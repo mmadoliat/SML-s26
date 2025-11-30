@@ -14,13 +14,13 @@ library(googlesheets4)
 library(gt)
 library(tidyverse)
 gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1ZfnybnUxzkyDCx4gGUjQVPXUyHnu3VlqWipHDMe17VU/edit?usp=sharing")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1Owq7t6nfNCV5Dgm0MP7RxUC9qEZ0QAYIVtjrQEvfzqU/edit?usp=sharing")
 ```
 
 ```{r}
 #| echo: false
 
-d[d$date < max(today()+21, as.Date("2025-02-04")),] |>
+d[d$date < max(today()+221, as.Date("2025-02-04")),] |>
   #filter(!is.na(session)) |>
   select(-dow, -session, -prepare) |>
   mutate(date = as.Date(date)) |>

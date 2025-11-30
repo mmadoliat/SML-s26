@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tinyurl.com/Comp-Prob/course-overview.html</loc>
-    <lastmod>2025-11-30T16:16:20.409Z</lastmod>
+    <loc>https://tinyurl.com/SML-MU/course-overview.html</loc>
+    <lastmod>2025-11-30T20:16:29.993Z</lastmod>
   </url>
   <url>
-    <loc>https://tinyurl.com/Comp-Prob/course-links.html</loc>
-    <lastmod>2025-11-30T16:16:20.409Z</lastmod>
+    <loc>https://tinyurl.com/SML-MU/about.html</loc>
+    <lastmod>2025-11-30T20:16:29.975Z</lastmod>
   </url>
   <url>
-    <loc>https://tinyurl.com/Comp-Prob/computing/computing-cheatsheets.html</loc>
-    <lastmod>2025-11-30T16:16:20.409Z</lastmod>
+    <loc>https://tinyurl.com/SML-MU/index.html</loc>
+    <lastmod>2025-11-30T20:16:30.000Z</lastmod>
   </url>
   <url>
-    <loc>https://tinyurl.com/Comp-Prob/course-syllabus.html</loc>
-    <lastmod>2025-11-30T16:16:20.410Z</lastmod>
+    <loc>https://tinyurl.com/SML-MU/course-syllabus.html</loc>
+    <lastmod>2025-11-30T20:16:29.993Z</lastmod>
   </url>
   <url>
-    <loc>https://tinyurl.com/Comp-Prob/index.html</loc>
-    <lastmod>2025-11-30T16:16:20.436Z</lastmod>
+    <loc>https://tinyurl.com/SML-MU/computing/computing-cheatsheets.html</loc>
+    <lastmod>2025-11-30T20:16:29.993Z</lastmod>
   </url>
   <url>
-    <loc>https://tinyurl.com/Comp-Prob/about.html</loc>
-    <lastmod>2025-11-30T16:16:20.394Z</lastmod>
+    <loc>https://tinyurl.com/SML-MU/course-links.html</loc>
+    <lastmod>2025-11-30T20:16:29.993Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/slides/Topic7.html</loc>
+    <lastmod>2025-11-30T20:16:30.001Z</lastmod>
   </url>
 </urlset>

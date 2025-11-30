@@ -1,5 +1,5 @@
 ---
-title: "Syllabus - Computational Probability"
+title: "Syllabus - Statistical Machine Learning"
 format: 
   html: default
   pdf: default

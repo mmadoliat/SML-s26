@@ -58,7 +58,7 @@ d[d$date < max(today()+221, as.Date("2025-02-04")),] |>
     date ~ px(100), 
     topic ~ px(300),
     materials ~ px(150),
-    code ~ px(40),
+    code ~ px(100),
     due ~ px(300)
   ) |>
   cols_label_with(fn = function(x) {

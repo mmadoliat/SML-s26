@@ -9,7 +9,7 @@ format:
 
 **Course Title:** MSSC 6250: Statistical Machine Learning\
 **Meeting Time:** TuTh 12:30pm - 1:45pm\
-**Location:** Cudahy Hall 208 ([Microsoft Teams](https://teams.microsoft.com/l/meetup-join/19%3aO9weL3KhvNMlRYfdBvKqPh_Esayq7FhBVeSD8tBs_Lw1%40thread.tacv2/1756221278059?context=%7b%22Tid%22%3a%22abe32f68-c72d-420d-b5bd-750c63a268e4%22%2c%22Oid%22%3a%22b0161be8-acaa-4999-ba8b-8ed780d0b7bf%22%7d))\
+**Location:** Cudahy Hall 208 ([Microsoft Teams](https://teams.microsoft.com/meet/29401373633432?p=dfNhq6676bM9F3sMX3))\
 **Website:** <http://tinyurl.com/SML-MU>
 
 ## Instructor Details

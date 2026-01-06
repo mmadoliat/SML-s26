@@ -7,7 +7,7 @@ website:
   description: "Homepage for 'Statistical Machine Learning' at Marquette University, Spring 2026."
   site-url: "https://tinyurl.com/SML-MU"
 
-  repo-url: https://github.com/mmadoliat/SML-s25/
+  repo-url: https://github.com/mmadoliat/SML-s26/
   repo-actions: [edit, issue]
 
   open-graph: true

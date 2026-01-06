@@ -20,41 +20,28 @@ format:
 
 ## Course Description
 
-A modern course in probability. Foundations of probability for modeling random processes with computational techniques. Topics include counting techniques, probability of events, random variables, distribution functions, probability functions, probability density functions, expectation, moments, moment generating functions, special discrete and continuous distributions, sampling distributions, transformation of variables, prior and posterior distributions, Law of Large Numbers, Central Limit Theorem, the Bayesian paradigm. Numerical and computational methods will be covered throughout topics.
+Multivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classication tree and regression tree, cluster analysis, neural network, support vector machine.
 
-## Learning Outcomes
+## Flyer
 
-By the end of the course, students will:
-
--   Understand and Apply Fundamental Probability Concepts
-
--   Analyze and Model Random Processes
-
--   Perform Variable Transformations
-
--   Implement Computational Techniques
-
--   Interpret Statistical Theorems
-
--   Critically Evaluate Probabilistic Models
-
--   Communicate Probabilistic Findings
+[Statistical Machine Learning (SML)](https://www.mssc.mu.edu/emehdi/SML-Sp26-Flyer.pdf) - [https://www.mssc.mu.edu/emehdi/SML-Sp21-Flyer.pdf](https://www.mssc.mu.edu/emehdi/SML-Sp26-Flyer.pdf)
 
 ## Prerequisites
 
--   Three semesters of mathematics beyond calculus and MATH 4720 or equiv.
--   Preferable knowledge is MSSC 5700 and MSSC 5710.
+-   A course in Statistical Methods, and 
+-   A course in Linear Algebra.
 
 ## Textbooks
 
--   *Probability and Statistics with R*, 2nd edition by Maria Dolores Ugarte, Ana F. Militino, Alan T. Arnholt, 2016. ISBN: 9781466504394.
+-   [*An Introduction to Statistical Learning*, with Applications in Python](https://hastie.su.domains/ISLP/ISLP_website.pdf.download.html) by G. James, D. Witten, T. Hastie, R. Tibshirani, and J. Taylor, 2023. ISBN: 978-3031387463.
+-   [*An Introduction to Statistical Learning*, with Applications in R, Second Edition](https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html) by G. James, D. Witten, T. Hastie, and R. Tibshirani, 2021. ISBN: 978-1071614174.
 
 ## Grading Breakdown
 
--   **Homework:** 30%
--   **Project:** 10%
--   **Midterm Exam: 30%**
--   **Final Exam: 30%**
+-   **Homework:** 25%
+-   **Project:** 25%
+-   **Midterm Exam: 25%**
+-   **Final Exam or Project Report (Instructor will decide): 25%**
 
 ### Grading Scale
 
@@ -74,7 +61,8 @@ By the end of the course, students will:
 
 ## Exams
 
-Tentatively, there will be a midterm (in class) on Oct. 23rd, plus the final (in class or take home): Dec. 8th from 10:30 - 12:30pm.
+-   There will be a midterm (in class) on Mar. 5th, plus 
+-   A tentative final (in-class or take-home): May. 5th from 10:30 - 12:30 pm.
 
 ## Homework
 

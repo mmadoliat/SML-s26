@@ -77,18 +77,18 @@
     "href": "course-syllabus.html#course-description",
     "title": "Syllabus - Statistical Machine Learning",
     "section": "Course Description",
-    "text": "Course Description\nA modern course in probability. Foundations of probability for modeling random processes with computational techniques. Topics include counting techniques, probability of events, random variables, distribution functions, probability functions, probability density functions, expectation, moments, moment generating functions, special discrete and continuous distributions, sampling distributions, transformation of variables, prior and posterior distributions, Law of Large Numbers, Central Limit Theorem, the Bayesian paradigm. Numerical and computational methods will be covered throughout topics.",
+    "text": "Course Description\nMultivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classi\fcation tree and regression tree, cluster analysis, neural network, support vector machine.",
     "crumbs": [
       "Course information",
       "Syllabus"
     ]
   },
   {
-    "objectID": "course-syllabus.html#learning-outcomes",
-    "href": "course-syllabus.html#learning-outcomes",
+    "objectID": "course-syllabus.html#flyer",
+    "href": "course-syllabus.html#flyer",
     "title": "Syllabus - Statistical Machine Learning",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\nBy the end of the course, students will:\n\nUnderstand and Apply Fundamental Probability Concepts\nAnalyze and Model Random Processes\nPerform Variable Transformations\nImplement Computational Techniques\nInterpret Statistical Theorems\nCritically Evaluate Probabilistic Models\nCommunicate Probabilistic Findings",
+    "section": "Flyer",
+    "text": "Flyer\nStatistical Machine Learning (SML) - https://www.mssc.mu.edu/emehdi/SML-Sp21-Flyer.pdf",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -99,7 +99,7 @@
     "href": "course-syllabus.html#prerequisites",
     "title": "Syllabus - Statistical Machine Learning",
     "section": "Prerequisites",
-    "text": "Prerequisites\n\nThree semesters of mathematics beyond calculus and MATH 4720 or equiv.\nPreferable knowledge is MSSC 5700 and MSSC 5710.",
+    "text": "Prerequisites\n\nA course in Statistical Methods, and\nA course in Linear Algebra.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -110,7 +110,7 @@
     "href": "course-syllabus.html#textbooks",
     "title": "Syllabus - Statistical Machine Learning",
     "section": "Textbooks",
-    "text": "Textbooks\n\nProbability and Statistics with R, 2nd edition by Maria Dolores Ugarte, Ana F. Militino, Alan T. Arnholt, 2016. ISBN: 9781466504394.",
+    "text": "Textbooks\n\nAn Introduction to Statistical Learning, with Applications in Python by G. James, D. Witten, T. Hastie, R. Tibshirani, and J. Taylor, 2023. ISBN: 978-3031387463.\nAn Introduction to Statistical Learning, with Applications in R, Second Edition by G. James, D. Witten, T. Hastie, and R. Tibshirani, 2021. ISBN: 978-1071614174.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -121,7 +121,7 @@
     "href": "course-syllabus.html#grading-breakdown",
     "title": "Syllabus - Statistical Machine Learning",
     "section": "Grading Breakdown",
-    "text": "Grading Breakdown\n\nHomework: 30%\nProject: 10%\nMidterm Exam: 30%\nFinal Exam: 30%\n\n\nGrading Scale\n\n\n\nGrade\nRange\n\n\n\n\nA\n93.5 - 100%\n\n\nA-\n90- 93.49%\n\n\nB+\n86.5 - 89.99%\n\n\nB\n83.5 - 86.49%\n\n\nB-\n80 - 83.49%\n\n\nC+\n76.5 - 79.99%\n\n\nC\n73.5 - 76.49%\n\n\nC-\n70 - 73.49%\n\n\nD+\n66.5 - 69.99%\n\n\nD\n60 - 66.49%\n\n\nF\n&lt; 59.99%",
+    "text": "Grading Breakdown\n\nHomework: 25%\nProject: 25%\nMidterm Exam: 25%\nFinal Exam or Project Report (Instructor will decide): 25%\n\n\nGrading Scale\n\n\n\nGrade\nRange\n\n\n\n\nA\n93.5 - 100%\n\n\nA-\n90- 93.49%\n\n\nB+\n86.5 - 89.99%\n\n\nB\n83.5 - 86.49%\n\n\nB-\n80 - 83.49%\n\n\nC+\n76.5 - 79.99%\n\n\nC\n73.5 - 76.49%\n\n\nC-\n70 - 73.49%\n\n\nD+\n66.5 - 69.99%\n\n\nD\n60 - 66.49%\n\n\nF\n&lt; 59.99%",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -132,7 +132,7 @@
     "href": "course-syllabus.html#exams",
     "title": "Syllabus - Statistical Machine Learning",
     "section": "Exams",
-    "text": "Exams\nTentatively, there will be a midterm (in class) on Oct. 23rd, plus the final (in class or take home): Dec. 8th from 10:30 - 12:30pm.",
+    "text": "Exams\n\nThere will be a midterm (in class) on Mar. 5th, plus\nA tentative final (in-class or take-home): May. 5th from 10:30 - 12:30 pm.",
     "crumbs": [
       "Course information",
       "Syllabus"

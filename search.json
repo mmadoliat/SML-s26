@@ -77,7 +77,7 @@
     "href": "course-syllabus.html#course-description",
     "title": "Syllabus - Statistical Machine Learning",
     "section": "Course Description",
-    "text": "Course Description\nMultivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classi\fcation tree and regression tree, cluster analysis, neural network, support vector machine.",
+    "text": "Course Description\nMultivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classification tree and regression tree, cluster analysis, neural network, support vector machine.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -88,7 +88,7 @@
     "href": "course-syllabus.html#flyer",
     "title": "Syllabus - Statistical Machine Learning",
     "section": "Flyer",
-    "text": "Flyer\nStatistical Machine Learning (SML) - https://www.mssc.mu.edu/emehdi/SML-Sp21-Flyer.pdf",
+    "text": "Flyer\nStatistical Machine Learning (SML) - https://www.mssc.mu.edu/~mehdi/SML-Sp21-Flyer.pdf",
     "crumbs": [
       "Course information",
       "Syllabus"

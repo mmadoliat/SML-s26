@@ -20,11 +20,11 @@ format:
 
 ## Course Description
 
-Multivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classication tree and regression tree, cluster analysis, neural network, support vector machine.
+Multivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classification tree and regression tree, cluster analysis, neural network, support vector machine.
 
 ## Flyer
 
-[Statistical Machine Learning (SML)](https://www.mssc.mu.edu/emehdi/SML-Sp26-Flyer.pdf) - [https://www.mssc.mu.edu/emehdi/SML-Sp21-Flyer.pdf](https://www.mssc.mu.edu/emehdi/SML-Sp26-Flyer.pdf)
+[Statistical Machine Learning (SML)](https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf) - [https://www.mssc.mu.edu/~mehdi/SML-Sp21-Flyer.pdf](https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf)
 
 ## Prerequisites
 
@@ -40,8 +40,8 @@ Multivariate data and exploratory analysis, random vector and multivariate norma
 
 -   **Homework:** 25%
 -   **Project:** 25%
--   **Midterm Exam: 25%**
--   **Final Exam or Project Report (Instructor will decide): 25%**
+-   **Midterm Exam:** 25%
+-   **Final Exam or Project Report (Instructor will decide):** 25%
 
 ### Grading Scale
 
@@ -117,7 +117,7 @@ If you are unsure if the use of a particular resource complies with the academic
 -   **Saturday, May 2**: Classes end
 -   **Tuesday, May 5, 10:30 am - 12:30 pm**: Presentations
 
-For more important dates, see the full [MU Academic Calendar](https://www.marquette.edu/central/registrar/2025-fall-academic-calendar.php).
+For more important dates, see the full [MU Academic Calendar](https://www.marquette.edu/central/registrar/2026-spring-academic-calendar.php).
 
 ## Important Note
 

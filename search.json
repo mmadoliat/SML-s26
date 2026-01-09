@@ -252,7 +252,7 @@
     "href": "slides/Topic7.html#recipes-of-a-machine-learning-algorithm",
     "title": "Statistical Machine Learning",
     "section": "Recipes of a Machine Learning Algorithm",
-    "text": "Recipes of a Machine Learning Algorithm\n\n\nInput data points, e.g. \n\nIf the task is speech recognition, these data points could be sound files\nIf the task is image tagging, they could be picture files\n\nExamples of the expected output \n\nIn a speech-recognition task, these could be transcripts of sound files\nIn an image task, expected outputs could tags such as “dog”, “cat”, and so on\n\nA way to measure whether the algorithm is doing a good job \n\nThis is needed to determine the distance between the output and its expected output.\nThe measurement is used as a feedback signal to adjust the way the algorithm works."
+    "text": "Recipes of a Machine Learning Algorithm\n\n\nInput data points, e.g. \n\nIf the task is speech recognition, these data points could be sound files\nIf the task is image tagging, they could be picture files\n\nExamples of the expected output \n\nIn a speech-recognition task, these could be transcripts of sound files\nIn an image task, expected outputs could tags such as “dog”, “cat”, and so on\n\nA way to measure whether the algorithm is doing a good job \n\nThis is needed to determine the distance between the output and its expected output.\nThe measurement is used as a feedback signal to adjust the way the algorithm works."
   },
   {
     "objectID": "slides/Topic7.html#anatomy-of-a-neural-network",

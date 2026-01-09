@@ -1,3 +1,3 @@
-# CompProb-f25
+# SML-s26
 
-Course webpage for MSSC 6010 - Fall 2025
+Course webpage for MSSC 6250 - Spring 2026

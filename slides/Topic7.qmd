@@ -28,56 +28,49 @@ format:
 
 ::: incremental
 -   **Why Deep Learning?** complex function approximation, feature engineering
-
 -   **Keras in R**: high-level API for TensorFlow backend
-
 -   **Installation**:
 
-    ``` r
+    ``` {.r}
     install.packages("keras3")
     library(keras3)
     install_keras()  # installs TensorFlow
     ```
-
 -   **Backend Setup**: Automatically installs TensorFlow backend
-
 -   **Benefits**:
 :::
 
 . . .
 
-:::: {style="margin-top: -30px; margin-left: 50px;"}
+<div style="margin-top: -30px; margin-left: 50px;">
+
 ::: small
--   Seamlessly integrates R with TensorFlow
--   Easy access to deep learning tools within R environment: `tensorflow::tf_config()`.
+  - Seamlessly integrates R with TensorFlow
+  - Easy access to deep learning tools within R environment: `tensorflow::tf_config()`.
 :::
-::::
+
+</div>
 
 ## Classical Programming vs Machine Learning {.smaller auto-animate="true"}
 
 -   Deep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.
 
-. . .
+. . . 
 
-::: {style="margin-top: -30px;"}
-<center>[*Reality is however quite far from this dream*]{.text-red}</center>
-:::
+<div style="margin-top: -30px;"><center>[*Reality is however quite far from this dream*]{.text-red}</center></div>
 
 . . .
 
 -   AI: the effort to automate intellectual tasks normally performed by humans.
 
-![](images/DLiR/classical-programming.png){.absolute top="210" left="80" width="400px"}
-
-::: {style="margin-top: 90px;"}
-:::
+![](images/DLiR/classical-programming.png){.absolute top=210 left=80 width="400px"} 
+<div style="margin-top: 90px;"></div>
 
 . . .
 
--   ML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? ![](images/DLiR/machine-learning.png){.absolute top="225" left="530" width="400px"}
-
-    ::: {style="margin-top: -40px;"}
-    :::
+-   ML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data?
+![](images/DLiR/machine-learning.png){.absolute top=225 left=530 width="400px"} 
+<div style="margin-top: -40px;"></div>
 
 . . .
 
@@ -99,23 +92,16 @@ Deep learning
 
 -   Deep learning is often presented as algorithms that “work like the brain”, that “think” or “understand”.
 
-::: {style="margin-top: -30px;"}
- 
-
-</center>
-:::
+<div style="margin-top: -30px;">&nbsp;</center></div>
 
 -   AI: the effort to automate intellectual tasks normally performed by humans.
 
-![](images/DLiR/classical-programming.png){.absolute top="210" left="80" width="400px"}
+![](images/DLiR/classical-programming.png){.absolute top=210 left=80 width="400px"} 
+<div style="margin-top: 90px;"></div>
 
-::: {style="margin-top: 90px;"}
-:::
-
--   ML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data? ![](images/DLiR/machine-learning.png){.absolute top="225" left="530" width="400px"}
-
-    ::: {style="margin-top: -40px;"}
-    :::
+-   ML: Could a computer surprise us? Rather than programmers crafting data-processing rules by hand, could a computer automatically learn these rules by looking at data?
+![](images/DLiR/machine-learning.png){.absolute top=225 left=530 width="400px"} 
+<div style="margin-top: -40px;"></div>
 
 ::::::: r-stack
 :::::: {.r-stack style="margin-top: 1em;"}
@@ -136,46 +122,47 @@ Deep learning
 :::::::
 
 ## Recipes of a Machine Learning Algorithm {.smaller auto-animate="true"}
-
 ::: incremental
--   Input data points, e.g. ![](images/DLiR/mse-1.png){.absolute bottom="0" left="300" width="400"}
+-   Input data points, e.g.
+![](images/DLiR/mse-1.png){.absolute bottom=0 left=300 width="400"}
     -   If the task is speech recognition, these data points could be sound files
     -   If the task is image tagging, they could be picture files
--   Examples of the expected output ![](images/DLiR/mse-2.png){.absolute bottom="0" left="300" width="400"}
+
+-   Examples of the expected output
+![](images/DLiR/mse-2.png){.absolute bottom=0 left=300 width="400"}
     -   In a speech-recognition task, these could be transcripts of sound files
     -   In an image task, expected outputs could tags such as "dog", "cat", and so on
--   A way to measure whether the algorithm is doing a good job ![](images/DLiR/mse-3.png){.absolute bottom="0" left="300" width="400"}
+
+-   A way to measure whether the algorithm is doing a good job
+![](images/DLiR/mse-3.png){.absolute bottom=0 left=300 width="400"}
     -   This is needed to determine the distance between the output and its expected output.
-
     -   The measurement is used as a feedback signal to adjust the way the algorithm works.
+<div style="margin-top: -30px;">![](images/DLiR/mse-4.png){.absolute bottom=0 left=300 width="400"}</div>
 
-        ::: {style="margin-top: -30px;"}
-        ![](images/DLiR/mse-4.png){.absolute bottom="0" left="300" width="400"}
-        :::
 :::
 
 ## Anatomy of a Neural Network {auto-animate="true"}
-
-::: {style="margin-top: -20px;"}
-:::
-
+<div style="margin-top: -20px;"></div>
 ::: incremental
--   The [*input data*]{.text-red} and corresponding [*targets*]{.text-red} ![](images/DLiR/nn-1.png){.absolute bottom="0" left="40" width="500"}
+-   The [*input data*]{.text-red} and corresponding [*targets*]{.text-red}
+![](images/DLiR/nn-1.png){.absolute bottom=0 left=40 width=500}
 
--   [*Layers*]{.text-red}, which are combined into a [*network* (or *model*)]{.text-red} ![](images/DLiR/nn-2.png){.absolute bottom="0" left="40" width="500"}
+-   [*Layers*]{.text-red}, which are combined into a [*network* (or *model*)]{.text-red}
+![](images/DLiR/nn-2.png){.absolute bottom=0 left=40 width=500}
 
--   The [*loss function*]{.text-red}, which provides feedback for learning ![](images/DLiR/nn-3.png){.absolute bottom="0" left="40" width="500"}
+-   The [*loss function*]{.text-red}, which provides feedback for learning
+![](images/DLiR/nn-3.png){.absolute bottom=0 left=40 width=500}
 
--   The [*optimizer*]{.text-red}, which determines how learning proceeds ![](images/DLiR/nn-4.png){.absolute bottom="0" left="40" width="500"}
+-   The [*optimizer*]{.text-red}, which determines how learning proceeds
+![](images/DLiR/nn-4.png){.absolute bottom=0 left=40 width=500}
 :::
 
 . . .
 
-![](images/DLiR/backprop.gif){.absolute bottom="0" right="0" width="500"}
+![](images/DLiR/backprop.gif){.absolute bottom=0 right=0 width=500}
 
-## LeNet-5: a pioneering 7-level CNN {.smaller auto-animate="true"}
-
-<img src="images/DLiR/LeNet-5_architecture.png" style="opacity: 0.10;"/>
+## LeNet-5: a pioneering 7-level CNN {auto-animate="true" .smaller}
+[<img src="images/DLiR/LeNet-5_architecture.png" style="opacity: 0.10;">]{.absolute top=75 left=0}
 
 ::: incremental
 -   The first successful practical application of neural nets came in 1989 from Bell Labs, when [*Yann LeCun*]{.text-red} combined the earlier ideas of convolutional neural networks and backpropagation, and applied them to the problem of classifying handwritten digits.
@@ -185,27 +172,25 @@ Deep learning
 -   LeNet-5 was applied by several banks to recognize hand-written numbers on checks digitized in 32x32 pixel images.
 :::
 
-<center>![](images/DLiR/cnn.gif){width="550"}</center>
+<center>![](images/DLiR/cnn.gif){width=550}</center>
 
 ## Why 30+ Years gap? {auto-animate="true"}
-
-<img src="images/DLiR/imagenet-1.png" style="opacity: 0.10" width="1200"/>
+[<img src="images/DLiR/imagenet-1.png" style="opacity: 0.10" width=1200>]{.absolute top=75 left=0}
 
 ::: incremental
 -   In 2011, Dan Ciresan from IDSIA (Switzerland) began to win academic image-classification competitions with GPU-trained deep neural networks
 
--   in 2012, a team led by Alex Krizhevsky and advised by [*Geoffrey Hinton*]{.text-red} was able to achieve a top-five accuracy of 83.6%--a significant breakthrough (in 2011 it was only 74.3%). ![](images/DLiR/imagenet-2.png){.absolute bottom="0" right="0" width="350" height="300"}
+-   in 2012, a team led by Alex Krizhevsky and advised by [*Geoffrey Hinton*]{.text-red} was able to achieve a top-five accuracy of 83.6%--a significant breakthrough (in 2011 it was only 74.3%).
+![](images/DLiR/imagenet-2.png){.absolute bottom=0 right=0 width=350 height=300}
 
 -   Three forces are driving advances in ML:
-
     -   Hardware
     -   Datasets and benchmarks
     -   Algorithmic advances
 :::
 
-## VGG16–CNN for Classification and Detection {.smaller auto-animate="true"}
-
-<img src="images/DLiR/VGG16-1.png" style="opacity: 0.10" width="1500"/>
+## VGG16–CNN for Classification and Detection {auto-animate="true" .smaller}
+[<img src="images/DLiR/VGG16-1.png" style="opacity: 0.10" width="1500">]{.absolute top=0 right=0}
 
 ::: incremental
 -   VGG16 is a convolutional neural network model proposed by K. Simonyan and A. Zisserman from the University of Oxford.
@@ -214,7 +199,8 @@ Deep learning
 
 -   It makes the improvement over AlexNet by replacing large kernel-sized filters (11 and 5 in the first and second convolutional layer, respectively) with multiple 3×3 kernel-sized filters one after another.
 
--   VGG16 was trained for weeks using NVIDIA Titan Black GPU’s. ![](images/DLiR/VGG16-2.png){.absolute bottom="0" left="250" width="500"}
+-   VGG16 was trained for weeks using NVIDIA Titan Black GPU’s.
+![](images/DLiR/VGG16-2.png){.absolute bottom=0 left=250 width=500}
 :::
 
 # 2. Fundamentals of Neural Networks {auto-animate="true"}
@@ -236,58 +222,52 @@ model <- keras_model_sequential(input_shape = c(784)) %>%
 
 -   Visualize network architecture with `plot()`.
 
-[🔗 Launch R](http://tinyurl.com/dna-Rstudio){target="_blank"}
+[🔗 Launch R](http://tinyurl.com/dna-Rstudio){target=_blank}
 
 ## Neural Network – Parameters - Activation Func. {auto-animate="true"}
 
-![](images/DLiR/nn-01.png){.absolute bottom="0" left="0" width="500"}
+![](images/DLiR/nn-01.png){.absolute bottom=0 left=0 width=500}
 
 . . .
 
-::: {style="margin-top: 55px;"}
-:::
-
-[*A Neural Network*]{.text-red}
+<div style="margin-top: 55px;"></div>
+<span style="padding-left: 3.5em;">[*A Neural Network*]{.text-red}</span>
 
 . . .
 
-![](images/DLiR/nn-02.png){.absolute bottom="0" left="0" width="500"}
+![](images/DLiR/nn-02.png){.absolute bottom=0 left=0 width=500}
+
+. . . 
+
+![](images/DLiR/nn-03.png){.absolute bottom=0 left=0 width=500}
 
 . . .
 
-![](images/DLiR/nn-03.png){.absolute bottom="0" left="0" width="500"}
+![](images/DLiR/af-1.png){.absolute bottom=100 right=0 width=500}
+
+. . . 
+
+<div style="margin-top: -55px;"></div>
+<span style="padding-left: 17.5em;">[*Activation Function*]{.text-red}</span>
 
 . . .
 
-![](images/DLiR/af-1.png){.absolute bottom="100" right="0" width="500"}
-
-. . .
-
-::: {style="margin-top: -55px;"}
-:::
-
-[*Activation Function*]{.text-red}
-
-. . .
-
-![](images/DLiR/af-2.png){.absolute bottom="100" right="0" width="500"}
+![](images/DLiR/af-2.png){.absolute bottom=100 right=0 width=500}
 
 ## Linear Activation function
 
-![](images/DLiR/nn01.png){.absolute bottom="0" right="0" width="400"}
+![](images/DLiR/nn01.png){.absolute bottom=0 right=0 width=400}
 
 . . .
 
-![](images/DLiR/nn02.png){.absolute bottom="0" right="0" width="400"}
+![](images/DLiR/nn02.png){.absolute bottom=0 right=0 width=400}
 
 -   $Z=\color{green}{W_1}X+\color{lightblue}{b_1}$
-
-    ::: {style="margin-top: 40px;"}
-    :::
+<div style="margin-top: 40px;"></div>
 
 . . .
 
-![](images/DLiR/nn03.png){.absolute bottom="0" right="0" width="400"}
+![](images/DLiR/nn03.png){.absolute bottom=0 right=0 width=400}
 
 -   $Y=\color{red}{W_2}Z+\color{blue}{b_2}$
 
@@ -298,23 +278,22 @@ model <- keras_model_sequential(input_shape = c(784)) %>%
 . . .
 
 -   $Y=\{\color{red}{W_2}\color{green}{W_1}\}X+\{\color{red}{W_2}\color{lightblue}{b_1}+\color{blue}{b_2}\}$
-
-    ::: {style="margin-top: 40px;"}
-    :::
+<div style="margin-top: 40px;"></div>
 
 . . .
 
-![](images/DLiR/nn04.png){.absolute bottom="0" right="0" width="400" height="580"}
+![](images/DLiR/nn04.png){.absolute bottom=0 right=0 width=400 height=580}
 
 -   $Y=\color{red}{\mathbf{W}^*}X+\color{blue}{\mathbf{b}^*}$
 
 . . .
 
-[**Hidden Layers Disappears**]{.text-red}
+<span style="padding-left: 3.5em;">[**Hidden Layers Disappears**]{.text-red}</span>
+
 
 ## Deep learning software
 
-<center>![](images/DLiR/DLiWiki.png){width="770"}</center>
+<center>![](images/DLiR/DLiWiki.png){width=770}</center>
 
 ::: smallest
 [🔗 Wikipedia: Deep learning software](http://en.wikipedia.org/wiki/Comparison_of_deep_learning_software)
@@ -330,9 +309,9 @@ model <- keras_model_sequential(input_shape = c(784)) %>%
 -   Data (tensors) flows between them
 :::
 
-  [<img src="images/DLiR/tensors_flowing.gif" width="420"/>]{.absolute bottom="0" right="50" width="420"}
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" width=420>]{.absolute bottom=0 right=50 width=420}
 
-## Why TensorFlow in R?
+## Why TensorFlow in R? 
 
 ::: incremental
 -   Hardware independent
@@ -341,53 +320,55 @@ model <- keras_model_sequential(input_shape = c(784)) %>%
     -   TPU (Tensor Processing Unit)
 -   Supports automatic differentiation
 -   Distributed execution and large datasets
--   Very general built-in optimization algorithms (SGD, Adam) that don't require that all data is in RAM
+-   Very general built-in optimization algorithms (SGD, Adam) 
+that don't require that all data is in RAM
 -   It can be deployed with a low-latency C++ runtime
 -   R has a lot to offer as an interface language for TensorFlow
+
 :::
 
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.15;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.15;" width=420>]{.absolute bottom=0 right=50 width=420}
 
-## Real-world examples of data tensors {.smaller auto-animate="true"}
+## Real-world examples of data tensors {auto-animate="true"  .smaller}
 
-<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>
+[<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
 
 -   2D tensors
-    -   Vector data—(samples, features) ![](images/DLiR/tensor-2d.png){.absolute top="60" left="475" width="150"} ![](images/DLiR/tensor2D.png){.absolute top="50" right="0" width="400"}
+    -   Vector data—(samples, features)
+![](images/DLiR/tensor-2d.png){.absolute top=60 left=475 width=150}
+![](images/DLiR/tensor2D.png){.absolute top=50 right=0 width=400}
 
 . . .
 
 -   3D tensors
-    -   Grayscale Images—(samples, height, width)
-    -   Time-series data or sequence data—(samples, timesteps, features)
+    -   Grayscale Images—(samples, height, width) 
+    - Time-series data or sequence data—(samples, timesteps, features)
 
 . . .
 
-![](images/DLiR/tensor-3d.png){.absolute top="290" left="475" width="150"} ![](images/DLiR/tensor3D.png){.absolute top="300" right="0" width="400"}
+![](images/DLiR/tensor-3d.png){.absolute top=290 left=475 width=150}
+![](images/DLiR/tensor3D.png){.absolute top=300 right=0 width=400}
 
-. . .
+. . . 
 
-::: {style="margin-top: 100px;"}
-:::
-
+<div style="margin-top: 100px;"></div>
 -   4D tensors
-    -   Color Images—(samples, height, width, channels)
+    -   Color Images—(samples, height, width, channels) 
 
 . . .
 
-![](images/DLiR/tensor-4d.png){.absolute top="350" left="150" width="75"} ![](images/DLiR/tensor4D.png){.absolute top="450" right="0" width="275"}
+![](images/DLiR/tensor-4d.png){.absolute top=350 left=150 width=75}
+![](images/DLiR/tensor4D.png){.absolute top=450 right=0 width=275}
 
 . . .
 
-::: {style="margin-top: -20px;"}
-:::
-
+<div style="margin-top: -20px;"></div>
 -   5D tensors
     -   Video—(samples, frames, height, width, channels)
 
 . . .
 
-![](images/DLiR/tensor-5d.png){.absolute bottom="0" right="300" width="125"}
+![](images/DLiR/tensor-5d.png){.absolute bottom=0 right=300 width=125}
 
 ## Why Keras?
 
@@ -396,25 +377,21 @@ model <- keras_model_sequential(input_shape = c(784)) %>%
 -   It has a user-friendly API that makes it easy to quickly prototype deep-learning models.
 :::
 
-::: {style="width: 700px; height: 500px; overflow:hidden;"}
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script>
-<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"TensorFlow","geo":"","time":"2015-01-01 2030-05-15"},{"keyword":"Pytorch","geo":"","time":"2015-01-01 2030-05-15"},{"keyword":"Keras","geo":"","time":"2015-01-01 2030-05-15"},{"keyword":"TensorFlow + Keras","geo":"","time":"2015-01-01 2030-05-15"}],"category":0,"property":""}, {"exploreQuery":"date=2015-01-01%202030-05-15&q=TensorFlow,Pytorch,Keras,TensorFlow%20%2B%20Keras","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
-:::
+<div style="width: 700px; height: 500px; overflow:hidden;">
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/4116_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"TensorFlow","geo":"","time":"2015-01-01 2030-05-15"},{"keyword":"Pytorch","geo":"","time":"2015-01-01 2030-05-15"},{"keyword":"Keras","geo":"","time":"2015-01-01 2030-05-15"},{"keyword":"TensorFlow + Keras","geo":"","time":"2015-01-01 2030-05-15"}],"category":0,"property":""}, {"exploreQuery":"date=2015-01-01%202030-05-15&q=TensorFlow,Pytorch,Keras,TensorFlow%20%2B%20Keras","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+</div>
 
 . . .
 
-![](images/DLiR/keras.png){.absolute bottom="325" right="0" width="350"} ![](images/DLiR/keras-2.png){.absolute bottom="0" right="30" width="275"}
+![](images/DLiR/keras.png){.absolute bottom=325 right=0 width=350}
+![](images/DLiR/keras-2.png){.absolute bottom=0 right=30 width=275}
 
 ## Installing Keras {.small}
 
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
-
-::: {style="margin-top: -20px;"}
-:::
-
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
+<div style="margin-top: -20px;"></div>
 -   First, install the keras R package:
-
-``` r
+``` {.r}
 remotes::install_github("rstudio/keras3");    # OR
 Install.packages("keras3")
 ```
@@ -422,8 +399,7 @@ Install.packages("keras3")
 . . .
 
 -   To install both the core [Keras](https://keras.rstudio.com/) library as well as the [TensorFlow](https://www.tensorflow.org/) backend
-
-``` r
+``` {.r}
 library(keras3)
 keras3::install_keras(backend = "tensorflow")
 ```
@@ -435,57 +411,47 @@ keras3::install_keras(backend = "tensorflow")
 
 . . .
 
-::: {style="margin-top: -20px;"}
-:::
-
+<div style="margin-top: -20px;"></div>
 -   You can install TensorFlow with GPU support
-    -   NVIDIA® drivers,
-    -   CUDA Toolkit v9.0, and
+    -   NVIDIA® drivers, 
+    -   CUDA Toolkit v9.0, and 
     -   cuDNN v7.0
+    
+<div style="margin-top: -20px;"></div>
+are needed: [https://tensorflow.rstudio.com/tools/local_gpu.html](https://tensorflow.rstudio.com/tools/local_gpu.html)
 
-::: {style="margin-top: -20px;"}
-:::
-
-are needed: <https://tensorflow.rstudio.com/tools/local_gpu.html>
 
 ## Developing a Deep NN with Keras {.small}
 
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
-
-::: {style="margin-top: -20px;"}
-:::
-
--   Step 1 - Define your training data:
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
+<div style="margin-top: -20px;"></div>
+-   Step 1 - Define your training data: 
     -   input tensors and target tensors.
 
 . . .
 
--   Step 2 - Define a network of layers (or model)
+-   Step 2 - Define a network of layers (or model) 
     -   that maps your inputs to your targets.
 
 . . .
 
--   Step 3 - Configure the learning process by choosing
-    -   a loss function,
-    -   an optimizer,
+-   Step 3 - Configure the learning process by choosing 
+    -   a loss function, 
+    -   an optimizer, 
     -   and some metrics to monitor.
 
 . . .
 
--   Step 4 - Iterate on your training data by calling the
+-   Step 4 - Iterate on your training data by calling the 
     -   **fit()** method of your model.
 
 # 3. Multilayer Perceptrons (MLPs)
 
-![](images/DLiR/MNIST-2.gif){width="950"}
+![](images/DLiR/MNIST-2.gif){width=950}
 
 ## Keras: Step 1 – Data preprocessing {.small}
-
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
-
-::: {style="margin-top: -40px;"}
-:::
-
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
+<div style="margin-top: -40px;"></div>
 ::: shrink-code
 ``` {.r code-line-numbers="1|3-4|6-8|9-10|12-14" height="100"}
 library(keras3)
@@ -505,16 +471,13 @@ y_test <- to_categorical(y_test, 10)
 ```
 :::
 
-![](images/DLiR/step1.png){.absolute bottom="0" left="50" width="950"}
+![](images/DLiR/step1.png){.absolute bottom=0 left=50 width=950}
 
 ## Keras: Step 2 – Model definition {.small}
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
+<div style="margin-top: -40px;"></div>
 
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
-
-::: {style="margin-top: -40px;"}
-:::
-
-:::: {.scrollable style="height: 300px; overflow-y: auto;"}
+::: {.scrollable style="height: 300px; overflow-y: auto;"}
 ::: shrink-code
 ``` {.r code-line-numbers="1|1-3|4|5-6|7|9-26"}
 model <- keras_model_sequential(input_shape = c(784)) 
@@ -540,78 +503,74 @@ summary(model)
 >#  Non-trainable params: 0 (0.00 B)
 ```
 :::
-::::
+:::
 
-![](images/DLiR/step2.png){.absolute bottom="25" left="0" width="550"}
+![](images/DLiR/step2.png){.absolute bottom=25 left=0 width=550}
 
 . . .
 
-![](images/DLiR/dropout.gif){.absolute bottom="25" right="0" width="500"}
+![](images/DLiR/dropout.gif){.absolute bottom=25 right=0 width=500}
 
 ## Multi-Class vs Multi-Label Classification
 
-![](images/DLiR/mcml-1.png){.absolute bottom="115" left="0" width="1000"}
+![](images/DLiR/mcml-1.png){.absolute bottom=115 left=0 width=1000}
 
 . . .
 
-![](images/DLiR/mcml-2.png){.absolute bottom="115" left="0" width="1200"}
+![](images/DLiR/mcml-2.png){.absolute bottom=115 left=0 width=1200}
 
 . . .
 
-![](images/DLiR/mcml-3.png){.absolute bottom="115" left="0" width="1000"}
+![](images/DLiR/mcml-3.png){.absolute bottom=115 left=0 width=1000}
 
 . . .
 
-![](images/DLiR/mcml-4.png){.absolute bottom="115" left="0" width="1200"}
+![](images/DLiR/mcml-4.png){.absolute bottom=115 left=0 width=1200}
 
 . . .
 
-![](images/DLiR/mcml-5.png){.absolute bottom="115" left="0" width="1200"}
+![](images/DLiR/mcml-5.png){.absolute bottom=115 left=0 width=1200}
 
 ## Multi-Class vs Multi-Label Classification (Cont.)
 
-![](images/DLiR/mcml-6.png){.absolute bottom="35" left="0" width="1000"}
+![](images/DLiR/mcml-6.png){.absolute bottom=35 left=0 width=1000}
 
 . . .
 
-![](images/DLiR/mcml-7.png){.absolute bottom="35" left="0" width="1200"}
+![](images/DLiR/mcml-7.png){.absolute bottom=35 left=0 width=1200}
 
 . . .
 
-![](images/DLiR/mcml-8.png){.absolute bottom="35" left="0" width="1000"}
+![](images/DLiR/mcml-8.png){.absolute bottom=35 left=0 width=1000}
 
 . . .
 
-![](images/DLiR/mcml-9.png){.absolute bottom="35" left="0" width="1200"}
+![](images/DLiR/mcml-9.png){.absolute bottom=35 left=0 width=1200}
 
 . . .
 
-![](images/DLiR/mcml-10.png){.absolute bottom="35" left="0" width="1200"}
+![](images/DLiR/mcml-10.png){.absolute bottom=35 left=0 width=1200}
 
 ## Multi-Class vs Multi-Label Classification (Cont.)
 
-![](images/DLiR/mcml-11.png){.absolute bottom="35" left="0" width="1000"}
+![](images/DLiR/mcml-11.png){.absolute bottom=35 left=0 width=1000}
 
 . . .
 
-![](images/DLiR/mcml-12.png){.absolute bottom="35" left="0" width="1200"}
+![](images/DLiR/mcml-12.png){.absolute bottom=35 left=0 width=1200}
 
 . . .
 
-![](images/DLiR/mcml-13.png){.absolute bottom="35" left="0" width="1000"}
+![](images/DLiR/mcml-13.png){.absolute bottom=35 left=0 width=1000}
 
 ## Keras: Step 3 – Compile Model {.small}
-
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
-
-::: {style="margin-top: -40px;"}
-:::
-
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
+<div style="margin-top: -40px;"></div>
 -   Model compilation prepares the model for training by:
-    -   Converting the layers into a TensorFlow graph
-    -   Applying the specified loss function and optimizer
-    -   Arranging for the collection of metrics during training
-
+    - Converting the layers into a TensorFlow graph
+    - Applying the specified loss function and optimizer
+    - Arranging for the collection of metrics during training
+    
 ::: shrink-code
 ``` {.r code-line-numbers="1,5|2|3|4|1-5"}
 model %>% compile(
@@ -622,24 +581,20 @@ model %>% compile(
 ```
 :::
 
-![](images/DLiR/step3a.png){.absolute bottom="300" right="0" width="225"}
+![](images/DLiR/step3a.png){.absolute bottom=300 right=0 width=225}
 
 . . .
 
-![](images/DLiR/step3b.png){.absolute bottom="0" right="0" width="930"}
+![](images/DLiR/step3b.png){.absolute bottom=0 right=0 width=930}
 
 ## Keras: Step 4 – Model Training {.small}
-
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
-
-::: {style="margin-top: -40px;"}
-:::
-
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
+<div style="margin-top: -40px;"></div>
 -   Use the `fit()` to train the model for 10 epochs using batches of 128 images:
-    -   Feed 128 samples at a time to the model (batch_size = 128)
-    -   Traverse the input dataset 10 times (epochs = 10)
-    -   Hold out 20% of the data for validation (validation_split = 0.2)
-
+    - Feed 128 samples at a time to the model (batch_size = 128)
+    - Traverse the input dataset 10 times (epochs = 10)
+    - Hold out 20% of the data for validation (validation_split = 0.2)
+  
 ::: shrink-code
 ``` {.r code-line-numbers="1,6|2|3|4|5|1-6"}
 history <- model %>% fit(
@@ -653,9 +608,9 @@ history <- model %>% fit(
 
 . . .
 
-:::: {.scrollable style="height: 100px; overflow-y: auto;"}
+::: {.scrollable style="height: 100px; overflow-y: auto;"}
 ::: smallest
-``` r
+``` {.r}
 Epoch 1/10
 375/375 ━━━━━ 3s 5ms/step - accuracy: 0.7831 - loss: 0.6970 - val_accuracy: 0.9513 - val_loss: 0.1640
 Epoch 2/10
@@ -678,12 +633,12 @@ Epoch 10/10
 375/375 ━━━━━ 1s 3ms/step - accuracy: 0.9769 - loss: 0.0744 - val_accuracy: 0.9777 - val_loss: 0.0835
 ```
 :::
-::::
+:::
 
 . . .
 
 ::: shrink-code
-``` r
+``` {.r}
 model %>% evaluate(x_test, y_test)
 ># 313/313 ━━━━━ 0s 771us/step - accuracy: 0.9747 - loss: 0.0930
 ># $accuracy
@@ -695,8 +650,7 @@ model %>% evaluate(x_test, y_test)
 :::
 
 ## Keras: Evaluation and prediction {.small}
-
-  [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width="420"/>]{.absolute bottom="0" right="50" width="420"}
+&nbsp; [<img src="images/DLiR/tensors_flowing.gif" style="opacity: 0.05;" width=420>]{.absolute bottom=0 right=50 width=420}
 
 ::: shrink-code
 ``` {.r code-line-numbers="1|4-11|13-24"}
@@ -727,42 +681,41 @@ round(model %>% predict(x_test[1:9,]),5)
 ```
 :::
 
-![](images/DLiR/loss-acc.png){.absolute top="185" right="65" width="340"}
+![](images/DLiR/loss-acc.png){.absolute top=185 right=65 width=340}
 
 ## Keras Demo
 
--   [keras3.posit.co](https://keras3.posit.co/articles/getting_started.html)
--   [🔗 Launch R](http://tinyurl.com/dna-Rstudio){target="_blank"}
+- [keras3.posit.co](https://keras3.posit.co/articles/getting_started.html)
+- [🔗 Launch R](http://tinyurl.com/dna-Rstudio){target="_blank"}
 
-![](images/DLiR/keras-demo.png){.absolute bottom="0" right="0" width="750"}
+![](images/DLiR/keras-demo.png){.absolute bottom=0 right=0 width=750}
 
 ## Keras API: Layers
 
--   90+ layers available (you can also create your own)
+- 90+ layers available (you can also create your own)
 
-![](images/DLiR/layers.png){.absolute top="150" right="200" width="600"}
+![](images/DLiR/layers.png){.absolute top=150 right=200 width=600}
 
 . . .
 
-::: {style="margin-top: 300px; margin-left: 50px;"}
-:::
+<div style="margin-top: 300px; margin-left: 50px;"></div>
 
 ::: small
-``` r
+``` {.r}
 layer_dense(units = 64, kernel_regularizer = regularizer_l1(0.01))
 layer_dense(units = 64, bias_regularizer = regularizer_l2(0.01))
 ```
 :::
 
-![](images/DLiR/layers-dense.png){.absolute bottom="30" left="0" width="350"}
+![](images/DLiR/layers-dense.png){.absolute bottom=30 left=0 width=350}
 
 . . .
 
-![](images/DLiR/layers-cnn.png){.absolute bottom="0" right="350" width="350"}
+![](images/DLiR/layers-cnn.png){.absolute bottom=0 right=350 width=350}
 
 . . .
 
-![](images/DLiR/layers-recurrent.png){.absolute bottom="30" right="0" width="350"}
+![](images/DLiR/layers-recurrent.png){.absolute bottom=30 right=0 width=350}
 
 # Convolutional Neural Networks (CNNs)
 
@@ -782,7 +735,7 @@ cnn <- keras_model_sequential(input_shape=c(28,28,1)) %>%
 ```
 :::
 
-![](images/DLiR/cnn-2.gif){.absolute top="480" right="350" width="450"}
+![](images/DLiR/cnn-2.gif){.absolute top=480 right=350 width=450}
 
 # Recurrent Neural Networks & LSTM
 
@@ -790,25 +743,23 @@ cnn <- keras_model_sequential(input_shape=c(28,28,1)) %>%
 -   **LSTM**: handling long-term dependencies
 
 ::: shrink-code
-``` r
+``` {.r}
 rnn <- keras_model_sequential() %>%
   layer_lstm(units=128, input_shape=c(timesteps, features)) %>%
   layer_dense(units=1, activation='sigmoid')
 ```
 :::
-
 -   **Use case**: sentiment analysis, text generation
 
-![](images/DLiR/rnn.gif){.absolute top="400" right="250" width="650"}
+![](images/DLiR/rnn.gif){.absolute top=400 right=250 width=650}
 
 ## Embedding Layers {.small}
 
--   Vectorization of text that reflects semantic relationships between words
+- Vectorization of text that reflects semantic relationships between words
 
-![](images/DLiR/one-hot-encoding.png){.absolute top="140" left="50" width="450"} ![](images/DLiR/embedding.png){.absolute top="100" right="50" width="450"}
-
-::: {style="margin-top: 320px; margin-left: 50px;"}
-:::
+![](images/DLiR/one-hot-encoding.png){.absolute top=140 left=50 width=450}
+![](images/DLiR/embedding.png){.absolute top=100 right=50 width=450}
+<div style="margin-top: 320px; margin-left: 50px;"></div>
 
 . . .
 
@@ -823,9 +774,9 @@ model <- keras_model_sequential() %>%
 
 . . .
 
--   How to use?
-    -   Learn the embeddings jointly with the main task (e.g. classification); or
-    -   Load pre-trained word embeddings (e.g. Word2vec, GloVe)
+- How to use?
+    - Learn the embeddings jointly with the main task (e.g. classification); or
+    - Load pre-trained word embeddings (e.g. Word2vec, GloVe)
 
 # Autoencoders & Unsupervised Learning
 
@@ -840,10 +791,9 @@ ae <- keras_model_sequential(input_shape=c(784)) %>%
   layer_dense(units=784, activation='sigmoid')
 ```
 :::
-
 -   [**Applications**](https://www.saberhq.com/blog/autoencoders): Dimension reduction, Denoising, Anomaly detection, Image segmentation, Neural inpainting
 
-![](images/DLiR/autoencoder.gif){.absolute top="430" right="300" width="450"}
+![](images/DLiR/autoencoder.gif){.absolute top=430 right=300 width=450}
 
 # Advanced Topics & Deployment
 
@@ -856,77 +806,54 @@ ae <- keras_model_sequential(input_shape=c(784)) %>%
 ## Hands-on Exercises
 
 1.  Build and train a CNN on Fashion MNIST
-    -   [MNIST CNN in keras3](https://keras3.posit.co/articles/examples/vision/mnist_convnet.html)
-
-        ::: {style="margin-top: -30px; margin-left: 50px;"}
-        :::
+    - [MNIST CNN in keras3](https://keras3.posit.co/articles/examples/vision/mnist_convnet.html)
+<div style="margin-top: -30px; margin-left: 50px;"></div>
 
 . . .
 
 2.  Implement an LSTM for
-    -   [Text Classification in keras3](https://keras3.posit.co/articles/examples/nlp/text_classification_from_scratch.html)
-
-        ::: {style="margin-top: -30px; margin-left: 50px;"}
-        :::
-
-        ![](images/DLiR/one-hot-encoding.png){.absolute top="190" right="50" width="450"}
+    - [Text Classification in keras3](https://keras3.posit.co/articles/examples/nlp/text_classification_from_scratch.html)
+<div style="margin-top: -30px; margin-left: 50px;"></div>
+![](images/DLiR/one-hot-encoding.png){.absolute top=190 right=50 width=450}
 
 . . .
-
-3.  Create an autoencoder for dimensionality reduction and visualize embeddings ![](images/DLiR/embedding.png){.absolute bottom="0" right="120" width="400"}
+ 
+3.  Create an autoencoder for dimensionality reduction and visualize embeddings
+![](images/DLiR/embedding.png){.absolute bottom=0 right=120 width=400}
 
 # Resources & Further Reading
-
 -   Book: [**Deep Learning with R**](https://www.manning.com/books/deep-learning-with-r-second-edition) by Francois Chollet & J.J. Allaire
-
-    ::: {style="margin-top: -30px; margin-left: 50px;"}
-    :::
-
-    ![](images/DLiR/DL-book.png){.absolute top="190" right="50" width="150"}
+<div style="margin-top: -30px; margin-left: 50px;"></div>
+![](images/DLiR/DL-book.png){.absolute top=190 right=50 width=150}
 
 . . .
 
 -   [**Deep Learning**](https://www.deeplearningbook.org/) Book: https://www.deeplearningbook.org/
-
-    ::: {style="margin-top: -30px; margin-left: 50px;"}
-    :::
-
-    ![](images/DLiR/DLiR.png){.absolute top="390" right="50" width="150"}
+<div style="margin-top: -30px; margin-left: 50px;"></div>
+![](images/DLiR/DLiR.png){.absolute top=390 right=50 width=150}
 
 . . .
 
--   Datacamp Tutorials:
-    -   [Keras: Deep Learning in R](https://www.datacamp.com/community/tutorials/keras-r-deep-learning)
-
-    -   [Keras Tutorial: Deep Learning in Python](https://www.datacamp.com/tutorial/deep-learning-python)
-
-    -   [TensorFlow Tutorial For Beginners](https://www.datacamp.com/tutorial/tensorflow-tutorial)
-
-        ::: {style="margin-top: -30px; margin-left: 50px;"}
-        :::
+- Datacamp Tutorials:
+  - [Keras: Deep Learning in R](https://www.datacamp.com/community/tutorials/keras-r-deep-learning)
+  - [Keras Tutorial: Deep Learning in Python](https://www.datacamp.com/tutorial/deep-learning-python)
+  - [TensorFlow Tutorial For Beginners](https://www.datacamp.com/tutorial/tensorflow-tutorial)
+<div style="margin-top: -30px; margin-left: 50px;"></div>
 
 . . .
 
 -   [Keras3 for R](https://keras3.posit.co/): https://keras3.posit.co/
-
 -   [TensorFlow for R](https://tensorflow.rstudio.com/): https://tensorflow.rstudio.com/
-
-    ::: {style="margin-top: -30px; margin-left: 50px;"}
-    :::
+<div style="margin-top: -30px; margin-left: 50px;"></div>
 
 . . .
 
--   [Deep Learning Specializations in Coursera](https://www.coursera.org/specializations/deep-learning)
+- [Deep Learning Specializations in Coursera](https://www.coursera.org/specializations/deep-learning)
 
 ## Keras for R cheatsheet
-
-::: {style="margin-top: -30px; margin-left: 50px;"}
-:::
-
-<center>![](../misc/cheatsheets/keras.png){width="760"}</center>
-
-::: {style="margin-top: -30px; margin-left: 50px;"}
-:::
+<div style="margin-top: -30px; margin-left: 50px;"></div>
+<center>![](images/DLiR/keras-cs.png){width=760}</center>
+<div style="margin-top: -30px; margin-left: 50px;"></div>
 
 ::: smallest
 [🔗 Rstudio: Keras cheatsheet](https://rstudio.github.io/cheatsheets/html/keras.html)
@@ -934,7 +861,7 @@ ae <- keras_model_sequential(input_shape=c(784)) %>%
 
 # Q&A {auto-animate="true"}
 
-<img src="images/DLiR/DL-babies.png" width="600" style="opacity: 0.5;" align="right"/>
+<img src="images/DLiR/DL-babies.png" width="600" style="opacity: 0.5;" align="right">
 
 ::: {style="margin-top: 200px;"}
 :::

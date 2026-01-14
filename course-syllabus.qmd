@@ -24,11 +24,11 @@ Multivariate data and exploratory analysis, random vector and multivariate norma
 
 ## Flyer
 
-[Statistical Machine Learning (SML)](https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf) - [https://www.mssc.mu.edu/~mehdi/SML-Sp21-Flyer.pdf](https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf)
+[Statistical Machine Learning (SML)](https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf) - <https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf>
 
 ## Prerequisites
 
--   A course in Statistical Methods, and 
+-   A course in Statistical Methods, and
 -   A course in Linear Algebra.
 
 ## Textbooks
@@ -61,7 +61,7 @@ Multivariate data and exploratory analysis, random vector and multivariate norma
 
 ## Exams
 
--   There will be a midterm (in class) on Mar. 5th, plus 
+-   There will be a midterm (in class) on Mar. 5th, plus
 -   A tentative final (in-class or take-home): May. 5th from 10:30 - 12:30 pm.
 
 ## Homework
@@ -111,7 +111,7 @@ If you are unsure if the use of a particular resource complies with the academic
 -   **Monday, January 12**: Classes begin
 -   **Monday, January 19**: Martin Luther King Jr. Day
 -   **Tuesday, January 20**: Drop/add ends
--   **Sunday - Saturday, March 8 - 14**: Fall Break
+-   **Sunday - Saturday, March 8 - 14**: Spring Break
 -   **Thursday - Sunday, April 2 - 5**: Easter Break
 -   **Friday, April 10**: Last day to withdraw with W
 -   **Saturday, May 2**: Classes end

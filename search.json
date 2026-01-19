@@ -1,239 +1,5 @@
 [
   {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "This is the homepage for MSSC 6250 - Statistical Machine Learning by Dr. Mehdi Maadooliat in Spring 2026 at Marquette University. All course materials will be posted on this site.\nYou can find the course syllabus here and the course schedule here.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "course-overview.html#class-meetings",
-    "href": "course-overview.html#class-meetings",
-    "title": "Course overview",
-    "section": "Class meetings",
-    "text": "Class meetings\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nCU 208\nTue & Thur 12:30 pm - 1:45 pm\n\n\nOffice Hours\nCU 351\nTue & Thur 1:45 - 3:15 pm",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistical Machine Learning - Spring 2026",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n[🎥 Lecture 3] Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n[🎥 Lecture 4] Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n[🎥 Lecture 5] What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n[🎥 Lecture 6] Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n[🎥 Lecture 7] Basics of Linear Regression\n📚Chapt 3-A\nPython🐍",
-    "crumbs": [
-      "Course information",
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html",
-    "href": "course-syllabus.html",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "",
-    "text": "Course Title: MSSC 6250: Statistical Machine Learning\nMeeting Time: TuTh 12:30pm - 1:45pm\nLocation: Cudahy Hall 208 (Microsoft Teams)\nWebsite: http://tinyurl.com/SML-MU",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#course-information",
-    "href": "course-syllabus.html#course-information",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "",
-    "text": "Course Title: MSSC 6250: Statistical Machine Learning\nMeeting Time: TuTh 12:30pm - 1:45pm\nLocation: Cudahy Hall 208 (Microsoft Teams)\nWebsite: http://tinyurl.com/SML-MU",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#instructor-details",
-    "href": "course-syllabus.html#instructor-details",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Instructor Details",
-    "text": "Instructor Details\n\nName: Mehdi Maadooliat, Ph.D.\nOffice: CU 351\nOffice Hours: TTh (CU 351) 1:45pm - 3:15pm or by e-mail",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#course-description",
-    "href": "course-syllabus.html#course-description",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Course Description",
-    "text": "Course Description\nMultivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classification tree and regression tree, cluster analysis, neural network, support vector machine.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#flyer",
-    "href": "course-syllabus.html#flyer",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Flyer",
-    "text": "Flyer\nStatistical Machine Learning (SML) - https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#prerequisites",
-    "href": "course-syllabus.html#prerequisites",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Prerequisites",
-    "text": "Prerequisites\n\nA course in Statistical Methods, and\nA course in Linear Algebra.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#textbooks",
-    "href": "course-syllabus.html#textbooks",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Textbooks",
-    "text": "Textbooks\n\nAn Introduction to Statistical Learning, with Applications in Python by G. James, D. Witten, T. Hastie, R. Tibshirani, and J. Taylor, 2023. ISBN: 978-3031387463.\nAn Introduction to Statistical Learning, with Applications in R, Second Edition by G. James, D. Witten, T. Hastie, and R. Tibshirani, 2021. ISBN: 978-1071614174.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#grading-breakdown",
-    "href": "course-syllabus.html#grading-breakdown",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Grading Breakdown",
-    "text": "Grading Breakdown\n\nHomework: 25%\nProject: 25%\nMidterm Exam: 25%\nFinal Exam or Project Report (Instructor will decide): 25%\n\n\nGrading Scale\n\n\n\nGrade\nRange\n\n\n\n\nA\n93.5 - 100%\n\n\nA-\n90- 93.49%\n\n\nB+\n86.5 - 89.99%\n\n\nB\n83.5 - 86.49%\n\n\nB-\n80 - 83.49%\n\n\nC+\n76.5 - 79.99%\n\n\nC\n73.5 - 76.49%\n\n\nC-\n70 - 73.49%\n\n\nD+\n66.5 - 69.99%\n\n\nD\n60 - 66.49%\n\n\nF\n&lt; 59.99%",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#exams",
-    "href": "course-syllabus.html#exams",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Exams",
-    "text": "Exams\n\nThere will be a midterm (in class) on Mar. 5th, plus\nA tentative final (in-class or take-home): May. 5th from 10:30 - 12:30 pm.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#homework",
-    "href": "course-syllabus.html#homework",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Homework",
-    "text": "Homework\nHomework is required so that you get a better understanding of the material covered, plus it will help you to keep up. You will get a better understanding of the material if you discuss it with someone. However, you must submit YOUR OWN work to D2L website. Assignments are mostly due at 11:50pm (check for due dates in D2L).\nNO LATE HOMEWORK WILL BE ACCEPTED NOR WILL YOU BE ALLOWED TO MAKE UP MISSED HOMEWORK! Plan accordingly! It is better to submit something, even if it is incomplete. You need to type your homework (preferably using LaTeX, or Quarto) and submit it as a PDF file. Scanned homework will be graded out of 80. Low quality scanned homework will be considered as NO submission.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#make-up-policy",
-    "href": "course-syllabus.html#make-up-policy",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Make-up Policy",
-    "text": "Make-up Policy\nThere will not be any make-up exam or homework unless there is an emergency.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#attendance",
-    "href": "course-syllabus.html#attendance",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Attendance",
-    "text": "Attendance\nAttendance is required and subject to the College of Arts and Sciences policy.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#academic-honesty",
-    "href": "course-syllabus.html#academic-honesty",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Academic Honesty",
-    "text": "Academic Honesty\nStudents are expected to follow the University’s policy on academic honesty as outlined in the Bulletin.\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nCollaboration: Only work that is clearly assigned as team work should be completed collaboratively.\n\nThe homework assignments must also be completed individually and you are welcomed to discuss the assignment with classmates at a high level (e.g., discuss what’s the best way for approaching a problem, what functions are useful for accomplishing a particular task, etc.). However you may not directly share answers to questions (including any code) with anyone other than myself.\nFor the projects, collaboration within teams is not only allowed, but expected. Communication between teams at a high level is also allowed however you may not share code or components of the project across teams.\nOn individual assignments you may not directly share code with another student in this class, and on team assignments you may not directly share code with another team in this class.\n\nOnline resources: I am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course’s policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nUse of generative artificial intelligence (AI): You should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course:1 (1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning. (2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. You may use these guidelines for citing AI-generated content.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you.\n\nYou are ultimately responsible for the work you turn in; it should reflect your understanding of the course content.\n\nIf you are unsure if the use of a particular resource complies with the academic honesty policy, please ask the instructor.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#important-dates",
-    "href": "course-syllabus.html#important-dates",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Important dates",
-    "text": "Important dates\n\nMonday, January 12: Classes begin\nMonday, January 19: Martin Luther King Jr. Day\nTuesday, January 20: Drop/add ends\nSunday - Saturday, March 8 - 14: Spring Break\nThursday - Sunday, April 2 - 5: Easter Break\nFriday, April 10: Last day to withdraw with W\nSaturday, May 2: Classes end\nTuesday, May 5, 10:30 am - 12:30 pm: Presentations\n\nFor more important dates, see the full MU Academic Calendar.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course-syllabus.html#important-note",
-    "href": "course-syllabus.html#important-note",
-    "title": "Syllabus - Statistical Machine Learning",
-    "section": "Important Note",
-    "text": "Important Note\nThe syllabus may be modified throughout the course. Any substantial modifications will result in a reissued syllabus.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "plan.html",
-    "href": "plan.html",
-    "title": "Statistical Machine Learning - Spring 2026",
-    "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n[🎥 Lecture 3] Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n[🎥 Lecture 4] Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n[🎥 Lecture 5] What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n[🎥 Lecture 6] Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n[🎥 Lecture 7] Basics of Linear Regression\n📚Chapt 3-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 5\n[🎥 Lecture 8] Wrap-up Linear Regression\n📚[Chapt 3-B]\n\n\n\n\n\n\n5\nTue, Feb 10\n[🎥 Lecture 9] Logistic Regression\n📚Chapt 4-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 12\n[🎥 Lecture 10] Linear Discriminant  Analysis and ROC\n📚[Chapt 4-B]\n\n\n\n\n\n\n\n\nFri, Feb 13\n\n\n\n\nD2L✍️\n📝 HW 2 at 11:50 pm  Solution\n\n\n6\nTue, Feb 17\n[🎥 Lecture 11] Quadratic Discriminant  Analysis and Naive Bayes\n📚[Chapt 4-C]\n\n\n\n\n\n\n\n\nThu, Feb 19\n[🎥 Lecture 12] Resampling  (Cross-validation)\n📚Chapt 5\nPython🐍\n\n\n\n\n7\nTue, Feb 24\n[🎥 Lecture 13] Model Selection\n📚Chapt 6-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 26\n[🎥 Lecture 14] Ridge Regression\n📚[Chapt 6-B]\n\n\n\n\n\n\n\n\nFri, Feb 27\n\n\n\n\nD2L✍️\n📝 HW 3 at 11:50 pm  Solution\n\n\n8\nTue, Mar 3\n[🎥 Lecture 15] Lasso Regression  Review for Exam\n📚[Chapt 6-C]\nPython🐍\n\n\n\n\n\n\nThu, Mar 5\nMidterm Exam\n📖[Exam 1]\nPython🐍\n\n\n\n\n\n\nFri, Mar 6\n\n\n\n\nD2L✍️\n📝 HW 4 at 11:50 pm  Solution\n\n\n\n\nTue, Mar 10\n🌴 Spring Break\n\n\n\n\n\n\n\n\n\n\nThu, Mar 12\n🌴 Spring Break\n\n\n\n\n\n\n\n\n9\nTue, Mar 17\n[🎥 Lecture 17] Guest Lecture by  Dr. Rowe\n📚[Guest Lecture]\nPython🐍\n\n\n\n\n\n\nThu, Mar 19\n[🎥 Lecture 18] Smoothing:  Basis functions (B-spline)\n📚Chapt 7-A\n\n\n\n\n\n\n10\nTue, Mar 24\n[🎥 Lecture 19] More on Smoothing\n📚[Chapt 7-B]\n\n\n\n\n\n\n\n\nThu, Mar 26\n[🎥 Lecture 20] Basics of PCA and ICA\n📚[Chapt 7-C]\n\n\n\n\n\n\n\n\nFri, Mar 27\n\n\n\n\nD2L✍️\n📝 HW 5 at 11:50 pm  Solution\n\n\n11\nTue, Mar 31\n[🎥 Lecture 21] Basics of SVM\n📚Chapt 9-A\nPython🐍\n\n\n\n\n\n\nThu, Apr 2\n🐰 Easter Break\n\n\n\n\n\n\n\n\n\n\nFri, Apr 3\n\n\n\n\nD2L✍️\n📝 HW 6 at 11:50 pm  Solution\n\n\n12\nTue, Apr 7\n[🎥 Lecture 22] More on SVM\n📚[Chapt 9-B]\n\n\n\n\n\n\n\n\nThu, Apr 9\n[🎥 Lecture 23] Basics of Clustering  (K-means)\n📚Chapt 12-A\nPython🐍\n\n\n\n\n\n\nFri, Apr 10\n\n\n\n\n[D2L✍️]\n📝 [HW 7] at 11:50 pm\n\n\n13\nTue, Apr 14\n[🎥 Lecture 24] More on Clustering  (Hierarchical Clustering)\n📚[Chapt 12-B]\nPython🐍\n\n\n\n\n\n\nThu, Apr 16\n[🎥 Lecture 25] More on Clustering  (PCA)\n📚Chapt 12-C\n\n\n\n\n\n\n14\nTue, Apr 21\n[🎥 Lecture 26] Basics of Deep Learning\n📚Chapt 10\nPython🐍\n\n\n\n\n\n\nThu, Apr 23\n[🎥 Lecture 27] More on Deep Learning\n💻[DLiR-A]\n\n\n\n\n\n\n15\nTue, Apr 28\n[🎥 Lecture 28] SDSS\n💻[DLiR-B]\n\n\n\n\n\n\n\n\nThu, Apr 30\n[🎥 Lecture 29] SDSS\n💻[DLiR-C]\n\n\n\n\n\n\n16\nTue, May 5\nFinal Project\n📃25 MIN Presentations :  10:30 am - 12:30 pm  Evaluation - Group A  Evaluation - Group B  Evaluation - Group C  Evaluation - Group D"
-  },
-  {
-    "objectID": "computing/computing-cheatsheets.html",
-    "href": "computing/computing-cheatsheets.html",
-    "title": "R cheatsheets",
-    "section": "",
-    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
-    "crumbs": [
-      "Computing",
-      "Cheatsheets"
-    ]
-  },
-  {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
-    "section": "",
-    "text": "Homework\nStat Calculator\nDistribution Calculator\nStat Tables\n🔗 on D2L\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 StatTables\n\n\nAdvanced Texbooks\n🔗 R Package\n🔗 Advanced R by Hadley Wickham\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org",
-    "crumbs": [
-      "Course information",
-      "Useful links"
-    ]
-  },
-  {
     "objectID": "slides/Topic7.html#classical-programming-vs-machine-learning",
     "href": "slides/Topic7.html#classical-programming-vs-machine-learning",
     "title": "Statistical Machine Learning",
@@ -435,5 +201,239 @@
     "title": "Statistical Machine Learning",
     "section": "Keras for R cheatsheet",
     "text": "Keras for R cheatsheet\n\n\n\n\n\n\n\n\n\n\n🔗 Rstudio: Keras cheatsheet"
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "Homework\nStat Calculator\nDistribution Calculator\nStat Tables\n🔗 on D2L\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 StatTables\n\n\nAdvanced Texbooks\n🔗 R Package\n🔗 Advanced R by Hadley Wickham\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org",
+    "crumbs": [
+      "Course information",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "computing/computing-cheatsheets.html",
+    "href": "computing/computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
+  },
+  {
+    "objectID": "plan.html",
+    "href": "plan.html",
+    "title": "Statistical Machine Learning - Spring 2026",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n[🎥 Lecture 3] Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n[🎥 Lecture 4] Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n[🎥 Lecture 5] What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n[🎥 Lecture 6] Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n[🎥 Lecture 7] Basics of Linear Regression\n📚Chapt 3-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 5\n[🎥 Lecture 8] Wrap-up Linear Regression\n📚[Chapt 3-B]\n\n\n\n\n\n\n5\nTue, Feb 10\n[🎥 Lecture 9] Logistic Regression\n📚Chapt 4-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 12\n[🎥 Lecture 10] Linear Discriminant  Analysis and ROC\n📚[Chapt 4-B]\n\n\n\n\n\n\n\n\nFri, Feb 13\n\n\n\n\nD2L✍️\n📝 HW 2 at 11:50 pm  Solution\n\n\n6\nTue, Feb 17\n[🎥 Lecture 11] Quadratic Discriminant  Analysis and Naive Bayes\n📚[Chapt 4-C]\n\n\n\n\n\n\n\n\nThu, Feb 19\n[🎥 Lecture 12] Resampling  (Cross-validation)\n📚Chapt 5\nPython🐍\n\n\n\n\n7\nTue, Feb 24\n[🎥 Lecture 13] Model Selection\n📚Chapt 6-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 26\n[🎥 Lecture 14] Ridge Regression\n📚[Chapt 6-B]\n\n\n\n\n\n\n\n\nFri, Feb 27\n\n\n\n\nD2L✍️\n📝 HW 3 at 11:50 pm  Solution\n\n\n8\nTue, Mar 3\n[🎥 Lecture 15] Lasso Regression  Review for Exam\n📚[Chapt 6-C]\nPython🐍\n\n\n\n\n\n\nThu, Mar 5\nMidterm Exam\n📖[Exam 1]\nPython🐍\n\n\n\n\n\n\nFri, Mar 6\n\n\n\n\nD2L✍️\n📝 HW 4 at 11:50 pm  Solution\n\n\n\n\nTue, Mar 10\n🌴 Spring Break\n\n\n\n\n\n\n\n\n\n\nThu, Mar 12\n🌴 Spring Break\n\n\n\n\n\n\n\n\n9\nTue, Mar 17\n[🎥 Lecture 17] Guest Lecture by  Dr. Rowe\n📚[Guest Lecture]\nPython🐍\n\n\n\n\n\n\nThu, Mar 19\n[🎥 Lecture 18] Smoothing:  Basis functions (B-spline)\n📚Chapt 7-A\n\n\n\n\n\n\n10\nTue, Mar 24\n[🎥 Lecture 19] More on Smoothing\n📚[Chapt 7-B]\n\n\n\n\n\n\n\n\nThu, Mar 26\n[🎥 Lecture 20] Basics of PCA and ICA\n📚[Chapt 7-C]\n\n\n\n\n\n\n\n\nFri, Mar 27\n\n\n\n\nD2L✍️\n📝 HW 5 at 11:50 pm  Solution\n\n\n11\nTue, Mar 31\n[🎥 Lecture 21] Basics of SVM\n📚Chapt 9-A\nPython🐍\n\n\n\n\n\n\nThu, Apr 2\n🐰 Easter Break\n\n\n\n\n\n\n\n\n\n\nFri, Apr 3\n\n\n\n\nD2L✍️\n📝 HW 6 at 11:50 pm  Solution\n\n\n12\nTue, Apr 7\n[🎥 Lecture 22] More on SVM\n📚[Chapt 9-B]\n\n\n\n\n\n\n\n\nThu, Apr 9\n[🎥 Lecture 23] Basics of Clustering  (K-means)\n📚Chapt 12-A\nPython🐍\n\n\n\n\n\n\nFri, Apr 10\n\n\n\n\n[D2L✍️]\n📝 [HW 7] at 11:50 pm\n\n\n13\nTue, Apr 14\n[🎥 Lecture 24] More on Clustering  (Hierarchical Clustering)\n📚[Chapt 12-B]\nPython🐍\n\n\n\n\n\n\nThu, Apr 16\n[🎥 Lecture 25] More on Clustering  (PCA)\n📚Chapt 12-C\n\n\n\n\n\n\n14\nTue, Apr 21\n[🎥 Lecture 26] Basics of Deep Learning\n📚Chapt 10\nPython🐍\n\n\n\n\n\n\nThu, Apr 23\n[🎥 Lecture 27] More on Deep Learning\n💻[DLiR-A]\n\n\n\n\n\n\n15\nTue, Apr 28\n[🎥 Lecture 28] SDSS\n💻[DLiR-B]\n\n\n\n\n\n\n\n\nThu, Apr 30\n[🎥 Lecture 29] SDSS\n💻[DLiR-C]\n\n\n\n\n\n\n16\nTue, May 5\nFinal Project\n📃25 MIN Presentations :  10:30 am - 12:30 pm  Evaluation - Group A  Evaluation - Group B  Evaluation - Group C  Evaluation - Group D"
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "",
+    "text": "Course Title: MSSC 6250: Statistical Machine Learning\nMeeting Time: TuTh 12:30pm - 1:45pm\nLocation: Cudahy Hall 208 (Microsoft Teams)\nWebsite: http://tinyurl.com/SML-MU",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-information",
+    "href": "course-syllabus.html#course-information",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "",
+    "text": "Course Title: MSSC 6250: Statistical Machine Learning\nMeeting Time: TuTh 12:30pm - 1:45pm\nLocation: Cudahy Hall 208 (Microsoft Teams)\nWebsite: http://tinyurl.com/SML-MU",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#instructor-details",
+    "href": "course-syllabus.html#instructor-details",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Instructor Details",
+    "text": "Instructor Details\n\nName: Mehdi Maadooliat, Ph.D.\nOffice: CU 351\nOffice Hours: TTh (CU 351) 1:45pm - 3:15pm or by e-mail",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#course-description",
+    "href": "course-syllabus.html#course-description",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Course Description",
+    "text": "Course Description\nMultivariate data and exploratory analysis, random vector and multivariate normal distribution, multivariate linear regression, principal component and other dimensional reduction techniques, linear discriminant analysis, recursive partition and tree-based methods including classification tree and regression tree, cluster analysis, neural network, support vector machine.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#flyer",
+    "href": "course-syllabus.html#flyer",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Flyer",
+    "text": "Flyer\nStatistical Machine Learning (SML) - https://www.mssc.mu.edu/~mehdi/SML-Sp26-Flyer.pdf",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#prerequisites",
+    "href": "course-syllabus.html#prerequisites",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Prerequisites",
+    "text": "Prerequisites\n\nA course in Statistical Methods, and\nA course in Linear Algebra.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Textbooks",
+    "text": "Textbooks\n\nAn Introduction to Statistical Learning, with Applications in Python by G. James, D. Witten, T. Hastie, R. Tibshirani, and J. Taylor, 2023. ISBN: 978-3031387463.\nAn Introduction to Statistical Learning, with Applications in R, Second Edition by G. James, D. Witten, T. Hastie, and R. Tibshirani, 2021. ISBN: 978-1071614174.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#grading-breakdown",
+    "href": "course-syllabus.html#grading-breakdown",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Grading Breakdown",
+    "text": "Grading Breakdown\n\nHomework: 25%\nProject: 25%\nMidterm Exam: 25%\nFinal Exam or Project Report (Instructor will decide): 25%\n\n\nGrading Scale\n\n\n\nGrade\nRange\n\n\n\n\nA\n93.5 - 100%\n\n\nA-\n90- 93.49%\n\n\nB+\n86.5 - 89.99%\n\n\nB\n83.5 - 86.49%\n\n\nB-\n80 - 83.49%\n\n\nC+\n76.5 - 79.99%\n\n\nC\n73.5 - 76.49%\n\n\nC-\n70 - 73.49%\n\n\nD+\n66.5 - 69.99%\n\n\nD\n60 - 66.49%\n\n\nF\n&lt; 59.99%",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#exams",
+    "href": "course-syllabus.html#exams",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Exams",
+    "text": "Exams\n\nThere will be a midterm (in class) on Mar. 5th, plus\nA tentative final (in-class or take-home): May. 5th from 10:30 - 12:30 pm.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#homework",
+    "href": "course-syllabus.html#homework",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Homework",
+    "text": "Homework\nHomework is required so that you get a better understanding of the material covered, plus it will help you to keep up. You will get a better understanding of the material if you discuss it with someone. However, you must submit YOUR OWN work to D2L website. Assignments are mostly due at 11:50pm (check for due dates in D2L).\nNO LATE HOMEWORK WILL BE ACCEPTED NOR WILL YOU BE ALLOWED TO MAKE UP MISSED HOMEWORK! Plan accordingly! It is better to submit something, even if it is incomplete. You need to type your homework (preferably using LaTeX, or Quarto) and submit it as a PDF file. Scanned homework will be graded out of 80. Low quality scanned homework will be considered as NO submission.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#make-up-policy",
+    "href": "course-syllabus.html#make-up-policy",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Make-up Policy",
+    "text": "Make-up Policy\nThere will not be any make-up exam or homework unless there is an emergency.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#attendance",
+    "href": "course-syllabus.html#attendance",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Attendance",
+    "text": "Attendance\nAttendance is required and subject to the College of Arts and Sciences policy.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#academic-honesty",
+    "href": "course-syllabus.html#academic-honesty",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Academic Honesty",
+    "text": "Academic Honesty\nStudents are expected to follow the University’s policy on academic honesty as outlined in the Bulletin.\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nCollaboration: Only work that is clearly assigned as team work should be completed collaboratively.\n\nThe homework assignments must also be completed individually and you are welcomed to discuss the assignment with classmates at a high level (e.g., discuss what’s the best way for approaching a problem, what functions are useful for accomplishing a particular task, etc.). However you may not directly share answers to questions (including any code) with anyone other than myself.\nFor the projects, collaboration within teams is not only allowed, but expected. Communication between teams at a high level is also allowed however you may not share code or components of the project across teams.\nOn individual assignments you may not directly share code with another student in this class, and on team assignments you may not directly share code with another team in this class.\n\nOnline resources: I am well aware that a huge volume of code is available on the web to solve any number of problems. Unless I explicitly tell you not to use something, the course’s policy is that you may make use of any online resources (e.g., StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nUse of generative artificial intelligence (AI): You should treat generative AI, such as ChatGPT, the same as other online resources. There are two guiding principles that govern how you can use AI in this course:1 (1) Cognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning. (2) Ethical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity.\n\n✅ AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. You may use these guidelines for citing AI-generated content.\n❌ AI tools for narrative: Unless instructed otherwise, you may not use generative AI to write narrative on assignments. In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you.\n\nYou are ultimately responsible for the work you turn in; it should reflect your understanding of the course content.\n\nIf you are unsure if the use of a particular resource complies with the academic honesty policy, please ask the instructor.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#important-dates",
+    "href": "course-syllabus.html#important-dates",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Important dates",
+    "text": "Important dates\n\nMonday, January 12: Classes begin\nMonday, January 19: Martin Luther King Jr. Day\nTuesday, January 20: Drop/add ends\nSunday - Saturday, March 8 - 14: Spring Break\nThursday - Sunday, April 2 - 5: Easter Break\nFriday, April 10: Last day to withdraw with W\nSaturday, May 2: Classes end\nTuesday, May 5, 10:30 am - 12:30 pm: Presentations\n\nFor more important dates, see the full MU Academic Calendar.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course-syllabus.html#important-note",
+    "href": "course-syllabus.html#important-note",
+    "title": "Syllabus - Statistical Machine Learning",
+    "section": "Important Note",
+    "text": "Important Note\nThe syllabus may be modified throughout the course. Any substantial modifications will result in a reissued syllabus.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistical Machine Learning - Spring 2026",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n[🎥 Lecture 3] Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n[🎥 Lecture 4] Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n[🎥 Lecture 5] What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n[🎥 Lecture 6] Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n[🎥 Lecture 7] Basics of Linear Regression\n📚Chapt 3-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 5\n[🎥 Lecture 8] Wrap-up Linear Regression\n📚[Chapt 3-B]",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site!"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "This is the homepage for MSSC 6250 - Statistical Machine Learning by Dr. Mehdi Maadooliat in Spring 2026 at Marquette University. All course materials will be posted on this site.\nYou can find the course syllabus here and the course schedule here.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Course overview",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nCU 208\nTue & Thur 12:30 pm - 1:45 pm\n\n\nOffice Hours\nCU 351\nTue & Thur 1:45 - 3:15 pm",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
   }
 ]

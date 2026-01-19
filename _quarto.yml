@@ -45,6 +45,10 @@ website:
             text: Schedule
           - href: course-links.qmd
             text: Useful links
+      - section: "HW"
+        contents:
+          - href: hw/HW 1.qmd
+            text: HW 1
       - section: "Computing"
         contents:
           - href: computing/computing-cheatsheets.qmd

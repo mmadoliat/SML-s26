@@ -178,4 +178,4 @@ $\hat Y_{K=3}=\text{Red}.$
 
 We would generally expect the best $K$ to be **small**, because a small $K$ yields a more flexible decision boundary (lower bias) that can adapt to strong non-linearities. A large $K$ averages over many points and produces an overly smooth boundary (higher bias).
 
-[🐍] Python code](hw/sol/ex2-7)
+[🐍 Python code](hw/sol/ex2-7)

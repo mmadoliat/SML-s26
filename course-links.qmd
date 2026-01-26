@@ -9,6 +9,8 @@ title: "Useful links"
 |                            |                                                                             |
 | Distribution Calculator    | 🔗 [DistCalc](http://dna.mscsnet.mu.edu:3838/mlab/DistCalc/)                |
 |                            |                                                                             |
+| The Matrix Cookbook        | 🔗 [MatCookbook](http://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) |
+|                            |                                                                             |
 | Stat Tables                | 🔗 [StatTables](tables/z_t_chi.html)                                        |
 +----------------------------+-----------------------------------------------------------------------------+
 | Advanced Texbooks          | 🔗 [R Package](https://r-pkgs.org/)                                         |

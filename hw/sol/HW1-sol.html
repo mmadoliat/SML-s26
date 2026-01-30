@@ -371,6 +371,7 @@ window.Quarto = {
 <section id="problem-4" class="level2">
 <h2 class="anchored" data-anchor-id="problem-4">Problem 4</h2>
 <p>Generate 1000 samples using both methods from Problem 3, and compare sample covariance matrices.</p>
+<p>🐍 Python code:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>mu <span class="op">=</span> np.array([<span class="fl">1.0</span>, <span class="op">-</span><span class="fl">1.0</span>, <span class="op">-</span><span class="fl">2.0</span>])</span>
@@ -406,6 +407,14 @@ window.Quarto = {
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Frobenius error (spectral):"</span>, np.linalg.norm(S_spec <span class="op">-</span> Sigma, <span class="bu">ord</span><span class="op">=</span><span class="st">"fro"</span>))</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Frobenius error (cholesky):"</span>, np.linalg.norm(S_chol <span class="op">-</span> Sigma, <span class="bu">ord</span><span class="op">=</span><span class="st">"fro"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>R Code:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode .r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="dv">1000</span>; mu <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="sc">-</span><span class="dv">2</span>); </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    Sig <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">2</span>), <span class="at">nr=</span><span class="dv">3</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    Z <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rnorm</span>(n<span class="sc">*</span><span class="fu">length</span>(mu)),<span class="at">nr=</span><span class="dv">3</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    X1 <span class="ot">&lt;-</span> <span class="fu">t</span>(mu <span class="sc">+</span> <span class="fu">eigen</span>(Sig)<span class="sc">$</span>vectors<span class="sc">%*%</span><span class="fu">diag</span>(<span class="fu">sqrt</span>(<span class="fu">eigen</span>(Sig)<span class="sc">$</span>values))<span class="sc">%*%</span>Z)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    X2 <span class="ot">&lt;-</span> <span class="fu">t</span>(mu <span class="sc">+</span> <span class="fu">t</span>(<span class="fu">chol</span>(Sig))<span class="sc">%*%</span>Z)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cov</span>(X1)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cov</span>(X2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>You should see both sample covariance matrices close to <span class="math inline">\(\Sigma\)</span>, with small differences due to Monte Carlo variation.</p>
 <hr>
 </section>

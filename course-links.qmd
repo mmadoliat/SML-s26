@@ -3,7 +3,11 @@ title: "Useful links"
 ---
 
 +----------------------------+-----------------------------------------------------------------------------+
-| Homework                   | 🔗 on [D2L](http://www.webassign.net/)                                      |
+| Homework                   | 🔗 on [D2L](http://d2l.mu.edu/)                                             |
+|                            |                                                                             |
+| ISLP Resources             | 🔗 [ISLP](http://www.statlearning.com/resources-python)                     |
+|                            |                                                                             |
+| Regression Shiny           | 🔗 [Regression](http://dna.mscsnet.mu.edu:3838/mlab/Regression/)            |
 |                            |                                                                             |
 | Stat Calculator            | 🔗 [StatCalc(JAMM)](http://dna.mscsnet.mu.edu:3838/mlab/JAMM/)              |
 |                            |                                                                             |

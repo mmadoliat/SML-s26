@@ -49,6 +49,10 @@ website:
         contents:
           - href: hw/HW 1.qmd
             text: HW 1
+          - href: hw/sol/HW1-sol.qmd
+            text: HW 1 Solution
+          - href: hw/HW 2.qmd
+            text: HW 2
       - section: "Computing"
         contents:
           - href: computing/computing-cheatsheets.qmd

@@ -256,7 +256,7 @@
     "href": "course-links.html",
     "title": "Useful links",
     "section": "",
-    "text": "Homework\nStat Calculator\nDistribution Calculator\nThe Matrix Cookbook\nStat Tables\n🔗 on D2L\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 MatCookbook\n🔗 StatTables\n\n\nAdvanced Texbooks\n🔗 R Package\n🔗 Advanced R by Hadley Wickham\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org",
+    "text": "Homework\nISLP Resources\nRegression Shiny\nStat Calculator\nDistribution Calculator\nThe Matrix Cookbook\nStat Tables\n🔗 on D2L\n🔗 ISLP\n🔗 Regression\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 MatCookbook\n🔗 StatTables\n\n\nAdvanced Texbooks\n🔗 R Package\n🔗 Advanced R by Hadley Wickham\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org",
     "crumbs": [
       "Course information",
       "Useful links"

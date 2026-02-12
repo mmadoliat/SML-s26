@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tinyurl.com/SML-MU/hw/HW 2.html</loc>
-    <lastmod>2026-02-10T21:42:11.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/hw/sol/ex2-7.html</loc>
-    <lastmod>2026-02-10T21:42:11.899Z</lastmod>
-  </url>
-  <url>
     <loc>https://tinyurl.com/SML-MU/course-overview.html</loc>
-    <lastmod>2026-02-10T21:42:11.898Z</lastmod>
+    <lastmod>2026-02-12T21:15:39.472Z</lastmod>
   </url>
   <url>
     <loc>https://tinyurl.com/SML-MU/about.html</loc>
-    <lastmod>2026-02-10T21:42:11.883Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/index.html</loc>
-    <lastmod>2026-02-10T21:42:11.906Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/course-syllabus.html</loc>
-    <lastmod>2026-02-10T21:42:11.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/plan.html</loc>
-    <lastmod>2026-02-10T21:42:11.906Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/computing/computing-cheatsheets.html</loc>
-    <lastmod>2026-02-10T21:42:11.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/course-links.html</loc>
-    <lastmod>2026-02-10T21:42:11.898Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/slides/Topic7.html</loc>
-    <lastmod>2026-02-10T21:42:11.908Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tinyurl.com/SML-MU/hw/HW 1.html</loc>
-    <lastmod>2026-02-10T21:42:11.898Z</lastmod>
+    <lastmod>2026-02-12T21:15:39.457Z</lastmod>
   </url>
   <url>
     <loc>https://tinyurl.com/SML-MU/hw/sol/HW1-sol.html</loc>
-    <lastmod>2026-02-10T21:42:11.899Z</lastmod>
+    <lastmod>2026-02-12T21:15:39.473Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/hw/HW 2.html</loc>
+    <lastmod>2026-02-12T21:15:39.473Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/plan.html</loc>
+    <lastmod>2026-02-12T21:15:39.481Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/course-links.html</loc>
+    <lastmod>2026-02-12T21:15:39.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/index.html</loc>
+    <lastmod>2026-02-12T21:15:39.481Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/computing/computing-cheatsheets.html</loc>
+    <lastmod>2026-02-12T21:15:39.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/course-syllabus.html</loc>
+    <lastmod>2026-02-12T21:15:39.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/code/Classification.html</loc>
+    <lastmod>2026-02-12T21:15:39.457Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/hw/sol/ex2-7.html</loc>
+    <lastmod>2026-02-12T21:15:39.474Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/hw/HW 1.html</loc>
+    <lastmod>2026-02-12T21:15:39.472Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tinyurl.com/SML-MU/slides/Topic7.html</loc>
+    <lastmod>2026-02-12T21:15:39.483Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,13 @@
+---
+title: "Statistical Machine Learning - HW 3"
+format: html
+editor: visual
+---
+
+## Problems 1-4: Chapter 5
+
+-   **Exercise #1, #3, #5, #8** from Chapter **5**
+
+## Problem 5: Chapter 6
+
+Show that the ridge regression estimate is the maximizer of the (log) posterior distribution, under a Gaussian prior $\mathbf{\beta} \sim N(0,\tau^2\mathbf{I})$, and Gaussian sampling model $\mathbf{y}\sim N(\mathbf{X}\mathbf{\beta},\sigma^2\mathbf{I})$. Find the relationship between the regularization parameter $\lambda$ in the ridge formula, and the variances $\tau^2$ and $\sigma^2$.

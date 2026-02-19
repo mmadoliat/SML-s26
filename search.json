@@ -1,100 +1,5 @@
 [
   {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Course overview",
-    "section": "",
-    "text": "This is the homepage for MSSC 6250 - Statistical Machine Learning by Dr. Mehdi Maadooliat in Spring 2026 at Marquette University. All course materials will be posted on this site.\nYou can find the course syllabus here and the course schedule here.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "course-overview.html#class-meetings",
-    "href": "course-overview.html#class-meetings",
-    "title": "Course overview",
-    "section": "Class meetings",
-    "text": "Class meetings\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nCU 208\nTue & Thur 12:30 pm - 1:45 pm\n\n\nOffice Hours\nCU 351\nTue & Thur 1:45 - 3:15 pm",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "hw/sol/HW1-sol.html",
-    "href": "hw/sol/HW1-sol.html",
-    "title": "Statistical Machine Learning - HW 1 (Solutions)",
-    "section": "",
-    "text": "Let \\(\\mathbf X=(X_1,X_2,X_3)^\\top\\sim MVN(\\boldsymbol\\mu,\\boldsymbol\\Sigma)\\) with\n\\[\n\\boldsymbol\\mu=\n\\begin{pmatrix}\n1\\\\-1\\\\-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma=\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\]\nFact (MVN): If \\((X_1,\\dots,X_p)\\) is multivariate normal, then zero covariance implies independence for any pair of components: \\(X_i\\perp X_j \\quad \\Longleftrightarrow\\quad \\mathrm{Cov}(X_i,X_j)=\\Sigma_{ij}=0.\\) More generally, two subvectors are independent iff their cross-covariance block is the zero matrix.\n\n\n\n\\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0 ;\\Rightarrow; X_1\\perp X_2.\\)\n\n\n\n\\(\\mathrm{Cov}(X_1,X_3)=\\Sigma_{13}=-1\\neq 0 ;\\Rightarrow; X_1 \\not\\perp X_3.\\)\n\n\n\n\\(\\mathrm{Cov}(X_2,X_3)=\\Sigma_{23}=0 ;\\Rightarrow; X_2\\perp X_3.\\)\n\n\n\nThe cross-covariances are \\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0,\\qquad \\mathrm{Cov}(X_3,X_2)=\\Sigma_{32}=0.\\) So the cross-covariance block between \\((X_1,X_3)\\) and \\(X_2\\) is \\((0,0)^\\top\\), hence \\((X_1,X_3)\\perp X_2.\\)\n\n\n\nFor multivariate normal variables, two linear combinations are independent iff their covariance is \\(0\\). Let \\(Y=X_1+3X_2-2X_3.\\) Then \\(\\mathrm{Cov}(X_1,Y)=\\mathrm{Cov}(X_1,X_1)+3,\\mathrm{Cov}(X_1,X_2)-2,\\mathrm{Cov}(X_1,X_3).\\) Using \\(\\mathrm{Var}(X_1)=\\Sigma_{11}=4\\), \\(\\Sigma_{12}=0\\), and \\(\\Sigma_{13}=-1\\): \\(\\mathrm{Cov}(X_1,Y)=4+3(0)-2(-1)=6\\neq 0.\\) Therefore, \\(X_1 \\not\\perp (X_1+3X_2-2X_3).\\)",
-    "crumbs": [
-      "HW",
-      "HW 1 Solution"
-    ]
-  },
-  {
-    "objectID": "hw/sol/HW1-sol.html#problem-1",
-    "href": "hw/sol/HW1-sol.html#problem-1",
-    "title": "Statistical Machine Learning - HW 1 (Solutions)",
-    "section": "",
-    "text": "Let \\(\\mathbf X=(X_1,X_2,X_3)^\\top\\sim MVN(\\boldsymbol\\mu,\\boldsymbol\\Sigma)\\) with\n\\[\n\\boldsymbol\\mu=\n\\begin{pmatrix}\n1\\\\-1\\\\-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma=\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\]\nFact (MVN): If \\((X_1,\\dots,X_p)\\) is multivariate normal, then zero covariance implies independence for any pair of components: \\(X_i\\perp X_j \\quad \\Longleftrightarrow\\quad \\mathrm{Cov}(X_i,X_j)=\\Sigma_{ij}=0.\\) More generally, two subvectors are independent iff their cross-covariance block is the zero matrix.\n\n\n\n\\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0 ;\\Rightarrow; X_1\\perp X_2.\\)\n\n\n\n\\(\\mathrm{Cov}(X_1,X_3)=\\Sigma_{13}=-1\\neq 0 ;\\Rightarrow; X_1 \\not\\perp X_3.\\)\n\n\n\n\\(\\mathrm{Cov}(X_2,X_3)=\\Sigma_{23}=0 ;\\Rightarrow; X_2\\perp X_3.\\)\n\n\n\nThe cross-covariances are \\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0,\\qquad \\mathrm{Cov}(X_3,X_2)=\\Sigma_{32}=0.\\) So the cross-covariance block between \\((X_1,X_3)\\) and \\(X_2\\) is \\((0,0)^\\top\\), hence \\((X_1,X_3)\\perp X_2.\\)\n\n\n\nFor multivariate normal variables, two linear combinations are independent iff their covariance is \\(0\\). Let \\(Y=X_1+3X_2-2X_3.\\) Then \\(\\mathrm{Cov}(X_1,Y)=\\mathrm{Cov}(X_1,X_1)+3,\\mathrm{Cov}(X_1,X_2)-2,\\mathrm{Cov}(X_1,X_3).\\) Using \\(\\mathrm{Var}(X_1)=\\Sigma_{11}=4\\), \\(\\Sigma_{12}=0\\), and \\(\\Sigma_{13}=-1\\): \\(\\mathrm{Cov}(X_1,Y)=4+3(0)-2(-1)=6\\neq 0.\\) Therefore, \\(X_1 \\not\\perp (X_1+3X_2-2X_3).\\)",
-    "crumbs": [
-      "HW",
-      "HW 1 Solution"
-    ]
-  },
-  {
-    "objectID": "hw/sol/HW1-sol.html#problem-2",
-    "href": "hw/sol/HW1-sol.html#problem-2",
-    "title": "Statistical Machine Learning - HW 1 (Solutions)",
-    "section": "Problem 2",
-    "text": "Problem 2\nSuppose \\(\\mathbf X\\) is a random vector with mean \\(\\boldsymbol\\mu=\\mathbb E[\\mathbf X]\\). Prove: \\(\\mathbb E\\big[(\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^\\top\\big]= \\mathbb E(\\mathbf X\\mathbf X^\\top)-\\boldsymbol\\mu\\boldsymbol\\mu^\\top.\\)\nProof. Expand: \\((\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^\\top = \\mathbf X\\mathbf X^\\top-\\mathbf X\\boldsymbol\\mu^\\top-\\boldsymbol\\mu\\mathbf X^\\top+\\boldsymbol\\mu\\boldsymbol\\mu^\\top.\\) Take expectation and use \\(\\mathbb E[\\mathbf X]=\\boldsymbol\\mu.\\) Therefore \\(\\mathbb E(\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^\\top = \\mathbb E\\mathbf X\\mathbf X^\\top-\\mathbb E\\mathbf X\\boldsymbol\\mu^\\top-\\boldsymbol\\mu\\mathbb E\\mathbf X^\\top+\\boldsymbol\\mu\\boldsymbol\\mu^\\top = \\mathbb E\\mathbf X\\mathbf X^\\top-\\boldsymbol\\mu\\boldsymbol\\mu^\\top. \\square\\)",
-    "crumbs": [
-      "HW",
-      "HW 1 Solution"
-    ]
-  },
-  {
-    "objectID": "hw/sol/HW1-sol.html#problem-3",
-    "href": "hw/sol/HW1-sol.html#problem-3",
-    "title": "Statistical Machine Learning - HW 1 (Solutions)",
-    "section": "Problem 3",
-    "text": "Problem 3\nLet \\(\\mathbf Z\\sim MVN(\\mathbf 0, I_p)\\), and let \\(\\boldsymbol\\Sigma\\) be positive definite.\nA general strategy is: find a matrix \\(A\\) such that \\(AA^\\top=\\boldsymbol\\Sigma,\\) then set \\(\\mathbf X=\\boldsymbol\\mu + A\\mathbf Z.\\) Since \\(\\mathbb E[\\mathbf Z]=0\\) and \\(\\mathrm{Cov}(\\mathbf Z)=I_p\\), \\(\\mathbb E\\mathbf X=\\boldsymbol\\mu,\\qquad \\mathrm{Cov}(\\mathbf X)=A,I_p,A^\\top=AA^\\top=\\boldsymbol\\Sigma.\\)\n\n(a) Spectral decomposition\nIf \\(\\boldsymbol\\Sigma=V\\Lambda V^\\top\\) with \\(V^\\top V=I_p\\) and diagonal \\(\\Lambda=\\mathrm{diag}(\\lambda_1,\\dots,\\lambda_p)\\), define \\(\\Lambda^{1/2}=\\mathrm{diag}(\\sqrt{\\lambda_1},\\dots,\\sqrt{\\lambda_p}),\\qquad A=V\\Lambda^{1/2}.\\) Then \\(AA^\\top=V\\Lambda^{1/2}\\left(V\\Lambda^{1/2}\\right)^\\top =V\\Lambda^{1/2}\\Lambda^{1/2}V^\\top =V\\Lambda V^\\top=\\boldsymbol\\Sigma.\\)\n\n\n(b) Cholesky decomposition\nIf \\(\\boldsymbol\\Sigma=LL^\\top\\) where \\(L\\) is lower-triangular with positive diagonal, take \\(A=L.\\) Then trivially \\(AA^\\top=LL^\\top=\\boldsymbol\\Sigma\\).",
-    "crumbs": [
-      "HW",
-      "HW 1 Solution"
-    ]
-  },
-  {
-    "objectID": "hw/sol/HW1-sol.html#problem-4",
-    "href": "hw/sol/HW1-sol.html#problem-4",
-    "title": "Statistical Machine Learning - HW 1 (Solutions)",
-    "section": "Problem 4",
-    "text": "Problem 4\nGenerate 1000 samples using both methods from Problem 3, and compare sample covariance matrices.\n🐍 Python code:\nimport numpy as np\n\nmu = np.array([1.0, -1.0, -2.0])\nSigma = np.array([\n    [4.0, 0.0, -1.0],\n    [0.0, 5.0,  0.0],\n    [-1.0, 0.0, 2.0]\n])\n\nn = 1000\np = 3\nrng = np.random.default_rng(123)\n\n# ---- Method (a): spectral decomposition\neigvals, V = np.linalg.eigh(Sigma)          # Sigma = V diag(eigvals) V^T\nA_spec = V @ np.diag(np.sqrt(eigvals))      # A_spec A_spec^T = Sigma\nZ = rng.standard_normal((n, p))\nX_spec = mu + Z @ A_spec.T\n\nS_spec = np.cov(X_spec, rowvar=False, bias=False)\n\n# ---- Method (b): Cholesky decomposition\nL = np.linalg.cholesky(Sigma)               # Sigma = L L^T\nZ2 = rng.standard_normal((n, p))\nX_chol = mu + Z2 @ L.T\n\nS_chol = np.cov(X_chol, rowvar=False, bias=False)\n\n# Compare\nprint(\"Target Sigma:\\n\", Sigma, \"\\n\")\nprint(\"Sample cov (spectral):\\n\", np.round(S_spec, 3), \"\\n\")\nprint(\"Sample cov (cholesky):\\n\", np.round(S_chol, 3), \"\\n\")\n\nprint(\"Frobenius error (spectral):\", np.linalg.norm(S_spec - Sigma, ord=\"fro\"))\nprint(\"Frobenius error (cholesky):\", np.linalg.norm(S_chol - Sigma, ord=\"fro\"))\nR Code:\n    n &lt;- 1000; mu &lt;- c(1,-1,-2); \n    Sig &lt;- matrix(c(4,0,-1,0,5,0,-1,0,2), nr=3)\n    Z &lt;- matrix(rnorm(n*length(mu)),nr=3)\n    X1 &lt;- t(mu + eigen(Sig)$vectors%*%diag(sqrt(eigen(Sig)$values))%*%Z)\n    X2 &lt;- t(mu + t(chol(Sig))%*%Z)\n    cov(X1)\n    cov(X2)\nYou should see both sample covariance matrices close to \\(\\Sigma\\), with small differences due to Monte Carlo variation.",
-    "crumbs": [
-      "HW",
-      "HW 1 Solution"
-    ]
-  },
-  {
-    "objectID": "hw/sol/HW1-sol.html#problem-5-islp-chapter-2-exercise-7",
-    "href": "hw/sol/HW1-sol.html#problem-5-islp-chapter-2-exercise-7",
-    "title": "Statistical Machine Learning - HW 1 (Solutions)",
-    "section": "Problem 5 (ISLP Chapter 2, Exercise 7)",
-    "text": "Problem 5 (ISLP Chapter 2, Exercise 7)\nWe predict \\(Y\\) at the test point \\(x_0=(X_1,X_2,X_3)=(0,0,0)\\) using \\(K\\)-nearest neighbors (KNN) with Euclidean distance.\nThe training set (six observations) is:\n\n\n\nObs\n\\(X_1\\)\n\\(X_2\\)\n\\(X_3\\)\n\\(Y\\)\n\n\n\n\n1\n0\n3\n0\nRed\n\n\n2\n2\n0\n0\nRed\n\n\n3\n0\n1\n3\nRed\n\n\n4\n0\n1\n2\nGreen\n\n\n5\n-1\n0\n1\nGreen\n\n\n6\n1\n1\n1\nRed\n\n\n\n\n(a) Distances to \\(x_0=(0,0,0)\\)\nFor observation \\(i\\) with predictors \\(x_i=(x_{i1},x_{i2},x_{i3})\\), the Euclidean distance is \\(d(x_i,x_0)=\\sqrt{x_{i1}^2+x_{i2}^2+x_{i3}^2}.\\)\nCompute each:\n\nObs 1: \\(\\sqrt{0^2+3^2+0^2}=3\\)\nObs 2: \\(\\sqrt{2^2+0^2+0^2}=2\\)\nObs 3: \\(\\sqrt{0^2+1^2+3^2}=\\sqrt{10}\\approx 3.162\\)\nObs 4: \\(\\sqrt{0^2+1^2+2^2}=\\sqrt{5}\\approx 2.236\\)\nObs 5: \\(\\sqrt{(-1)^2+0^2+1^2}=\\sqrt{2}\\approx 1.414\\)\nObs 6: \\(\\sqrt{1^2+1^2+1^2}=\\sqrt{3}\\approx 1.732\\)\n\nSorted by distance (smallest first):\n\n\n\nRank\nObs\nDistance\nClass\n\n\n\n\n1\n5\n\\(\\sqrt{2}\\approx 1.414\\)\nGreen\n\n\n2\n6\n\\(\\sqrt{3}\\approx 1.732\\)\nRed\n\n\n3\n2\n\\(2\\)\nRed\n\n\n4\n4\n\\(\\sqrt{5}\\approx 2.236\\)\nGreen\n\n\n5\n1\n\\(3\\)\nRed\n\n\n6\n3\n\\(\\sqrt{10}\\approx 3.162\\)\nRed\n\n\n\n\n\n(b) Prediction with \\(K=1\\)\nThe nearest neighbor is Obs 5 (Green), so the prediction is:\n\\(\\hat Y_{K=1}=\\text{Green}.\\)\n\n\n(c) Prediction with \\(K=3\\)\nThe three nearest neighbors are Obs 5 (Green), Obs 6 (Red), Obs 2 (Red).\nMajority vote is Red (2 out of 3), so:\n\\(\\hat Y_{K=3}=\\text{Red}.\\)\n\n\n(d) If the Bayes decision boundary is highly non-linear, should best \\(K\\) be large or small?\nWe would generally expect the best \\(K\\) to be small, because a small \\(K\\) yields a more flexible decision boundary (lower bias) that can adapt to strong non-linearities. A large \\(K\\) averages over many points and produces an overly smooth boundary (higher bias).\n🐍 Python code",
-    "crumbs": [
-      "HW",
-      "HW 1 Solution"
-    ]
-  },
-  {
     "objectID": "hw/HW 2.html",
     "href": "hw/HW 2.html",
     "title": "Statistical Machine Learning - HW 2",
@@ -117,43 +22,101 @@
     ]
   },
   {
-    "objectID": "plan.html",
-    "href": "plan.html",
-    "title": "Statistical Machine Learning - Spring 2026",
+    "objectID": "hw/sol/ex2-7.html",
+    "href": "hw/sol/ex2-7.html",
+    "title": "Exercise 2.7",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n🎥 Lecture 3 Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n🎥 Lecture 4 Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n🎥 Lecture 5 What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n🎥 Lecture 6 Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n🎥 Lecture 7 Basics of Linear Regression\n📚Chapt 3-A\nPython🐍\n\n\n\n\n\n\nWed, Feb 4\nOptional: A real Data Science Project: Rfssa\n🎤👩‍💻Colloquium\n\n\n\n\n\n\n\n\nThu, Feb 5\n🎥 Lecture 8 Wrap-up Linear Regression\n📚[Chapt 3-B]\n\n\n\n\n\n\n5\nTue, Feb 10\n🎥 Lecture 9 Logistic Regression\n📚Chapt 4-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 12\n🎥 Lecture 10 Linear Discriminant  Analysis and ROC\n📚[Chapt 4-B]\nPython🐍\n\n\n\n\n6\nTue, Feb 17\n[🎥 Lecture 11] Quadratic Discriminant  Analysis and Naive Bayes\n📚[Chapt 4-C]\n\n\n\n\n\n\n\n\nThu, Feb 19\n[🎥 Lecture 12] Resampling  (Cross-validation)\n📚Chapt 5\nPython🐍\n\n\n\n\n\n\nFri, Feb 20\n\n\n\n\nD2L✍️\n📝 HW 2 at 11:50 pm  [Solution]\n\n\n7\nTue, Feb 24\n[🎥 Lecture 13] Model Selection\n📚Chapt 6-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 26\n[🎥 Lecture 14] Ridge Regression\n📚[Chapt 6-B]\n\n\n\n\n\n\n8\nTue, Mar 3\n[🎥 Lecture 15] Lasso Regression  Review for Exam\n📚[Chapt 6-C]\nPython🐍\n\n\n\n\n\n\nThu, Mar 5\n[🎥 Lecture 16] Smoothing:  Basis functions (B-spline)\n📚Chapt 7-A\nPython🐍\n\n\n\n\n\n\nFri, Mar 6\n\n\n\n\nD2L✍️\n📝 HW 3 at 11:50 pm  [Solution]\n\n\n\n\nTue, Mar 10\n🌴 Spring Break\n\n\n\n\n\n\n\n\n\n\nThu, Mar 12\n🌴 Spring Break\n\n\n\n\n\n\n\n\n9\nTue, Mar 17\n[🎥 Lecture 17] More on Smoothing\n📚[Chapt 7-B]\nPython🐍\n\n\n\n\n\n\nThu, Mar 19\nMidterm Exam\n📖[Exam 1]\n\n\n\n\n\n\n10\nTue, Mar 24\n[🎥 Lecture 19] More on Smoothing\n📚[Chapt 7-C]\n\n\n\n\n\n\n\n\nThu, Mar 26\n[🎥 Lecture 20] Basics of PCA and ICA\n📚[Chapt 7-D]\n\n\n\n\n\n\n\n\nFri, Mar 27\n\n\n\n\nD2L✍️\n📝 HW 4 at 11:50 pm  [Solution]\n\n\n11\nTue, Mar 31\n[🎥 Lecture 21] Basics of SVM\n📚Chapt 9-A\nPython🐍\n\n\n\n\n\n\nThu, Apr 2\n🐰 Easter Break\n\n\n\n\n\n\n\n\n12\nTue, Apr 7\n[🎥 Lecture 22] More on SVM\n📚[Chapt 9-B]\n\n\n\n\n\n\n\n\nThu, Apr 9\n[🎥 Lecture 23] Basics of Clustering  (K-means)\n📚Chapt 12-A\nPython🐍\n\n\n\n\n\n\nFri, Apr 10\n\n\n\n\n[D2L✍️]\n📝 HW 5 at 11:50 pm  [Solution]\n\n\n13\nTue, Apr 14\n[🎥 Lecture 24] More on Clustering  (Hierarchical Clustering)\n📚[Chapt 12-B]\nPython🐍\n\n\n\n\n\n\nThu, Apr 16\n[🎥 Lecture 25] More on Clustering  (PCA)\n📚Chapt 12-C\n\n\n\n\n\n\n14\nTue, Apr 21\n[🎥 Lecture 26] Basics of Deep Learning\n📚Chapt 10\nPython🐍\n\n\n\n\n\n\nThu, Apr 23\n[🎥 Lecture 27] More on Deep Learning\n💻[DLiR-A]\n\n\n\n\n\n\n15\nTue, Apr 28\n[🎥 Lecture 17] Guest Lecture by  Dr. Rowe\n📚[Guest Lecture]\n\n\n\n\n\n\n\n\nThu, Apr 30\n[🎥 Lecture 29] SDSS\n💻[DLiR-C]\n\n\n\n\n\n\n16\nTue, May 5\nFinal Project\n📃25 MIN Presentations :  10:30 am - 12:30 pm  Evaluation - Group A  Evaluation - Group B  Evaluation - Group C  Evaluation - Group D"
+    "text": "Exercise 2.7\nimport numpy as np\nimport pandas as pd\n\nd = {'X1': pd.Series([0,2,0,0,-1,1]),\n     'X2': pd.Series([3,0,1,1,0,1]),\n     'X3': pd.Series([0,0,3,2,1,1]),\n     'Y': pd.Series(['Red','Red','Red','Green','Green','Red'])}\ndf = pd.DataFrame(d)\ndf.index = np.arange(1, len(df) + 1)\ndf\n\n\n\n\n\n\n\nX1\n\n\nX2\n\n\nX3\n\n\nY\n\n\n\n\n\n\n1\n\n\n0\n\n\n3\n\n\n0\n\n\nRed\n\n\n\n\n2\n\n\n2\n\n\n0\n\n\n0\n\n\nRed\n\n\n\n\n3\n\n\n0\n\n\n1\n\n\n3\n\n\nRed\n\n\n\n\n4\n\n\n0\n\n\n1\n\n\n2\n\n\nGreen\n\n\n\n\n5\n\n\n-1\n\n\n0\n\n\n1\n\n\nGreen\n\n\n\n\n6\n\n\n1\n\n\n1\n\n\n1\n\n\nRed\n\n\n\n\n\n\n(a) Euclidian distance\nfrom math import sqrt\ndf['distance']=np.sqrt(df['X1']**2+df['X2']**2+df['X3']**2)\ndf\n\n\n\n\n\n\n\nX1\n\n\nX2\n\n\nX3\n\n\nY\n\n\ndistance\n\n\n\n\n\n\n1\n\n\n0\n\n\n3\n\n\n0\n\n\nRed\n\n\n3.000000\n\n\n\n\n2\n\n\n2\n\n\n0\n\n\n0\n\n\nRed\n\n\n2.000000\n\n\n\n\n3\n\n\n0\n\n\n1\n\n\n3\n\n\nRed\n\n\n3.162278\n\n\n\n\n4\n\n\n0\n\n\n1\n\n\n2\n\n\nGreen\n\n\n2.236068\n\n\n\n\n5\n\n\n-1\n\n\n0\n\n\n1\n\n\nGreen\n\n\n1.414214\n\n\n\n\n6\n\n\n1\n\n\n1\n\n\n1\n\n\nRed\n\n\n1.732051\n\n\n\n\n\n\n\n(b) K=1\ndf.sort_values(['distance'])\n\n\n\n\n\n\n\nX1\n\n\nX2\n\n\nX3\n\n\nY\n\n\ndistance\n\n\n\n\n\n\n5\n\n\n-1\n\n\n0\n\n\n1\n\n\nGreen\n\n\n1.414214\n\n\n\n\n6\n\n\n1\n\n\n1\n\n\n1\n\n\nRed\n\n\n1.732051\n\n\n\n\n2\n\n\n2\n\n\n0\n\n\n0\n\n\nRed\n\n\n2.000000\n\n\n\n\n4\n\n\n0\n\n\n1\n\n\n2\n\n\nGreen\n\n\n2.236068\n\n\n\n\n1\n\n\n0\n\n\n3\n\n\n0\n\n\nRed\n\n\n3.000000\n\n\n\n\n3\n\n\n0\n\n\n1\n\n\n3\n\n\nRed\n\n\n3.162278\n\n\n\n\n\nAs we can see by sorting the data by distance to the origin, for K=1, our prediction is Green, since that’s the value of the nearest neighbor (point 5 at distance 1.41).\n\n\n(c) K=3\nOn the other hand, for K=3 our prediction is Red, because that’s the mode of the 3 nearest neigbours: Green, Red and Red (points 5, 6 and 2, respectively).\n\n\n(d) Highly non-linear Bayes decision boundary\nA large value of K leads to a smoother decision boundary, as if the non-linearities where averaged out. This happens because KNN uses majority voting and this means less emphasis on individual points. For a large value of K, we will likely have a decision boundary which varies very little from point to point, since the result of this majority voting would have to change while for most points this will be a large majority. That is, one of its nearest neighbors changing from one class to the other would still leave the majority voting the same. By contrast, when K is very small, the decision boundary will be better able to capture local non-linearities, because it the majority of neighbors can vary significantly from point to point since the are so few neighbors. Accordingly, we would expect the best value of K to be small.\nImagine this simple example: a true linear boundary that splits the plane in two semi-planes (classes A and B), but with an additional enclave in one of the regions. That is, the true model has a small region of, say, class A inside the class B semi-plane. Would we more likely capture this region for small or large K? Say we have 3 neighboring data points in the class A enclave inside the large class B region with say 50 points. If K &gt; 4, each of the 3 points in the enclave will be classified as B, since they always lose by majority voting (unless K is so large, say 100, that many of the points from A semi-plane region enter this voting). If, on the other hand, K &lt; 4, each of the 3 class A points inside the enclave will be classified as class A, and we will capture this non-linearity of the regions."
   },
   {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
+    "objectID": "hw/HW 1.html",
+    "href": "hw/HW 1.html",
+    "title": "Statistical Machine Learning - HW 1",
     "section": "",
-    "text": "Homework\nISLP Resources\nRegression Shiny\nStat Calculator\nDistribution Calculator\nThe Matrix Cookbook\nStat Tables\n🔗 on D2L\n🔗 ISLP\n🔗 Regression\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 MatCookbook\n🔗 StatTables\n\n\nAdvanced Texbooks\n🔗 R Package\n🔗 Advanced R by Hadley Wickham\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org",
+    "text": "Let \\(\\mathbf X = (X_1, X_2, X_3)^T\\) be distributed as \\(\\mathbf X \\sim MVN(\\boldsymbol\\mu, \\boldsymbol\\Sigma)\\), where \\[\n\\boldsymbol\\mu =\n\\begin{pmatrix}\n1\\\\\n-1\\\\\n-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma =\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\] Which of the following pairs of random variables are independent? Explain why.\n\n\\(X_1\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_3\\)\n\\(X_2\\) and \\(X_3\\)\n\\((X_1, X_3)\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_1 + 3X_2 - 2X_3\\)",
     "crumbs": [
-      "Course information",
-      "Useful links"
+      "HW",
+      "HW 1"
     ]
+  },
+  {
+    "objectID": "hw/HW 1.html#problem-1",
+    "href": "hw/HW 1.html#problem-1",
+    "title": "Statistical Machine Learning - HW 1",
+    "section": "",
+    "text": "Let \\(\\mathbf X = (X_1, X_2, X_3)^T\\) be distributed as \\(\\mathbf X \\sim MVN(\\boldsymbol\\mu, \\boldsymbol\\Sigma)\\), where \\[\n\\boldsymbol\\mu =\n\\begin{pmatrix}\n1\\\\\n-1\\\\\n-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma =\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\] Which of the following pairs of random variables are independent? Explain why.\n\n\\(X_1\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_3\\)\n\\(X_2\\) and \\(X_3\\)\n\\((X_1, X_3)\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_1 + 3X_2 - 2X_3\\)",
+    "crumbs": [
+      "HW",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/HW 1.html#problem-2",
+    "href": "hw/HW 1.html#problem-2",
+    "title": "Statistical Machine Learning - HW 1",
+    "section": "Problem 2",
+    "text": "Problem 2\nSuppose \\(\\mathbf X\\) is a random vector with mean \\(\\boldsymbol\\mu\\). Prove that \\[\nE\\big[(\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^T\\big]\n=\nE(\\mathbf X\\mathbf X^T)-\\boldsymbol\\mu\\boldsymbol\\mu^T.\n\\]",
+    "crumbs": [
+      "HW",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/HW 1.html#problem-3",
+    "href": "hw/HW 1.html#problem-3",
+    "title": "Statistical Machine Learning - HW 1",
+    "section": "Problem 3",
+    "text": "Problem 3\nLet \\(\\mathbf Z \\in \\mathbb R^p\\) be distributed as \\(\\mathbf Z \\sim MVN(\\mathbf 0, I_p).\\) Given \\(\\boldsymbol\\mu \\in \\mathbb R^p\\) and a positive definite \\(p\\times p\\) matrix \\(\\boldsymbol\\Sigma\\), derive methods to transform \\(\\mathbf Z\\) into a \\(p\\)-variate normal random vector with mean \\(\\boldsymbol\\mu\\) and covariance \\(\\boldsymbol\\Sigma\\) using:\n\nThe spectral decomposition, \\(\\boldsymbol\\Sigma = V\\Lambda V^T\\), where \\(V^TV=I_p\\) and \\(\\Lambda\\) is diagonal.\nThe Cholesky decomposition, \\(\\boldsymbol\\Sigma = LL^T\\), where \\(L\\) is lower-triangular.",
+    "crumbs": [
+      "HW",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/HW 1.html#problem-4",
+    "href": "hw/HW 1.html#problem-4",
+    "title": "Statistical Machine Learning - HW 1",
+    "section": "Problem 4",
+    "text": "Problem 4\nWrite Python (or R) code that uses the covariance matrix \\(\\boldsymbol\\Sigma\\) from Problem 1 to generate 1000 trivariate normal random vectors using both methods from Problem 3(a) and 3(b). Compare the associated sample covariance matrices from the two methods.",
+    "crumbs": [
+      "HW",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "hw/HW 1.html#problem-5",
+    "href": "hw/HW 1.html#problem-5",
+    "title": "Statistical Machine Learning - HW 1",
+    "section": "Problem 5",
+    "text": "Problem 5\nExercise #7 from Chapter 2 of the textbook: “7. The table below provides a training data set containing six …”",
+    "crumbs": [
+      "HW",
+      "HW 1"
+    ]
+  },
+  {
+    "objectID": "code/Classification.html",
+    "href": "code/Classification.html",
+    "title": "Classification",
+    "section": "",
+    "text": "Classification\n  \n\n\nLinear Discriminant Analysis\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.discriminant_analysis import LinearDiscriminantAnalysis\nfrom sklearn.metrics import accuracy_score, confusion_matrix, classification_report\n\n# 1) Load Iris data\niris = load_iris()\nX = iris.data\ny = iris.target\ntarget_names = iris.target_names\n\n# 2) Train/test split (stratify keeps class proportions)\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.25, random_state=42, stratify=y\n)\n\n# 3) Fit LDA classifier\nlda = LinearDiscriminantAnalysis()\nlda.fit(X_train, y_train)\n\n# 4) Evaluate\ny_pred = lda.predict(X_test)\nacc = accuracy_score(y_test, y_pred)\ncm = confusion_matrix(y_test, y_pred)\n\nprint(f\"Accuracy: {acc:.4f}\\n\")\nprint(\"Confusion matrix:\\n\", cm, \"\\n\")\n\n# 5) Project data to 2D using LDA for visualization\n#    (Iris has 3 classes =&gt; at most 2 LDA components)\nX_lda = lda.fit(X, y).transform(X)\n\nplt.figure(figsize=(7, 5))\nfor cls in np.unique(y):\n    plt.scatter(\n        -X_lda[y == cls, 0],\n        -X_lda[y == cls, 1],\n        label=target_names[cls],\n        alpha=0.8\n    )\n\nplt.title(\"Iris projected onto first 2 LDA components\")\nplt.xlabel(\"LD1\")\nplt.ylabel(\"LD2\")\nplt.legend()\nplt.tight_layout()\nplt.show()\n\nAccuracy: 1.0000\n\nConfusion matrix:\n [[12  0  0]\n [ 0 13  0]\n [ 0  0 13]] \n\n\n\n\n\n\n\n\n\n\n\n\nROC curve\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.discriminant_analysis import LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis\nfrom sklearn.naive_bayes import GaussianNB\nfrom sklearn.metrics import roc_curve, auc\nfrom sklearn.preprocessing import OneHotEncoder\nfrom sklearn.compose import ColumnTransformer\n\n# pip install uv && uv pip install ISLP\nfrom ISLP import load_data\n\n# 1) Load ISL Default dataset\ndf = load_data('Default')\n\n# 2) Encode target (Yes/No -&gt; 1/0)\ndf[\"default\"] = df[\"default\"].map({\"Yes\": 1, \"No\": 0})\n\n# 3) Separate features and target\nX = df[[\"balance\", \"income\", \"student\"]]\ny = df[\"default\"]\n\n# 4) One-hot encode the 'student' variable\npreprocessor = ColumnTransformer(\n    transformers=[\n        (\"cat\", OneHotEncoder(drop=\"first\"), [\"student\"])\n    ],\n    remainder=\"passthrough\"\n)\n\nX = preprocessor.fit_transform(X)\n\n# 5) Train/test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.3, random_state=42, stratify=y\n)\n\n# 6) Fit models\nmodel1 = LogisticRegression(max_iter=1000)\nmodel2 = LinearDiscriminantAnalysis()\nmodel3 = GaussianNB()  # Naive Bayes\nmodel4 = QuadraticDiscriminantAnalysis()  # QDA\n\nmodel1.fit(X_train, y_train)\nmodel2.fit(X_train, y_train)\n\n# GaussianNB expects dense arrays (often); convert if needed\nX_train_dense = X_train.toarray() if hasattr(X_train, \"toarray\") else X_train\nX_test_dense  = X_test.toarray()  if hasattr(X_test, \"toarray\")  else X_test\n\nmodel3.fit(X_train_dense, y_train)\nmodel4.fit(X_train_dense, y_train)\n\n# 7) Get predicted probabilities\ny_prob1 = model1.predict_proba(X_test)[:, 1]\ny_prob2 = model2.predict_proba(X_test)[:, 1]\ny_prob3 = model3.predict_proba(X_test_dense)[:, 1]\ny_prob4 = model4.predict_proba(X_test_dense)[:, 1]\n\n# 8) Compute ROC curve + AUC\nfpr1, tpr1, _ = roc_curve(y_test, y_prob1); roc_auc1 = auc(fpr1, tpr1)\nfpr2, tpr2, _ = roc_curve(y_test, y_prob2); roc_auc2 = auc(fpr2, tpr2)\nfpr3, tpr3, _ = roc_curve(y_test, y_prob3); roc_auc3 = auc(fpr3, tpr3)\nfpr4, tpr4, _ = roc_curve(y_test, y_prob4); roc_auc4 = auc(fpr4, tpr4)\n\n# 9) Plot ROC\nplt.figure(figsize=(7, 5))\nplt.plot(fpr1, tpr1, label=f\"Logistic Regression (AUC = {roc_auc1:.3f})\")\nplt.plot(fpr2, tpr2, label=f\"LDA (AUC = {roc_auc2:.3f})\")\nplt.plot(fpr3, tpr3, label=f\"Naive Bayes (AUC = {roc_auc3:.3f})\")\nplt.plot(fpr4, tpr4, label=f\"QDA (AUC = {roc_auc4:.3f})\")\nplt.plot([0, 1], [0, 1], linestyle=\"--\", label=\"Chance\")\n\nplt.xlabel(\"False Positive Rate\")\nplt.ylabel(\"True Positive Rate\")\nplt.title(\"ROC Curve - ISL Default Data\")\nplt.legend()\nplt.tight_layout()\nplt.show()\n\nprint(f\"Logistic Reg. AUC: {roc_auc1:.4f}\")\nprint(f\"LDA AUC:          {roc_auc2:.4f}\")\nprint(f\"Naive Bayes AUC:  {roc_auc3:.4f}\")\nprint(f\"QDA AUC:          {roc_auc4:.4f}\")\n\n\n\n\n\n\n\n\nLogistic Reg. AUC: 0.9511\nLDA AUC:          0.9508\nNaive Bayes AUC:  0.9440\nQDA AUC:          0.9508\n\n\n\nimport numpy as np\nfrom sklearn.metrics import roc_curve\n\ndef best_threshold_youden(y_true, y_prob, decimals=4):\n    fpr, tpr, thr = roc_curve(y_true, y_prob)\n    j = tpr - fpr\n    idx = np.argmax(j)\n\n    return {\n        \"threshold\": round(float(thr[idx]), decimals),\n        \"sensitivity\": round(float(tpr[idx]), decimals),\n        \"specificity\": round(float(1 - fpr[idx]), decimals),\n        \"youden_J\": round(float(j[idx]), decimals)\n    }\n\nbest1 = best_threshold_youden(y_test, y_prob1)  # Logistic\nbest2 = best_threshold_youden(y_test, y_prob2)  # LDA\nbest3 = best_threshold_youden(y_test, y_prob3)  # NB\nbest4 = best_threshold_youden(y_test, y_prob4)  # QDA\n\nprint(\"Logistic:\", best1)\nprint(\"LDA:     \", best2)\nprint(\"NB:      \", best3)\nprint(\"QDA:     \", best4)\n\nLogistic: {'threshold': 0.0512, 'sensitivity': 0.87, 'specificity': 0.9021, 'youden_J': 0.7721}\nLDA:      {'threshold': 0.0586, 'sensitivity': 0.87, 'specificity': 0.8993, 'youden_J': 0.7693}\nNB:       {'threshold': 0.0437, 'sensitivity': 0.87, 'specificity': 0.8714, 'youden_J': 0.7414}\nQDA:      {'threshold': 0.0597, 'sensitivity': 0.87, 'specificity': 0.8962, 'youden_J': 0.7662}"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Statistical Machine Learning - Spring 2026",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n🎥 Lecture 3 Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n🎥 Lecture 4 Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n🎥 Lecture 5 What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n🎥 Lecture 6 Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n🎥 Lecture 7 Basics of Linear Regression\n📚Chapt 3-A\nPython🐍\n\n\n\n\n\n\nWed, Feb 4\nOptional: A real Data Science Project: Rfssa\n🎤👩‍💻Colloquium\n\n\n\n\n\n\n\n\nThu, Feb 5\n🎥 Lecture 8 Wrap-up Linear Regression\n📚[Chapt 3-B]\n\n\n\n\n\n\n5\nTue, Feb 10\n🎥 Lecture 9 Logistic Regression\n📚Chapt 4-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 12\n🎥 Lecture 10 Linear Discriminant  Analysis and ROC\n📚[Chapt 4-B]\nPython🐍\n\n\n\n\n6\nTue, Feb 17\n[🎥 Lecture 11] Quadratic Discriminant  Analysis and Naive Bayes\n📚[Chapt 4-C]\n\n\n\n\n\n\n\n\nThu, Feb 19\n[🎥 Lecture 12] Resampling  (Cross-validation)\n📚Chapt 5\nPython🐍\n\n\n\n\n\n\nFri, Feb 20\n\n\n\n\nD2L✍️\n📝 HW 2 at 11:50 pm  [Solution]\n\n\n7\nTue, Feb 24\n[🎥 Lecture 13] Model Selection\n📚Chapt 6-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 26\n[🎥 Lecture 14] Ridge Regression\n📚[Chapt 6-B]\n\n\n\n\n\n\n8\nTue, Mar 3\n[🎥 Lecture 15] Lasso Regression  Review for Exam\n📚[Chapt 6-C]\nPython🐍\n\n\n\n\n\n\nThu, Mar 5\n[🎥 Lecture 16] Smoothing:  Basis functions (B-spline)\n📚Chapt 7-A\nPython🐍",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n🎥 Lecture 3 Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n🎥 Lecture 4 Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n🎥 Lecture 5 What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n🎥 Lecture 6 Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n🎥 Lecture 7 Basics of Linear Regression\n📚Chapt 3-A\nPython🐍\n\n\n\n\n\n\nWed, Feb 4\nOptional: A real Data Science Project: Rfssa\n🎤👩‍💻Colloquium\n\n\n\n\n\n\n\n\nThu, Feb 5\n🎥 Lecture 8 Wrap-up Linear Regression\n📚[Chapt 3-B]\n\n\n\n\n\n\n5\nTue, Feb 10\n🎥 Lecture 9 Logistic Regression\n📚Chapt 4-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 12\n🎥 Lecture 10 Linear Discriminant  Analysis and ROC\n📚[Chapt 4-B]\nPython🐍\n\n\n\n\n6\nTue, Feb 17\n🎥 Lecture 11 Quadratic Discriminant  Analysis and Naive Bayes\n📚[Chapt 4-C]\n\n\n\n\n\n\n\n\nThu, Feb 19\n[🎥 Lecture 12] Resampling  (Cross-validation)\n📚Chapt 5\nPython🐍\n\n\n\n\n\n\nFri, Feb 20\n\n\n\n\nD2L✍️\n📝 HW 2 at 11:50 pm  [Solution]\n\n\n7\nTue, Feb 24\n[🎥 Lecture 13] Model Selection\n📚Chapt 6-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 26\n[🎥 Lecture 14] Ridge Regression\n📚[Chapt 6-B]\n\n\n\n\n\n\n8\nTue, Mar 3\n[🎥 Lecture 15] Lasso Regression  Review for Exam\n📚[Chapt 6-C]\nPython🐍\n\n\n\n\n\n\nThu, Mar 5\n[🎥 Lecture 16] Smoothing:  Basis functions (B-spline)\n📚Chapt 7-A\nPython🐍\n\n\n\n\n\n\nFri, Mar 6\n\n\n\n\nD2L✍️\n📝 HW 3 at 11:50 pm  [Solution]\n\n\n\n\nTue, Mar 10\n🌴 Spring Break",
     "crumbs": [
       "Course information",
       "Schedule"
-    ]
-  },
-  {
-    "objectID": "computing/computing-cheatsheets.html",
-    "href": "computing/computing-cheatsheets.html",
-    "title": "R cheatsheets",
-    "section": "",
-    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
-    "crumbs": [
-      "Computing",
-      "Cheatsheets"
     ]
   },
   {
@@ -322,83 +285,32 @@
     ]
   },
   {
-    "objectID": "code/Classification.html",
-    "href": "code/Classification.html",
-    "title": "Classification",
+    "objectID": "plan.html",
+    "href": "plan.html",
+    "title": "Statistical Machine Learning - Spring 2026",
     "section": "",
-    "text": "Classification\n  \n\n\nLinear Discriminant Analysis\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.discriminant_analysis import LinearDiscriminantAnalysis\nfrom sklearn.metrics import accuracy_score, confusion_matrix, classification_report\n\n# 1) Load Iris data\niris = load_iris()\nX = iris.data\ny = iris.target\ntarget_names = iris.target_names\n\n# 2) Train/test split (stratify keeps class proportions)\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.25, random_state=42, stratify=y\n)\n\n# 3) Fit LDA classifier\nlda = LinearDiscriminantAnalysis()\nlda.fit(X_train, y_train)\n\n# 4) Evaluate\ny_pred = lda.predict(X_test)\nacc = accuracy_score(y_test, y_pred)\ncm = confusion_matrix(y_test, y_pred)\n\nprint(f\"Accuracy: {acc:.4f}\\n\")\nprint(\"Confusion matrix:\\n\", cm, \"\\n\")\n\n# 5) Project data to 2D using LDA for visualization\n#    (Iris has 3 classes =&gt; at most 2 LDA components)\nX_lda = lda.fit(X, y).transform(X)\n\nplt.figure(figsize=(7, 5))\nfor cls in np.unique(y):\n    plt.scatter(\n        -X_lda[y == cls, 0],\n        -X_lda[y == cls, 1],\n        label=target_names[cls],\n        alpha=0.8\n    )\n\nplt.title(\"Iris projected onto first 2 LDA components\")\nplt.xlabel(\"LD1\")\nplt.ylabel(\"LD2\")\nplt.legend()\nplt.tight_layout()\nplt.show()\n\nAccuracy: 1.0000\n\nConfusion matrix:\n [[12  0  0]\n [ 0 13  0]\n [ 0  0 13]] \n\n\n\n\n\n\n\n\n\n\n\n\nROC curve\n\nimport numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.discriminant_analysis import LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis\nfrom sklearn.naive_bayes import GaussianNB\nfrom sklearn.metrics import roc_curve, auc\nfrom sklearn.preprocessing import OneHotEncoder\nfrom sklearn.compose import ColumnTransformer\n\n# pip install uv && uv pip install ISLP\nfrom ISLP import load_data\n\n# 1) Load ISL Default dataset\ndf = load_data('Default')\n\n# 2) Encode target (Yes/No -&gt; 1/0)\ndf[\"default\"] = df[\"default\"].map({\"Yes\": 1, \"No\": 0})\n\n# 3) Separate features and target\nX = df[[\"balance\", \"income\", \"student\"]]\ny = df[\"default\"]\n\n# 4) One-hot encode the 'student' variable\npreprocessor = ColumnTransformer(\n    transformers=[\n        (\"cat\", OneHotEncoder(drop=\"first\"), [\"student\"])\n    ],\n    remainder=\"passthrough\"\n)\n\nX = preprocessor.fit_transform(X)\n\n# 5) Train/test split\nX_train, X_test, y_train, y_test = train_test_split(\n    X, y, test_size=0.3, random_state=42, stratify=y\n)\n\n# 6) Fit models\nmodel1 = LogisticRegression(max_iter=1000)\nmodel2 = LinearDiscriminantAnalysis()\nmodel3 = GaussianNB()  # Naive Bayes\nmodel4 = QuadraticDiscriminantAnalysis()  # QDA\n\nmodel1.fit(X_train, y_train)\nmodel2.fit(X_train, y_train)\n\n# GaussianNB expects dense arrays (often); convert if needed\nX_train_dense = X_train.toarray() if hasattr(X_train, \"toarray\") else X_train\nX_test_dense  = X_test.toarray()  if hasattr(X_test, \"toarray\")  else X_test\n\nmodel3.fit(X_train_dense, y_train)\nmodel4.fit(X_train_dense, y_train)\n\n# 7) Get predicted probabilities\ny_prob1 = model1.predict_proba(X_test)[:, 1]\ny_prob2 = model2.predict_proba(X_test)[:, 1]\ny_prob3 = model3.predict_proba(X_test_dense)[:, 1]\ny_prob4 = model4.predict_proba(X_test_dense)[:, 1]\n\n# 8) Compute ROC curve + AUC\nfpr1, tpr1, _ = roc_curve(y_test, y_prob1); roc_auc1 = auc(fpr1, tpr1)\nfpr2, tpr2, _ = roc_curve(y_test, y_prob2); roc_auc2 = auc(fpr2, tpr2)\nfpr3, tpr3, _ = roc_curve(y_test, y_prob3); roc_auc3 = auc(fpr3, tpr3)\nfpr4, tpr4, _ = roc_curve(y_test, y_prob4); roc_auc4 = auc(fpr4, tpr4)\n\n# 9) Plot ROC\nplt.figure(figsize=(7, 5))\nplt.plot(fpr1, tpr1, label=f\"Logistic Regression (AUC = {roc_auc1:.3f})\")\nplt.plot(fpr2, tpr2, label=f\"LDA (AUC = {roc_auc2:.3f})\")\nplt.plot(fpr3, tpr3, label=f\"Naive Bayes (AUC = {roc_auc3:.3f})\")\nplt.plot(fpr4, tpr4, label=f\"QDA (AUC = {roc_auc4:.3f})\")\nplt.plot([0, 1], [0, 1], linestyle=\"--\", label=\"Chance\")\n\nplt.xlabel(\"False Positive Rate\")\nplt.ylabel(\"True Positive Rate\")\nplt.title(\"ROC Curve - ISL Default Data\")\nplt.legend()\nplt.tight_layout()\nplt.show()\n\nprint(f\"Logistic Reg. AUC: {roc_auc1:.4f}\")\nprint(f\"LDA AUC:          {roc_auc2:.4f}\")\nprint(f\"Naive Bayes AUC:  {roc_auc3:.4f}\")\nprint(f\"QDA AUC:          {roc_auc4:.4f}\")\n\n\n\n\n\n\n\n\nLogistic Reg. AUC: 0.9511\nLDA AUC:          0.9508\nNaive Bayes AUC:  0.9440\nQDA AUC:          0.9508\n\n\n\nimport numpy as np\nfrom sklearn.metrics import roc_curve\n\ndef best_threshold_youden(y_true, y_prob, decimals=4):\n    fpr, tpr, thr = roc_curve(y_true, y_prob)\n    j = tpr - fpr\n    idx = np.argmax(j)\n\n    return {\n        \"threshold\": round(float(thr[idx]), decimals),\n        \"sensitivity\": round(float(tpr[idx]), decimals),\n        \"specificity\": round(float(1 - fpr[idx]), decimals),\n        \"youden_J\": round(float(j[idx]), decimals)\n    }\n\nbest1 = best_threshold_youden(y_test, y_prob1)  # Logistic\nbest2 = best_threshold_youden(y_test, y_prob2)  # LDA\nbest3 = best_threshold_youden(y_test, y_prob3)  # NB\nbest4 = best_threshold_youden(y_test, y_prob4)  # QDA\n\nprint(\"Logistic:\", best1)\nprint(\"LDA:     \", best2)\nprint(\"NB:      \", best3)\nprint(\"QDA:     \", best4)\n\nLogistic: {'threshold': 0.0512, 'sensitivity': 0.87, 'specificity': 0.9021, 'youden_J': 0.7721}\nLDA:      {'threshold': 0.0586, 'sensitivity': 0.87, 'specificity': 0.8993, 'youden_J': 0.7693}\nNB:       {'threshold': 0.0437, 'sensitivity': 0.87, 'specificity': 0.8714, 'youden_J': 0.7414}\nQDA:      {'threshold': 0.0597, 'sensitivity': 0.87, 'specificity': 0.8962, 'youden_J': 0.7662}"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nTOPIC\nMATERIALS\nCODE\nDUE\n\n\n\n\n1\nTue, Jan 13\n🎥 Lecture 1 Introduction\n🔗Syllabus  📚Chapt 1\n\n\n\n\n\n\n\n\nThu, Jan 15\n🎥 Lecture 2 Review Python\n💻Python Review\nPython🐍\n\n\n\n\n\n\nFri, Jan 16\nMore on Python and R\n💻R Review\n\n\n📝 HW 0\n\n\n2\nTue, Jan 20\n🎥 Lecture 3 Linear Algebra\n📚Review LA\n\n\n\n\n\n\n\n\nThu, Jan 22\n🎥 Lecture 4 Probability Distributions  (Normal)\n📚Review PD\n\n\n\n\n\n\n3\nTue, Jan 27\n🎥 Lecture 5 What is SML?\n📚Chapt 2-A\n\n\n\n\n\n\n\n\nThu, Jan 29\n🎥 Lecture 6 Bias and Variance Trade-off\n📚[Chapt 2-B]\n\n\n\n\n\n\n\n\nFri, Jan 30\n\n\n\n\nD2L✍️\n📝 HW 1 at 11:50 pm  Solution\n\n\n4\nTue, Feb 3\n🎥 Lecture 7 Basics of Linear Regression\n📚Chapt 3-A\nPython🐍\n\n\n\n\n\n\nWed, Feb 4\nOptional: A real Data Science Project: Rfssa\n🎤👩‍💻Colloquium\n\n\n\n\n\n\n\n\nThu, Feb 5\n🎥 Lecture 8 Wrap-up Linear Regression\n📚[Chapt 3-B]\n\n\n\n\n\n\n5\nTue, Feb 10\n🎥 Lecture 9 Logistic Regression\n📚Chapt 4-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 12\n🎥 Lecture 10 Linear Discriminant  Analysis and ROC\n📚[Chapt 4-B]\nPython🐍\n\n\n\n\n6\nTue, Feb 17\n🎥 Lecture 11 Quadratic Discriminant  Analysis and Naive Bayes\n📚[Chapt 4-C]\n\n\n\n\n\n\n\n\nThu, Feb 19\n[🎥 Lecture 12] Resampling  (Cross-validation)\n📚Chapt 5\nPython🐍\n\n\n\n\n\n\nFri, Feb 20\n\n\n\n\nD2L✍️\n📝 HW 2 at 11:50 pm  [Solution]\n\n\n7\nTue, Feb 24\n[🎥 Lecture 13] Model Selection\n📚Chapt 6-A\nPython🐍\n\n\n\n\n\n\nThu, Feb 26\n[🎥 Lecture 14] Ridge Regression\n📚[Chapt 6-B]\n\n\n\n\n\n\n8\nTue, Mar 3\n[🎥 Lecture 15] Lasso Regression  Review for Exam\n📚[Chapt 6-C]\nPython🐍\n\n\n\n\n\n\nThu, Mar 5\n[🎥 Lecture 16] Smoothing:  Basis functions (B-spline)\n📚Chapt 7-A\nPython🐍\n\n\n\n\n\n\nFri, Mar 6\n\n\n\n\nD2L✍️\n📝 HW 3 at 11:50 pm  [Solution]\n\n\n\n\nTue, Mar 10\n🌴 Spring Break\n\n\n\n\n\n\n\n\n\n\nThu, Mar 12\n🌴 Spring Break\n\n\n\n\n\n\n\n\n9\nTue, Mar 17\n[🎥 Lecture 17] More on Smoothing\n📚[Chapt 7-B]\nPython🐍\n\n\n\n\n\n\nThu, Mar 19\nMidterm Exam\n📖[Exam 1]\n\n\n\n\n\n\n10\nTue, Mar 24\n[🎥 Lecture 19] More on Smoothing\n📚[Chapt 7-C]\n\n\n\n\n\n\n\n\nThu, Mar 26\n[🎥 Lecture 20] Basics of PCA and ICA\n📚[Chapt 7-D]\n\n\n\n\n\n\n\n\nFri, Mar 27\n\n\n\n\nD2L✍️\n📝 HW 4 at 11:50 pm  [Solution]\n\n\n11\nTue, Mar 31\n[🎥 Lecture 21] Basics of SVM\n📚Chapt 9-A\nPython🐍\n\n\n\n\n\n\nThu, Apr 2\n🐰 Easter Break\n\n\n\n\n\n\n\n\n12\nTue, Apr 7\n[🎥 Lecture 22] More on SVM\n📚[Chapt 9-B]\n\n\n\n\n\n\n\n\nThu, Apr 9\n[🎥 Lecture 23] Basics of Clustering  (K-means)\n📚Chapt 12-A\nPython🐍\n\n\n\n\n\n\nFri, Apr 10\n\n\n\n\n[D2L✍️]\n📝 HW 5 at 11:50 pm  [Solution]\n\n\n13\nTue, Apr 14\n[🎥 Lecture 24] More on Clustering  (Hierarchical Clustering)\n📚[Chapt 12-B]\nPython🐍\n\n\n\n\n\n\nThu, Apr 16\n[🎥 Lecture 25] More on Clustering  (PCA)\n📚Chapt 12-C\n\n\n\n\n\n\n14\nTue, Apr 21\n[🎥 Lecture 26] Basics of Deep Learning\n📚Chapt 10\nPython🐍\n\n\n\n\n\n\nThu, Apr 23\n[🎥 Lecture 27] More on Deep Learning\n💻[DLiR-A]\n\n\n\n\n\n\n15\nTue, Apr 28\n[🎥 Lecture 17] Guest Lecture by  Dr. Rowe\n📚[Guest Lecture]\n\n\n\n\n\n\n\n\nThu, Apr 30\n[🎥 Lecture 29] SDSS\n💻[DLiR-C]\n\n\n\n\n\n\n16\nTue, May 5\nFinal Project\n📃25 MIN Presentations :  10:30 am - 12:30 pm  Evaluation - Group A  Evaluation - Group B  Evaluation - Group C  Evaluation - Group D"
   },
   {
-    "objectID": "hw/sol/ex2-7.html",
-    "href": "hw/sol/ex2-7.html",
-    "title": "Exercise 2.7",
+    "objectID": "computing/computing-cheatsheets.html",
+    "href": "computing/computing-cheatsheets.html",
+    "title": "R cheatsheets",
     "section": "",
-    "text": "Exercise 2.7\nimport numpy as np\nimport pandas as pd\n\nd = {'X1': pd.Series([0,2,0,0,-1,1]),\n     'X2': pd.Series([3,0,1,1,0,1]),\n     'X3': pd.Series([0,0,3,2,1,1]),\n     'Y': pd.Series(['Red','Red','Red','Green','Green','Red'])}\ndf = pd.DataFrame(d)\ndf.index = np.arange(1, len(df) + 1)\ndf\n\n\n\n\n\n\n\nX1\n\n\nX2\n\n\nX3\n\n\nY\n\n\n\n\n\n\n1\n\n\n0\n\n\n3\n\n\n0\n\n\nRed\n\n\n\n\n2\n\n\n2\n\n\n0\n\n\n0\n\n\nRed\n\n\n\n\n3\n\n\n0\n\n\n1\n\n\n3\n\n\nRed\n\n\n\n\n4\n\n\n0\n\n\n1\n\n\n2\n\n\nGreen\n\n\n\n\n5\n\n\n-1\n\n\n0\n\n\n1\n\n\nGreen\n\n\n\n\n6\n\n\n1\n\n\n1\n\n\n1\n\n\nRed\n\n\n\n\n\n\n(a) Euclidian distance\nfrom math import sqrt\ndf['distance']=np.sqrt(df['X1']**2+df['X2']**2+df['X3']**2)\ndf\n\n\n\n\n\n\n\nX1\n\n\nX2\n\n\nX3\n\n\nY\n\n\ndistance\n\n\n\n\n\n\n1\n\n\n0\n\n\n3\n\n\n0\n\n\nRed\n\n\n3.000000\n\n\n\n\n2\n\n\n2\n\n\n0\n\n\n0\n\n\nRed\n\n\n2.000000\n\n\n\n\n3\n\n\n0\n\n\n1\n\n\n3\n\n\nRed\n\n\n3.162278\n\n\n\n\n4\n\n\n0\n\n\n1\n\n\n2\n\n\nGreen\n\n\n2.236068\n\n\n\n\n5\n\n\n-1\n\n\n0\n\n\n1\n\n\nGreen\n\n\n1.414214\n\n\n\n\n6\n\n\n1\n\n\n1\n\n\n1\n\n\nRed\n\n\n1.732051\n\n\n\n\n\n\n\n(b) K=1\ndf.sort_values(['distance'])\n\n\n\n\n\n\n\nX1\n\n\nX2\n\n\nX3\n\n\nY\n\n\ndistance\n\n\n\n\n\n\n5\n\n\n-1\n\n\n0\n\n\n1\n\n\nGreen\n\n\n1.414214\n\n\n\n\n6\n\n\n1\n\n\n1\n\n\n1\n\n\nRed\n\n\n1.732051\n\n\n\n\n2\n\n\n2\n\n\n0\n\n\n0\n\n\nRed\n\n\n2.000000\n\n\n\n\n4\n\n\n0\n\n\n1\n\n\n2\n\n\nGreen\n\n\n2.236068\n\n\n\n\n1\n\n\n0\n\n\n3\n\n\n0\n\n\nRed\n\n\n3.000000\n\n\n\n\n3\n\n\n0\n\n\n1\n\n\n3\n\n\nRed\n\n\n3.162278\n\n\n\n\n\nAs we can see by sorting the data by distance to the origin, for K=1, our prediction is Green, since that’s the value of the nearest neighbor (point 5 at distance 1.41).\n\n\n(c) K=3\nOn the other hand, for K=3 our prediction is Red, because that’s the mode of the 3 nearest neigbours: Green, Red and Red (points 5, 6 and 2, respectively).\n\n\n(d) Highly non-linear Bayes decision boundary\nA large value of K leads to a smoother decision boundary, as if the non-linearities where averaged out. This happens because KNN uses majority voting and this means less emphasis on individual points. For a large value of K, we will likely have a decision boundary which varies very little from point to point, since the result of this majority voting would have to change while for most points this will be a large majority. That is, one of its nearest neighbors changing from one class to the other would still leave the majority voting the same. By contrast, when K is very small, the decision boundary will be better able to capture local non-linearities, because it the majority of neighbors can vary significantly from point to point since the are so few neighbors. Accordingly, we would expect the best value of K to be small.\nImagine this simple example: a true linear boundary that splits the plane in two semi-planes (classes A and B), but with an additional enclave in one of the regions. That is, the true model has a small region of, say, class A inside the class B semi-plane. Would we more likely capture this region for small or large K? Say we have 3 neighboring data points in the class A enclave inside the large class B region with say 50 points. If K &gt; 4, each of the 3 points in the enclave will be classified as B, since they always lose by majority voting (unless K is so large, say 100, that many of the points from A semi-plane region enter this voting). If, on the other hand, K &lt; 4, each of the 3 class A points inside the enclave will be classified as class A, and we will capture this non-linearity of the regions."
+    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets. We haven’t covered every function and functionality listed on them, but you might still find them useful as references.",
+    "crumbs": [
+      "Computing",
+      "Cheatsheets"
+    ]
   },
   {
-    "objectID": "hw/HW 1.html",
-    "href": "hw/HW 1.html",
-    "title": "Statistical Machine Learning - HW 1",
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
     "section": "",
-    "text": "Let \\(\\mathbf X = (X_1, X_2, X_3)^T\\) be distributed as \\(\\mathbf X \\sim MVN(\\boldsymbol\\mu, \\boldsymbol\\Sigma)\\), where \\[\n\\boldsymbol\\mu =\n\\begin{pmatrix}\n1\\\\\n-1\\\\\n-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma =\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\] Which of the following pairs of random variables are independent? Explain why.\n\n\\(X_1\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_3\\)\n\\(X_2\\) and \\(X_3\\)\n\\((X_1, X_3)\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_1 + 3X_2 - 2X_3\\)",
+    "text": "Homework\nISLP Resources\nRegression Shiny\nStat Calculator\nDistribution Calculator\nThe Matrix Cookbook\nStat Tables\n🔗 on D2L\n🔗 ISLP\n🔗 Regression\n🔗 StatCalc(JAMM)\n🔗 DistCalc\n🔗 MatCookbook\n🔗 StatTables\n\n\nAdvanced Texbooks\n🔗 R Package\n🔗 Advanced R by Hadley Wickham\n🔗 Quarto\n🔗 R Markdown\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n🔗 Data Visualization: A Practical Introduction\n🔗 R for Data Science\n\n\nSome Package documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org",
     "crumbs": [
-      "HW",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/HW 1.html#problem-1",
-    "href": "hw/HW 1.html#problem-1",
-    "title": "Statistical Machine Learning - HW 1",
-    "section": "",
-    "text": "Let \\(\\mathbf X = (X_1, X_2, X_3)^T\\) be distributed as \\(\\mathbf X \\sim MVN(\\boldsymbol\\mu, \\boldsymbol\\Sigma)\\), where \\[\n\\boldsymbol\\mu =\n\\begin{pmatrix}\n1\\\\\n-1\\\\\n-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma =\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\] Which of the following pairs of random variables are independent? Explain why.\n\n\\(X_1\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_3\\)\n\\(X_2\\) and \\(X_3\\)\n\\((X_1, X_3)\\) and \\(X_2\\)\n\\(X_1\\) and \\(X_1 + 3X_2 - 2X_3\\)",
-    "crumbs": [
-      "HW",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/HW 1.html#problem-2",
-    "href": "hw/HW 1.html#problem-2",
-    "title": "Statistical Machine Learning - HW 1",
-    "section": "Problem 2",
-    "text": "Problem 2\nSuppose \\(\\mathbf X\\) is a random vector with mean \\(\\boldsymbol\\mu\\). Prove that \\[\nE\\big[(\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^T\\big]\n=\nE(\\mathbf X\\mathbf X^T)-\\boldsymbol\\mu\\boldsymbol\\mu^T.\n\\]",
-    "crumbs": [
-      "HW",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/HW 1.html#problem-3",
-    "href": "hw/HW 1.html#problem-3",
-    "title": "Statistical Machine Learning - HW 1",
-    "section": "Problem 3",
-    "text": "Problem 3\nLet \\(\\mathbf Z \\in \\mathbb R^p\\) be distributed as \\(\\mathbf Z \\sim MVN(\\mathbf 0, I_p).\\) Given \\(\\boldsymbol\\mu \\in \\mathbb R^p\\) and a positive definite \\(p\\times p\\) matrix \\(\\boldsymbol\\Sigma\\), derive methods to transform \\(\\mathbf Z\\) into a \\(p\\)-variate normal random vector with mean \\(\\boldsymbol\\mu\\) and covariance \\(\\boldsymbol\\Sigma\\) using:\n\nThe spectral decomposition, \\(\\boldsymbol\\Sigma = V\\Lambda V^T\\), where \\(V^TV=I_p\\) and \\(\\Lambda\\) is diagonal.\nThe Cholesky decomposition, \\(\\boldsymbol\\Sigma = LL^T\\), where \\(L\\) is lower-triangular.",
-    "crumbs": [
-      "HW",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/HW 1.html#problem-4",
-    "href": "hw/HW 1.html#problem-4",
-    "title": "Statistical Machine Learning - HW 1",
-    "section": "Problem 4",
-    "text": "Problem 4\nWrite Python (or R) code that uses the covariance matrix \\(\\boldsymbol\\Sigma\\) from Problem 1 to generate 1000 trivariate normal random vectors using both methods from Problem 3(a) and 3(b). Compare the associated sample covariance matrices from the two methods.",
-    "crumbs": [
-      "HW",
-      "HW 1"
-    ]
-  },
-  {
-    "objectID": "hw/HW 1.html#problem-5",
-    "href": "hw/HW 1.html#problem-5",
-    "title": "Statistical Machine Learning - HW 1",
-    "section": "Problem 5",
-    "text": "Problem 5\nExercise #7 from Chapter 2 of the textbook: “7. The table below provides a training data set containing six …”",
-    "crumbs": [
-      "HW",
-      "HW 1"
+      "Course information",
+      "Useful links"
     ]
   },
   {
@@ -603,5 +515,114 @@
     "title": "Statistical Machine Learning",
     "section": "Keras for R cheatsheet",
     "text": "Keras for R cheatsheet\n\n\n\n\n\n\n\n\n\n\n🔗 Rstudio: Keras cheatsheet"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "This is the homepage for MSSC 6250 - Statistical Machine Learning by Dr. Mehdi Maadooliat in Spring 2026 at Marquette University. All course materials will be posted on this site.\nYou can find the course syllabus here and the course schedule here.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Course overview",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nCU 208\nTue & Thur 12:30 pm - 1:45 pm\n\n\nOffice Hours\nCU 351\nTue & Thur 1:45 - 3:15 pm",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "hw/HW 3.html",
+    "href": "hw/HW 3.html",
+    "title": "Statistical Machine Learning - HW 3",
+    "section": "",
+    "text": "Exercise #1, #3, #5, #8 from Chapter 5"
+  },
+  {
+    "objectID": "hw/HW 3.html#problems-1-4-chapter-5",
+    "href": "hw/HW 3.html#problems-1-4-chapter-5",
+    "title": "Statistical Machine Learning - HW 3",
+    "section": "",
+    "text": "Exercise #1, #3, #5, #8 from Chapter 5"
+  },
+  {
+    "objectID": "hw/HW 3.html#problem-5-chapter-6",
+    "href": "hw/HW 3.html#problem-5-chapter-6",
+    "title": "Statistical Machine Learning - HW 3",
+    "section": "Problem 5: Chapter 6",
+    "text": "Problem 5: Chapter 6\nShow that the ridge regression estimate is the maximizer of the (log) posterior distribution, under a Gaussian prior \\(\\mathbf{\\beta} \\sim N(0,\\tau^2\\mathbf{I})\\), and Gaussian sampling model \\(\\mathbf{y}\\sim N(\\mathbf{X}\\mathbf{\\beta},\\sigma^2\\mathbf{I})\\). Find the relationship between the regularization parameter \\(\\lambda\\) in the ridge formula, and the variances \\(\\tau^2\\) and \\(\\sigma^2\\)."
+  },
+  {
+    "objectID": "hw/sol/HW1-sol.html",
+    "href": "hw/sol/HW1-sol.html",
+    "title": "Statistical Machine Learning - HW 1 (Solutions)",
+    "section": "",
+    "text": "Let \\(\\mathbf X=(X_1,X_2,X_3)^\\top\\sim MVN(\\boldsymbol\\mu,\\boldsymbol\\Sigma)\\) with\n\\[\n\\boldsymbol\\mu=\n\\begin{pmatrix}\n1\\\\-1\\\\-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma=\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\]\nFact (MVN): If \\((X_1,\\dots,X_p)\\) is multivariate normal, then zero covariance implies independence for any pair of components: \\(X_i\\perp X_j \\quad \\Longleftrightarrow\\quad \\mathrm{Cov}(X_i,X_j)=\\Sigma_{ij}=0.\\) More generally, two subvectors are independent iff their cross-covariance block is the zero matrix.\n\n\n\n\\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0 ;\\Rightarrow; X_1\\perp X_2.\\)\n\n\n\n\\(\\mathrm{Cov}(X_1,X_3)=\\Sigma_{13}=-1\\neq 0 ;\\Rightarrow; X_1 \\not\\perp X_3.\\)\n\n\n\n\\(\\mathrm{Cov}(X_2,X_3)=\\Sigma_{23}=0 ;\\Rightarrow; X_2\\perp X_3.\\)\n\n\n\nThe cross-covariances are \\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0,\\qquad \\mathrm{Cov}(X_3,X_2)=\\Sigma_{32}=0.\\) So the cross-covariance block between \\((X_1,X_3)\\) and \\(X_2\\) is \\((0,0)^\\top\\), hence \\((X_1,X_3)\\perp X_2.\\)\n\n\n\nFor multivariate normal variables, two linear combinations are independent iff their covariance is \\(0\\). Let \\(Y=X_1+3X_2-2X_3.\\) Then \\(\\mathrm{Cov}(X_1,Y)=\\mathrm{Cov}(X_1,X_1)+3,\\mathrm{Cov}(X_1,X_2)-2,\\mathrm{Cov}(X_1,X_3).\\) Using \\(\\mathrm{Var}(X_1)=\\Sigma_{11}=4\\), \\(\\Sigma_{12}=0\\), and \\(\\Sigma_{13}=-1\\): \\(\\mathrm{Cov}(X_1,Y)=4+3(0)-2(-1)=6\\neq 0.\\) Therefore, \\(X_1 \\not\\perp (X_1+3X_2-2X_3).\\)",
+    "crumbs": [
+      "HW",
+      "HW 1 Solution"
+    ]
+  },
+  {
+    "objectID": "hw/sol/HW1-sol.html#problem-1",
+    "href": "hw/sol/HW1-sol.html#problem-1",
+    "title": "Statistical Machine Learning - HW 1 (Solutions)",
+    "section": "",
+    "text": "Let \\(\\mathbf X=(X_1,X_2,X_3)^\\top\\sim MVN(\\boldsymbol\\mu,\\boldsymbol\\Sigma)\\) with\n\\[\n\\boldsymbol\\mu=\n\\begin{pmatrix}\n1\\\\-1\\\\-2\n\\end{pmatrix},\n\\qquad\n\\boldsymbol\\Sigma=\n\\begin{pmatrix}\n4 & 0 & -1\\\\\n0 & 5 & 0\\\\\n-1 & 0 & 2\n\\end{pmatrix}.\n\\]\nFact (MVN): If \\((X_1,\\dots,X_p)\\) is multivariate normal, then zero covariance implies independence for any pair of components: \\(X_i\\perp X_j \\quad \\Longleftrightarrow\\quad \\mathrm{Cov}(X_i,X_j)=\\Sigma_{ij}=0.\\) More generally, two subvectors are independent iff their cross-covariance block is the zero matrix.\n\n\n\n\\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0 ;\\Rightarrow; X_1\\perp X_2.\\)\n\n\n\n\\(\\mathrm{Cov}(X_1,X_3)=\\Sigma_{13}=-1\\neq 0 ;\\Rightarrow; X_1 \\not\\perp X_3.\\)\n\n\n\n\\(\\mathrm{Cov}(X_2,X_3)=\\Sigma_{23}=0 ;\\Rightarrow; X_2\\perp X_3.\\)\n\n\n\nThe cross-covariances are \\(\\mathrm{Cov}(X_1,X_2)=\\Sigma_{12}=0,\\qquad \\mathrm{Cov}(X_3,X_2)=\\Sigma_{32}=0.\\) So the cross-covariance block between \\((X_1,X_3)\\) and \\(X_2\\) is \\((0,0)^\\top\\), hence \\((X_1,X_3)\\perp X_2.\\)\n\n\n\nFor multivariate normal variables, two linear combinations are independent iff their covariance is \\(0\\). Let \\(Y=X_1+3X_2-2X_3.\\) Then \\(\\mathrm{Cov}(X_1,Y)=\\mathrm{Cov}(X_1,X_1)+3,\\mathrm{Cov}(X_1,X_2)-2,\\mathrm{Cov}(X_1,X_3).\\) Using \\(\\mathrm{Var}(X_1)=\\Sigma_{11}=4\\), \\(\\Sigma_{12}=0\\), and \\(\\Sigma_{13}=-1\\): \\(\\mathrm{Cov}(X_1,Y)=4+3(0)-2(-1)=6\\neq 0.\\) Therefore, \\(X_1 \\not\\perp (X_1+3X_2-2X_3).\\)",
+    "crumbs": [
+      "HW",
+      "HW 1 Solution"
+    ]
+  },
+  {
+    "objectID": "hw/sol/HW1-sol.html#problem-2",
+    "href": "hw/sol/HW1-sol.html#problem-2",
+    "title": "Statistical Machine Learning - HW 1 (Solutions)",
+    "section": "Problem 2",
+    "text": "Problem 2\nSuppose \\(\\mathbf X\\) is a random vector with mean \\(\\boldsymbol\\mu=\\mathbb E[\\mathbf X]\\). Prove: \\(\\mathbb E\\big[(\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^\\top\\big]= \\mathbb E(\\mathbf X\\mathbf X^\\top)-\\boldsymbol\\mu\\boldsymbol\\mu^\\top.\\)\nProof. Expand: \\((\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^\\top = \\mathbf X\\mathbf X^\\top-\\mathbf X\\boldsymbol\\mu^\\top-\\boldsymbol\\mu\\mathbf X^\\top+\\boldsymbol\\mu\\boldsymbol\\mu^\\top.\\) Take expectation and use \\(\\mathbb E[\\mathbf X]=\\boldsymbol\\mu.\\) Therefore \\(\\mathbb E(\\mathbf X-\\boldsymbol\\mu)(\\mathbf X-\\boldsymbol\\mu)^\\top = \\mathbb E\\mathbf X\\mathbf X^\\top-\\mathbb E\\mathbf X\\boldsymbol\\mu^\\top-\\boldsymbol\\mu\\mathbb E\\mathbf X^\\top+\\boldsymbol\\mu\\boldsymbol\\mu^\\top = \\mathbb E\\mathbf X\\mathbf X^\\top-\\boldsymbol\\mu\\boldsymbol\\mu^\\top. \\square\\)",
+    "crumbs": [
+      "HW",
+      "HW 1 Solution"
+    ]
+  },
+  {
+    "objectID": "hw/sol/HW1-sol.html#problem-3",
+    "href": "hw/sol/HW1-sol.html#problem-3",
+    "title": "Statistical Machine Learning - HW 1 (Solutions)",
+    "section": "Problem 3",
+    "text": "Problem 3\nLet \\(\\mathbf Z\\sim MVN(\\mathbf 0, I_p)\\), and let \\(\\boldsymbol\\Sigma\\) be positive definite.\nA general strategy is: find a matrix \\(A\\) such that \\(AA^\\top=\\boldsymbol\\Sigma,\\) then set \\(\\mathbf X=\\boldsymbol\\mu + A\\mathbf Z.\\) Since \\(\\mathbb E[\\mathbf Z]=0\\) and \\(\\mathrm{Cov}(\\mathbf Z)=I_p\\), \\(\\mathbb E\\mathbf X=\\boldsymbol\\mu,\\qquad \\mathrm{Cov}(\\mathbf X)=A,I_p,A^\\top=AA^\\top=\\boldsymbol\\Sigma.\\)\n\n(a) Spectral decomposition\nIf \\(\\boldsymbol\\Sigma=V\\Lambda V^\\top\\) with \\(V^\\top V=I_p\\) and diagonal \\(\\Lambda=\\mathrm{diag}(\\lambda_1,\\dots,\\lambda_p)\\), define \\(\\Lambda^{1/2}=\\mathrm{diag}(\\sqrt{\\lambda_1},\\dots,\\sqrt{\\lambda_p}),\\qquad A=V\\Lambda^{1/2}.\\) Then \\(AA^\\top=V\\Lambda^{1/2}\\left(V\\Lambda^{1/2}\\right)^\\top =V\\Lambda^{1/2}\\Lambda^{1/2}V^\\top =V\\Lambda V^\\top=\\boldsymbol\\Sigma.\\)\n\n\n(b) Cholesky decomposition\nIf \\(\\boldsymbol\\Sigma=LL^\\top\\) where \\(L\\) is lower-triangular with positive diagonal, take \\(A=L.\\) Then trivially \\(AA^\\top=LL^\\top=\\boldsymbol\\Sigma\\).",
+    "crumbs": [
+      "HW",
+      "HW 1 Solution"
+    ]
+  },
+  {
+    "objectID": "hw/sol/HW1-sol.html#problem-4",
+    "href": "hw/sol/HW1-sol.html#problem-4",
+    "title": "Statistical Machine Learning - HW 1 (Solutions)",
+    "section": "Problem 4",
+    "text": "Problem 4\nGenerate 1000 samples using both methods from Problem 3, and compare sample covariance matrices.\n🐍 Python code:\nimport numpy as np\n\nmu = np.array([1.0, -1.0, -2.0])\nSigma = np.array([\n    [4.0, 0.0, -1.0],\n    [0.0, 5.0,  0.0],\n    [-1.0, 0.0, 2.0]\n])\n\nn = 1000\np = 3\nrng = np.random.default_rng(123)\n\n# ---- Method (a): spectral decomposition\neigvals, V = np.linalg.eigh(Sigma)          # Sigma = V diag(eigvals) V^T\nA_spec = V @ np.diag(np.sqrt(eigvals))      # A_spec A_spec^T = Sigma\nZ = rng.standard_normal((n, p))\nX_spec = mu + Z @ A_spec.T\n\nS_spec = np.cov(X_spec, rowvar=False, bias=False)\n\n# ---- Method (b): Cholesky decomposition\nL = np.linalg.cholesky(Sigma)               # Sigma = L L^T\nZ2 = rng.standard_normal((n, p))\nX_chol = mu + Z2 @ L.T\n\nS_chol = np.cov(X_chol, rowvar=False, bias=False)\n\n# Compare\nprint(\"Target Sigma:\\n\", Sigma, \"\\n\")\nprint(\"Sample cov (spectral):\\n\", np.round(S_spec, 3), \"\\n\")\nprint(\"Sample cov (cholesky):\\n\", np.round(S_chol, 3), \"\\n\")\n\nprint(\"Frobenius error (spectral):\", np.linalg.norm(S_spec - Sigma, ord=\"fro\"))\nprint(\"Frobenius error (cholesky):\", np.linalg.norm(S_chol - Sigma, ord=\"fro\"))\nR Code:\n    n &lt;- 1000; mu &lt;- c(1,-1,-2); \n    Sig &lt;- matrix(c(4,0,-1,0,5,0,-1,0,2), nr=3)\n    Z &lt;- matrix(rnorm(n*length(mu)),nr=3)\n    X1 &lt;- t(mu + eigen(Sig)$vectors%*%diag(sqrt(eigen(Sig)$values))%*%Z)\n    X2 &lt;- t(mu + t(chol(Sig))%*%Z)\n    cov(X1)\n    cov(X2)\nYou should see both sample covariance matrices close to \\(\\Sigma\\), with small differences due to Monte Carlo variation.",
+    "crumbs": [
+      "HW",
+      "HW 1 Solution"
+    ]
+  },
+  {
+    "objectID": "hw/sol/HW1-sol.html#problem-5-islp-chapter-2-exercise-7",
+    "href": "hw/sol/HW1-sol.html#problem-5-islp-chapter-2-exercise-7",
+    "title": "Statistical Machine Learning - HW 1 (Solutions)",
+    "section": "Problem 5 (ISLP Chapter 2, Exercise 7)",
+    "text": "Problem 5 (ISLP Chapter 2, Exercise 7)\nWe predict \\(Y\\) at the test point \\(x_0=(X_1,X_2,X_3)=(0,0,0)\\) using \\(K\\)-nearest neighbors (KNN) with Euclidean distance.\nThe training set (six observations) is:\n\n\n\nObs\n\\(X_1\\)\n\\(X_2\\)\n\\(X_3\\)\n\\(Y\\)\n\n\n\n\n1\n0\n3\n0\nRed\n\n\n2\n2\n0\n0\nRed\n\n\n3\n0\n1\n3\nRed\n\n\n4\n0\n1\n2\nGreen\n\n\n5\n-1\n0\n1\nGreen\n\n\n6\n1\n1\n1\nRed\n\n\n\n\n(a) Distances to \\(x_0=(0,0,0)\\)\nFor observation \\(i\\) with predictors \\(x_i=(x_{i1},x_{i2},x_{i3})\\), the Euclidean distance is \\(d(x_i,x_0)=\\sqrt{x_{i1}^2+x_{i2}^2+x_{i3}^2}.\\)\nCompute each:\n\nObs 1: \\(\\sqrt{0^2+3^2+0^2}=3\\)\nObs 2: \\(\\sqrt{2^2+0^2+0^2}=2\\)\nObs 3: \\(\\sqrt{0^2+1^2+3^2}=\\sqrt{10}\\approx 3.162\\)\nObs 4: \\(\\sqrt{0^2+1^2+2^2}=\\sqrt{5}\\approx 2.236\\)\nObs 5: \\(\\sqrt{(-1)^2+0^2+1^2}=\\sqrt{2}\\approx 1.414\\)\nObs 6: \\(\\sqrt{1^2+1^2+1^2}=\\sqrt{3}\\approx 1.732\\)\n\nSorted by distance (smallest first):\n\n\n\nRank\nObs\nDistance\nClass\n\n\n\n\n1\n5\n\\(\\sqrt{2}\\approx 1.414\\)\nGreen\n\n\n2\n6\n\\(\\sqrt{3}\\approx 1.732\\)\nRed\n\n\n3\n2\n\\(2\\)\nRed\n\n\n4\n4\n\\(\\sqrt{5}\\approx 2.236\\)\nGreen\n\n\n5\n1\n\\(3\\)\nRed\n\n\n6\n3\n\\(\\sqrt{10}\\approx 3.162\\)\nRed\n\n\n\n\n\n(b) Prediction with \\(K=1\\)\nThe nearest neighbor is Obs 5 (Green), so the prediction is:\n\\(\\hat Y_{K=1}=\\text{Green}.\\)\n\n\n(c) Prediction with \\(K=3\\)\nThe three nearest neighbors are Obs 5 (Green), Obs 6 (Red), Obs 2 (Red).\nMajority vote is Red (2 out of 3), so:\n\\(\\hat Y_{K=3}=\\text{Red}.\\)\n\n\n(d) If the Bayes decision boundary is highly non-linear, should best \\(K\\) be large or small?\nWe would generally expect the best \\(K\\) to be small, because a small \\(K\\) yields a more flexible decision boundary (lower bias) that can adapt to strong non-linearities. A large \\(K\\) averages over many points and produces an overly smooth boundary (higher bias).\n🐍 Python code",
+    "crumbs": [
+      "HW",
+      "HW 1 Solution"
+    ]
   }
 ]

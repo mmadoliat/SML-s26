@@ -1,6 +1,6 @@
 ---
 title: "Statistical Machine Learning - HW 3"
-format: html
+format: pdf
 editor: visual
 ---
 

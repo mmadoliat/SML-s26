@@ -828,6 +828,20 @@ origin
 <h2 class="anchored" data-anchor-id="c">(c)</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ cylinders + displacement + horsepower + weight + acceleration + year + origin'</span>, df).fit()</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.821&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.818&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   252.4&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;2.04e-139&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:08&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -1023.5&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   2063.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   384&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2095.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     7&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
 <caption>
 OLS Regression Results
@@ -1075,6 +1089,7 @@ Kurtosis:
 
 </tr>
 </tbody></table>
+</div>
 </section>
 <section id="i" class="level2">
 <h2 class="anchored" data-anchor-id="i">i</h2>
@@ -1302,6 +1317,20 @@ H_0 :\beta_{cylinders} = \beta_{displacement} = \beta_{weight} = \beta_{accelera
 <p>Let’s find out.</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower*year + displacement + weight + origin'</span>, df).fit()</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.851&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.849&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   367.0&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;7.51e-156&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -987.81&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1990.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   385&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2017.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     6&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
 <caption>
 OLS Regression Results
@@ -1492,6 +1521,7 @@ Kurtosis:
 
 </tr>
 </tbody></table>
+</div>
 <p>From the value of the p-value of the coefficient of the interaction term between horsepower and year, it does seem like there is a statistically significant relationship between the response and horsepower:year.</p>
 <p>With 7 factors, there will be a total of 21 interaction terms. For simplicity sake, we will exclude all the terms with cylinders and acceleration, leaving us with 10 interaction terms. Let’s try to fit a model with these terms - a total of 15 terms.</p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> <span class="st">'mpg ~ displacement + horsepower + origin + weight + year </span><span class="ch">\</span></span>
@@ -1499,6 +1529,20 @@ Kurtosis:
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="st">               + horsepower:origin + horsepower:weight + horsepower:year + origin:weight + origin:year + weight:year'</span></span>
 <span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(model, df).fit()</span>
 <span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.880&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.875&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   184.0&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;1.09e-162&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -945.49&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1923.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   376&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   1987.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;    15&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
 <caption>
 OLS Regression Results
@@ -1760,6 +1804,7 @@ Kurtosis:
 
 </tr>
 </tbody></table>
+</div>
 <p>These results indicate that the interactions that appear to be statistically significant are displacement:weight, horsepower:origin and horsepower:year. Interestingly, when these are considered the only first order terms that are statistically different are horsepower and year. By the hierarchy principle (page 89), we should nonetheless include all of the main effects (for more on this, see <a href="https://stats.stackexchange.com/questions/27724/do-all-interactions-terms-need-their-individual-terms-in-regression-model">these</a> answers).</p>
 <p>We could also have a try at <a href="https://en.wikipedia.org/wiki/Interaction_%28statistics%29#Interaction_plots">interaction plots</a>, which are not covered in the book, but we will leave it as a <a href="https://en.wikipedia.org/wiki/Interaction_%28statistics%29#/media/File:GSS_sealevel_interaction.png">mention</a> only.</p>
 </section>
@@ -1768,6 +1813,20 @@ Kurtosis:
 <p>As an example, we fit the data with a model containing the transformations indicated for the variable horsepower, starting with <span class="math inline">\(X^2\)</span>.</p>
 <div class="sourceCode" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + weight + year + origin'</span>, df).fit()</span>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.851&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.849&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   439.5&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;7.11e-157&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -988.57&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1989.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   386&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2013.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     5&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
 <caption>
 OLS Regression Results
@@ -1935,6 +1994,7 @@ Kurtosis:
 
 </tr>
 </tbody></table>
+</div>
 <div class="sourceCode" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
 <span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>fitted <span class="op">=</span> reg.fittedvalues</span>
 <span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>sns.regplot(fitted, df.mpg <span class="op">-</span> fitted,  lowess<span class="op">=</span><span class="va">True</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>:<span class="st">'r'</span>, <span class="st">'lw'</span>:<span class="dv">1</span>})</span>
@@ -1952,6 +2012,20 @@ Kurtosis:
 <p>It is clear that this quadratic term is statistically significant. Let’s try adding a logarithmic term as well.</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + np.log(horsepower) + weight + year + origin'</span>, df).fit()</span>
 <span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.855&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.853&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   378.6&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;4.62e-158&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -982.62&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1979.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   385&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2007.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     6&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
 <caption>
 OLS Regression Results
@@ -2125,9 +2199,24 @@ Kurtosis:
 
 </tr>
 </tbody></table>
+</div>
 <p>Now the p-value for the square term is very large. This indicates that there is indeed a non-linearity but it seems to be better captured by the logarithm than the square. Let’s try adding the square root term.</p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + np.log(horsepower) + np.sqrt(horsepower) + weight + year + origin'</span>, df).fit()</span>
 <span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
 <pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.859&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.856&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   332.9&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;9.16e-159&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:12&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -977.89&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1972.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   384&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2004.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     7&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
 <caption>
 OLS Regression Results
@@ -2324,6 +2413,7 @@ Kurtosis:
 
 </tr>
 </tbody></table>
+</div>
 <p>So now the square term is back to a small p-value, indicating that it is statistically significant in the presence of the square root and the logarithm.</p>
 
 

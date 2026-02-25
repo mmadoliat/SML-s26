@@ -1,0 +1,19 @@
+---
+title: "Statistical Machine Learning - HW 1 (Solutions)"
+format: pdf
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## [Exercise 3.9](ex3-9)
+
+## [Exercise 3.14](ex3-14)
+
+## [Exercise 3.15](ex3-15)
+
+## [Exercise 4.6](ex4-6)
+
+## [Exercise 4.15](ex4-15)

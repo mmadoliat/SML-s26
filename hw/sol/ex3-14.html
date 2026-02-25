@@ -244,6 +244,18 @@ window.Quarto = {
  <span class="menu-text">HW 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW 2 Solution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../hw/HW 3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -351,189 +363,146 @@ Y = \beta_0 + \beta_1  X_1 + \beta_2  X_2 + \epsilon = 2 + 2 X_1 + 0.3 X_2 + \ep
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>results.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>      &lt;td&gt;y&lt;/td&gt;        &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.444&lt;/td&gt;</code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.433&lt;/td&gt;</code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   38.74&lt;/td&gt;</code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;4.31e-13&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:50:56&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -123.67&lt;/td&gt;</code></pre><pre><code>&lt;td&gt;   100&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   253.3&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt;    97&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   261.1&lt;/td&gt;</code></pre><pre><code>        &lt;td&gt;     2&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;   </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;   </code></pre><table class="simpletable">
-<caption>
-OLS Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>OLS Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>y</td>
+<td>R-squared:</td>
+<td>0.444</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>OLS</td>
+<td>Adj. R-squared:</td>
+<td>0.433</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>Least Squares</td>
+<td>F-statistic:</td>
+<td>38.74</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 08 Dec 2017</td>
+<td>Prob (F-statistic):</td>
+<td>4.31e-13</td>
 </tr>
-<tr>
-<th>
-No.&nbsp;Observations:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>09:50:56</td>
+<td>Log-Likelihood:</td>
+<td>-123.67</td>
 </tr>
-<tr>
-<th>
-Df Residuals:
-</th>
-
+<tr class="odd">
+<td>No.&nbsp;Observations:</td>
+<td>100</td>
+<td>AIC:</td>
+<td>253.3</td>
 </tr>
-<tr>
-<th>
-Df Model:
-</th>
-
+<tr class="even">
+<td>Df Residuals:</td>
+<td>97</td>
+<td>BIC:</td>
+<td>261.1</td>
 </tr>
-<tr>
-<th>
-Covariance Type:
-</th>
-
+<tr class="odd">
+<td>Df Model:</td>
+<td>2</td>
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-t
-</th>
-<th>
-P&gt;|t|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td>Covariance Type:</td>
+<td>nonrobust</td>
+<td></td>
+<td></td>
 </tr>
-<tr>
-<th>
-const
-</th>
-<td>
-1.8158
-</td>
-<td>
-0.162
-</td>
-<td>
-11.231
-</td>
-<td>
-0.000
-</td>
-<td>
-1.495
-</td>
-<td>
-2.137
-</td>
+</tbody>
+</table>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">P&gt;|t|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-x1
-</th>
-<td>
-2.0758
-</td>
-<td>
-0.488
-</td>
-<td>
-4.257
-</td>
-<td>
-0.000
-</td>
-<td>
-1.108
-</td>
-<td>
-3.044
-</td>
+<tr class="even">
+<td>const</td>
+<td style="text-align: left;">1.8158</td>
+<td style="text-align: left;">0.162</td>
+<td style="text-align: left;">11.231</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">1.495</td>
+<td style="text-align: left;">2.137</td>
 </tr>
-<tr>
-<th>
-x2
-</th>
-<td>
-0.7584
-</td>
-<td>
-0.817
-</td>
-<td>
-0.929
-</td>
-<td>
-0.355
-</td>
-<td>
--0.862
-</td>
-<td>
-2.379
-</td>
+<tr class="odd">
+<td>x1</td>
+<td style="text-align: left;">2.0758</td>
+<td style="text-align: left;">0.488</td>
+<td style="text-align: left;">4.257</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">1.108</td>
+<td style="text-align: left;">3.044</td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt; 0.718&lt;/td&gt; &lt;th&gt;  Durbin-Watson:     &lt;/th&gt; &lt;td&gt;   1.960&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt;-0.185&lt;/td&gt; &lt;th&gt;  Prob(JB):          &lt;/th&gt; &lt;td&gt;   0.750&lt;/td&gt;</code></pre><pre><code>&lt;td&gt; 2.981&lt;/td&gt; &lt;th&gt;  Cond. No.          &lt;/th&gt; &lt;td&gt;    12.5&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<th>
-Omnibus:
-</th>
-
+<tr class="even">
+<td>x2</td>
+<td style="text-align: left;">0.7584</td>
+<td style="text-align: left;">0.817</td>
+<td style="text-align: left;">0.929</td>
+<td style="text-align: left;">0.355</td>
+<td style="text-align: left;">-0.862</td>
+<td style="text-align: left;">2.379</td>
 </tr>
-<tr>
-<th>
-Prob(Omnibus):
-</th>
-<td>
-0.698
-</td>
-<th>
-Jarque-Bera (JB):
-</th>
-<td>
-0.574
-</td>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omnibus:</th>
+<th>0.718</th>
+<th style="text-align: left;">Durbin-Watson:</th>
+<th>1.960</th>
 </tr>
-<tr>
-<th>
-Skew:
-</th>
-
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob(Omnibus):</td>
+<td>0.698</td>
+<td style="text-align: left;">Jarque-Bera (JB):</td>
+<td>0.574</td>
 </tr>
-<tr>
-<th>
-Kurtosis:
-</th>
-
+<tr class="even">
+<td style="text-align: left;">Skew:</td>
+<td>-0.185</td>
+<td style="text-align: left;">Prob(JB):</td>
+<td>0.750</td>
 </tr>
-</tbody></table>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis:</td>
+<td>2.981</td>
+<td style="text-align: left;">Cond. No.</td>
+<td>12.5</td>
+</tr>
+</tbody>
+</table>
 <p>According to the results we have:</p>
 <ul>
 <li><span class="math inline">\(\hat{\beta_0} = 1.8158\)</span></li>
@@ -551,17 +520,17 @@ Kurtosis:
 <p><b> <span class="math inline">\(H_0 : \beta_2 = 0\)</span> </b>. In this case the t-statistic is low (0.929) and the p-value is high (0.355). Accordingly, the <b>null hypothesis can’t be rejected</b>.</p>
 <p><b>Alternative solution</b></p>
 <p>A different way to approximate the equation using R-style formula in StatsModel.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define data</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1, <span class="st">'x2'</span>:x2, <span class="st">'y'</span>:y})  <span class="co"># We don't need to add constant because we will use formulas</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create model</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>mod <span class="op">=</span> smf.ols(formula<span class="op">=</span><span class="st">'y ~ x1 + x2'</span>, data<span class="op">=</span>df)  <span class="co"># R-style command</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit model</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> mod.fit()</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (res.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1, <span class="st">'x2'</span>:x2, <span class="st">'y'</span>:y})  <span class="co"># We don't need to add constant because we will use formulas</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create model</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>mod <span class="op">=</span> smf.ols(formula<span class="op">=</span><span class="st">'y ~ x1 + x2'</span>, data<span class="op">=</span>df)  <span class="co"># R-style command</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit model</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> mod.fit()</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Print results</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (res.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      y   R-squared:                       0.444
@@ -590,24 +559,24 @@ Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
 <p><b>Alternative solution</b></p>
 <p>This is an alternative solution using Scikit instead of StatsModel.</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create model</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>lr <span class="op">=</span> LinearRegression()</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit model</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>mod <span class="op">=</span> lr.fit(X,y)</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Get coefficients</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>mod.coef_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create model</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>lr <span class="op">=</span> LinearRegression()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit model</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>mod <span class="op">=</span> lr.fit(X,y)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Get coefficients</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>mod.coef_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>array([ 0.        ,  2.0758066 ,  0.75840009])</code></pre>
 </section>
 <section id="d" class="level1">
 <h1>(d)</h1>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1})</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1})</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      y   R-squared:                       0.439
@@ -637,12 +606,12 @@ Warnings:
 </section>
 <section id="e" class="level1">
 <h1>(e)</h1>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x2'</span>:x2})</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x2'</span>:x2})</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      y   R-squared:                       0.340
@@ -678,24 +647,24 @@ Warnings:
 </section>
 <section id="g" class="level1">
 <h1>(g)</h1>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add observation </span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.append(x1, <span class="fl">0.1</span>)  <span class="co"># To x1</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.append(x2, <span class="fl">0.8</span>)  <span class="co"># To x2</span></span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.append(y, <span class="dv">6</span>)  <span class="co"># To y</span></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to dataframe (easier for outlier analysis plots)</span></span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> {<span class="st">'x1'</span>: <span class="fl">.1</span>, <span class="st">'x2'</span>: <span class="fl">.8</span>, <span class="st">'y'</span>: <span class="dv">6</span>}  <span class="co"># Create point</span></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.append(sample, ignore_index<span class="op">=</span><span class="va">True</span>)  <span class="co"># Append sample to existing dataframe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add observation </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.append(x1, <span class="fl">0.1</span>)  <span class="co"># To x1</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.append(x2, <span class="fl">0.8</span>)  <span class="co"># To x2</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.append(y, <span class="dv">6</span>)  <span class="co"># To y</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Add to dataframe (easier for outlier analysis plots)</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> {<span class="st">'x1'</span>: <span class="fl">.1</span>, <span class="st">'x2'</span>: <span class="fl">.8</span>, <span class="st">'y'</span>: <span class="dv">6</span>}  <span class="co"># Create point</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.append(sample, ignore_index<span class="op">=</span><span class="va">True</span>)  <span class="co"># Append sample to existing dataframe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="models-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="models-analysis">Models analysis</h3>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model (c)</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1, <span class="st">'x2'</span>:x2})</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)  <span class="co"># No constant is added by the model unless we're using formulas, so we have to add it</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model (c)</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1, <span class="st">'x2'</span>:x2})</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)  <span class="co"># No constant is added by the model unless we're using formulas, so we have to add it</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      y   R-squared:                       0.425
@@ -722,14 +691,14 @@ Kurtosis:                       3.035   Cond. No.                         10.2
 
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model (d)</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1})</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)  <span class="co"># No constant is added by the model unless we're using formulas, so we have to add it</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model (d)</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x1'</span>:x1})</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)  <span class="co"># No constant is added by the model unless we're using formulas, so we have to add it</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      y   R-squared:                       0.363
@@ -755,14 +724,14 @@ Kurtosis:                       5.003   Cond. No.                         4.14
 
 Warnings:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model (e)</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x2'</span>:x2})</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)  <span class="co"># No constant is added by the model unless we're using formulas, so we have to add it</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model (e)</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> pd.DataFrame({<span class="st">'x2'</span>:x2})</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> sm.add_constant(X)  <span class="co"># No constant is added by the model unless we're using formulas, so we have to add it</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.OLS(y, X)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> model.fit()</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      y   R-squared:                       0.377
@@ -800,11 +769,11 @@ Warnings:
 <p>We just saw that outliers are observations for which the response <span class="math inline">\(y_i\)</span> is unusual given the predictor <span class="math inline">\(x_i\)</span>. In contrast, observations with high leverage have an unusual value for <span class="math inline">\(x_i\)</span>. In statistics, particularly in regression analysis, leverage is a measure of how far away the independent variable values of an observation are from those of the other observations.</p>
 <p>In a simple linear regression, high leverage observations are fairly easy to identify, since we can simply look for observations for which the predictor value is outside of the normal range of the observations. With a single predictor, an extreme x value is simply one that is particularly high or low.</p>
 <p>But in a multiple linear regression with many predictors, it is possible to have an observation that is well within the range of each individual predictor’s values, but that is unusual in terms of the full set of predictors. With multiple predictors, extreme x values may be particularly high or low for one or more predictors, or may be “unusual” combinations of predictor values (e.g., with two predictors that are positively correlated, an unusual combination of predictor values might be a high value of one predictor paired with a low value of the other predictor).</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bivariate analysis (x1,x2)</span></span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> df.iloc[<span class="op">-</span><span class="dv">1</span>:]  <span class="co"># To get the last observation</span></span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>other <span class="op">=</span> df.iloc[:<span class="op">-</span><span class="dv">1</span>]  <span class="co"># To get all the observations but the last</span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> other.plot(kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'x2'</span>, color<span class="op">=</span><span class="st">'blue'</span>)<span class="op">;</span>  <span class="co"># Plot all observations but the last in blue</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>sample.plot(ax<span class="op">=</span>ax, kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'x2'</span>, color<span class="op">=</span><span class="st">'red'</span>)<span class="op">;</span>  <span class="co"># Plot last observation added in red</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bivariate analysis (x1,x2)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> df.iloc[<span class="op">-</span><span class="dv">1</span>:]  <span class="co"># To get the last observation</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>other <span class="op">=</span> df.iloc[:<span class="op">-</span><span class="dv">1</span>]  <span class="co"># To get all the observations but the last</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> other.plot(kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'x2'</span>, color<span class="op">=</span><span class="st">'blue'</span>)<span class="op">;</span>  <span class="co"># Plot all observations but the last in blue</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>sample.plot(ax<span class="op">=</span>ax, kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'x2'</span>, color<span class="op">=</span><span class="st">'red'</span>)<span class="op">;</span>  <span class="co"># Plot last observation added in red</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_14_files/03_14_34_0.png" class="img-fluid figure-img"></p>
@@ -815,11 +784,11 @@ Warnings:
 <li>There is an unusual combination of predictor values, so it looks like an high leverage point.</li>
 </ul>
 <p><b>Note:</b> we are not comparing predictors with responses nor evaluating if <span class="math inline">\(y_i\)</span> is far from the value predicted by the model. Therefore, it doesn’t make sense to discuss if it’s an outlier or not based on this plot.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bivariate analysis (x1,y)</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> df.iloc[<span class="op">-</span><span class="dv">1</span>:]  <span class="co"># To get the last observation</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>other <span class="op">=</span> df.iloc[:<span class="op">-</span><span class="dv">1</span>]  <span class="co"># To get all the observations but the last</span></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> other.plot(kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'blue'</span>)<span class="op">;</span>  <span class="co"># Plot all observations but the last in blue</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>sample.plot(ax<span class="op">=</span>ax, kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'red'</span>)<span class="op">;</span>  <span class="co"># Plot last observation added in red</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bivariate analysis (x1,y)</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> df.iloc[<span class="op">-</span><span class="dv">1</span>:]  <span class="co"># To get the last observation</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>other <span class="op">=</span> df.iloc[:<span class="op">-</span><span class="dv">1</span>]  <span class="co"># To get all the observations but the last</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> other.plot(kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'blue'</span>)<span class="op">;</span>  <span class="co"># Plot all observations but the last in blue</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>sample.plot(ax<span class="op">=</span>ax, kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x1'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'red'</span>)<span class="op">;</span>  <span class="co"># Plot last observation added in red</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_14_files/03_14_36_0.png" class="img-fluid figure-img"></p>
@@ -830,11 +799,11 @@ Warnings:
 <li>The red point does not follow the trend, so it looks like an outlier.</li>
 <li>The red point doesn’t have an unusual <span class="math inline">\(x_1\)</span> value, so it doesn’t look like an high leverage point.</li>
 </ul>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bivariate analysis (x2,y)</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> df.iloc[<span class="op">-</span><span class="dv">1</span>:]  <span class="co"># To get the last observation</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>other <span class="op">=</span> df.iloc[:<span class="op">-</span><span class="dv">1</span>]  <span class="co"># To get all the observations but the last</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> other.plot(kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x2'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'blue'</span>)<span class="op">;</span>  <span class="co"># Plot all observations but the last in blue</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>sample.plot(ax<span class="op">=</span>ax, kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x2'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'red'</span>)<span class="op">;</span>  <span class="co"># Plot last observation added in red</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bivariate analysis (x2,y)</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>sample <span class="op">=</span> df.iloc[<span class="op">-</span><span class="dv">1</span>:]  <span class="co"># To get the last observation</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>other <span class="op">=</span> df.iloc[:<span class="op">-</span><span class="dv">1</span>]  <span class="co"># To get all the observations but the last</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> other.plot(kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x2'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'blue'</span>)<span class="op">;</span>  <span class="co"># Plot all observations but the last in blue</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>sample.plot(ax<span class="op">=</span>ax, kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'x2'</span>,y<span class="op">=</span><span class="st">'y'</span>, color<span class="op">=</span><span class="st">'red'</span>)<span class="op">;</span>  <span class="co"># Plot last observation added in red</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_14_files/03_14_38_0.png" class="img-fluid figure-img"></p>

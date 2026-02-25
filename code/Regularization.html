@@ -215,6 +215,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">HW 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW 2 Solution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hw/HW 3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -339,7 +351,7 @@ n = 15  cond(H_n) = 3.37e+17</code></pre>
 </section>
 <section id="ols-ridge-lasso-elastic-net" class="level1">
 <h1>OLS, Ridge, Lasso, Elastic Net</h1>
-<div id="2a232661" class="cell" data-execution_count="2">
+<div id="2a232661" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Goal:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Sell the idea: when p approaches n (or p &gt; n), X'X becomes singular (or ill-conditioned),</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#    making OLS unstable / non-unique.</span></span>
@@ -362,7 +374,7 @@ n = 15  cond(H_n) = 3.37e+17</code></pre>
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Simulate a "p close to n" setting</span></span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co"># -----------------------------</span></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">100</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">66</span>   <span class="co"># p close to n -&gt; trouble for X'X (often ill-conditioned)</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">65</span>   <span class="co"># p close to n -&gt; trouble for X'X (often ill-conditioned)</span></span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">2.0</span></span>
 <span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Correlated features make the ill-conditioning even more obvious</span></span>

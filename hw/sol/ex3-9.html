@@ -242,6 +242,18 @@ window.Quarto = {
  <span class="menu-text">HW 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW 2 Solution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../hw/HW 3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">HW 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -317,200 +329,332 @@ window.Quarto = {
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../data/Auto.csv'</span>, na_values<span class="op">=</span><span class="st">'?'</span>).dropna()</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
 
-<table class="dataframe table table-sm table-striped small">
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table>
 <thead>
 <tr>
 <th>
+<p>
+</p>
 </th>
 <th>
+<p>
 mpg
+</p>
 </th>
 <th>
+<p>
 cylinders
+</p>
 </th>
 <th>
+<p>
 displacement
+</p>
 </th>
 <th>
+<p>
 horsepower
+</p>
 </th>
 <th>
+<p>
 weight
+</p>
 </th>
 <th>
+<p>
 acceleration
+</p>
 </th>
 <th>
+<p>
 year
+</p>
 </th>
 <th>
+<p>
 origin
+</p>
 </th>
 <th>
+<p>
 name
+</p>
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th>
+<td>
+<p>
 0
-</th>
+</p>
+</td>
 <td>
+<p>
 18.0
+</p>
 </td>
 <td>
+<p>
 8
+</p>
 </td>
 <td>
+<p>
 307.0
+</p>
 </td>
 <td>
+<p>
 130.0
+</p>
 </td>
 <td>
+<p>
 3504
+</p>
 </td>
 <td>
+<p>
 12.0
+</p>
 </td>
 <td>
+<p>
 70
+</p>
 </td>
 <td>
+<p>
 1
+</p>
 </td>
 <td>
+<p>
 chevrolet chevelle malibu
+</p>
 </td>
 </tr>
 <tr>
-<th>
-1
-</th>
 <td>
+<p>
+1
+</p>
+</td>
+<td>
+<p>
 15.0
+</p>
 </td>
 <td>
+<p>
 8
+</p>
 </td>
 <td>
+<p>
 350.0
+</p>
 </td>
 <td>
+<p>
 165.0
+</p>
 </td>
 <td>
+<p>
 3693
+</p>
 </td>
 <td>
+<p>
 11.5
+</p>
 </td>
 <td>
+<p>
 70
+</p>
 </td>
 <td>
+<p>
 1
+</p>
 </td>
 <td>
+<p>
 buick skylark 320
+</p>
 </td>
 </tr>
 <tr>
-<th>
+<td>
+<p>
 2
-</th>
+</p>
+</td>
 <td>
+<p>
 18.0
+</p>
 </td>
 <td>
+<p>
 8
+</p>
 </td>
 <td>
+<p>
 318.0
+</p>
 </td>
 <td>
+<p>
 150.0
+</p>
 </td>
 <td>
+<p>
 3436
+</p>
 </td>
 <td>
+<p>
 11.0
+</p>
 </td>
 <td>
+<p>
 70
+</p>
 </td>
 <td>
+<p>
 1
+</p>
 </td>
 <td>
+<p>
 plymouth satellite
+</p>
 </td>
 </tr>
 <tr>
-<th>
+<td>
+<p>
 3
-</th>
+</p>
+</td>
 <td>
+<p>
 16.0
+</p>
 </td>
 <td>
+<p>
 8
+</p>
 </td>
 <td>
+<p>
 304.0
+</p>
 </td>
 <td>
+<p>
 150.0
+</p>
 </td>
 <td>
+<p>
 3433
+</p>
 </td>
 <td>
+<p>
 12.0
+</p>
 </td>
 <td>
+<p>
 70
+</p>
 </td>
 <td>
+<p>
 1
+</p>
 </td>
 <td>
+<p>
 amc rebel sst
+</p>
 </td>
 </tr>
 <tr>
-<th>
+<td>
+<p>
 4
-</th>
+</p>
+</td>
 <td>
+<p>
 17.0
+</p>
 </td>
 <td>
+<p>
 8
+</p>
 </td>
 <td>
+<p>
 302.0
+</p>
 </td>
 <td>
+<p>
 140.0
+</p>
 </td>
 <td>
+<p>
 3449
+</p>
 </td>
 <td>
+<p>
 10.5
+</p>
 </td>
 <td>
+<p>
 70
+</p>
 </td>
 <td>
+<p>
 1
+</p>
 </td>
 <td>
+<p>
 ford torino
+</p>
 </td>
 </tr>
 </tbody>
@@ -538,277 +682,139 @@ ford torino
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df.corr()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
 
-<table class="dataframe table table-sm table-striped small">
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+</colgroup>
 <thead>
-<tr>
-<th>
-</th>
-<th>
-mpg
-</th>
-<th>
-cylinders
-</th>
-<th>
-displacement
-</th>
-<th>
-horsepower
-</th>
-<th>
-weight
-</th>
-<th>
-acceleration
-</th>
-<th>
-year
-</th>
-<th>
-origin
-</th>
+<tr class="header">
+<th></th>
+<th>mpg</th>
+<th>cylinders</th>
+<th>displacement</th>
+<th>horsepower</th>
+<th>weight</th>
+<th>acceleration</th>
+<th>year</th>
+<th>origin</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<th>
-mpg
-</th>
-<td>
-1.000000
-</td>
-<td>
--0.777618
-</td>
-<td>
--0.805127
-</td>
-<td>
--0.778427
-</td>
-<td>
--0.832244
-</td>
-<td>
-0.423329
-</td>
-<td>
-0.580541
-</td>
-<td>
-0.565209
-</td>
+<tr class="odd">
+<td>mpg</td>
+<td>1.000000</td>
+<td>-0.777618</td>
+<td>-0.805127</td>
+<td>-0.778427</td>
+<td>-0.832244</td>
+<td>0.423329</td>
+<td>0.580541</td>
+<td>0.565209</td>
 </tr>
-<tr>
-<th>
-cylinders
-</th>
-<td>
--0.777618
-</td>
-<td>
-1.000000
-</td>
-<td>
-0.950823
-</td>
-<td>
-0.842983
-</td>
-<td>
-0.897527
-</td>
-<td>
--0.504683
-</td>
-<td>
--0.345647
-</td>
-<td>
--0.568932
-</td>
+<tr class="even">
+<td>cylinders</td>
+<td>-0.777618</td>
+<td>1.000000</td>
+<td>0.950823</td>
+<td>0.842983</td>
+<td>0.897527</td>
+<td>-0.504683</td>
+<td>-0.345647</td>
+<td>-0.568932</td>
 </tr>
-<tr>
-<th>
-displacement
-</th>
-<td>
--0.805127
-</td>
-<td>
-0.950823
-</td>
-<td>
-1.000000
-</td>
-<td>
-0.897257
-</td>
-<td>
-0.932994
-</td>
-<td>
--0.543800
-</td>
-<td>
--0.369855
-</td>
-<td>
--0.614535
-</td>
+<tr class="odd">
+<td>displacement</td>
+<td>-0.805127</td>
+<td>0.950823</td>
+<td>1.000000</td>
+<td>0.897257</td>
+<td>0.932994</td>
+<td>-0.543800</td>
+<td>-0.369855</td>
+<td>-0.614535</td>
 </tr>
-<tr>
-<th>
-horsepower
-</th>
-<td>
--0.778427
-</td>
-<td>
-0.842983
-</td>
-<td>
-0.897257
-</td>
-<td>
-1.000000
-</td>
-<td>
-0.864538
-</td>
-<td>
--0.689196
-</td>
-<td>
--0.416361
-</td>
-<td>
--0.455171
-</td>
+<tr class="even">
+<td>horsepower</td>
+<td>-0.778427</td>
+<td>0.842983</td>
+<td>0.897257</td>
+<td>1.000000</td>
+<td>0.864538</td>
+<td>-0.689196</td>
+<td>-0.416361</td>
+<td>-0.455171</td>
 </tr>
-<tr>
-<th>
-weight
-</th>
-<td>
--0.832244
-</td>
-<td>
-0.897527
-</td>
-<td>
-0.932994
-</td>
-<td>
-0.864538
-</td>
-<td>
-1.000000
-</td>
-<td>
--0.416839
-</td>
-<td>
--0.309120
-</td>
-<td>
--0.585005
-</td>
+<tr class="odd">
+<td>weight</td>
+<td>-0.832244</td>
+<td>0.897527</td>
+<td>0.932994</td>
+<td>0.864538</td>
+<td>1.000000</td>
+<td>-0.416839</td>
+<td>-0.309120</td>
+<td>-0.585005</td>
 </tr>
-<tr>
-<th>
-acceleration
-</th>
-<td>
-0.423329
-</td>
-<td>
--0.504683
-</td>
-<td>
--0.543800
-</td>
-<td>
--0.689196
-</td>
-<td>
--0.416839
-</td>
-<td>
-1.000000
-</td>
-<td>
-0.290316
-</td>
-<td>
-0.212746
-</td>
+<tr class="even">
+<td>acceleration</td>
+<td>0.423329</td>
+<td>-0.504683</td>
+<td>-0.543800</td>
+<td>-0.689196</td>
+<td>-0.416839</td>
+<td>1.000000</td>
+<td>0.290316</td>
+<td>0.212746</td>
 </tr>
-<tr>
-<th>
-year
-</th>
-<td>
-0.580541
-</td>
-<td>
--0.345647
-</td>
-<td>
--0.369855
-</td>
-<td>
--0.416361
-</td>
-<td>
--0.309120
-</td>
-<td>
-0.290316
-</td>
-<td>
-1.000000
-</td>
-<td>
-0.181528
-</td>
+<tr class="odd">
+<td>year</td>
+<td>0.580541</td>
+<td>-0.345647</td>
+<td>-0.369855</td>
+<td>-0.416361</td>
+<td>-0.309120</td>
+<td>0.290316</td>
+<td>1.000000</td>
+<td>0.181528</td>
 </tr>
-<tr>
-<th>
-origin
-</th>
-<td>
-0.565209
-</td>
-<td>
--0.568932
-</td>
-<td>
--0.614535
-</td>
-<td>
--0.455171
-</td>
-<td>
--0.585005
-</td>
-<td>
-0.212746
-</td>
-<td>
-0.181528
-</td>
-<td>
-1.000000
-</td>
+<tr class="even">
+<td>origin</td>
+<td>0.565209</td>
+<td>-0.568932</td>
+<td>-0.614535</td>
+<td>-0.455171</td>
+<td>-0.585005</td>
+<td>0.212746</td>
+<td>0.181528</td>
+<td>1.000000</td>
 </tr>
 </tbody>
 </table>
 </div>
 <p><strong>Extra</strong></p>
 <p>Why not a correlation heatmap as well?</p>
-<p><a href="http://seaborn.pydata.org/examples/network_correlations.html">http://seaborn.pydata.org/examples/network_correlations.html</a></p>
+<p><a href="http://seaborn.pydata.org/examples/network_correlations.html" class="uri">http://seaborn.pydata.org/examples/network_correlations.html</a></p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>corrmat <span class="op">=</span> df.corr()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up the matplotlib figure</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">9</span>))</span>
@@ -828,268 +834,200 @@ origin
 <h2 class="anchored" data-anchor-id="c">(c)</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ cylinders + displacement + horsepower + weight + acceleration + year + origin'</span>, df).fit()</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.821&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.818&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   252.4&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;2.04e-139&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:08&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -1023.5&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   2063.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   384&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2095.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     7&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
-<caption>
-OLS Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>OLS Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>mpg</td>
+<td>R-squared:</td>
+<td>0.821</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>OLS</td>
+<td>Adj. R-squared:</td>
+<td>0.818</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>Least Squares</td>
+<td>F-statistic:</td>
+<td>252.4</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 08 Dec 2017</td>
+<td>Prob (F-statistic):</td>
+<td>2.04e-139</td>
 </tr>
-<tr>
-<th>
-No.&nbsp;Observations:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>09:49:08</td>
+<td>Log-Likelihood:</td>
+<td>-1023.5</td>
 </tr>
-<tr>
-<th>
-Df Residuals:
-</th>
-
+<tr class="odd">
+<td>No.&nbsp;Observations:</td>
+<td>392</td>
+<td>AIC:</td>
+<td>2063.</td>
 </tr>
-<tr>
-<th>
-Df Model:
-</th>
-
+<tr class="even">
+<td>Df Residuals:</td>
+<td>384</td>
+<td>BIC:</td>
+<td>2095.</td>
 </tr>
-<tr>
-<th>
-Covariance Type:
-</th>
-
+<tr class="odd">
+<td>Df Model:</td>
+<td>7</td>
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;   -0.0065&lt;/td&gt; &lt;td&gt;    0.001&lt;/td&gt; &lt;td&gt;   -9.929&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;   -0.008&lt;/td&gt; &lt;td&gt;   -0.005&lt;/td&gt;</code></pre><pre><code>   &lt;td&gt;    0.7508&lt;/td&gt; &lt;td&gt;    0.051&lt;/td&gt; &lt;td&gt;   14.729&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.651&lt;/td&gt; &lt;td&gt;    0.851&lt;/td&gt;</code></pre><pre><code> &lt;td&gt;    1.4261&lt;/td&gt; &lt;td&gt;    0.278&lt;/td&gt; &lt;td&gt;    5.127&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.879&lt;/td&gt; &lt;td&gt;    1.973&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-t
-</th>
-<th>
-P&gt;|t|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td>Covariance Type:</td>
+<td>nonrobust</td>
+<td></td>
+<td></td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-<td>
--17.2184
-</td>
-<td>
-4.644
-</td>
-<td>
--3.707
-</td>
-<td>
-0.000
-</td>
-<td>
--26.350
-</td>
-<td>
--8.087
-</td>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">P&gt;|t|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-cylinders
-</th>
-<td>
--0.4934
-</td>
-<td>
-0.323
-</td>
-<td>
--1.526
-</td>
-<td>
-0.128
-</td>
-<td>
--1.129
-</td>
-<td>
-0.142
-</td>
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">-17.2184</td>
+<td style="text-align: left;">4.644</td>
+<td style="text-align: left;">-3.707</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-26.350</td>
+<td style="text-align: left;">-8.087</td>
 </tr>
-<tr>
-<th>
-displacement
-</th>
-<td>
-0.0199
-</td>
-<td>
-0.008
-</td>
-<td>
-2.647
-</td>
-<td>
-0.008
-</td>
-<td>
-0.005
-</td>
-<td>
-0.035
-</td>
+<tr class="odd">
+<td>cylinders</td>
+<td style="text-align: left;">-0.4934</td>
+<td style="text-align: left;">0.323</td>
+<td style="text-align: left;">-1.526</td>
+<td style="text-align: left;">0.128</td>
+<td style="text-align: left;">-1.129</td>
+<td style="text-align: left;">0.142</td>
 </tr>
-<tr>
-<th>
-horsepower
-</th>
-<td>
--0.0170
-</td>
-<td>
-0.014
-</td>
-<td>
--1.230
-</td>
-<td>
-0.220
-</td>
-<td>
--0.044
-</td>
-<td>
-0.010
-</td>
+<tr class="even">
+<td>displacement</td>
+<td style="text-align: left;">0.0199</td>
+<td style="text-align: left;">0.008</td>
+<td style="text-align: left;">2.647</td>
+<td style="text-align: left;">0.008</td>
+<td style="text-align: left;">0.005</td>
+<td style="text-align: left;">0.035</td>
 </tr>
-<tr>
-<th>
-weight
-</th>
-
+<tr class="odd">
+<td>horsepower</td>
+<td style="text-align: left;">-0.0170</td>
+<td style="text-align: left;">0.014</td>
+<td style="text-align: left;">-1.230</td>
+<td style="text-align: left;">0.220</td>
+<td style="text-align: left;">-0.044</td>
+<td style="text-align: left;">0.010</td>
 </tr>
-<tr>
-<th>
-acceleration
-</th>
-<td>
-0.0806
-</td>
-<td>
-0.099
-</td>
-<td>
-0.815
-</td>
-<td>
-0.415
-</td>
-<td>
--0.114
-</td>
-<td>
-0.275
-</td>
+<tr class="even">
+<td>weight</td>
+<td style="text-align: left;">-0.0065</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">-9.929</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.008</td>
+<td style="text-align: left;">-0.005</td>
 </tr>
-<tr>
-<th>
-year
-</th>
-
+<tr class="odd">
+<td>acceleration</td>
+<td style="text-align: left;">0.0806</td>
+<td style="text-align: left;">0.099</td>
+<td style="text-align: left;">0.815</td>
+<td style="text-align: left;">0.415</td>
+<td style="text-align: left;">-0.114</td>
+<td style="text-align: left;">0.275</td>
 </tr>
-<tr>
-<th>
-origin
-</th>
-
+<tr class="even">
+<td>year</td>
+<td style="text-align: left;">0.7508</td>
+<td style="text-align: left;">0.051</td>
+<td style="text-align: left;">14.729</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.651</td>
+<td style="text-align: left;">0.851</td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;31.906&lt;/td&gt; &lt;th&gt;  Durbin-Watson:     &lt;/th&gt; &lt;td&gt;   1.309&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt; 0.529&lt;/td&gt; &lt;th&gt;  Prob(JB):          &lt;/th&gt; &lt;td&gt;2.95e-12&lt;/td&gt;</code></pre><pre><code>&lt;td&gt; 4.460&lt;/td&gt; &lt;th&gt;  Cond. No.          &lt;/th&gt; &lt;td&gt;8.59e+04&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<th>
-Omnibus:
-</th>
-
+<tr class="odd">
+<td>origin</td>
+<td style="text-align: left;">1.4261</td>
+<td style="text-align: left;">0.278</td>
+<td style="text-align: left;">5.127</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.879</td>
+<td style="text-align: left;">1.973</td>
 </tr>
-<tr>
-<th>
-Prob(Omnibus):
-</th>
-<td>
-0.000
-</td>
-<th>
-Jarque-Bera (JB):
-</th>
-<td>
-53.100
-</td>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omnibus:</th>
+<th>31.906</th>
+<th style="text-align: left;">Durbin-Watson:</th>
+<th>1.309</th>
 </tr>
-<tr>
-<th>
-Skew:
-</th>
-
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob(Omnibus):</td>
+<td>0.000</td>
+<td style="text-align: left;">Jarque-Bera (JB):</td>
+<td>53.100</td>
 </tr>
-<tr>
-<th>
-Kurtosis:
-</th>
-
+<tr class="even">
+<td style="text-align: left;">Skew:</td>
+<td>0.529</td>
+<td style="text-align: left;">Prob(JB):</td>
+<td>2.95e-12</td>
 </tr>
-</tbody></table>
-</div>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis:</td>
+<td>4.460</td>
+<td style="text-align: left;">Cond. No.</td>
+<td>8.59e+04</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="i" class="level2">
 <h2 class="anchored" data-anchor-id="i">i</h2>
@@ -1111,73 +1049,73 @@ H_0 :\beta_{cylinders} = \beta_{displacement} = \beta_{weight} = \beta_{accelera
 <h2 class="anchored" data-anchor-id="d">(d)</h2>
 <p>In R [4], by default, plot() on a fit produces 4 plots: * a plot of residuals against fitted values, * a Scale-Location plot of sqrt(| residuals |) against fitted values, * a Normal Q-Q plot, * a plot of residuals against leverages.</p>
 <p>Below, we plot each of these 4 plots. We use the code published by Emre Can [5] with a few adaptations.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.gofplots <span class="im">import</span> ProbPlot</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'seaborn'</span>) <span class="co"># pretty matplotlib plots</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'font'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'figure'</span>, titlesize<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'axes'</span>, labelsize<span class="op">=</span><span class="dv">15</span>)</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'axes'</span>, titlesize<span class="op">=</span><span class="dv">18</span>)</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>model_f <span class="op">=</span> <span class="st">'mpg ~ cylinders + </span><span class="ch">\</span></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="st">                 displacement + </span><span class="ch">\</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="st">                 horsepower + </span><span class="ch">\</span></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="st">                 weight + </span><span class="ch">\</span></span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="st">                 acceleration + </span><span class="ch">\</span></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="st">                 year + </span><span class="ch">\</span></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="st">                 origin'</span></span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>df.reset_index(drop<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> smf.ols(formula<span class="op">=</span>model_f, data<span class="op">=</span>df)</span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>model_fit <span class="op">=</span> model.fit()</span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a><span class="co"># fitted values (need a constant term for intercept)</span></span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>model_fitted_y <span class="op">=</span> model_fit.fittedvalues</span>
-<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a><span class="co"># model residuals</span></span>
-<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>model_residuals <span class="op">=</span> model_fit.resid</span>
-<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a><span class="co"># normalized residuals</span></span>
-<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>model_norm_residuals <span class="op">=</span> model_fit.get_influence().resid_studentized_internal</span>
-<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a><span class="co"># absolute squared normalized residuals</span></span>
-<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>model_norm_residuals_abs_sqrt <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(model_norm_residuals))</span>
-<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a><span class="co"># absolute residuals</span></span>
-<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>model_abs_resid <span class="op">=</span> np.<span class="bu">abs</span>(model_residuals)</span>
-<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a><span class="co"># leverage, from statsmodels internals</span></span>
-<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>model_leverage <span class="op">=</span> model_fit.get_influence().hat_matrix_diag</span>
-<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a><span class="co"># cook's distance, from statsmodels internals</span></span>
-<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>model_cooks <span class="op">=</span> model_fit.get_influence().cooks_distance[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.gofplots <span class="im">import</span> ProbPlot</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'seaborn'</span>) <span class="co"># pretty matplotlib plots</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'font'</span>, size<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'figure'</span>, titlesize<span class="op">=</span><span class="dv">18</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'axes'</span>, labelsize<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>plt.rc(<span class="st">'axes'</span>, titlesize<span class="op">=</span><span class="dv">18</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>model_f <span class="op">=</span> <span class="st">'mpg ~ cylinders + </span><span class="ch">\</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="st">                 displacement + </span><span class="ch">\</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="st">                 horsepower + </span><span class="ch">\</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="st">                 weight + </span><span class="ch">\</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">                 acceleration + </span><span class="ch">\</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="st">                 year + </span><span class="ch">\</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="st">                 origin'</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>df.reset_index(drop<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> smf.ols(formula<span class="op">=</span>model_f, data<span class="op">=</span>df)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>model_fit <span class="op">=</span> model.fit()</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="co"># fitted values (need a constant term for intercept)</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>model_fitted_y <span class="op">=</span> model_fit.fittedvalues</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co"># model residuals</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>model_residuals <span class="op">=</span> model_fit.resid</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co"># normalized residuals</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>model_norm_residuals <span class="op">=</span> model_fit.get_influence().resid_studentized_internal</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="co"># absolute squared normalized residuals</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>model_norm_residuals_abs_sqrt <span class="op">=</span> np.sqrt(np.<span class="bu">abs</span>(model_norm_residuals))</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a><span class="co"># absolute residuals</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>model_abs_resid <span class="op">=</span> np.<span class="bu">abs</span>(model_residuals)</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="co"># leverage, from statsmodels internals</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>model_leverage <span class="op">=</span> model_fit.get_influence().hat_matrix_diag</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="co"># cook's distance, from statsmodels internals</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>model_cooks <span class="op">=</span> model_fit.get_influence().cooks_distance[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <section id="residuals-against-fitted-values" class="level3">
 <h3 class="anchored" data-anchor-id="residuals-against-fitted-values">Residuals against fitted values</h3>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>plot_lm_1 <span class="op">=</span> plt.figure(<span class="dv">1</span>)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>plot_lm_1.set_figheight(<span class="dv">8</span>)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>plot_lm_1.set_figwidth(<span class="dv">12</span>)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>] <span class="op">=</span> sns.residplot(model_fitted_y, <span class="st">'mpg'</span>, data<span class="op">=</span>df,</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>                                  lowess<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>                                  scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.5</span>},</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>                                  line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'lw'</span>: <span class="dv">1</span>, <span class="st">'alpha'</span>: <span class="fl">0.8</span>})</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>].set_title(<span class="st">'Residuals vs Fitted'</span>)</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Fitted values'</span>)</span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Residuals'</span>)</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations</span></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>abs_resid <span class="op">=</span> model_abs_resid.sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>abs_resid_top_3 <span class="op">=</span> abs_resid[:<span class="dv">3</span>]</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> abs_resid_top_3.index:</span>
-<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>    plot_lm_1.axes[<span class="dv">0</span>].annotate(i, </span>
-<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(model_fitted_y[i], </span>
-<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>                                   model_residuals[i]))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plot_lm_1 <span class="op">=</span> plt.figure(<span class="dv">1</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>plot_lm_1.set_figheight(<span class="dv">8</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plot_lm_1.set_figwidth(<span class="dv">12</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>] <span class="op">=</span> sns.residplot(model_fitted_y, <span class="st">'mpg'</span>, data<span class="op">=</span>df,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>                                  lowess<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>                                  scatter_kws<span class="op">=</span>{<span class="st">'alpha'</span>: <span class="fl">0.5</span>},</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>                                  line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'lw'</span>: <span class="dv">1</span>, <span class="st">'alpha'</span>: <span class="fl">0.8</span>})</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>].set_title(<span class="st">'Residuals vs Fitted'</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Fitted values'</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plot_lm_1.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Residuals'</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>abs_resid <span class="op">=</span> model_abs_resid.sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>abs_resid_top_3 <span class="op">=</span> abs_resid[:<span class="dv">3</span>]</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> abs_resid_top_3.index:</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    plot_lm_1.axes[<span class="dv">0</span>].annotate(i, </span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(model_fitted_y[i], </span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>                                   model_residuals[i]))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_09_files/03_09_21_0.png" class="img-fluid figure-img"></p>
@@ -1187,24 +1125,24 @@ H_0 :\beta_{cylinders} = \beta_{displacement} = \beta_{weight} = \beta_{accelera
 </section>
 <section id="normal-q-q-plot" class="level3">
 <h3 class="anchored" data-anchor-id="normal-q-q-plot">Normal Q-Q plot</h3>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>QQ <span class="op">=</span> ProbPlot(model_norm_residuals)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>plot_lm_2 <span class="op">=</span> QQ.qqplot(line<span class="op">=</span><span class="st">'45'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'#4C72B0'</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>plot_lm_2.set_figheight(<span class="dv">8</span>)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>plot_lm_2.set_figwidth(<span class="dv">12</span>)</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>plot_lm_2.axes[<span class="dv">0</span>].set_title(<span class="st">'Normal Q-Q'</span>)</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>plot_lm_2.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Theoretical Quantiles'</span>)</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>plot_lm_2.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Standardized Residuals'</span>)<span class="op">;</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>abs_norm_resid <span class="op">=</span> np.flip(np.argsort(np.<span class="bu">abs</span>(model_norm_residuals)), <span class="dv">0</span>)</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>abs_norm_resid_top_3 <span class="op">=</span> abs_norm_resid[:<span class="dv">3</span>]</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r, i <span class="kw">in</span> <span class="bu">enumerate</span>(abs_norm_resid_top_3):</span>
-<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    plot_lm_2.axes[<span class="dv">0</span>].annotate(i, </span>
-<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(np.flip(QQ.theoretical_quantiles, <span class="dv">0</span>)[r],</span>
-<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>                                   model_norm_residuals[i]))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>QQ <span class="op">=</span> ProbPlot(model_norm_residuals)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plot_lm_2 <span class="op">=</span> QQ.qqplot(line<span class="op">=</span><span class="st">'45'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'#4C72B0'</span>, lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plot_lm_2.set_figheight(<span class="dv">8</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plot_lm_2.set_figwidth(<span class="dv">12</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plot_lm_2.axes[<span class="dv">0</span>].set_title(<span class="st">'Normal Q-Q'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plot_lm_2.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Theoretical Quantiles'</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>plot_lm_2.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Standardized Residuals'</span>)<span class="op">;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>abs_norm_resid <span class="op">=</span> np.flip(np.argsort(np.<span class="bu">abs</span>(model_norm_residuals)), <span class="dv">0</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>abs_norm_resid_top_3 <span class="op">=</span> abs_norm_resid[:<span class="dv">3</span>]</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> r, i <span class="kw">in</span> <span class="bu">enumerate</span>(abs_norm_resid_top_3):</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    plot_lm_2.axes[<span class="dv">0</span>].annotate(i, </span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(np.flip(QQ.theoretical_quantiles, <span class="dv">0</span>)[r],</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>                                   model_norm_residuals[i]))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_09_files/03_09_23_0.png" class="img-fluid figure-img"></p>
@@ -1214,26 +1152,26 @@ H_0 :\beta_{cylinders} = \beta_{displacement} = \beta_{weight} = \beta_{accelera
 </section>
 <section id="scale-location-plot-of-sqrtresiduals-against-fitted-values" class="level3">
 <h3 class="anchored" data-anchor-id="scale-location-plot-of-sqrtresiduals-against-fitted-values">Scale-Location plot of sqrt(|residuals|) against fitted values</h3>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>plot_lm_3 <span class="op">=</span> plt.figure(<span class="dv">3</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>plot_lm_3.set_figheight(<span class="dv">8</span>)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>plot_lm_3.set_figwidth(<span class="dv">12</span>)</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(model_fitted_y, model_norm_residuals_abs_sqrt, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>sns.regplot(model_fitted_y, model_norm_residuals_abs_sqrt, </span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>            scatter<span class="op">=</span><span class="va">False</span>, </span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>            ci<span class="op">=</span><span class="va">False</span>, </span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>            lowess<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>            line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'lw'</span>: <span class="dv">1</span>, <span class="st">'alpha'</span>: <span class="fl">0.8</span>})</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>plot_lm_3.axes[<span class="dv">0</span>].set_title(<span class="st">'Scale-Location'</span>)</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>plot_lm_3.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Fitted values'</span>)</span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>plot_lm_3.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'$\sqrt{|Standardized Residuals|}$'</span>)<span class="op">;</span></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> abs_norm_resid_top_3:</span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    plot_lm_3.axes[<span class="dv">0</span>].annotate(i, </span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(model_fitted_y[i], </span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>                                   model_norm_residuals_abs_sqrt[i]))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plot_lm_3 <span class="op">=</span> plt.figure(<span class="dv">3</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plot_lm_3.set_figheight(<span class="dv">8</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plot_lm_3.set_figwidth(<span class="dv">12</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(model_fitted_y, model_norm_residuals_abs_sqrt, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>sns.regplot(model_fitted_y, model_norm_residuals_abs_sqrt, </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>            scatter<span class="op">=</span><span class="va">False</span>, </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>            ci<span class="op">=</span><span class="va">False</span>, </span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>            lowess<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>            line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'lw'</span>: <span class="dv">1</span>, <span class="st">'alpha'</span>: <span class="fl">0.8</span>})</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plot_lm_3.axes[<span class="dv">0</span>].set_title(<span class="st">'Scale-Location'</span>)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>plot_lm_3.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Fitted values'</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>plot_lm_3.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'$\sqrt{|Standardized Residuals|}$'</span>)<span class="op">;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> abs_norm_resid_top_3:</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    plot_lm_3.axes[<span class="dv">0</span>].annotate(i, </span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(model_fitted_y[i], </span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>                                   model_norm_residuals_abs_sqrt[i]))<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_09_files/03_09_25_0.png" class="img-fluid figure-img"></p>
@@ -1243,47 +1181,47 @@ H_0 :\beta_{cylinders} = \beta_{displacement} = \beta_{weight} = \beta_{accelera
 </section>
 <section id="residuals-against-leverages" class="level3">
 <h3 class="anchored" data-anchor-id="residuals-against-leverages">Residuals against leverages</h3>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>plot_lm_4 <span class="op">=</span> plt.figure(<span class="dv">4</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>plot_lm_4.set_figheight(<span class="dv">8</span>)</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>plot_lm_4.set_figwidth(<span class="dv">12</span>)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(model_leverage, model_norm_residuals, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>sns.regplot(model_leverage, model_norm_residuals, </span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>            scatter<span class="op">=</span><span class="va">False</span>, </span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>            ci<span class="op">=</span><span class="va">False</span>, </span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>            lowess<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>            line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'lw'</span>: <span class="dv">1</span>, <span class="st">'alpha'</span>: <span class="fl">0.8</span>})</span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_xlim(<span class="dv">0</span>, <span class="fl">0.20</span>)</span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_title(<span class="st">'Residuals vs Leverage'</span>)</span>
-<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Leverage'</span>)</span>
-<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Standardized Residuals'</span>)</span>
-<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations</span></span>
-<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>leverage_top_3 <span class="op">=</span> np.flip(np.argsort(model_cooks), <span class="dv">0</span>)[:<span class="dv">3</span>]</span>
-<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> leverage_top_3:</span>
-<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>    plot_lm_4.axes[<span class="dv">0</span>].annotate(i, </span>
-<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(model_leverage[i], </span>
-<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>                                   model_norm_residuals[i]))</span>
-<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a><span class="co"># shenanigans for cook's distance contours</span></span>
-<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> graph(formula, x_range, label<span class="op">=</span><span class="va">None</span>, ls<span class="op">=</span><span class="st">'-'</span>):</span>
-<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x_range</span>
-<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> formula(x)</span>
-<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>    plt.plot(x, y, label<span class="op">=</span>label, lw<span class="op">=</span><span class="dv">1</span>, ls<span class="op">=</span>ls, color<span class="op">=</span><span class="st">'red'</span>)</span>
-<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="bu">len</span>(model_fit.params) <span class="co"># number of model parameters</span></span>
-<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a>graph(<span class="kw">lambda</span> x: np.sqrt((<span class="fl">0.5</span> <span class="op">*</span> p <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> x)) <span class="op">/</span> x), </span>
-<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a>      np.linspace(<span class="fl">0.001</span>, <span class="fl">0.200</span>, <span class="dv">50</span>), </span>
-<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a>      <span class="st">'Cook</span><span class="ch">\'</span><span class="st">s distance = .5'</span>, ls<span class="op">=</span><span class="st">'--'</span>) <span class="co"># 0.5 line</span></span>
-<span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>graph(<span class="kw">lambda</span> x: np.sqrt((<span class="dv">1</span> <span class="op">*</span> p <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> x)) <span class="op">/</span> x), </span>
-<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a>      np.linspace(<span class="fl">0.001</span>, <span class="fl">0.200</span>, <span class="dv">50</span>), <span class="st">'Cook</span><span class="ch">\'</span><span class="st">s distance = 1'</span>, ls<span class="op">=</span><span class="st">':'</span>) <span class="co"># 1 line</span></span>
-<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plot_lm_4 <span class="op">=</span> plt.figure(<span class="dv">4</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plot_lm_4.set_figheight(<span class="dv">8</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plot_lm_4.set_figwidth(<span class="dv">12</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(model_leverage, model_norm_residuals, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>sns.regplot(model_leverage, model_norm_residuals, </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>            scatter<span class="op">=</span><span class="va">False</span>, </span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>            ci<span class="op">=</span><span class="va">False</span>, </span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>            lowess<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>            line_kws<span class="op">=</span>{<span class="st">'color'</span>: <span class="st">'red'</span>, <span class="st">'lw'</span>: <span class="dv">1</span>, <span class="st">'alpha'</span>: <span class="fl">0.8</span>})</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_xlim(<span class="dv">0</span>, <span class="fl">0.20</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_title(<span class="st">'Residuals vs Leverage'</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Leverage'</span>)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>plot_lm_4.axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Standardized Residuals'</span>)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="co"># annotations</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>leverage_top_3 <span class="op">=</span> np.flip(np.argsort(model_cooks), <span class="dv">0</span>)[:<span class="dv">3</span>]</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> leverage_top_3:</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>    plot_lm_4.axes[<span class="dv">0</span>].annotate(i, </span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>                               xy<span class="op">=</span>(model_leverage[i], </span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>                                   model_norm_residuals[i]))</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="co"># shenanigans for cook's distance contours</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> graph(formula, x_range, label<span class="op">=</span><span class="va">None</span>, ls<span class="op">=</span><span class="st">'-'</span>):</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x_range</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> formula(x)</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>    plt.plot(x, y, label<span class="op">=</span>label, lw<span class="op">=</span><span class="dv">1</span>, ls<span class="op">=</span>ls, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="bu">len</span>(model_fit.params) <span class="co"># number of model parameters</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>graph(<span class="kw">lambda</span> x: np.sqrt((<span class="fl">0.5</span> <span class="op">*</span> p <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> x)) <span class="op">/</span> x), </span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>      np.linspace(<span class="fl">0.001</span>, <span class="fl">0.200</span>, <span class="dv">50</span>), </span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>      <span class="st">'Cook</span><span class="ch">\'</span><span class="st">s distance = .5'</span>, ls<span class="op">=</span><span class="st">'--'</span>) <span class="co"># 0.5 line</span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>graph(<span class="kw">lambda</span> x: np.sqrt((<span class="dv">1</span> <span class="op">*</span> p <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> x)) <span class="op">/</span> x), </span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>      np.linspace(<span class="fl">0.001</span>, <span class="fl">0.200</span>, <span class="dv">50</span>), <span class="st">'Cook</span><span class="ch">\'</span><span class="st">s distance = 1'</span>, ls<span class="op">=</span><span class="st">':'</span>) <span class="co"># 1 line</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_09_files/03_09_27_0.png" class="img-fluid figure-img"></p>
@@ -1315,694 +1253,658 @@ H_0 :\beta_{cylinders} = \beta_{displacement} = \beta_{weight} = \beta_{accelera
 <p>So, which pairs of variables would we expect to interact, both a priori (from our interpretation of the meaning of these variables) and from the pairs plot?</p>
 <p>Perhaps horsepower and year? What would this mean? It would mean that, for different years, varying horsepower has different effect on mpg. It seems plausible. We could also interpret it in the reverse order: for different values of horsepower, does varying year have a different effect on mpg? For example, does the change in mpg when varying year (i.e., the derivative dmpg/dyear), differ when holding horsepower at either 130 or 160?</p>
 <p>Let’s find out.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower*year + displacement + weight + origin'</span>, df).fit()</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.851&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.849&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   367.0&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;7.51e-156&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -987.81&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1990.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   385&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2017.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     6&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
-<caption>
-OLS Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower*year + displacement + weight + origin'</span>, df).fit()</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>OLS Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>mpg</td>
+<td>R-squared:</td>
+<td>0.851</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>OLS</td>
+<td>Adj. R-squared:</td>
+<td>0.849</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>Least Squares</td>
+<td>F-statistic:</td>
+<td>367.0</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 08 Dec 2017</td>
+<td>Prob (F-statistic):</td>
+<td>7.51e-156</td>
 </tr>
-<tr>
-<th>
-No.&nbsp;Observations:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>09:49:11</td>
+<td>Log-Likelihood:</td>
+<td>-987.81</td>
 </tr>
-<tr>
-<th>
-Df Residuals:
-</th>
-
+<tr class="odd">
+<td>No.&nbsp;Observations:</td>
+<td>392</td>
+<td>AIC:</td>
+<td>1990.</td>
 </tr>
-<tr>
-<th>
-Df Model:
-</th>
-
+<tr class="even">
+<td>Df Residuals:</td>
+<td>385</td>
+<td>BIC:</td>
+<td>2017.</td>
 </tr>
-<tr>
-<th>
-Covariance Type:
-</th>
-
+<tr class="odd">
+<td>Df Model:</td>
+<td>6</td>
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;  -96.6688&lt;/td&gt; &lt;td&gt;    9.667&lt;/td&gt; &lt;td&gt;  -10.000&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt; -115.675&lt;/td&gt; &lt;td&gt;  -77.663&lt;/td&gt;</code></pre><pre><code>&lt;td&gt;    0.7993&lt;/td&gt; &lt;td&gt;    0.092&lt;/td&gt; &lt;td&gt;    8.687&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.618&lt;/td&gt; &lt;td&gt;    0.980&lt;/td&gt;</code></pre><pre><code>      &lt;td&gt;    1.8179&lt;/td&gt; &lt;td&gt;    0.128&lt;/td&gt; &lt;td&gt;   14.221&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    1.567&lt;/td&gt; &lt;td&gt;    2.069&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt;   -0.0054&lt;/td&gt; &lt;td&gt;    0.001&lt;/td&gt; &lt;td&gt;  -10.170&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;   -0.006&lt;/td&gt; &lt;td&gt;   -0.004&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt;    1.1866&lt;/td&gt; &lt;td&gt;    0.253&lt;/td&gt; &lt;td&gt;    4.684&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.688&lt;/td&gt; &lt;td&gt;    1.685&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-t
-</th>
-<th>
-P&gt;|t|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td>Covariance Type:</td>
+<td>nonrobust</td>
+<td></td>
+<td></td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 12%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">P&gt;|t|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-horsepower
-</th>
-
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">-96.6688</td>
+<td style="text-align: left;">9.667</td>
+<td style="text-align: left;">-10.000</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-115.675</td>
+<td style="text-align: left;">-77.663</td>
 </tr>
-<tr>
-<th>
-year
-</th>
-
+<tr class="odd">
+<td>horsepower</td>
+<td style="text-align: left;">0.7993</td>
+<td style="text-align: left;">0.092</td>
+<td style="text-align: left;">8.687</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.618</td>
+<td style="text-align: left;">0.980</td>
 </tr>
-<tr>
-<th>
-horsepower:year
-</th>
-<td>
--0.0113
-</td>
-<td>
-0.001
-</td>
-<td>
--8.977
-</td>
-<td>
-0.000
-</td>
-<td>
--0.014
-</td>
-<td>
--0.009
-</td>
+<tr class="even">
+<td>year</td>
+<td style="text-align: left;">1.8179</td>
+<td style="text-align: left;">0.128</td>
+<td style="text-align: left;">14.221</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">1.567</td>
+<td style="text-align: left;">2.069</td>
 </tr>
-<tr>
-<th>
-displacement
-</th>
-<td>
-0.0068
-</td>
-<td>
-0.005
-</td>
-<td>
-1.344
-</td>
-<td>
-0.180
-</td>
-<td>
--0.003
-</td>
-<td>
-0.017
-</td>
+<tr class="odd">
+<td>horsepower:year</td>
+<td style="text-align: left;">-0.0113</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">-8.977</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.014</td>
+<td style="text-align: left;">-0.009</td>
 </tr>
-<tr>
-<th>
-weight
-</th>
-
+<tr class="even">
+<td>displacement</td>
+<td style="text-align: left;">0.0068</td>
+<td style="text-align: left;">0.005</td>
+<td style="text-align: left;">1.344</td>
+<td style="text-align: left;">0.180</td>
+<td style="text-align: left;">-0.003</td>
+<td style="text-align: left;">0.017</td>
 </tr>
-<tr>
-<th>
-origin
-</th>
-
+<tr class="odd">
+<td>weight</td>
+<td style="text-align: left;">-0.0054</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">-10.170</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.006</td>
+<td style="text-align: left;">-0.004</td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;21.932&lt;/td&gt; &lt;th&gt;  Durbin-Watson:     &lt;/th&gt; &lt;td&gt;   1.488&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt; 0.411&lt;/td&gt; &lt;th&gt;  Prob(JB):          &lt;/th&gt; &lt;td&gt;6.60e-08&lt;/td&gt;</code></pre><pre><code>&lt;td&gt; 4.161&lt;/td&gt; &lt;th&gt;  Cond. No.          &lt;/th&gt; &lt;td&gt;5.60e+05&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<th>
-Omnibus:
-</th>
-
+<tr class="even">
+<td>origin</td>
+<td style="text-align: left;">1.1866</td>
+<td style="text-align: left;">0.253</td>
+<td style="text-align: left;">4.684</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.688</td>
+<td style="text-align: left;">1.685</td>
 </tr>
-<tr>
-<th>
-Prob(Omnibus):
-</th>
-<td>
-0.000
-</td>
-<th>
-Jarque-Bera (JB):
-</th>
-<td>
-33.066
-</td>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omnibus:</th>
+<th>21.932</th>
+<th style="text-align: left;">Durbin-Watson:</th>
+<th>1.488</th>
 </tr>
-<tr>
-<th>
-Skew:
-</th>
-
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob(Omnibus):</td>
+<td>0.000</td>
+<td style="text-align: left;">Jarque-Bera (JB):</td>
+<td>33.066</td>
 </tr>
-<tr>
-<th>
-Kurtosis:
-</th>
-
+<tr class="even">
+<td style="text-align: left;">Skew:</td>
+<td>0.411</td>
+<td style="text-align: left;">Prob(JB):</td>
+<td>6.60e-08</td>
 </tr>
-</tbody></table>
-</div>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis:</td>
+<td>4.161</td>
+<td style="text-align: left;">Cond. No.</td>
+<td>5.60e+05</td>
+</tr>
+</tbody>
+</table>
 <p>From the value of the p-value of the coefficient of the interaction term between horsepower and year, it does seem like there is a statistically significant relationship between the response and horsepower:year.</p>
 <p>With 7 factors, there will be a total of 21 interaction terms. For simplicity sake, we will exclude all the terms with cylinders and acceleration, leaving us with 10 interaction terms. Let’s try to fit a model with these terms - a total of 15 terms.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> <span class="st">'mpg ~ displacement + horsepower + origin + weight + year </span><span class="ch">\</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="st">               + displacement:horsepower + displacement:origin + displacement:weight + displacement:year </span><span class="ch">\</span></span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="st">               + horsepower:origin + horsepower:weight + horsepower:year + origin:weight + origin:year + weight:year'</span></span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(model, df).fit()</span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.880&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.875&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   184.0&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;1.09e-162&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -945.49&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1923.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   376&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   1987.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;    15&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
-<caption>
-OLS Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> <span class="st">'mpg ~ displacement + horsepower + origin + weight + year </span><span class="ch">\</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="st">               + displacement:horsepower + displacement:origin + displacement:weight + displacement:year </span><span class="ch">\</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="st">               + horsepower:origin + horsepower:weight + horsepower:year + origin:weight + origin:year + weight:year'</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(model, df).fit()</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>OLS Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>mpg</td>
+<td>R-squared:</td>
+<td>0.880</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>OLS</td>
+<td>Adj. R-squared:</td>
+<td>0.875</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>Least Squares</td>
+<td>F-statistic:</td>
+<td>184.0</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 08 Dec 2017</td>
+<td>Prob (F-statistic):</td>
+<td>1.09e-162</td>
 </tr>
-<tr>
-<th>
-No.&nbsp;Observations:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>09:49:11</td>
+<td>Log-Likelihood:</td>
+<td>-945.49</td>
 </tr>
-<tr>
-<th>
-Df Residuals:
-</th>
-
+<tr class="odd">
+<td>No.&nbsp;Observations:</td>
+<td>392</td>
+<td>AIC:</td>
+<td>1923.</td>
 </tr>
-<tr>
-<th>
-Df Model:
-</th>
-
+<tr class="even">
+<td>Df Residuals:</td>
+<td>376</td>
+<td>BIC:</td>
+<td>1987.</td>
 </tr>
-<tr>
-<th>
-Covariance Type:
-</th>
-
+<tr class="odd">
+<td>Df Model:</td>
+<td>15</td>
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<pre><code>         &lt;td&gt;  -51.3746&lt;/td&gt; &lt;td&gt;   26.175&lt;/td&gt; &lt;td&gt;   -1.963&lt;/td&gt; &lt;td&gt; 0.050&lt;/td&gt; &lt;td&gt; -102.843&lt;/td&gt; &lt;td&gt;    0.093&lt;/td&gt;</code></pre><pre><code>      &lt;td&gt;   -0.1818&lt;/td&gt; &lt;td&gt;    0.120&lt;/td&gt; &lt;td&gt;   -1.521&lt;/td&gt; &lt;td&gt; 0.129&lt;/td&gt; &lt;td&gt;   -0.417&lt;/td&gt; &lt;td&gt;    0.053&lt;/td&gt;</code></pre><pre><code>        &lt;td&gt;    0.9485&lt;/td&gt; &lt;td&gt;    0.232&lt;/td&gt; &lt;td&gt;    4.089&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.492&lt;/td&gt; &lt;td&gt;    1.405&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;   -3.0637&lt;/td&gt; &lt;td&gt;    5.496&lt;/td&gt; &lt;td&gt;   -0.557&lt;/td&gt; &lt;td&gt; 0.578&lt;/td&gt; &lt;td&gt;  -13.871&lt;/td&gt; &lt;td&gt;    7.744&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;   -0.0174&lt;/td&gt; &lt;td&gt;    0.016&lt;/td&gt; &lt;td&gt;   -1.115&lt;/td&gt; &lt;td&gt; 0.265&lt;/td&gt; &lt;td&gt;   -0.048&lt;/td&gt; &lt;td&gt;    0.013&lt;/td&gt;</code></pre><pre><code>              &lt;td&gt;    1.3975&lt;/td&gt; &lt;td&gt;    0.328&lt;/td&gt; &lt;td&gt;    4.267&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.754&lt;/td&gt; &lt;td&gt;    2.042&lt;/td&gt;</code></pre><pre><code> &lt;td&gt;    0.0010&lt;/td&gt; &lt;td&gt;    0.001&lt;/td&gt; &lt;td&gt;    0.710&lt;/td&gt; &lt;td&gt; 0.478&lt;/td&gt; &lt;td&gt;   -0.002&lt;/td&gt; &lt;td&gt;    0.004&lt;/td&gt;</code></pre><pre><code> &lt;td&gt;   -0.0629&lt;/td&gt; &lt;td&gt;    0.020&lt;/td&gt; &lt;td&gt;   -3.104&lt;/td&gt; &lt;td&gt; 0.002&lt;/td&gt; &lt;td&gt;   -0.103&lt;/td&gt; &lt;td&gt;   -0.023&lt;/td&gt;</code></pre><pre><code> &lt;td&gt;-1.175e-05&lt;/td&gt; &lt;td&gt; 1.77e-05&lt;/td&gt; &lt;td&gt;   -0.664&lt;/td&gt; &lt;td&gt; 0.507&lt;/td&gt; &lt;td&gt;-4.65e-05&lt;/td&gt; &lt;td&gt;  2.3e-05&lt;/td&gt;</code></pre><pre><code>   &lt;td&gt;   -0.0114&lt;/td&gt; &lt;td&gt;    0.003&lt;/td&gt; &lt;td&gt;   -3.998&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;   -0.017&lt;/td&gt; &lt;td&gt;   -0.006&lt;/td&gt;</code></pre><pre><code>     &lt;td&gt;    0.0014&lt;/td&gt; &lt;td&gt;    0.001&lt;/td&gt; &lt;td&gt;    1.200&lt;/td&gt; &lt;td&gt; 0.231&lt;/td&gt; &lt;td&gt;   -0.001&lt;/td&gt; &lt;td&gt;    0.004&lt;/td&gt;</code></pre><pre><code>       &lt;td&gt;    0.0322&lt;/td&gt; &lt;td&gt;    0.069&lt;/td&gt; &lt;td&gt;    0.464&lt;/td&gt; &lt;td&gt; 0.643&lt;/td&gt; &lt;td&gt;   -0.104&lt;/td&gt; &lt;td&gt;    0.169&lt;/td&gt;</code></pre><pre><code>       &lt;td&gt; 7.438e-05&lt;/td&gt; &lt;td&gt;    0.000&lt;/td&gt; &lt;td&gt;    0.394&lt;/td&gt; &lt;td&gt; 0.694&lt;/td&gt; &lt;td&gt;   -0.000&lt;/td&gt; &lt;td&gt;    0.000&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-t
-</th>
-<th>
-P&gt;|t|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td>Covariance Type:</td>
+<td>nonrobust</td>
+<td></td>
+<td></td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 13%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">P&gt;|t|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-displacement
-</th>
-
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">-51.3746</td>
+<td style="text-align: left;">26.175</td>
+<td style="text-align: left;">-1.963</td>
+<td style="text-align: left;">0.050</td>
+<td style="text-align: left;">-102.843</td>
+<td style="text-align: left;">0.093</td>
 </tr>
-<tr>
-<th>
-horsepower
-</th>
-
+<tr class="odd">
+<td>displacement</td>
+<td style="text-align: left;">-0.1818</td>
+<td style="text-align: left;">0.120</td>
+<td style="text-align: left;">-1.521</td>
+<td style="text-align: left;">0.129</td>
+<td style="text-align: left;">-0.417</td>
+<td style="text-align: left;">0.053</td>
 </tr>
-<tr>
-<th>
-origin
-</th>
-
+<tr class="even">
+<td>horsepower</td>
+<td style="text-align: left;">0.9485</td>
+<td style="text-align: left;">0.232</td>
+<td style="text-align: left;">4.089</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.492</td>
+<td style="text-align: left;">1.405</td>
 </tr>
-<tr>
-<th>
-weight
-</th>
-
+<tr class="odd">
+<td>origin</td>
+<td style="text-align: left;">-3.0637</td>
+<td style="text-align: left;">5.496</td>
+<td style="text-align: left;">-0.557</td>
+<td style="text-align: left;">0.578</td>
+<td style="text-align: left;">-13.871</td>
+<td style="text-align: left;">7.744</td>
 </tr>
-<tr>
-<th>
-year
-</th>
-
+<tr class="even">
+<td>weight</td>
+<td style="text-align: left;">-0.0174</td>
+<td style="text-align: left;">0.016</td>
+<td style="text-align: left;">-1.115</td>
+<td style="text-align: left;">0.265</td>
+<td style="text-align: left;">-0.048</td>
+<td style="text-align: left;">0.013</td>
 </tr>
-<tr>
-<th>
-displacement:horsepower
-</th>
-<td>
--0.0001
-</td>
-<td>
-0.000
-</td>
-<td>
--0.815
-</td>
-<td>
-0.416
-</td>
-<td>
--0.000
-</td>
-<td>
-0.000
-</td>
+<tr class="odd">
+<td>year</td>
+<td style="text-align: left;">1.3975</td>
+<td style="text-align: left;">0.328</td>
+<td style="text-align: left;">4.267</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.754</td>
+<td style="text-align: left;">2.042</td>
 </tr>
-<tr>
-<th>
-displacement:origin
-</th>
-<td>
-0.0282
-</td>
-<td>
-0.013
-</td>
-<td>
-2.172
-</td>
-<td>
-0.030
-</td>
-<td>
-0.003
-</td>
-<td>
-0.054
-</td>
+<tr class="even">
+<td>displacement:horsepower</td>
+<td style="text-align: left;">-0.0001</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.815</td>
+<td style="text-align: left;">0.416</td>
+<td style="text-align: left;">-0.000</td>
+<td style="text-align: left;">0.000</td>
 </tr>
-<tr>
-<th>
-displacement:weight
-</th>
-<td>
-2.792e-05
-</td>
-<td>
-5.99e-06
-</td>
-<td>
-4.663
-</td>
-<td>
-0.000
-</td>
-<td>
-1.61e-05
-</td>
-<td>
-3.97e-05
-</td>
+<tr class="odd">
+<td>displacement:origin</td>
+<td style="text-align: left;">0.0282</td>
+<td style="text-align: left;">0.013</td>
+<td style="text-align: left;">2.172</td>
+<td style="text-align: left;">0.030</td>
+<td style="text-align: left;">0.003</td>
+<td style="text-align: left;">0.054</td>
 </tr>
-<tr>
-<th>
-displacement:year
-</th>
-
+<tr class="even">
+<td>displacement:weight</td>
+<td style="text-align: left;">2.792e-05</td>
+<td style="text-align: left;">5.99e-06</td>
+<td style="text-align: left;">4.663</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">1.61e-05</td>
+<td style="text-align: left;">3.97e-05</td>
 </tr>
-<tr>
-<th>
-horsepower:origin
-</th>
-
+<tr class="odd">
+<td>displacement:year</td>
+<td style="text-align: left;">0.0010</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">0.710</td>
+<td style="text-align: left;">0.478</td>
+<td style="text-align: left;">-0.002</td>
+<td style="text-align: left;">0.004</td>
 </tr>
-<tr>
-<th>
-horsepower:weight
-</th>
-
+<tr class="even">
+<td>horsepower:origin</td>
+<td style="text-align: left;">-0.0629</td>
+<td style="text-align: left;">0.020</td>
+<td style="text-align: left;">-3.104</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">-0.103</td>
+<td style="text-align: left;">-0.023</td>
 </tr>
-<tr>
-<th>
-horsepower:year
-</th>
-
+<tr class="odd">
+<td>horsepower:weight</td>
+<td style="text-align: left;">-1.175e-05</td>
+<td style="text-align: left;">1.77e-05</td>
+<td style="text-align: left;">-0.664</td>
+<td style="text-align: left;">0.507</td>
+<td style="text-align: left;">-4.65e-05</td>
+<td style="text-align: left;">2.3e-05</td>
 </tr>
-<tr>
-<th>
-origin:weight
-</th>
-
+<tr class="even">
+<td>horsepower:year</td>
+<td style="text-align: left;">-0.0114</td>
+<td style="text-align: left;">0.003</td>
+<td style="text-align: left;">-3.998</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.017</td>
+<td style="text-align: left;">-0.006</td>
 </tr>
-<tr>
-<th>
-origin:year
-</th>
-
+<tr class="odd">
+<td>origin:weight</td>
+<td style="text-align: left;">0.0014</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">1.200</td>
+<td style="text-align: left;">0.231</td>
+<td style="text-align: left;">-0.001</td>
+<td style="text-align: left;">0.004</td>
 </tr>
-<tr>
-<th>
-weight:year
-</th>
-
+<tr class="even">
+<td>origin:year</td>
+<td style="text-align: left;">0.0322</td>
+<td style="text-align: left;">0.069</td>
+<td style="text-align: left;">0.464</td>
+<td style="text-align: left;">0.643</td>
+<td style="text-align: left;">-0.104</td>
+<td style="text-align: left;">0.169</td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;52.658&lt;/td&gt; &lt;th&gt;  Durbin-Watson:     &lt;/th&gt; &lt;td&gt;   1.599&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt; 0.710&lt;/td&gt; &lt;th&gt;  Prob(JB):          &lt;/th&gt; &lt;td&gt;9.61e-26&lt;/td&gt;</code></pre><pre><code>&lt;td&gt; 5.244&lt;/td&gt; &lt;th&gt;  Cond. No.          &lt;/th&gt; &lt;td&gt;1.81e+08&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<th>
-Omnibus:
-</th>
-
+<tr class="odd">
+<td>weight:year</td>
+<td style="text-align: left;">7.438e-05</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.394</td>
+<td style="text-align: left;">0.694</td>
+<td style="text-align: left;">-0.000</td>
+<td style="text-align: left;">0.000</td>
 </tr>
-<tr>
-<th>
-Prob(Omnibus):
-</th>
-<td>
-0.000
-</td>
-<th>
-Jarque-Bera (JB):
-</th>
-<td>
-115.208
-</td>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omnibus:</th>
+<th>52.658</th>
+<th style="text-align: left;">Durbin-Watson:</th>
+<th>1.599</th>
 </tr>
-<tr>
-<th>
-Skew:
-</th>
-
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob(Omnibus):</td>
+<td>0.000</td>
+<td style="text-align: left;">Jarque-Bera (JB):</td>
+<td>115.208</td>
 </tr>
-<tr>
-<th>
-Kurtosis:
-</th>
-
+<tr class="even">
+<td style="text-align: left;">Skew:</td>
+<td>0.710</td>
+<td style="text-align: left;">Prob(JB):</td>
+<td>9.61e-26</td>
 </tr>
-</tbody></table>
-</div>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis:</td>
+<td>5.244</td>
+<td style="text-align: left;">Cond. No.</td>
+<td>1.81e+08</td>
+</tr>
+</tbody>
+</table>
 <p>These results indicate that the interactions that appear to be statistically significant are displacement:weight, horsepower:origin and horsepower:year. Interestingly, when these are considered the only first order terms that are statistically different are horsepower and year. By the hierarchy principle (page 89), we should nonetheless include all of the main effects (for more on this, see <a href="https://stats.stackexchange.com/questions/27724/do-all-interactions-terms-need-their-individual-terms-in-regression-model">these</a> answers).</p>
 <p>We could also have a try at <a href="https://en.wikipedia.org/wiki/Interaction_%28statistics%29#Interaction_plots">interaction plots</a>, which are not covered in the book, but we will leave it as a <a href="https://en.wikipedia.org/wiki/Interaction_%28statistics%29#/media/File:GSS_sealevel_interaction.png">mention</a> only.</p>
 </section>
 <section id="f" class="level2">
 <h2 class="anchored" data-anchor-id="f">(f)</h2>
 <p>As an example, we fit the data with a model containing the transformations indicated for the variable horsepower, starting with <span class="math inline">\(X^2\)</span>.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + weight + year + origin'</span>, df).fit()</span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.851&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.849&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   439.5&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;7.11e-157&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -988.57&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1989.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   386&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2013.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     5&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
-<caption>
-OLS Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + weight + year + origin'</span>, df).fit()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>OLS Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>mpg</td>
+<td>R-squared:</td>
+<td>0.851</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>OLS</td>
+<td>Adj. R-squared:</td>
+<td>0.849</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>Least Squares</td>
+<td>F-statistic:</td>
+<td>439.5</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 08 Dec 2017</td>
+<td>Prob (F-statistic):</td>
+<td>7.11e-157</td>
 </tr>
-<tr>
-<th>
-No.&nbsp;Observations:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>09:49:11</td>
+<td>Log-Likelihood:</td>
+<td>-988.57</td>
 </tr>
-<tr>
-<th>
-Df Residuals:
-</th>
-
+<tr class="odd">
+<td>No.&nbsp;Observations:</td>
+<td>392</td>
+<td>AIC:</td>
+<td>1989.</td>
 </tr>
-<tr>
-<th>
-Df Model:
-</th>
-
+<tr class="even">
+<td>Df Residuals:</td>
+<td>386</td>
+<td>BIC:</td>
+<td>2013.</td>
 </tr>
-<tr>
-<th>
-Covariance Type:
-</th>
-
+<tr class="odd">
+<td>Df Model:</td>
+<td>5</td>
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<pre><code>         &lt;td&gt;   -6.6457&lt;/td&gt; &lt;td&gt;    3.915&lt;/td&gt; &lt;td&gt;   -1.698&lt;/td&gt; &lt;td&gt; 0.090&lt;/td&gt; &lt;td&gt;  -14.343&lt;/td&gt; &lt;td&gt;    1.052&lt;/td&gt;</code></pre><pre><code>        &lt;td&gt;   -0.2441&lt;/td&gt; &lt;td&gt;    0.027&lt;/td&gt; &lt;td&gt;   -9.099&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;   -0.297&lt;/td&gt; &lt;td&gt;   -0.191&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;   -0.0044&lt;/td&gt; &lt;td&gt;    0.000&lt;/td&gt; &lt;td&gt;  -10.426&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;   -0.005&lt;/td&gt; &lt;td&gt;   -0.004&lt;/td&gt;</code></pre><pre><code>              &lt;td&gt;    0.7456&lt;/td&gt; &lt;td&gt;    0.046&lt;/td&gt; &lt;td&gt;   16.145&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.655&lt;/td&gt; &lt;td&gt;    0.836&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;    1.0465&lt;/td&gt; &lt;td&gt;    0.238&lt;/td&gt; &lt;td&gt;    4.405&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.579&lt;/td&gt; &lt;td&gt;    1.514&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-t
-</th>
-<th>
-P&gt;|t|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td>Covariance Type:</td>
+<td>nonrobust</td>
+<td></td>
+<td></td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">P&gt;|t|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-horsepower
-</th>
-
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">-6.6457</td>
+<td style="text-align: left;">3.915</td>
+<td style="text-align: left;">-1.698</td>
+<td style="text-align: left;">0.090</td>
+<td style="text-align: left;">-14.343</td>
+<td style="text-align: left;">1.052</td>
 </tr>
-<tr>
-<th>
-np.power(horsepower, 2)
-</th>
-<td>
-0.0008
-</td>
-<td>
-9.13e-05
-</td>
-<td>
-9.170
-</td>
-<td>
-0.000
-</td>
-<td>
-0.001
-</td>
-<td>
-0.001
-</td>
+<tr class="odd">
+<td>horsepower</td>
+<td style="text-align: left;">-0.2441</td>
+<td style="text-align: left;">0.027</td>
+<td style="text-align: left;">-9.099</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.297</td>
+<td style="text-align: left;">-0.191</td>
 </tr>
-<tr>
-<th>
-weight
-</th>
-
+<tr class="even">
+<td>np.power(horsepower, 2)</td>
+<td style="text-align: left;">0.0008</td>
+<td style="text-align: left;">9.13e-05</td>
+<td style="text-align: left;">9.170</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">0.001</td>
 </tr>
-<tr>
-<th>
-year
-</th>
-
+<tr class="odd">
+<td>weight</td>
+<td style="text-align: left;">-0.0044</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-10.426</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.005</td>
+<td style="text-align: left;">-0.004</td>
 </tr>
-<tr>
-<th>
-origin
-</th>
-
+<tr class="even">
+<td>year</td>
+<td style="text-align: left;">0.7456</td>
+<td style="text-align: left;">0.046</td>
+<td style="text-align: left;">16.145</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.655</td>
+<td style="text-align: left;">0.836</td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;21.819&lt;/td&gt; &lt;th&gt;  Durbin-Watson:     &lt;/th&gt; &lt;td&gt;   1.500&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt; 0.414&lt;/td&gt; &lt;th&gt;  Prob(JB):          &lt;/th&gt; &lt;td&gt;9.00e-08&lt;/td&gt;</code></pre><pre><code>&lt;td&gt; 4.140&lt;/td&gt; &lt;th&gt;  Cond. No.          &lt;/th&gt; &lt;td&gt;4.10e+05&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<th>
-Omnibus:
-</th>
-
+<tr class="odd">
+<td>origin</td>
+<td style="text-align: left;">1.0465</td>
+<td style="text-align: left;">0.238</td>
+<td style="text-align: left;">4.405</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.579</td>
+<td style="text-align: left;">1.514</td>
 </tr>
-<tr>
-<th>
-Prob(Omnibus):
-</th>
-<td>
-0.000
-</td>
-<th>
-Jarque-Bera (JB):
-</th>
-<td>
-32.447
-</td>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omnibus:</th>
+<th>21.819</th>
+<th style="text-align: left;">Durbin-Watson:</th>
+<th>1.500</th>
 </tr>
-<tr>
-<th>
-Skew:
-</th>
-
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob(Omnibus):</td>
+<td>0.000</td>
+<td style="text-align: left;">Jarque-Bera (JB):</td>
+<td>32.447</td>
 </tr>
-<tr>
-<th>
-Kurtosis:
-</th>
-
+<tr class="even">
+<td style="text-align: left;">Skew:</td>
+<td>0.414</td>
+<td style="text-align: left;">Prob(JB):</td>
+<td>9.00e-08</td>
 </tr>
-</tbody></table>
-</div>
-<div class="sourceCode" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>fitted <span class="op">=</span> reg.fittedvalues</span>
-<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a>sns.regplot(fitted, df.mpg <span class="op">-</span> fitted,  lowess<span class="op">=</span><span class="va">True</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>:<span class="st">'r'</span>, <span class="st">'lw'</span>:<span class="dv">1</span>})</span>
-<span id="cb89-4"><a href="#cb89-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.axes[<span class="dv">0</span>]</span>
-<span id="cb89-5"><a href="#cb89-5" aria-hidden="true" tabindex="-1"></a>ax.axhline(color<span class="op">=</span><span class="st">"grey"</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
-<span id="cb89-6"><a href="#cb89-6" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Residuals vs Fitted Values"</span>)</span>
-<span id="cb89-7"><a href="#cb89-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Fitted Values"</span>)</span>
-<span id="cb89-8"><a href="#cb89-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Residuals"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis:</td>
+<td>4.140</td>
+<td style="text-align: left;">Cond. No.</td>
+<td>4.10e+05</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>fitted <span class="op">=</span> reg.fittedvalues</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>sns.regplot(fitted, df.mpg <span class="op">-</span> fitted,  lowess<span class="op">=</span><span class="va">True</span>, line_kws<span class="op">=</span>{<span class="st">'color'</span>:<span class="st">'r'</span>, <span class="st">'lw'</span>:<span class="dv">1</span>})</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.axes[<span class="dv">0</span>]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>ax.axhline(color<span class="op">=</span><span class="st">"grey"</span>, ls<span class="op">=</span><span class="st">"--"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Residuals vs Fitted Values"</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Fitted Values"</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Residuals"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="03_09_files/03_09_40_0.png" class="img-fluid figure-img"></p>
@@ -2010,410 +1912,390 @@ Kurtosis:
 </figure>
 </div>
 <p>It is clear that this quadratic term is statistically significant. Let’s try adding a logarithmic term as well.</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + np.log(horsepower) + weight + year + origin'</span>, df).fit()</span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.855&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.853&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   378.6&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;4.62e-158&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:11&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -982.62&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1979.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   385&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2007.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     6&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
-<caption>
-OLS Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + np.log(horsepower) + weight + year + origin'</span>, df).fit()</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>OLS Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>mpg</td>
+<td>R-squared:</td>
+<td>0.855</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>OLS</td>
+<td>Adj. R-squared:</td>
+<td>0.853</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>Least Squares</td>
+<td>F-statistic:</td>
+<td>378.6</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 08 Dec 2017</td>
+<td>Prob (F-statistic):</td>
+<td>4.62e-158</td>
 </tr>
-<tr>
-<th>
-No.&nbsp;Observations:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>09:49:11</td>
+<td>Log-Likelihood:</td>
+<td>-982.62</td>
 </tr>
-<tr>
-<th>
-Df Residuals:
-</th>
-
+<tr class="odd">
+<td>No.&nbsp;Observations:</td>
+<td>392</td>
+<td>AIC:</td>
+<td>1979.</td>
 </tr>
-<tr>
-<th>
-Df Model:
-</th>
-
+<tr class="even">
+<td>Df Residuals:</td>
+<td>385</td>
+<td>BIC:</td>
+<td>2007.</td>
 </tr>
-<tr>
-<th>
-Covariance Type:
-</th>
-
+<tr class="odd">
+<td>Df Model:</td>
+<td>6</td>
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<pre><code>         &lt;td&gt;   80.3681&lt;/td&gt; &lt;td&gt;   25.568&lt;/td&gt; &lt;td&gt;    3.143&lt;/td&gt; &lt;td&gt; 0.002&lt;/td&gt; &lt;td&gt;   30.098&lt;/td&gt; &lt;td&gt;  130.638&lt;/td&gt;</code></pre><pre><code>        &lt;td&gt;    0.2570&lt;/td&gt; &lt;td&gt;    0.148&lt;/td&gt; &lt;td&gt;    1.737&lt;/td&gt; &lt;td&gt; 0.083&lt;/td&gt; &lt;td&gt;   -0.034&lt;/td&gt; &lt;td&gt;    0.548&lt;/td&gt;</code></pre><pre><code>&lt;td&gt;  -27.5412&lt;/td&gt; &lt;td&gt;    8.000&lt;/td&gt; &lt;td&gt;   -3.443&lt;/td&gt; &lt;td&gt; 0.001&lt;/td&gt; &lt;td&gt;  -43.270&lt;/td&gt; &lt;td&gt;  -11.812&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;   -0.0048&lt;/td&gt; &lt;td&gt;    0.000&lt;/td&gt; &lt;td&gt;  -11.098&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;   -0.006&lt;/td&gt; &lt;td&gt;   -0.004&lt;/td&gt;</code></pre><pre><code>              &lt;td&gt;    0.7561&lt;/td&gt; &lt;td&gt;    0.046&lt;/td&gt; &lt;td&gt;   16.565&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.666&lt;/td&gt; &lt;td&gt;    0.846&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;    0.9480&lt;/td&gt; &lt;td&gt;    0.236&lt;/td&gt; &lt;td&gt;    4.016&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.484&lt;/td&gt; &lt;td&gt;    1.412&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-t
-</th>
-<th>
-P&gt;|t|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td>Covariance Type:</td>
+<td>nonrobust</td>
+<td></td>
+<td></td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">P&gt;|t|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-horsepower
-</th>
-
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">80.3681</td>
+<td style="text-align: left;">25.568</td>
+<td style="text-align: left;">3.143</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">30.098</td>
+<td style="text-align: left;">130.638</td>
 </tr>
-<tr>
-<th>
-np.power(horsepower, 2)
-</th>
-<td>
--0.0002
-</td>
-<td>
-0.000
-</td>
-<td>
--0.571
-</td>
-<td>
-0.568
-</td>
-<td>
--0.001
-</td>
-<td>
-0.000
-</td>
+<tr class="odd">
+<td>horsepower</td>
+<td style="text-align: left;">0.2570</td>
+<td style="text-align: left;">0.148</td>
+<td style="text-align: left;">1.737</td>
+<td style="text-align: left;">0.083</td>
+<td style="text-align: left;">-0.034</td>
+<td style="text-align: left;">0.548</td>
 </tr>
-<tr>
-<th>
-np.log(horsepower)
-</th>
-
+<tr class="even">
+<td>np.power(horsepower, 2)</td>
+<td style="text-align: left;">-0.0002</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.571</td>
+<td style="text-align: left;">0.568</td>
+<td style="text-align: left;">-0.001</td>
+<td style="text-align: left;">0.000</td>
 </tr>
-<tr>
-<th>
-weight
-</th>
-
+<tr class="odd">
+<td>np.log(horsepower)</td>
+<td style="text-align: left;">-27.5412</td>
+<td style="text-align: left;">8.000</td>
+<td style="text-align: left;">-3.443</td>
+<td style="text-align: left;">0.001</td>
+<td style="text-align: left;">-43.270</td>
+<td style="text-align: left;">-11.812</td>
 </tr>
-<tr>
-<th>
-year
-</th>
-
+<tr class="even">
+<td>weight</td>
+<td style="text-align: left;">-0.0048</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-11.098</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.006</td>
+<td style="text-align: left;">-0.004</td>
 </tr>
-<tr>
-<th>
-origin
-</th>
-
+<tr class="odd">
+<td>year</td>
+<td style="text-align: left;">0.7561</td>
+<td style="text-align: left;">0.046</td>
+<td style="text-align: left;">16.565</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.666</td>
+<td style="text-align: left;">0.846</td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;17.905&lt;/td&gt; &lt;th&gt;  Durbin-Watson:     &lt;/th&gt; &lt;td&gt;   1.575&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt; 0.312&lt;/td&gt; &lt;th&gt;  Prob(JB):          &lt;/th&gt; &lt;td&gt;4.34e-07&lt;/td&gt;</code></pre><pre><code>&lt;td&gt; 4.185&lt;/td&gt; &lt;th&gt;  Cond. No.          &lt;/th&gt; &lt;td&gt;2.84e+06&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<th>
-Omnibus:
-</th>
-
+<tr class="even">
+<td>origin</td>
+<td style="text-align: left;">0.9480</td>
+<td style="text-align: left;">0.236</td>
+<td style="text-align: left;">4.016</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.484</td>
+<td style="text-align: left;">1.412</td>
 </tr>
-<tr>
-<th>
-Prob(Omnibus):
-</th>
-<td>
-0.000
-</td>
-<th>
-Jarque-Bera (JB):
-</th>
-<td>
-29.299
-</td>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omnibus:</th>
+<th>17.905</th>
+<th style="text-align: left;">Durbin-Watson:</th>
+<th>1.575</th>
 </tr>
-<tr>
-<th>
-Skew:
-</th>
-
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob(Omnibus):</td>
+<td>0.000</td>
+<td style="text-align: left;">Jarque-Bera (JB):</td>
+<td>29.299</td>
 </tr>
-<tr>
-<th>
-Kurtosis:
-</th>
-
+<tr class="even">
+<td style="text-align: left;">Skew:</td>
+<td>0.312</td>
+<td style="text-align: left;">Prob(JB):</td>
+<td>4.34e-07</td>
 </tr>
-</tbody></table>
-</div>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis:</td>
+<td>4.185</td>
+<td style="text-align: left;">Cond. No.</td>
+<td>2.84e+06</td>
+</tr>
+</tbody>
+</table>
 <p>Now the p-value for the square term is very large. This indicates that there is indeed a non-linearity but it seems to be better captured by the logarithm than the square. Let’s try adding the square root term.</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + np.log(horsepower) + np.sqrt(horsepower) + weight + year + origin'</span>, df).fit()</span>
-<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div>
-<style>
-    .dataframe thead tr:only-child th {
-        text-align: right;
-    }
-
-    .dataframe thead th {
-        text-align: left;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-</style>
-<pre><code>     &lt;td&gt;mpg&lt;/td&gt;       &lt;th&gt;  R-squared:         &lt;/th&gt; &lt;td&gt;   0.859&lt;/td&gt; </code></pre><pre><code>             &lt;td&gt;OLS&lt;/td&gt;       &lt;th&gt;  Adj. R-squared:    &lt;/th&gt; &lt;td&gt;   0.856&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Least Squares&lt;/td&gt;  &lt;th&gt;  F-statistic:       &lt;/th&gt; &lt;td&gt;   332.9&lt;/td&gt; </code></pre><pre><code>       &lt;td&gt;Fri, 08 Dec 2017&lt;/td&gt; &lt;th&gt;  Prob (F-statistic):&lt;/th&gt; &lt;td&gt;9.16e-159&lt;/td&gt;</code></pre><pre><code>           &lt;td&gt;09:49:12&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt; &lt;td&gt; -977.89&lt;/td&gt; </code></pre><pre><code>&lt;td&gt;   392&lt;/td&gt;      &lt;th&gt;  AIC:               &lt;/th&gt; &lt;td&gt;   1972.&lt;/td&gt; </code></pre><pre><code>    &lt;td&gt;   384&lt;/td&gt;      &lt;th&gt;  BIC:               &lt;/th&gt; &lt;td&gt;   2004.&lt;/td&gt; </code></pre><pre><code>        &lt;td&gt;     7&lt;/td&gt;      &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><pre><code>&lt;td&gt;nonrobust&lt;/td&gt;    &lt;th&gt;                     &lt;/th&gt;     &lt;td&gt; &lt;/td&gt;    </code></pre><table class="simpletable">
-<caption>
-OLS Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> smf.ols(<span class="st">'mpg ~ horsepower + np.power(horsepower,2) + np.log(horsepower) + np.sqrt(horsepower) + weight + year + origin'</span>, df).fit()</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>reg.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 28%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>OLS Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>mpg</td>
+<td>R-squared:</td>
+<td>0.859</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>OLS</td>
+<td>Adj. R-squared:</td>
+<td>0.856</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>Least Squares</td>
+<td>F-statistic:</td>
+<td>332.9</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 08 Dec 2017</td>
+<td>Prob (F-statistic):</td>
+<td>9.16e-159</td>
 </tr>
-<tr>
-<th>
-No.&nbsp;Observations:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>09:49:12</td>
+<td>Log-Likelihood:</td>
+<td>-977.89</td>
 </tr>
-<tr>
-<th>
-Df Residuals:
-</th>
-
+<tr class="odd">
+<td>No.&nbsp;Observations:</td>
+<td>392</td>
+<td>AIC:</td>
+<td>1972.</td>
 </tr>
-<tr>
-<th>
-Df Model:
-</th>
-
+<tr class="even">
+<td>Df Residuals:</td>
+<td>384</td>
+<td>BIC:</td>
+<td>2004.</td>
 </tr>
-<tr>
-<th>
-Covariance Type:
-</th>
-
+<tr class="odd">
+<td>Df Model:</td>
+<td>7</td>
+<td></td>
+<td></td>
 </tr>
-</tbody></table>
-<pre><code>         &lt;td&gt; -426.3991&lt;/td&gt; &lt;td&gt;  167.288&lt;/td&gt; &lt;td&gt;   -2.549&lt;/td&gt; &lt;td&gt; 0.011&lt;/td&gt; &lt;td&gt; -755.314&lt;/td&gt; &lt;td&gt;  -97.485&lt;/td&gt;</code></pre><pre><code>        &lt;td&gt;    8.4452&lt;/td&gt; &lt;td&gt;    2.676&lt;/td&gt; &lt;td&gt;    3.156&lt;/td&gt; &lt;td&gt; 0.002&lt;/td&gt; &lt;td&gt;    3.184&lt;/td&gt; &lt;td&gt;   13.706&lt;/td&gt;</code></pre><pre><code>&lt;td&gt;  416.0064&lt;/td&gt; &lt;td&gt;  144.951&lt;/td&gt; &lt;td&gt;    2.870&lt;/td&gt; &lt;td&gt; 0.004&lt;/td&gt; &lt;td&gt;  131.009&lt;/td&gt; &lt;td&gt;  701.004&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;   -0.0048&lt;/td&gt; &lt;td&gt;    0.000&lt;/td&gt; &lt;td&gt;  -11.229&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;   -0.006&lt;/td&gt; &lt;td&gt;   -0.004&lt;/td&gt;</code></pre><pre><code>              &lt;td&gt;    0.7475&lt;/td&gt; &lt;td&gt;    0.045&lt;/td&gt; &lt;td&gt;   16.522&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.659&lt;/td&gt; &lt;td&gt;    0.836&lt;/td&gt;</code></pre><pre><code>            &lt;td&gt;    0.9088&lt;/td&gt; &lt;td&gt;    0.234&lt;/td&gt; &lt;td&gt;    3.886&lt;/td&gt; &lt;td&gt; 0.000&lt;/td&gt; &lt;td&gt;    0.449&lt;/td&gt; &lt;td&gt;    1.369&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-t
-</th>
-<th>
-P&gt;|t|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td>Covariance Type:</td>
+<td>nonrobust</td>
+<td></td>
+<td></td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 13%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 10%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">t</td>
+<td style="text-align: left;">P&gt;|t|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-horsepower
-</th>
-
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">-426.3991</td>
+<td style="text-align: left;">167.288</td>
+<td style="text-align: left;">-2.549</td>
+<td style="text-align: left;">0.011</td>
+<td style="text-align: left;">-755.314</td>
+<td style="text-align: left;">-97.485</td>
 </tr>
-<tr>
-<th>
-np.power(horsepower, 2)
-</th>
-<td>
--0.0060
-</td>
-<td>
-0.002
-</td>
-<td>
--3.117
-</td>
-<td>
-0.002
-</td>
-<td>
--0.010
-</td>
-<td>
--0.002
-</td>
+<tr class="odd">
+<td>horsepower</td>
+<td style="text-align: left;">8.4452</td>
+<td style="text-align: left;">2.676</td>
+<td style="text-align: left;">3.156</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">3.184</td>
+<td style="text-align: left;">13.706</td>
 </tr>
-<tr>
-<th>
-np.log(horsepower)
-</th>
-
+<tr class="even">
+<td>np.power(horsepower, 2)</td>
+<td style="text-align: left;">-0.0060</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">-3.117</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">-0.010</td>
+<td style="text-align: left;">-0.002</td>
 </tr>
-<tr>
-<th>
-np.sqrt(horsepower)
-</th>
-<td>
--229.6161
-</td>
-<td>
-74.927
-</td>
-<td>
--3.065
-</td>
-<td>
-0.002
-</td>
-<td>
--376.934
-</td>
-<td>
--82.298
-</td>
+<tr class="odd">
+<td>np.log(horsepower)</td>
+<td style="text-align: left;">416.0064</td>
+<td style="text-align: left;">144.951</td>
+<td style="text-align: left;">2.870</td>
+<td style="text-align: left;">0.004</td>
+<td style="text-align: left;">131.009</td>
+<td style="text-align: left;">701.004</td>
 </tr>
-<tr>
-<th>
-weight
-</th>
-
+<tr class="even">
+<td>np.sqrt(horsepower)</td>
+<td style="text-align: left;">-229.6161</td>
+<td style="text-align: left;">74.927</td>
+<td style="text-align: left;">-3.065</td>
+<td style="text-align: left;">0.002</td>
+<td style="text-align: left;">-376.934</td>
+<td style="text-align: left;">-82.298</td>
 </tr>
-<tr>
-<th>
-year
-</th>
-
+<tr class="odd">
+<td>weight</td>
+<td style="text-align: left;">-0.0048</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-11.229</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-0.006</td>
+<td style="text-align: left;">-0.004</td>
 </tr>
-<tr>
-<th>
-origin
-</th>
-
+<tr class="even">
+<td>year</td>
+<td style="text-align: left;">0.7475</td>
+<td style="text-align: left;">0.045</td>
+<td style="text-align: left;">16.522</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.659</td>
+<td style="text-align: left;">0.836</td>
 </tr>
-</tbody></table>
-<pre><code> &lt;td&gt;23.395&lt;/td&gt; &lt;th&gt;  Durbin-Watson:     &lt;/th&gt; &lt;td&gt;   1.570&lt;/td&gt;</code></pre><pre><code>    &lt;td&gt; 0.411&lt;/td&gt; &lt;th&gt;  Prob(JB):          &lt;/th&gt; &lt;td&gt;6.18e-09&lt;/td&gt;</code></pre><pre><code>&lt;td&gt; 4.281&lt;/td&gt; &lt;th&gt;  Cond. No.          &lt;/th&gt; &lt;td&gt;2.50e+07&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<th>
-Omnibus:
-</th>
-
+<tr class="odd">
+<td>origin</td>
+<td style="text-align: left;">0.9088</td>
+<td style="text-align: left;">0.234</td>
+<td style="text-align: left;">3.886</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.449</td>
+<td style="text-align: left;">1.369</td>
 </tr>
-<tr>
-<th>
-Prob(Omnibus):
-</th>
-<td>
-0.000
-</td>
-<th>
-Jarque-Bera (JB):
-</th>
-<td>
-37.804
-</td>
+</tbody>
+</table>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Omnibus:</th>
+<th>23.395</th>
+<th style="text-align: left;">Durbin-Watson:</th>
+<th>1.570</th>
 </tr>
-<tr>
-<th>
-Skew:
-</th>
-
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Prob(Omnibus):</td>
+<td>0.000</td>
+<td style="text-align: left;">Jarque-Bera (JB):</td>
+<td>37.804</td>
 </tr>
-<tr>
-<th>
-Kurtosis:
-</th>
-
+<tr class="even">
+<td style="text-align: left;">Skew:</td>
+<td>0.411</td>
+<td style="text-align: left;">Prob(JB):</td>
+<td>6.18e-09</td>
 </tr>
-</tbody></table>
-</div>
+<tr class="odd">
+<td style="text-align: left;">Kurtosis:</td>
+<td>4.281</td>
+<td style="text-align: left;">Cond. No.</td>
+<td>2.50e+07</td>
+</tr>
+</tbody>
+</table>
 <p>So now the square term is back to a small p-value, indicating that it is statistically significant in the presence of the square root and the logarithm.</p>
 
 

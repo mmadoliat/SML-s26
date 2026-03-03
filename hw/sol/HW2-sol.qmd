@@ -17,3 +17,5 @@ execute:
 ## [Exercise 4.6](ex4-6)
 
 ## [Exercise 4.15](ex4-15)
+
+## [HW 2 in R](hw2-sol.pdf)

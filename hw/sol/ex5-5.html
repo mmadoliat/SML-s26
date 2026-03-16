@@ -335,129 +335,78 @@ window.Quarto = {
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'default_yes'</span>] <span class="op">=</span> (df[<span class="st">'default'</span>] <span class="op">==</span> <span class="st">'Yes'</span>).astype(<span class="st">'int'</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<table class="dataframe table table-sm table-striped small">
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table class="table">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 19%">
+<col style="width: 20%">
+<col style="width: 19%">
+</colgroup>
 <thead>
-<tr>
-<th>
-</th>
-<th>
-default
-</th>
-<th>
-student
-</th>
-<th>
-balance
-</th>
-<th>
-income
-</th>
-<th>
-default_yes
-</th>
+<tr class="header">
+<th></th>
+<th>default</th>
+<th>student</th>
+<th>balance</th>
+<th>income</th>
+<th>default_yes</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<th>
-1
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-729.526495
-</td>
-<td>
-44361.625074
-</td>
-<td>
-0
-</td>
+<tr class="odd">
+<td>1</td>
+<td>No</td>
+<td>No</td>
+<td>729.526495</td>
+<td>44361.625074</td>
+<td>0</td>
 </tr>
-<tr>
-<th>
-2
-</th>
-<td>
-No
-</td>
-<td>
-Yes
-</td>
-<td>
-817.180407
-</td>
-<td>
-12106.134700
-</td>
-<td>
-0
-</td>
+<tr class="even">
+<td>2</td>
+<td>No</td>
+<td>Yes</td>
+<td>817.180407</td>
+<td>12106.134700</td>
+<td>0</td>
 </tr>
-<tr>
-<th>
-3
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-1073.549164
-</td>
-<td>
-31767.138947
-</td>
-<td>
-0
-</td>
+<tr class="odd">
+<td>3</td>
+<td>No</td>
+<td>No</td>
+<td>1073.549164</td>
+<td>31767.138947</td>
+<td>0</td>
 </tr>
-<tr>
-<th>
-4
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-529.250605
-</td>
-<td>
-35704.493935
-</td>
-<td>
-0
-</td>
+<tr class="even">
+<td>4</td>
+<td>No</td>
+<td>No</td>
+<td>529.250605</td>
+<td>35704.493935</td>
+<td>0</td>
 </tr>
-<tr>
-<th>
-5
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-785.655883
-</td>
-<td>
-38463.495879
-</td>
-<td>
-0
-</td>
+<tr class="odd">
+<td>5</td>
+<td>No</td>
+<td>No</td>
+<td>785.655883</td>
+<td>38463.495879</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
@@ -490,182 +439,145 @@ memory usage: 468.8+ KB</code></pre>
 <pre><code>Optimization terminated successfully.
          Current function value: 0.078948
          Iterations 10</code></pre>
-<pre><code>         &lt;td&gt;Logit&lt;/td&gt;      &lt;th&gt;  Df Residuals:      &lt;/th&gt;   &lt;td&gt;  9997&lt;/td&gt;  </code></pre><pre><code>         &lt;td&gt;MLE&lt;/td&gt;       &lt;th&gt;  Df Model:          &lt;/th&gt;   &lt;td&gt;     2&lt;/td&gt;  </code></pre><pre><code>    &lt;td&gt;Fri, 05 Jan 2018&lt;/td&gt; &lt;th&gt;  Pseudo R-squ.:     &lt;/th&gt;   &lt;td&gt;0.4594&lt;/td&gt;  </code></pre><pre><code>        &lt;td&gt;16:05:52&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt;  &lt;td&gt; -789.48&lt;/td&gt; </code></pre><pre><code>     &lt;td&gt;True&lt;/td&gt;       &lt;th&gt;  LL-Null:           &lt;/th&gt;  &lt;td&gt; -1460.3&lt;/td&gt; </code></pre><pre><code>                &lt;td&gt; &lt;/td&gt;        &lt;th&gt;  LLR p-value:       &lt;/th&gt; &lt;td&gt;4.541e-292&lt;/td&gt;</code></pre><table class="simpletable">
-<caption>
-Logit Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-<td>
-default_yes
-</td>
-<th>
-No.&nbsp;Observations:
-</th>
-<td>
-10000
-</td>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 22%">
+<col style="width: 23%">
+<col style="width: 31%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>Logit Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>default_yes</td>
+<td>No.&nbsp;Observations:</td>
+<td>10000</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>Logit</td>
+<td>Df Residuals:</td>
+<td>9997</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>MLE</td>
+<td>Df Model:</td>
+<td>2</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 05 Jan 2018</td>
+<td>Pseudo R-squ.:</td>
+<td>0.4594</td>
 </tr>
-<tr>
-<th>
-converged:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>16:05:52</td>
+<td>Log-Likelihood:</td>
+<td>-789.48</td>
 </tr>
-<tr>
-<th>
-</th>
-
+<tr class="odd">
+<td>converged:</td>
+<td>True</td>
+<td>LL-Null:</td>
+<td>-1460.3</td>
 </tr>
-</tbody></table>
-<table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-z
-</th>
-<th>
-P&gt;|z|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td></td>
+<td></td>
+<td>LLR p-value:</td>
+<td>4.541e-292</td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-<td>
--11.5405
-</td>
-<td>
-0.435
-</td>
-<td>
--26.544
-</td>
-<td>
-0.000
-</td>
-<td>
--12.393
-</td>
-<td>
--10.688
-</td>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 14%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">z</td>
+<td style="text-align: left;">P&gt;|z|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-income
-</th>
-<td>
-2.081e-05
-</td>
-<td>
-4.99e-06
-</td>
-<td>
-4.174
-</td>
-<td>
-0.000
-</td>
-<td>
-1.1e-05
-</td>
-<td>
-3.06e-05
-</td>
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">-11.5405</td>
+<td style="text-align: left;">0.435</td>
+<td style="text-align: left;">-26.544</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-12.393</td>
+<td style="text-align: left;">-10.688</td>
 </tr>
-<tr>
-<th>
-balance
-</th>
-<td>
-0.0056
-</td>
-<td>
-0.000
-</td>
-<td>
-24.835
-</td>
-<td>
-0.000
-</td>
-<td>
-0.005
-</td>
-<td>
-0.006
-</td>
+<tr class="odd">
+<td>income</td>
+<td style="text-align: left;">2.081e-05</td>
+<td style="text-align: left;">4.99e-06</td>
+<td style="text-align: left;">4.174</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">1.1e-05</td>
+<td style="text-align: left;">3.06e-05</td>
 </tr>
-</tbody></table>
+<tr class="even">
+<td>balance</td>
+<td style="text-align: left;">0.0056</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">24.835</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.005</td>
+<td style="text-align: left;">0.006</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="b" class="level2">
 <h2 class="anchored" data-anchor-id="b">(b)</h2>
 </section>
 <section id="i." class="level2">
 <h2 class="anchored" data-anchor-id="i.">i.</h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="ii." class="level2">
 <h2 class="anchored" data-anchor-id="ii.">ii.</h2>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>mod <span class="op">=</span> lr.fit(X_train, y_train)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>mod.coef_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mod <span class="op">=</span> lr.fit(X_train, y_train)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mod.coef_</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>array([[  1.62553551e-05,   5.83500517e-03]])</code></pre>
 </section>
 <section id="iii." class="level2">
 <h2 class="anchored" data-anchor-id="iii.">iii.</h2>
 <p>Let’s try to plot this region and boundary. For more info on how to draw the boundary for logistic regression, here’s <a href="https://stackoverflow.com/a/28257799">two</a> <a href="https://stackoverflow.com/a/22356551">answers</a> by Michael Waskom, the creator of seaborn, and you can also see Jake VanderPlas’ <a href="https://jakevdp.github.io/PythonDataScienceHandbook/04.04-density-and-contour-plots.html">book</a> for an introduction to contour plots in general.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>xx, yy <span class="op">=</span> np.mgrid[<span class="dv">0</span>:<span class="dv">80000</span>:<span class="dv">100</span>, <span class="op">-</span><span class="dv">100</span>:<span class="dv">3000</span>:<span class="dv">10</span>]</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> np.c_[xx.ravel(), yy.ravel()]                    <span class="co"># https://www.quora.com/Can-anybody-elaborate-the-use-of-c_-in-numpy</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> mod.predict_proba(grid)[:, <span class="dv">1</span>].reshape(xx.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>contour <span class="op">=</span> ax.contourf(xx, yy, probs, <span class="dv">25</span>, cmap<span class="op">=</span><span class="st">"RdBu"</span>,    <span class="co"># 25 levels</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                     vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>ax_c <span class="op">=</span> f.colorbar(contour)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>ax_c.set_label(<span class="st">"P(default)"</span>)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>ax_c.set_ticks([<span class="dv">0</span>,<span class="fl">0.25</span>,<span class="fl">0.5</span>,<span class="fl">.75</span>,<span class="dv">1</span>])</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>ax.scatter(X_test[<span class="st">'income'</span>], X_test[<span class="st">'balance'</span>], c<span class="op">=</span>y_test, s<span class="op">=</span><span class="dv">50</span>, </span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>          cmap<span class="op">=</span><span class="st">"RdBu"</span>, vmin<span class="op">=-</span><span class="fl">0.2</span>, vmax<span class="op">=</span><span class="fl">1.2</span>,</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>          edgecolor<span class="op">=</span><span class="st">"white"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">"income"</span>, ylabel<span class="op">=</span><span class="st">"balance"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>xx, yy <span class="op">=</span> np.mgrid[<span class="dv">0</span>:<span class="dv">80000</span>:<span class="dv">100</span>, <span class="op">-</span><span class="dv">100</span>:<span class="dv">3000</span>:<span class="dv">10</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>grid <span class="op">=</span> np.c_[xx.ravel(), yy.ravel()]                    <span class="co"># https://www.quora.com/Can-anybody-elaborate-the-use-of-c_-in-numpy</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> mod.predict_proba(grid)[:, <span class="dv">1</span>].reshape(xx.shape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>f, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>contour <span class="op">=</span> ax.contourf(xx, yy, probs, <span class="dv">25</span>, cmap<span class="op">=</span><span class="st">"RdBu"</span>,    <span class="co"># 25 levels</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                     vmin<span class="op">=</span><span class="dv">0</span>, vmax<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>ax_c <span class="op">=</span> f.colorbar(contour)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>ax_c.set_label(<span class="st">"P(default)"</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>ax_c.set_ticks([<span class="dv">0</span>,<span class="fl">0.25</span>,<span class="fl">0.5</span>,<span class="fl">.75</span>,<span class="dv">1</span>])</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>ax.scatter(X_test[<span class="st">'income'</span>], X_test[<span class="st">'balance'</span>], c<span class="op">=</span>y_test, s<span class="op">=</span><span class="dv">50</span>, </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>          cmap<span class="op">=</span><span class="st">"RdBu"</span>, vmin<span class="op">=-</span><span class="fl">0.2</span>, vmax<span class="op">=</span><span class="fl">1.2</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>          edgecolor<span class="op">=</span><span class="st">"white"</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>ax.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">"income"</span>, ylabel<span class="op">=</span><span class="st">"balance"</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="05_05_files/05_05_16_0.png" class="img-fluid figure-img"></p>
@@ -675,120 +587,120 @@ balance
 </section>
 <section id="iv." class="level2">
 <h2 class="anchored" data-anchor-id="iv.">iv.</h2>
-<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> mod.predict(X_test)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">-</span>(y_pred <span class="op">==</span> y_test).mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> mod.predict(X_test)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">-</span>(y_pred <span class="op">==</span> y_test).mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>0.025000000000000022</code></pre>
 <p>So our general test error is 2.5%.</p>
 <p>But from the figure above, it seems that the error rates are very different depending on whether we are considering a positive or a negative. Let’s have a look at the <a href="https://en.wikipedia.org/wiki/Confusion_matrix">confusion matrix</a> as well (page 145 of ISLR). The function show_confusion_matrix() we use below is from <a href="http://notmatthancock.github.io/2015/10/28/confusion-matrix.html">this blog post</a> by Matt Hancock (with a slight modification).</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_confusion_matrix(C,class_labels<span class="op">=</span>[<span class="st">'0'</span>,<span class="st">'1'</span>]):</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co">    C: ndarray, shape (2,2) as given by scikit-learn confusion_matrix function</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">    class_labels: list of strings, default simply labels 0 and 1.</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Draws confusion matrix with associated metrics.</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> C.shape <span class="op">==</span> (<span class="dv">2</span>,<span class="dv">2</span>), <span class="st">"Confusion matrix should be from binary classification only."</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># true negative, false positive, etc...</span></span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    tn <span class="op">=</span> C[<span class="dv">0</span>,<span class="dv">0</span>]<span class="op">;</span> fp <span class="op">=</span> C[<span class="dv">0</span>,<span class="dv">1</span>]<span class="op">;</span> fn <span class="op">=</span> C[<span class="dv">1</span>,<span class="dv">0</span>]<span class="op">;</span> tp <span class="op">=</span> C[<span class="dv">1</span>,<span class="dv">1</span>]<span class="op">;</span></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    NP <span class="op">=</span> fn<span class="op">+</span>tp <span class="co"># Num positive examples</span></span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    NN <span class="op">=</span> tn<span class="op">+</span>fp <span class="co"># Num negative examples</span></span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    N  <span class="op">=</span> NP<span class="op">+</span>NN</span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">8</span>))</span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    ax  <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>    ax.imshow(C, interpolation<span class="op">=</span><span class="st">'nearest'</span>, cmap<span class="op">=</span>plt.cm.gray)</span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw the grid boxes</span></span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>)</span>
-<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="fl">2.5</span>,<span class="op">-</span><span class="fl">0.5</span>)</span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>],[<span class="fl">0.5</span>,<span class="fl">0.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>],[<span class="fl">1.5</span>,<span class="fl">1.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">0.5</span>,<span class="fl">0.5</span>],[<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">1.5</span>,<span class="fl">1.5</span>],[<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
-<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set xlabels</span></span>
-<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'Predicted Label'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks([<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>])</span>
-<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>    ax.set_xticklabels(class_labels <span class="op">+</span> [<span class="st">''</span>])</span>
-<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_label_position(<span class="st">'top'</span>)</span>
-<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.tick_top()</span>
-<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># These coordinate might require some tinkering. Ditto for y, below.</span></span>
-<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_label_coords(<span class="fl">0.34</span>,<span class="fl">1.06</span>)</span>
-<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set ylabels</span></span>
-<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'True Label'</span>, fontsize<span class="op">=</span><span class="dv">16</span>, rotation<span class="op">=</span><span class="dv">90</span>)</span>
-<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>    ax.set_yticklabels(class_labels <span class="op">+</span> [<span class="st">''</span>],rotation<span class="op">=</span><span class="dv">90</span>)</span>
-<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>    ax.set_yticks([<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>])</span>
-<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a>    ax.yaxis.set_label_coords(<span class="op">-</span><span class="fl">0.09</span>,<span class="fl">0.65</span>)</span>
-<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fill in initial metrics: tp, tn, etc...</span></span>
-<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">0</span>,<span class="dv">0</span>,</span>
-<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a>            <span class="st">'True Neg: </span><span class="sc">%d</span><span class="ch">\n</span><span class="st">(Num Neg: </span><span class="sc">%d</span><span class="st">)'</span><span class="op">%</span>(tn,NN),</span>
-<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">0</span>,<span class="dv">1</span>,</span>
-<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a>            <span class="st">'False Neg: </span><span class="sc">%d</span><span class="st">'</span><span class="op">%</span>fn,</span>
-<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">1</span>,<span class="dv">0</span>,</span>
-<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a>            <span class="st">'False Pos: </span><span class="sc">%d</span><span class="st">'</span><span class="op">%</span>fp,</span>
-<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">1</span>,<span class="dv">1</span>,</span>
-<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>            <span class="st">'True Pos: </span><span class="sc">%d</span><span class="ch">\n</span><span class="st">(Num Pos: </span><span class="sc">%d</span><span class="st">)'</span><span class="op">%</span>(tp,NP),</span>
-<span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-72"><a href="#cb22-72" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-73"><a href="#cb22-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-74"><a href="#cb22-74" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fill in secondary metrics: accuracy, true pos rate, etc...</span></span>
-<span id="cb22-75"><a href="#cb22-75" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">2</span>,<span class="dv">0</span>,</span>
-<span id="cb22-76"><a href="#cb22-76" aria-hidden="true" tabindex="-1"></a>            <span class="st">'False Pos Rate: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(fp <span class="op">/</span> (fp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)),</span>
-<span id="cb22-77"><a href="#cb22-77" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-78"><a href="#cb22-78" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-79"><a href="#cb22-79" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-80"><a href="#cb22-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-81"><a href="#cb22-81" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">2</span>,<span class="dv">1</span>,</span>
-<span id="cb22-82"><a href="#cb22-82" aria-hidden="true" tabindex="-1"></a>            <span class="st">'True Pos Rate: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(tp <span class="op">/</span> (tp<span class="op">+</span>fn<span class="op">+</span><span class="fl">0.</span>)),</span>
-<span id="cb22-83"><a href="#cb22-83" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-84"><a href="#cb22-84" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-85"><a href="#cb22-85" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-86"><a href="#cb22-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-87"><a href="#cb22-87" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">2</span>,<span class="dv">2</span>,</span>
-<span id="cb22-88"><a href="#cb22-88" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Accuracy: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>((tp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)<span class="op">/</span>N),</span>
-<span id="cb22-89"><a href="#cb22-89" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-90"><a href="#cb22-90" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-91"><a href="#cb22-91" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-92"><a href="#cb22-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-93"><a href="#cb22-93" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">0</span>,<span class="dv">2</span>,</span>
-<span id="cb22-94"><a href="#cb22-94" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Neg Pre Val: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(<span class="dv">1</span><span class="op">-</span>fn<span class="op">/</span>(fn<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)),</span>
-<span id="cb22-95"><a href="#cb22-95" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-96"><a href="#cb22-96" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-97"><a href="#cb22-97" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-98"><a href="#cb22-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-99"><a href="#cb22-99" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">1</span>,<span class="dv">2</span>,</span>
-<span id="cb22-100"><a href="#cb22-100" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Pos Pred Val: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(tp<span class="op">/</span>(tp<span class="op">+</span>fp<span class="op">+</span><span class="fl">0.</span>)),</span>
-<span id="cb22-101"><a href="#cb22-101" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-102"><a href="#cb22-102" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
-<span id="cb22-103"><a href="#cb22-103" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
-<span id="cb22-104"><a href="#cb22-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-105"><a href="#cb22-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-106"><a href="#cb22-106" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
-<span id="cb22-107"><a href="#cb22-107" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> confusion_matrix(y_test, y_pred)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>show_confusion_matrix(C, [<span class="st">'No Default'</span>, <span class="st">'Default'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_confusion_matrix(C,class_labels<span class="op">=</span>[<span class="st">'0'</span>,<span class="st">'1'</span>]):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">    C: ndarray, shape (2,2) as given by scikit-learn confusion_matrix function</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">    class_labels: list of strings, default simply labels 0 and 1.</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Draws confusion matrix with associated metrics.</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> C.shape <span class="op">==</span> (<span class="dv">2</span>,<span class="dv">2</span>), <span class="st">"Confusion matrix should be from binary classification only."</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># true negative, false positive, etc...</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    tn <span class="op">=</span> C[<span class="dv">0</span>,<span class="dv">0</span>]<span class="op">;</span> fp <span class="op">=</span> C[<span class="dv">0</span>,<span class="dv">1</span>]<span class="op">;</span> fn <span class="op">=</span> C[<span class="dv">1</span>,<span class="dv">0</span>]<span class="op">;</span> tp <span class="op">=</span> C[<span class="dv">1</span>,<span class="dv">1</span>]<span class="op">;</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    NP <span class="op">=</span> fn<span class="op">+</span>tp <span class="co"># Num positive examples</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    NN <span class="op">=</span> tn<span class="op">+</span>fp <span class="co"># Num negative examples</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    N  <span class="op">=</span> NP<span class="op">+</span>NN</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">8</span>))</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>    ax  <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>    ax.imshow(C, interpolation<span class="op">=</span><span class="st">'nearest'</span>, cmap<span class="op">=</span>plt.cm.gray)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw the grid boxes</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>    ax.set_xlim(<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>    ax.set_ylim(<span class="fl">2.5</span>,<span class="op">-</span><span class="fl">0.5</span>)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>],[<span class="fl">0.5</span>,<span class="fl">0.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>],[<span class="fl">1.5</span>,<span class="fl">1.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">0.5</span>,<span class="fl">0.5</span>],[<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    ax.plot([<span class="fl">1.5</span>,<span class="fl">1.5</span>],[<span class="op">-</span><span class="fl">0.5</span>,<span class="fl">2.5</span>], <span class="st">'-k'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set xlabels</span></span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'Predicted Label'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>    ax.set_xticks([<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>])</span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>    ax.set_xticklabels(class_labels <span class="op">+</span> [<span class="st">''</span>])</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_label_position(<span class="st">'top'</span>)</span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.tick_top()</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># These coordinate might require some tinkering. Ditto for y, below.</span></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>    ax.xaxis.set_label_coords(<span class="fl">0.34</span>,<span class="fl">1.06</span>)</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Set ylabels</span></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'True Label'</span>, fontsize<span class="op">=</span><span class="dv">16</span>, rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>    ax.set_yticklabels(class_labels <span class="op">+</span> [<span class="st">''</span>],rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>    ax.set_yticks([<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>])</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>    ax.yaxis.set_label_coords(<span class="op">-</span><span class="fl">0.09</span>,<span class="fl">0.65</span>)</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fill in initial metrics: tp, tn, etc...</span></span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>            <span class="st">'True Neg: </span><span class="sc">%d</span><span class="ch">\n</span><span class="st">(Num Neg: </span><span class="sc">%d</span><span class="st">)'</span><span class="op">%</span>(tn,NN),</span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">0</span>,<span class="dv">1</span>,</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>            <span class="st">'False Neg: </span><span class="sc">%d</span><span class="st">'</span><span class="op">%</span>fn,</span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">1</span>,<span class="dv">0</span>,</span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a>            <span class="st">'False Pos: </span><span class="sc">%d</span><span class="st">'</span><span class="op">%</span>fp,</span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-65"><a href="#cb16-65" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-66"><a href="#cb16-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-67"><a href="#cb16-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-68"><a href="#cb16-68" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">1</span>,<span class="dv">1</span>,</span>
+<span id="cb16-69"><a href="#cb16-69" aria-hidden="true" tabindex="-1"></a>            <span class="st">'True Pos: </span><span class="sc">%d</span><span class="ch">\n</span><span class="st">(Num Pos: </span><span class="sc">%d</span><span class="st">)'</span><span class="op">%</span>(tp,NP),</span>
+<span id="cb16-70"><a href="#cb16-70" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-71"><a href="#cb16-71" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-72"><a href="#cb16-72" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-73"><a href="#cb16-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-74"><a href="#cb16-74" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fill in secondary metrics: accuracy, true pos rate, etc...</span></span>
+<span id="cb16-75"><a href="#cb16-75" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">2</span>,<span class="dv">0</span>,</span>
+<span id="cb16-76"><a href="#cb16-76" aria-hidden="true" tabindex="-1"></a>            <span class="st">'False Pos Rate: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(fp <span class="op">/</span> (fp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)),</span>
+<span id="cb16-77"><a href="#cb16-77" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-78"><a href="#cb16-78" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-79"><a href="#cb16-79" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-80"><a href="#cb16-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-81"><a href="#cb16-81" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">2</span>,<span class="dv">1</span>,</span>
+<span id="cb16-82"><a href="#cb16-82" aria-hidden="true" tabindex="-1"></a>            <span class="st">'True Pos Rate: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(tp <span class="op">/</span> (tp<span class="op">+</span>fn<span class="op">+</span><span class="fl">0.</span>)),</span>
+<span id="cb16-83"><a href="#cb16-83" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-84"><a href="#cb16-84" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-85"><a href="#cb16-85" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-86"><a href="#cb16-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-87"><a href="#cb16-87" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">2</span>,<span class="dv">2</span>,</span>
+<span id="cb16-88"><a href="#cb16-88" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Accuracy: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>((tp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)<span class="op">/</span>N),</span>
+<span id="cb16-89"><a href="#cb16-89" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-90"><a href="#cb16-90" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-91"><a href="#cb16-91" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-92"><a href="#cb16-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-93"><a href="#cb16-93" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">0</span>,<span class="dv">2</span>,</span>
+<span id="cb16-94"><a href="#cb16-94" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Neg Pre Val: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(<span class="dv">1</span><span class="op">-</span>fn<span class="op">/</span>(fn<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)),</span>
+<span id="cb16-95"><a href="#cb16-95" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-96"><a href="#cb16-96" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-97"><a href="#cb16-97" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-98"><a href="#cb16-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-99"><a href="#cb16-99" aria-hidden="true" tabindex="-1"></a>    ax.text(<span class="dv">1</span>,<span class="dv">2</span>,</span>
+<span id="cb16-100"><a href="#cb16-100" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Pos Pred Val: </span><span class="sc">%.4f</span><span class="st">'</span><span class="op">%</span>(tp<span class="op">/</span>(tp<span class="op">+</span>fp<span class="op">+</span><span class="fl">0.</span>)),</span>
+<span id="cb16-101"><a href="#cb16-101" aria-hidden="true" tabindex="-1"></a>            va<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-102"><a href="#cb16-102" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">'center'</span>,</span>
+<span id="cb16-103"><a href="#cb16-103" aria-hidden="true" tabindex="-1"></a>            bbox<span class="op">=</span><span class="bu">dict</span>(fc<span class="op">=</span><span class="st">'w'</span>,boxstyle<span class="op">=</span><span class="st">'round,pad=1'</span>))</span>
+<span id="cb16-104"><a href="#cb16-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-105"><a href="#cb16-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-106"><a href="#cb16-106" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb16-107"><a href="#cb16-107" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> confusion_matrix(y_test, y_pred)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>show_confusion_matrix(C, [<span class="st">'No Default'</span>, <span class="st">'Default'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="05_05_files/05_05_21_0.png" class="img-fluid figure-img"></p>
@@ -801,37 +713,37 @@ balance
 <section id="c" class="level2">
 <h2 class="anchored" data-anchor-id="c">(c)</h2>
 <p>Let’s keep a vector of the confusion matrices, and compute the different errors for each validation set.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [C]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>):</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    mod <span class="op">=</span> lr.fit(X_train, y_train)</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> mod.predict(X_test)</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    C.append(confusion_matrix(y_test, y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>tpr, fpr, ppv, npv, acc <span class="op">=</span> ([] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>))</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> C:</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    tn <span class="op">=</span> c[<span class="dv">0</span>,<span class="dv">0</span>] </span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    fp <span class="op">=</span> c[<span class="dv">0</span>,<span class="dv">1</span>]</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    fn <span class="op">=</span> c[<span class="dv">1</span>,<span class="dv">0</span>]</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    tp <span class="op">=</span> c[<span class="dv">1</span>,<span class="dv">1</span>]</span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    tpr.append((tp <span class="op">/</span> (tp<span class="op">+</span>fn<span class="op">+</span><span class="fl">0.</span>)))</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>    fpr.append((fp <span class="op">/</span> (fp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)))</span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    ppv.append((tp<span class="op">/</span>(tp<span class="op">+</span>fp<span class="op">+</span><span class="fl">0.</span>)))</span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    npv.append((<span class="dv">1</span><span class="op">-</span>fn<span class="op">/</span>(fn<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)))</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>    acc.append(((tp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)<span class="op">/</span>(tn<span class="op">+</span>fp<span class="op">+</span>fn<span class="op">+</span>tp)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> line(l):</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">" "</span>.join( <span class="st">'</span><span class="sc">{:06.4f}</span><span class="st">'</span>.<span class="bu">format</span>(a) <span class="cf">for</span> a <span class="kw">in</span> l) <span class="op">+</span> <span class="st">', Average: '</span> <span class="op">+</span><span class="st">'</span><span class="sc">{:06.4f}</span><span class="st">'</span>.<span class="bu">format</span>(<span class="bu">sum</span>(l)<span class="op">/</span> <span class="bu">len</span>(l))</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'TPR: '</span>)</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(tpr))</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'FPR: '</span>)</span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(fpr))</span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'PPV: '</span>)</span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(ppv))</span>
-<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'NPV: '</span>)</span>
-<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(npv))</span>
-<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'ACC: '</span>)</span>
-<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(acc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> [C]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">4</span>):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    mod <span class="op">=</span> lr.fit(X_train, y_train)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> mod.predict(X_test)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    C.append(confusion_matrix(y_test, y_pred))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>tpr, fpr, ppv, npv, acc <span class="op">=</span> ([] <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>))</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> c <span class="kw">in</span> C:</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    tn <span class="op">=</span> c[<span class="dv">0</span>,<span class="dv">0</span>] </span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    fp <span class="op">=</span> c[<span class="dv">0</span>,<span class="dv">1</span>]</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    fn <span class="op">=</span> c[<span class="dv">1</span>,<span class="dv">0</span>]</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    tp <span class="op">=</span> c[<span class="dv">1</span>,<span class="dv">1</span>]</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    tpr.append((tp <span class="op">/</span> (tp<span class="op">+</span>fn<span class="op">+</span><span class="fl">0.</span>)))</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    fpr.append((fp <span class="op">/</span> (fp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)))</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>    ppv.append((tp<span class="op">/</span>(tp<span class="op">+</span>fp<span class="op">+</span><span class="fl">0.</span>)))</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    npv.append((<span class="dv">1</span><span class="op">-</span>fn<span class="op">/</span>(fn<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)))</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    acc.append(((tp<span class="op">+</span>tn<span class="op">+</span><span class="fl">0.</span>)<span class="op">/</span>(tn<span class="op">+</span>fp<span class="op">+</span>fn<span class="op">+</span>tp)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> line(l):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">" "</span>.join( <span class="st">'</span><span class="sc">{:06.4f}</span><span class="st">'</span>.<span class="bu">format</span>(a) <span class="cf">for</span> a <span class="kw">in</span> l) <span class="op">+</span> <span class="st">', Average: '</span> <span class="op">+</span><span class="st">'</span><span class="sc">{:06.4f}</span><span class="st">'</span>.<span class="bu">format</span>(<span class="bu">sum</span>(l)<span class="op">/</span> <span class="bu">len</span>(l))</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'TPR: '</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(tpr))</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'FPR: '</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(fpr))</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'PPV: '</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(ppv))</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'NPV: '</span>)</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(npv))</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'ACC: '</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(line(acc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>TPR: 
 0.3648 0.3452 0.3030 0.3293, Average: 0.3356
 FPR: 
@@ -846,321 +758,225 @@ ACC:
 </section>
 <section id="d" class="level2">
 <h2 class="anchored" data-anchor-id="d">(d)</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'student_yes'</span>] <span class="op">=</span> (df[<span class="st">'student'</span>] <span class="op">==</span> <span class="st">'Yes'</span>).astype(<span class="st">'int'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'student_yes'</span>] <span class="op">=</span> (df[<span class="st">'student'</span>] <span class="op">==</span> <span class="st">'Yes'</span>).astype(<span class="st">'int'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<table class="dataframe table table-sm table-striped small">
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table class="table">
+<colgroup>
+<col style="width: 4%">
+<col style="width: 11%">
+<col style="width: 11%">
+<col style="width: 16%">
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
 <thead>
-<tr>
-<th>
-</th>
-<th>
-default
-</th>
-<th>
-student
-</th>
-<th>
-balance
-</th>
-<th>
-income
-</th>
-<th>
-default_yes
-</th>
-<th>
-student_yes
-</th>
+<tr class="header">
+<th></th>
+<th>default</th>
+<th>student</th>
+<th>balance</th>
+<th>income</th>
+<th>default_yes</th>
+<th>student_yes</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<th>
-1
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-729.526495
-</td>
-<td>
-44361.625074
-</td>
-<td>
-0
-</td>
-<td>
-0
-</td>
+<tr class="odd">
+<td>1</td>
+<td>No</td>
+<td>No</td>
+<td>729.526495</td>
+<td>44361.625074</td>
+<td>0</td>
+<td>0</td>
 </tr>
-<tr>
-<th>
-2
-</th>
-<td>
-No
-</td>
-<td>
-Yes
-</td>
-<td>
-817.180407
-</td>
-<td>
-12106.134700
-</td>
-<td>
-0
-</td>
-<td>
-1
-</td>
+<tr class="even">
+<td>2</td>
+<td>No</td>
+<td>Yes</td>
+<td>817.180407</td>
+<td>12106.134700</td>
+<td>0</td>
+<td>1</td>
 </tr>
-<tr>
-<th>
-3
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-1073.549164
-</td>
-<td>
-31767.138947
-</td>
-<td>
-0
-</td>
-<td>
-0
-</td>
+<tr class="odd">
+<td>3</td>
+<td>No</td>
+<td>No</td>
+<td>1073.549164</td>
+<td>31767.138947</td>
+<td>0</td>
+<td>0</td>
 </tr>
-<tr>
-<th>
-4
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-529.250605
-</td>
-<td>
-35704.493935
-</td>
-<td>
-0
-</td>
-<td>
-0
-</td>
+<tr class="even">
+<td>4</td>
+<td>No</td>
+<td>No</td>
+<td>529.250605</td>
+<td>35704.493935</td>
+<td>0</td>
+<td>0</td>
 </tr>
-<tr>
-<th>
-5
-</th>
-<td>
-No
-</td>
-<td>
-No
-</td>
-<td>
-785.655883
-</td>
-<td>
-38463.495879
-</td>
-<td>
-0
-</td>
-<td>
-0
-</td>
+<tr class="odd">
+<td>5</td>
+<td>No</td>
+<td>No</td>
+<td>785.655883</td>
+<td>38463.495879</td>
+<td>0</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[[<span class="st">'income'</span>,<span class="st">'balance'</span>,<span class="st">'student_yes'</span>]]</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">'default_yes'</span>]</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">'default_yes ~ income + balance + student_yes'</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y)</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>train <span class="op">=</span> X_train.join(y_train)</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> smf.logit(formula<span class="op">=</span>f, data<span class="op">=</span>train).fit()</span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>res.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[[<span class="st">'income'</span>,<span class="st">'balance'</span>,<span class="st">'student_yes'</span>]]</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">'default_yes'</span>]</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">'default_yes ~ income + balance + student_yes'</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>train <span class="op">=</span> X_train.join(y_train)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>res <span class="op">=</span> smf.logit(formula<span class="op">=</span>f, data<span class="op">=</span>train).fit()</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>res.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code>Optimization terminated successfully.
          Current function value: 0.076250
          Iterations 10</code></pre>
-<pre><code>         &lt;td&gt;Logit&lt;/td&gt;      &lt;th&gt;  Df Residuals:      &lt;/th&gt;   &lt;td&gt;  7496&lt;/td&gt;  </code></pre><pre><code>         &lt;td&gt;MLE&lt;/td&gt;       &lt;th&gt;  Df Model:          &lt;/th&gt;   &lt;td&gt;     3&lt;/td&gt;  </code></pre><pre><code>    &lt;td&gt;Fri, 05 Jan 2018&lt;/td&gt; &lt;th&gt;  Pseudo R-squ.:     &lt;/th&gt;   &lt;td&gt;0.4799&lt;/td&gt;  </code></pre><pre><code>        &lt;td&gt;16:07:39&lt;/td&gt;     &lt;th&gt;  Log-Likelihood:    &lt;/th&gt;  &lt;td&gt; -571.88&lt;/td&gt; </code></pre><pre><code>     &lt;td&gt;True&lt;/td&gt;       &lt;th&gt;  LL-Null:           &lt;/th&gt;  &lt;td&gt; -1099.5&lt;/td&gt; </code></pre><pre><code>                &lt;td&gt; &lt;/td&gt;        &lt;th&gt;  LLR p-value:       &lt;/th&gt; &lt;td&gt;1.954e-228&lt;/td&gt;</code></pre><table class="simpletable">
-<caption>
-Logit Regression Results
-</caption>
-<tbody><tr>
-<th>
-Dep. Variable:
-</th>
-<td>
-default_yes
-</td>
-<th>
-No.&nbsp;Observations:
-</th>
-<td>
-7500
-</td>
+<table class="table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 22%">
+<col style="width: 23%">
+<col style="width: 31%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td>Logit Regression Results</td>
 </tr>
-<tr>
-<th>
-Model:
-</th>
-
+<tr class="even">
+<td>Dep. Variable:</td>
+<td>default_yes</td>
+<td>No.&nbsp;Observations:</td>
+<td>7500</td>
 </tr>
-<tr>
-<th>
-Method:
-</th>
-
+<tr class="odd">
+<td>Model:</td>
+<td>Logit</td>
+<td>Df Residuals:</td>
+<td>7496</td>
 </tr>
-<tr>
-<th>
-Date:
-</th>
-
+<tr class="even">
+<td>Method:</td>
+<td>MLE</td>
+<td>Df Model:</td>
+<td>3</td>
 </tr>
-<tr>
-<th>
-Time:
-</th>
-
+<tr class="odd">
+<td>Date:</td>
+<td>Fri, 05 Jan 2018</td>
+<td>Pseudo R-squ.:</td>
+<td>0.4799</td>
 </tr>
-<tr>
-<th>
-converged:
-</th>
-
+<tr class="even">
+<td>Time:</td>
+<td>16:07:39</td>
+<td>Log-Likelihood:</td>
+<td>-571.88</td>
 </tr>
-<tr>
-<th>
-</th>
-
+<tr class="odd">
+<td>converged:</td>
+<td>True</td>
+<td>LL-Null:</td>
+<td>-1099.5</td>
 </tr>
-</tbody></table>
-<pre><code>&lt;td&gt;-6.764e-06&lt;/td&gt; &lt;td&gt;  9.4e-06&lt;/td&gt; &lt;td&gt;   -0.720&lt;/td&gt; &lt;td&gt; 0.472&lt;/td&gt; &lt;td&gt;-2.52e-05&lt;/td&gt; &lt;td&gt; 1.17e-05&lt;/td&gt;</code></pre><table class="simpletable">
-<tbody><tr>
-<td>
-</td>
-<th>
-coef
-</th>
-<th>
-std err
-</th>
-<th>
-z
-</th>
-<th>
-P&gt;|z|
-</th>
-<th>
-[0.025]
-</th>
+<tr class="even">
+<td></td>
+<td></td>
+<td>LLR p-value:</td>
+<td>1.954e-228</td>
 </tr>
-<tr>
-<th>
-Intercept
-</th>
-<td>
--10.9255
-</td>
-<td>
-0.579
-</td>
-<td>
--18.873
-</td>
-<td>
-0.000
-</td>
-<td>
--12.060
-</td>
-<td>
--9.791
-</td>
+</tbody>
+</table>
+<table class="table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 13%">
+<col style="width: 14%">
+<col style="width: 13%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td></td>
+<td style="text-align: left;">coef</td>
+<td style="text-align: left;">std err</td>
+<td style="text-align: left;">z</td>
+<td style="text-align: left;">P&gt;|z|</td>
+<td style="text-align: left;">[0.025</td>
+<td style="text-align: left;">0.975]</td>
 </tr>
-<tr>
-<th>
-income
-</th>
-
+<tr class="even">
+<td>Intercept</td>
+<td style="text-align: left;">-10.9255</td>
+<td style="text-align: left;">0.579</td>
+<td style="text-align: left;">-18.873</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-12.060</td>
+<td style="text-align: left;">-9.791</td>
 </tr>
-<tr>
-<th>
-balance
-</th>
-<td>
-0.0061
-</td>
-<td>
-0.000
-</td>
-<td>
-21.174
-</td>
-<td>
-0.000
-</td>
-<td>
-0.006
-</td>
-<td>
-0.007
-</td>
+<tr class="odd">
+<td>income</td>
+<td style="text-align: left;">-6.764e-06</td>
+<td style="text-align: left;">9.4e-06</td>
+<td style="text-align: left;">-0.720</td>
+<td style="text-align: left;">0.472</td>
+<td style="text-align: left;">-2.52e-05</td>
+<td style="text-align: left;">1.17e-05</td>
 </tr>
-<tr>
-<th>
-student_yes
-</th>
-<td>
--1.0870
-</td>
-<td>
-0.274
-</td>
-<td>
--3.961
-</td>
-<td>
-0.000
-</td>
-<td>
--1.625
-</td>
-<td>
--0.549
-</td>
+<tr class="even">
+<td>balance</td>
+<td style="text-align: left;">0.0061</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">21.174</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">0.006</td>
+<td style="text-align: left;">0.007</td>
 </tr>
-</tbody></table>
-<div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> (res.predict(X_test) <span class="op">&gt;</span> <span class="fl">.5</span>) <span class="op">*</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> confusion_matrix(y_test, y_pred)</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>show_confusion_matrix(C, [<span class="st">'No Default'</span>, <span class="st">'Default'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<tr class="odd">
+<td>student_yes</td>
+<td style="text-align: left;">-1.0870</td>
+<td style="text-align: left;">0.274</td>
+<td style="text-align: left;">-3.961</td>
+<td style="text-align: left;">0.000</td>
+<td style="text-align: left;">-1.625</td>
+<td style="text-align: left;">-0.549</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> (res.predict(X_test) <span class="op">&gt;</span> <span class="fl">.5</span>) <span class="op">*</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> confusion_matrix(y_test, y_pred)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>show_confusion_matrix(C, [<span class="st">'No Default'</span>, <span class="st">'Default'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="05_05_files/05_05_35_0.png" class="img-fluid figure-img"></p>

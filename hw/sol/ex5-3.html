@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MSSC 6250 – Statistical Machine Learning - HW 1 (Solutions)</title>
+<title>MSSC 6250 – ex5-3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../hw/HW 3.html" rel="next">
-<link href="../../hw/HW 2.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,9 +69,9 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta property="og:title" content="MSSC 6250 - Statistical Machine Learning - HW 1 (Solutions)">
+<meta property="og:title" content="MSSC 6250">
 <meta property="og:site_name" content="MSSC 6250">
-<meta name="twitter:title" content="MSSC 6250 - Statistical Machine Learning - HW 1 (Solutions)">
+<meta name="twitter:title" content="MSSC 6250">
 <meta name="twitter:image" content="https://tinyurl.com/SML-MU/hw/sol/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
@@ -88,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW2-sol.html">HW 2 Solution</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,13 +154,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">HW</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../hw/HW 1.html" class="sidebar-item-text sidebar-link">
@@ -183,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HW 2 Solution</span></a>
   </div>
 </li>
@@ -228,56 +226,44 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-3.9" id="toc-exercise-3.9" class="nav-link active" data-scroll-target="#exercise-3.9">Exercise 3.9</a></li>
-  <li><a href="#exercise-3.14" id="toc-exercise-3.14" class="nav-link" data-scroll-target="#exercise-3.14">Exercise 3.14</a></li>
-  <li><a href="#exercise-3.15" id="toc-exercise-3.15" class="nav-link" data-scroll-target="#exercise-3.15">Exercise 3.15</a></li>
-  <li><a href="#exercise-4.6" id="toc-exercise-4.6" class="nav-link" data-scroll-target="#exercise-4.6">Exercise 4.6</a></li>
-  <li><a href="#exercise-4.15" id="toc-exercise-4.15" class="nav-link" data-scroll-target="#exercise-4.15">Exercise 4.15</a></li>
-  <li><a href="#hw-2-in-r" id="toc-hw-2-in-r" class="nav-link" data-scroll-target="#hw-2-in-r">HW 2 in R</a></li>
+  <li><a href="#problem-5.3" id="toc-problem-5.3" class="nav-link active" data-scroll-target="#problem-5.3">Problem 5.3</a>
+  <ul class="collapse">
+  <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
+  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a>
+  <ul class="collapse">
+  <li><a href="#i." id="toc-i." class="nav-link" data-scroll-target="#i.">i.</a></li>
+  <li><a href="#ii." id="toc-ii." class="nav-link" data-scroll-target="#ii.">ii.</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW2-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="HW2-sol.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-3.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW2-sol.html">HW 2 Solution</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Statistical Machine Learning - HW 1 (Solutions)</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="exercise-3.9" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.9"><a href="ex3-9">Exercise 3.9</a></h2>
+<section id="problem-5.3" class="level1">
+<h1>Problem 5.3</h1>
+<section id="a" class="level2">
+<h2 class="anchored" data-anchor-id="a">(a)</h2>
+<p>The k-fold cross-validation algorithm is a method to estimate the test error of a given statistical estimator. We start by taking the training set (of size N) and partitioning it into k non-overlapping equal parts. If k does not divide N evenly, we split it into k folds as “equal” as possible; for example, if N=1003, and k=10, we will have 3 folds with 101 elements and 7 with 100 elements. We then fit the model k times, each time leaving out a different fold as validation set. For each of these k model fits, we use the left-out fold to calculate the validation error. Finally, the average of the k validation errors is our estimate of the test error.</p>
 </section>
-<section id="exercise-3.14" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.14"><a href="ex3-14">Exercise 3.14</a></h2>
+<section id="b" class="level2">
+<h2 class="anchored" data-anchor-id="b">(b)</h2>
+<section id="i." class="level3">
+<h3 class="anchored" data-anchor-id="i.">i.</h3>
+<p>Relative to the the k-fold cross validation, the validation set approach requires less computation (since it only fits the model once) and is simpler and easier to implement. On the other hand, the validation set approach tends to overestimate the test error since it only uses half the sample to fit the model (in general a larger sample size leads to lower test error). Additionally, fitting only half the model will make the test error estimate dependent on which half of the sample we choose. Both of these aspects are also true for the k-fold cross-validation but the effect is much smaller (the difference is evident when comparing the right-hand panels of Figures 5.2 and 5.4 of the text).</p>
 </section>
-<section id="exercise-3.15" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.15"><a href="ex3-15">Exercise 3.15</a></h2>
-</section>
-<section id="exercise-4.6" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4.6"><a href="ex4-6">Exercise 4.6</a></h2>
-</section>
-<section id="exercise-4.15" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4.15"><a href="ex4-15">Exercise 4.15</a></h2>
-</section>
-<section id="hw-2-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="hw-2-in-r"><a href="hw2-sol.pdf">HW 2 in R</a></h2>
+<section id="ii." class="level3">
+<h3 class="anchored" data-anchor-id="ii.">ii.</h3>
+<p>Leave-one-out cross-validation (LOOCV) has less bias than k-fold cross validation since it uses almost all of the points of the data set, nearly unbiased. On the other hand, this is yet another instance of the bias-variance trade-off, and LOOCV will have more variance than k-fold cross validation. This is because when every pair of the n-1 fitted models differs only by 2 points, making the validation errors extremely correlated - they share n-2 of the n-1 points used for each fit. With k-fold cross validation this correlation is greatly diminished if k=5 or k=10, for instance.</p>
+<p>Consider a k=10 example: each pair of the 10 fits shares about only 80% of the points. With k=5, each pair of the 5 model fits shares only approximately 60% of the points. Additionally, k-fold cross validation is less computationally intensive, requiring only k model fits instead of the n fits with LOOCV. As pointed out in the text (Equation 5.2), there’s an exception to this case for the least squares linear or polinomial regression - in this case LOOCV requires only the same computation as a single model fit.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -812,18 +798,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../hw/HW 2.html" class="pagination-link" aria-label="HW 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW 2</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../hw/HW 3.html" class="pagination-link" aria-label="HW 3">
-        <span class="nav-page-text">HW 3</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -832,7 +806,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW2-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-3.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

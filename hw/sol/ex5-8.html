@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MSSC 6250 – ex4-6</title>
+<title>MSSC 6250 – ex5-8</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -99,8 +133,10 @@ window.Quarto = {
 </script>
 
 <meta property="og:title" content="MSSC 6250">
+<meta property="og:description" content="Homepage for ‘Statistical Machine Learning’ at Marquette University, Spring 2026.">
 <meta property="og:site_name" content="MSSC 6250">
 <meta name="twitter:title" content="MSSC 6250">
+<meta name="twitter:description" content="Homepage for ‘Statistical Machine Learning’ at Marquette University, Spring 2026.">
 <meta name="twitter:image" content="https://tinyurl.com/SML-MU/hw/sol/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
@@ -255,13 +291,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-4.6" id="toc-exercise-4.6" class="nav-link active" data-scroll-target="#exercise-4.6">Exercise 4.6</a>
-  <ul class="collapse">
+  <li><a href="#exercise-5.8" id="toc-exercise-5.8" class="nav-link active" data-scroll-target="#exercise-5.8">Exercise 5.8</a></li>
   <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
   <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
-  </ul></li>
+  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">(c)</a></li>
+  <li><a href="#d" id="toc-d" class="nav-link" data-scroll-target="#d">(d)</a></li>
+  <li><a href="#e" id="toc-e" class="nav-link" data-scroll-target="#e">(e)</a></li>
+  <li><a href="#f" id="toc-f" class="nav-link" data-scroll-target="#f">(f)</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex4-6.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-8.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -269,30 +308,263 @@ window.Quarto = {
 
 
 
-<section id="exercise-4.6" class="level1">
-<h1>Exercise 4.6</h1>
-<section id="a" class="level2">
-<h2 class="anchored" data-anchor-id="a">(a)</h2>
-<p>Multiple logistic regression model is represented by the following equation:</p>
-<p><span class="math display">\[ p(x) = \frac{e^{\beta_0 + \beta_1 \times X_1 + ... + \beta_p \times X_p}}{1 + e^{\beta_0 + \beta_1 \times X_1 + ... + \beta_p \times X_p}}\]</span></p>
-<p>In this case, since we have two features, the equation is as follows:</p>
-<p><span class="math display">\[ p(x) = \frac{e^{\beta_0 + \beta_1 \times X_1 + \beta_2 \times X_2}}{1 + e^{\beta_0 + \beta_1 \times X_1 + \beta_2 \times X_2}}\]</span></p>
-<p>Considering that <span class="math inline">\(\beta_0 = -6\)</span>, <span class="math inline">\(\beta_1 = 0.05\)</span>, <span class="math inline">\(\beta_2 = 1\)</span>, <span class="math inline">\(X_1 = 40\)</span> and <span class="math inline">\(X_2 = 3.5\)</span>, we have:</p>
-<p><span class="math display">\[ p(x) = \frac{e^{-6 + 0.05 \times 40 + 1 \times 3.5}}{1 + e^{-6 + 0.05 \times 40 + 1 \times 3.5}} = 0.3775\]</span></p>
-<p>Thus, the probability that a student who studies for 40 h and has an undergrad GPA of 3.5 gets an A in the class is <b>37.75%</b>.</p>
+<section id="exercise-5.8" class="level1">
+<h1>Exercise 5.8</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> LeaveOneOut  <span class="co"># To use cross-validation in (c); only available after scikit v0.17.1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> PolynomialFeatures</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm  <span class="co"># To fit models using least squares</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="b" class="level2">
-<h2 class="anchored" data-anchor-id="b">(b)</h2>
-<p>What we are asking is how many hours a student needs to study (<span class="math inline">\(X_1\)</span>) to have p(x) = 0.5. Replacing in the equation presented before:</p>
-<p><span class="math display">\[ p(x) = \frac{e^{-6 + 0.05 \times X_1 + 1 \times 3.5}}{1 + e^{-6 + 0.05 \times X_1 + 1 \times 3.5}} \Leftrightarrow \frac{1}{2} = \frac{e^{-6 + 0.05 \times X_1 + 1 \times 3.5}}{1 + e^{-6 + 0.05 \times X_1 + 1 \times 3.5}}.\]</span></p>
-<p>This will be true when the numerator equals 1, that is, when</p>
-<p><span class="math display">\[e^{-6 + 0.05 \times X_1 + 1 \times 3.5 }= 1 \Leftrightarrow \]</span></p>
-<p><span class="math display">\[ \Leftrightarrow -6 + 0.05 \times X_1 + 1 \times 3.5 = \log(1) = 0 \Leftrightarrow \]</span></p>
-<p><span class="math display">\[ \Leftrightarrow X_1 = 50.\]</span></p>
-<p>To have a 50% chance of getting an A in the class a student needs to study <b>50 hours</b>.</p>
+<section id="a" class="level1">
+<h1>(a)</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">1</span>)  <span class="co"># Random numbers generated by Python are different from those generated by R, as mentioned in Exercise 3.11</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">100</span>)  <span class="co"># By default np.random.normal considers a standard normal, so we just have to define the size</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> epsilon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><b>n</b> = number of observations = 100</p>
+<p><b>p</b> = number of predictors = 2 (X and X^2)</p>
+<p>Model in equation form: <span class="math display">\[Y = X - 2 X^{2} + \epsilon\]</span></p>
+</section>
+<section id="b" class="level1">
+<h1>(b)</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="05_08_files/05_08_6_0.png" class="img-fluid figure-img"></p>
+<figcaption>png</figcaption>
+</figure>
+</div>
+<p><b>Comments</b>:</p>
+<ul>
+<li>Quadratic plot</li>
+<li>Convex function with negative concavity</li>
+<li>X from about -2 to 2</li>
+<li>Y from about -10 to 2</li>
+</ul>
+</section>
+<section id="c" class="level1">
+<h1>(c)</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set new random seed</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create LOOCV object</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>loo <span class="op">=</span> LeaveOneOut()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Organize data into a dataframe (easier to handle)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'x'</span>:x, <span class="st">'y'</span>:y})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initiate variables</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>min_deg <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Minimum degree of the polynomial equations considered</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>max_deg <span class="op">=</span> <span class="dv">4</span><span class="op">+</span><span class="dv">1</span>  <span class="co"># Maximum degree of the polynomial equations considered</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute mean squared error (MSE) for the different polynomial equations.</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(min_deg, max_deg):</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Leave-one-out cross validation </span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> train, test <span class="kw">in</span> loo.split(df):</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        X_train <span class="op">=</span> df[<span class="st">'x'</span>][train]</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        y_train <span class="op">=</span> df[<span class="st">'y'</span>][train]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        X_test <span class="op">=</span> df[<span class="st">'x'</span>][test]</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        y_test <span class="op">=</span> df[<span class="st">'y'</span>][test]</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Pipeline</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> Pipeline([(<span class="st">'poly'</span>, PolynomialFeatures(degree <span class="op">=</span> i)),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>                      (<span class="st">'linear'</span>, LinearRegression())])</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        model.fit(X_train[:,np.newaxis], y_train)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># MSE</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        score <span class="op">=</span> mean_squared_error(y_test, model.predict(X_test[:,np.newaxis]))</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        scores.append(score)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Model </span><span class="sc">%i</span><span class="st"> (MSE): </span><span class="sc">%f</span><span class="st">'</span> <span class="op">%</span> (i,np.mean(scores)))</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>/Users/disciplina/anaconda3/envs/islp/lib/python3.6/site-packages/scipy/linalg/basic.py:1226: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
+  warnings.warn(mesg, RuntimeWarning)
 
 
+Model 1 (MSE): 8.292212
+Model 2 (MSE): 1.017096
+Model 3 (MSE): 1.046553
+Model 4 (MSE): 1.057493</code></pre>
 </section>
+<section id="d" class="level1">
+<h1>(d)</h1>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set new random seed</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute MSE as in (c)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>min_deg <span class="op">=</span> <span class="dv">1</span>  </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>max_deg <span class="op">=</span> <span class="dv">4</span><span class="op">+</span><span class="dv">1</span> </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(min_deg, max_deg):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> train, test <span class="kw">in</span> loo.split(df):</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        X_train <span class="op">=</span> df[<span class="st">'x'</span>][train]</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        y_train <span class="op">=</span> df[<span class="st">'y'</span>][train]</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        X_test <span class="op">=</span> df[<span class="st">'x'</span>][test]</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        y_test <span class="op">=</span> df[<span class="st">'y'</span>][test]</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> Pipeline([(<span class="st">'poly'</span>, PolynomialFeatures(degree <span class="op">=</span> i)),</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>                      (<span class="st">'linear'</span>, LinearRegression())])</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        model.fit(X_train[:,np.newaxis], y_train)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        score <span class="op">=</span> mean_squared_error(y_test, model.predict(X_test[:,np.newaxis]))</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        scores.append(score)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Model </span><span class="sc">%i</span><span class="st"> (MSE): </span><span class="sc">%f</span><span class="st">'</span> <span class="op">%</span> (i,np.mean(scores)))</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Model 1 (MSE): 8.292212
+Model 2 (MSE): 1.017096
+Model 3 (MSE): 1.046553
+Model 4 (MSE): 1.057493</code></pre>
+<p>The results are <b>exactly the same</b> because we only remove one observation from the training set. Thus, there is no random effect resulting from the observations used for the test set. LOOCV will always be the same, no matter the random seed.</p>
+</section>
+<section id="e" class="level1">
+<h1>(e)</h1>
+<p>The model that had the smallest LOOCV error was <b>model (ii)</b>. This was an expected result because model (ii) has the same form as y (second order polynomial).</p>
+<p><b>Comment:</b> If we used <em>np.random.seed(0)</em> instead of <em>np.random.seed(1)</em> or <em>np.random.seed(10)</em>, the answer to the problem would be different. Using <em>seed(0)</em>, the epsilon values are proportional higher to the remaining values in the y equation. Thus, its influence is greater and the random effect prevails over the second order parameters y. We didn’t try what happens for other seed values, but there may be other seed values that produce a similar effect to <em>seed(0)</em>.</p>
+</section>
+<section id="f" class="level1">
+<h1>(f)</h1>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Models with polynomial features</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>min_deg <span class="op">=</span> <span class="dv">1</span>  </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>max_deg <span class="op">=</span> <span class="dv">4</span><span class="op">+</span><span class="dv">1</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(min_deg, max_deg):</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    pol <span class="op">=</span> PolynomialFeatures(degree <span class="op">=</span> i)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    X_pol <span class="op">=</span> pol.fit_transform(df[<span class="st">'x'</span>][:,np.newaxis])</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> df[<span class="st">'y'</span>]</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> sm.OLS(y, X_pol)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> model.fit()</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(results.summary())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.088
+Model:                            OLS   Adj. R-squared:                  0.079
+Method:                 Least Squares   F-statistic:                     9.460
+Date:                Fri, 05 Jan 2018   Prob (F-statistic):            0.00272
+Time:                        17:15:28   Log-Likelihood:                -242.69
+No. Observations:                 100   AIC:                             489.4
+Df Residuals:                      98   BIC:                             494.6
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -1.7609      0.280     -6.278      0.000      -2.317      -1.204
+x1             0.9134      0.297      3.076      0.003       0.324       1.503
+==============================================================================
+Omnibus:                       40.887   Durbin-Watson:                   1.957
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               83.786
+Skew:                          -1.645   Prob(JB):                     6.40e-19
+Kurtosis:                       6.048   Cond. No.                         1.19
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.882
+Model:                            OLS   Adj. R-squared:                  0.880
+Method:                 Least Squares   F-statistic:                     362.9
+Date:                Fri, 05 Jan 2018   Prob (F-statistic):           9.26e-46
+Time:                        17:15:28   Log-Likelihood:                -140.40
+No. Observations:                 100   AIC:                             286.8
+Df Residuals:                      97   BIC:                             294.6
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0216      0.122     -0.177      0.860      -0.264       0.221
+x1             1.2132      0.108     11.238      0.000       0.999       1.428
+x2            -2.0014      0.078    -25.561      0.000      -2.157      -1.846
+==============================================================================
+Omnibus:                        0.094   Durbin-Watson:                   2.221
+Prob(Omnibus):                  0.954   Jarque-Bera (JB):                0.009
+Skew:                          -0.022   Prob(JB):                        0.995
+Kurtosis:                       2.987   Cond. No.                         2.26
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.883
+Model:                            OLS   Adj. R-squared:                  0.880
+Method:                 Least Squares   F-statistic:                     242.1
+Date:                Fri, 05 Jan 2018   Prob (F-statistic):           1.26e-44
+Time:                        17:15:28   Log-Likelihood:                -139.91
+No. Observations:                 100   AIC:                             287.8
+Df Residuals:                      96   BIC:                             298.2
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.0046      0.125      0.037      0.971      -0.244       0.253
+x1             1.0639      0.189      5.636      0.000       0.689       1.439
+x2            -2.0215      0.081    -24.938      0.000      -2.182      -1.861
+x3             0.0550      0.057      0.965      0.337      -0.058       0.168
+==============================================================================
+Omnibus:                        0.034   Durbin-Watson:                   2.253
+Prob(Omnibus):                  0.983   Jarque-Bera (JB):                0.050
+Skew:                           0.032   Prob(JB):                        0.975
+Kurtosis:                       2.911   Cond. No.                         6.55
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.885
+Model:                            OLS   Adj. R-squared:                  0.880
+Method:                 Least Squares   F-statistic:                     182.4
+Date:                Fri, 05 Jan 2018   Prob (F-statistic):           1.13e-43
+Time:                        17:15:28   Log-Likelihood:                -139.24
+No. Observations:                 100   AIC:                             288.5
+Df Residuals:                      95   BIC:                             301.5
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.0866      0.144      0.600      0.550      -0.200       0.373
+x1             1.0834      0.189      5.724      0.000       0.708       1.459
+x2            -2.2455      0.214    -10.505      0.000      -2.670      -1.821
+x3             0.0436      0.058      0.755      0.452      -0.071       0.158
+x4             0.0482      0.043      1.132      0.260      -0.036       0.133
+==============================================================================
+Omnibus:                        0.102   Durbin-Watson:                   2.214
+Prob(Omnibus):                  0.950   Jarque-Bera (JB):                0.117
+Skew:                           0.069   Prob(JB):                        0.943
+Kurtosis:                       2.906   Cond. No.                         17.5
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
+<p>To answer to the question, we should pay attention to the t-statistic value of each coefficient.</p>
+<p>As we can see, when we have a second order polynomial, both x1 and x2 have high t-statistic values. When we have a third order polynomial, x2 has the highest t-statistic, followed by x1 and then by x3. Finally, when we have a fourth order polynomial, x2 is the variable with the highest t-statistic, followed by x1, x4 and x3.</p>
+<p>We can conclude that x2 and x1 are variables with relevance for the presented models. These results agree with the conclusions drawn based on the cross-validation results, showing that the first and second order terms are the most significant.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ul>
+<li>https://github.com/scikit-learn/scikit-learn/issues/6161 (scikit.model_selection only available after 0.17.1)</li>
+<li>http://scikit-learn.org/stable/install.html (to install scikit)</li>
+<li>http://stats.stackexchange.com/questions/58739/polynomial-regression-using-scikit-learn (polynomial linear regression)</li>
+<li>http://stackoverflow.com/questions/29241056/the-use-of-python-numpy-newaxis (use of np.newaxis)</li>
+<li>http://scikit-learn.org/stable/modules/linear_model.html#polynomial-regression-extending-linear-models-with-basis-functions (about the use of pipeline)</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -835,7 +1107,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex4-6.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-8.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

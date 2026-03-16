@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MSSC 6250 – Statistical Machine Learning - HW 1 (Solutions)</title>
+<title>MSSC 6250 – ex5-1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../hw/HW 3.html" rel="next">
-<link href="../../hw/HW 2.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,10 +68,41 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="MSSC 6250 - Statistical Machine Learning - HW 1 (Solutions)">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="MSSC 6250">
+<meta property="og:description" content="Homepage for ‘Statistical Machine Learning’ at Marquette University, Spring 2026.">
 <meta property="og:site_name" content="MSSC 6250">
-<meta name="twitter:title" content="MSSC 6250 - Statistical Machine Learning - HW 1 (Solutions)">
+<meta name="twitter:title" content="MSSC 6250">
+<meta name="twitter:description" content="Homepage for ‘Statistical Machine Learning’ at Marquette University, Spring 2026.">
 <meta name="twitter:image" content="https://tinyurl.com/SML-MU/hw/sol/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
@@ -88,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW2-sol.html">HW 2 Solution</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,13 +185,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">HW</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../hw/HW 1.html" class="sidebar-item-text sidebar-link">
@@ -183,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HW 2 Solution</span></a>
   </div>
 </li>
@@ -228,54 +257,38 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-3.9" id="toc-exercise-3.9" class="nav-link active" data-scroll-target="#exercise-3.9">Exercise 3.9</a></li>
-  <li><a href="#exercise-3.14" id="toc-exercise-3.14" class="nav-link" data-scroll-target="#exercise-3.14">Exercise 3.14</a></li>
-  <li><a href="#exercise-3.15" id="toc-exercise-3.15" class="nav-link" data-scroll-target="#exercise-3.15">Exercise 3.15</a></li>
-  <li><a href="#exercise-4.6" id="toc-exercise-4.6" class="nav-link" data-scroll-target="#exercise-4.6">Exercise 4.6</a></li>
-  <li><a href="#exercise-4.15" id="toc-exercise-4.15" class="nav-link" data-scroll-target="#exercise-4.15">Exercise 4.15</a></li>
-  <li><a href="#hw-2-in-r" id="toc-hw-2-in-r" class="nav-link" data-scroll-target="#hw-2-in-r">HW 2 in R</a></li>
+  <li><a href="#exercise-5.1" id="toc-exercise-5.1" class="nav-link active" data-scroll-target="#exercise-5.1">Exercise 5.1</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW2-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="HW2-sol.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-1.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW2-sol.html">HW 2 Solution</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Statistical Machine Learning - HW 1 (Solutions)</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="exercise-3.9" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.9"><a href="ex3-9">Exercise 3.9</a></h2>
-</section>
-<section id="exercise-3.14" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.14"><a href="ex3-14">Exercise 3.14</a></h2>
-</section>
-<section id="exercise-3.15" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.15"><a href="ex3-15">Exercise 3.15</a></h2>
-</section>
-<section id="exercise-4.6" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4.6"><a href="ex4-6">Exercise 4.6</a></h2>
-</section>
-<section id="exercise-4.15" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4.15"><a href="ex4-15">Exercise 4.15</a></h2>
-</section>
-<section id="hw-2-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="hw-2-in-r"><a href="hw2-sol.pdf">HW 2 in R</a></h2>
+<section id="exercise-5.1" class="level1">
+<h1>Exercise 5.1</h1>
+<p>We will use the following properties of the variance:</p>
+<p><span class="math display">\[\begin{align}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\Var(X + Y)    &amp; = \Var(X)+\Var(Y) + 2\Cov(X,Y)\\
+\Var(\alpha X) &amp; = \alpha^2 \Var(X) \\
+\Cov(\alpha X, \beta Y) &amp; = \alpha \beta \Cov(X,Y)
+\end{align}\]</span></p>
+<p>With these properties, we get:</p>
+<p><span class="math display">\[\begin{align}
+\Var(\alpha X + (1-\alpha) Y) &amp; = \Var(\alpha X)   + \Var((1-\alpha)Y)    + 2\Cov(\alpha X,(1-\alpha) Y)\\
+\                             &amp; = \alpha^2 \Var(X) + (1-\alpha)^2 \Var(Y) + 2\alpha\beta\Cov(X,Y)
+\end{align}\]</span></p>
+<p>Now, we should find the minimum in the expression above. To do so, we differentiate the expression, equal it to 0 and solve for <span class="math inline">\(\alpha\)</span>:</p>
+<p><span class="math display">\[\begin{align}
+\  0 &amp; = 2 \alpha\Var(X) - 2(1-\alpha) \Var(Y)  + 2(1-2\alpha)\Cov(X,Y) \Leftrightarrow \\
+\ \Leftrightarrow   0 &amp; = \alpha\Var(X) - (1-\alpha) \Var(Y)  + (1-2\alpha)\Cov(X,Y) \Leftrightarrow \\
+\ \Leftrightarrow   \alpha\Var(X) + \alpha\Var(Y) - 2\alpha\Cov(X,Y) &amp; =  \Var(Y)  -\Cov(X,Y) \Leftrightarrow \\
+\ \Leftrightarrow   \alpha &amp; =  \frac{\Var(Y)  -\Cov(X,Y)}{\Var(X) + \Var(Y) - 2\Cov(X,Y)} = \frac{\sigma^2_Y - \sigma_{XY}}{\sigma^2_X + \sigma^2_Y - 2\sigma_X\sigma_Y}\\
+\end{align}\]</span></p>
 
 
 </section>
@@ -812,18 +825,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../hw/HW 2.html" class="pagination-link" aria-label="HW 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW 2</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../hw/HW 3.html" class="pagination-link" aria-label="HW 3">
-        <span class="nav-page-text">HW 3</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -832,7 +833,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW2-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-1.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

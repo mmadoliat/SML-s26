@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MSSC 6250 – Statistical Machine Learning - HW 1 (Solutions)</title>
+<title>MSSC 6250 – hw3-5</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../hw/HW 3.html" rel="next">
-<link href="../../hw/HW 2.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,10 +68,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="MSSC 6250 - Statistical Machine Learning - HW 1 (Solutions)">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="MSSC 6250">
 <meta property="og:site_name" content="MSSC 6250">
-<meta name="twitter:title" content="MSSC 6250 - Statistical Machine Learning - HW 1 (Solutions)">
+<meta name="twitter:title" content="MSSC 6250">
 <meta name="twitter:image" content="https://tinyurl.com/SML-MU/hw/sol/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
@@ -88,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW2-sol.html">HW 2 Solution</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -156,13 +183,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">HW</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../hw/HW 1.html" class="sidebar-item-text sidebar-link">
@@ -183,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../hw/sol/HW2-sol.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HW 2 Solution</span></a>
   </div>
 </li>
@@ -228,56 +255,95 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-3.9" id="toc-exercise-3.9" class="nav-link active" data-scroll-target="#exercise-3.9">Exercise 3.9</a></li>
-  <li><a href="#exercise-3.14" id="toc-exercise-3.14" class="nav-link" data-scroll-target="#exercise-3.14">Exercise 3.14</a></li>
-  <li><a href="#exercise-3.15" id="toc-exercise-3.15" class="nav-link" data-scroll-target="#exercise-3.15">Exercise 3.15</a></li>
-  <li><a href="#exercise-4.6" id="toc-exercise-4.6" class="nav-link" data-scroll-target="#exercise-4.6">Exercise 4.6</a></li>
-  <li><a href="#exercise-4.15" id="toc-exercise-4.15" class="nav-link" data-scroll-target="#exercise-4.15">Exercise 4.15</a></li>
-  <li><a href="#hw-2-in-r" id="toc-hw-2-in-r" class="nav-link" data-scroll-target="#hw-2-in-r">HW 2 in R</a></li>
+  <li><a href="#problem-5-ridge-regression-as-a-map-estimator-gaussian-prior-gaussian-likelihood" id="toc-problem-5-ridge-regression-as-a-map-estimator-gaussian-prior-gaussian-likelihood" class="nav-link active" data-scroll-target="#problem-5-ridge-regression-as-a-map-estimator-gaussian-prior-gaussian-likelihood">Problem 5: Ridge Regression as a MAP Estimator (Gaussian Prior + Gaussian Likelihood)</a>
+  <ul class="collapse">
+  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+  <li><a href="#likelihood-and-prior-up-to-proportionality" id="toc-likelihood-and-prior-up-to-proportionality" class="nav-link" data-scroll-target="#likelihood-and-prior-up-to-proportionality">Likelihood and Prior (up to proportionality)</a>
+  <ul class="collapse">
+  <li><a href="#likelihood" id="toc-likelihood" class="nav-link" data-scroll-target="#likelihood">Likelihood</a></li>
+  <li><a href="#prior" id="toc-prior" class="nav-link" data-scroll-target="#prior">Prior</a></li>
+  </ul></li>
+  <li><a href="#posterior-and-log-posterior" id="toc-posterior-and-log-posterior" class="nav-link" data-scroll-target="#posterior-and-log-posterior">Posterior and Log Posterior</a></li>
+  <li><a href="#closed-form-solution-map-ridge" id="toc-closed-form-solution-map-ridge" class="nav-link" data-scroll-target="#closed-form-solution-map-ridge">Closed-Form Solution (MAP = Ridge)</a></li>
+  <li><a href="#relationship-between-lambda-sigma2-and-tau2" id="toc-relationship-between-lambda-sigma2-and-tau2" class="nav-link" data-scroll-target="#relationship-between-lambda-sigma2-and-tau2">Relationship Between <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\sigma^2\)</span>, and <span class="math inline">\(\tau^2\)</span></a></li>
+  <li><a href="#interpretation" id="toc-interpretation" class="nav-link" data-scroll-target="#interpretation">Interpretation</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW2-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="HW2-sol.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/hw3-5.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW2-sol.html">HW 2 Solution</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Statistical Machine Learning - HW 1 (Solutions)</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="exercise-3.9" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.9"><a href="ex3-9">Exercise 3.9</a></h2>
+<section id="problem-5-ridge-regression-as-a-map-estimator-gaussian-prior-gaussian-likelihood" class="level1">
+<h1>Problem 5: Ridge Regression as a MAP Estimator (Gaussian Prior + Gaussian Likelihood)</h1>
+<section id="setup" class="level2">
+<h2 class="anchored" data-anchor-id="setup">Setup</h2>
+<p>Let</p>
+<ul>
+<li>Prior on coefficients:<br>
+<span class="math inline">\(\boldsymbol{\beta} \sim \mathcal{N}(\mathbf{0}, \tau^2 \mathbf{I})\)</span></li>
+<li>Sampling model (likelihood):<br>
+<span class="math inline">\(\mathbf{y}\mid \boldsymbol{\beta} \sim \mathcal{N}(\mathbf{X}\boldsymbol{\beta}, \sigma^2 \mathbf{I})\)</span></li>
+</ul>
+<p>We will show the <strong>ridge regression estimator</strong> is the <strong>MAP (posterior mode)</strong> and then relate the ridge penalty <span class="math inline">\(\lambda\)</span> to <span class="math inline">\(\sigma^2\)</span> and <span class="math inline">\(\tau^2\)</span>.</p>
+<hr>
 </section>
-<section id="exercise-3.14" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.14"><a href="ex3-14">Exercise 3.14</a></h2>
+<section id="likelihood-and-prior-up-to-proportionality" class="level2">
+<h2 class="anchored" data-anchor-id="likelihood-and-prior-up-to-proportionality">Likelihood and Prior (up to proportionality)</h2>
+<section id="likelihood" class="level3">
+<h3 class="anchored" data-anchor-id="likelihood">Likelihood</h3>
+<p><span class="math inline">\(p(\mathbf{y}\mid \boldsymbol{\beta}) \propto \exp!\left( -\frac{1}{2\sigma^2}\|\mathbf{y}-\mathbf{X}\boldsymbol{\beta}\|_2^2 \right)\)</span></p>
 </section>
-<section id="exercise-3.15" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.15"><a href="ex3-15">Exercise 3.15</a></h2>
+<section id="prior" class="level3">
+<h3 class="anchored" data-anchor-id="prior">Prior</h3>
+<p><span class="math inline">\(p(\boldsymbol{\beta}) \propto \exp!\left( -\frac{1}{2\tau^2}\|\boldsymbol{\beta}\|_2^2 \right)\)</span></p>
+<hr>
 </section>
-<section id="exercise-4.6" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4.6"><a href="ex4-6">Exercise 4.6</a></h2>
 </section>
-<section id="exercise-4.15" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4.15"><a href="ex4-15">Exercise 4.15</a></h2>
+<section id="posterior-and-log-posterior" class="level2">
+<h2 class="anchored" data-anchor-id="posterior-and-log-posterior">Posterior and Log Posterior</h2>
+<p>By Bayes’ rule (dropping constants not depending on <span class="math inline">\(\boldsymbol{\beta})\)</span>:</p>
+<p><span class="math inline">\(p(\boldsymbol{\beta}\mid \mathbf{y}) \propto p(\mathbf{y}\mid \boldsymbol{\beta}).p(\boldsymbol{\beta}) \propto \exp\left( -\frac{1}{2\sigma^2}\|\mathbf{y}-\mathbf{X}\boldsymbol{\beta}\|_2^2 -\frac{1}{2\tau^2}\|\boldsymbol{\beta}\|_2^2 \right)\)</span></p>
+<p>Taking logs (again ignoring additive constants):</p>
+<p><span class="math inline">\(\log p(\boldsymbol{\beta}\mid \mathbf{y}) = -\frac{1}{2\sigma^2}\|\mathbf{y}-\mathbf{X}\boldsymbol{\beta}\|_2^2 -\frac{1}{2\tau^2}\|\boldsymbol{\beta}\|_2^2 + C\)</span></p>
+<p>Maximizing the posterior is equivalent to minimizing the negative log posterior:</p>
+<p><span class="math inline">\(\boldsymbol{\beta}_{\text{MAP}} = \arg\min_{\boldsymbol{\beta}} \left\{ \frac{1}{2\sigma^2}\|\mathbf{y}-\mathbf{X}\boldsymbol{\beta}\|_2^2 + \frac{1}{2\tau^2}\|\boldsymbol{\beta}\|_2^2 \right\}\)</span></p>
+<p>Multiplying the objective by <span class="math inline">\(2\sigma^2\)</span> (which does not change the minimizer):</p>
+<p><span class="math inline">\(\boldsymbol{\beta}_{\text{MAP}} = \arg\min_{\boldsymbol{\beta}} \left\{ \|\mathbf{y}-\mathbf{X}\boldsymbol{\beta}\|_2^2 + \frac{\sigma^2}{\tau^2}\|\boldsymbol{\beta}\|_2^2 \right\}\)</span></p>
+<p>This is exactly the ridge regression objective.</p>
+<hr>
 </section>
-<section id="hw-2-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="hw-2-in-r"><a href="hw2-sol.pdf">HW 2 in R</a></h2>
+<section id="closed-form-solution-map-ridge" class="level2">
+<h2 class="anchored" data-anchor-id="closed-form-solution-map-ridge">Closed-Form Solution (MAP = Ridge)</h2>
+<p>Differentiate the negative log posterior (or the ridge objective) and set to zero.</p>
+<p>From <span class="math inline">\(\frac{1}{2\sigma^2}\|\mathbf{y}-\mathbf{X}\boldsymbol{\beta}\|_2^2 + \frac{1}{2\tau^2}\|\boldsymbol{\beta}\|_2^2\)</span></p>
+<p>the gradient w.r.t. <span class="math inline">\(\boldsymbol{\beta}\)</span> is <span class="math inline">\(-\frac{1}{\sigma^2}\mathbf{X}^\top(\mathbf{y}-\mathbf{X}\boldsymbol{\beta}) +\frac{1}{\tau^2}\boldsymbol{\beta}\)</span></p>
+<p>Set equal to zero: <span class="math inline">\(-\frac{1}{\sigma^2}\mathbf{X}^\top\mathbf{y} +\frac{1}{\sigma^2}\mathbf{X}^\top\mathbf{X}\boldsymbol{\beta} +\frac{1}{\tau^2}\boldsymbol{\beta} =0\)</span></p>
+<p>Multiply by <span class="math inline">\(\sigma^2\)</span>: <span class="math inline">\(\mathbf{X}^\top\mathbf{X}\boldsymbol{\beta} +\frac{\sigma^2}{\tau^2}\boldsymbol{\beta} = \mathbf{X}^\top\mathbf{y}\)</span></p>
+<p>Factor: <span class="math inline">\(\left(\mathbf{X}^\top\mathbf{X}+\frac{\sigma^2}{\tau^2}\mathbf{I}\right)\boldsymbol{\beta} = \mathbf{X}^\top\mathbf{y}\)</span></p>
+<p>Thus, <span class="math inline">\(\boxed{\boldsymbol{\beta}_{\text{MAP}} = \left(\mathbf{X}^\top\mathbf{X}+\frac{\sigma^2}{\tau^2}\mathbf{I}\right)^{-1}\mathbf{X}^\top\mathbf{y}}\)</span></p>
+<hr>
+</section>
+<section id="relationship-between-lambda-sigma2-and-tau2" class="level2">
+<h2 class="anchored" data-anchor-id="relationship-between-lambda-sigma2-and-tau2">Relationship Between <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\sigma^2\)</span>, and <span class="math inline">\(\tau^2\)</span></h2>
+<p>The ridge estimator is commonly written as: <span class="math inline">\(\hat{\boldsymbol{\beta}}_{\text{ridge}} = (\mathbf{X}^\top\mathbf{X}+\lambda \mathbf{I})^{-1}\mathbf{X}^\top\mathbf{y}\)</span></p>
+<p>Comparing with the MAP solution above gives: <span class="math inline">\(\boxed{\lambda = \frac{\sigma^2}{\tau^2}}\)</span></p>
+<p>Equivalently: <span class="math inline">\(\boxed{\tau^2 = \frac{\sigma^2}{\lambda}}\)</span></p>
+<hr>
+</section>
+<section id="interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="interpretation">Interpretation</h2>
+<ul>
+<li>Larger noise variance <span class="math inline">\(\sigma^2\)</span> <span class="math inline">\(\Rightarrow\)</span> stronger regularization (larger <span class="math inline">\(\lambda\)</span>).</li>
+<li>Larger prior variance <span class="math inline">\(\tau^2\)</span> (weaker prior shrinkage) <span class="math inline">\(\Rightarrow\)</span> smaller <span class="math inline">\(\lambda\)</span>.</li>
+<li>Ridge is MAP under a zero-mean isotropic Gaussian prior.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -812,18 +878,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../hw/HW 2.html" class="pagination-link" aria-label="HW 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW 2</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../hw/HW 3.html" class="pagination-link" aria-label="HW 3">
-        <span class="nav-page-text">HW 3</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -832,7 +886,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW2-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/hw3-5.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

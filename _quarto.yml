@@ -57,6 +57,8 @@ website:
             text: HW 2 Solution
           - href: hw/HW 3.qmd
             text: HW 3
+          - href: hw/sol/HW3-sol.qmd
+            text: HW 3 Solution
       - section: "Computing"
         contents:
           - href: computing/computing-cheatsheets.qmd

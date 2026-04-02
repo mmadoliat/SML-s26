@@ -1,0 +1,142 @@
+---
+title: "Statistical Machine Learning - HW 4 (Solutions)"
+format: pdf
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Homework 4 Problem
+
+For leave-one-out cross validation (or equivalently $c$-fold cross validation with $c=n$) the cross validation error $E_{\text{val}}$ for ridge regression actually has a closed-form solution
+
+$$
+E_{\text{val}} = \frac{1}{n}\sum_{i=1}^n
+\left(\frac{\hat{y}_i - y_i}{1 - [H(\gamma)]_{ii}}\right)^2,
+\tag{1}
+$$
+
+where $\hat{y}_i$ is the prediction of $y_i$ when the model is learned from all $n$ data points (no data point is left out), the regularization parameter $\gamma$ and $[H(\gamma)]_{ii}$ is element $(i,i)$ of the matrix
+
+$$
+H(\gamma) = X (X^\top X + \gamma I)^{-1} X^\top.
+$$
+
+In this problem, we will let $x_i^\top$ denote the entire $i$th row of $X$.
+
+------------------------------------------------------------------------
+
+## (a)
+
+Let $X_{-i}$ denote the matrix $X$ where row $i$ is removed, and $y_{-i}$ is the column vector $y$ with element $i$ removed.
+
+### 1. Show that $X_{-i}^\top X_{-i} = X^\top X - x_i x_i^\top$
+
+Write the Gram matrix as a sum over rows: $$
+X^\top X = \sum_{j=1}^n x_j x_j^\top.
+$$ Removing row $i$ gives $$
+X_{-i}^\top X_{-i} = \sum_{\substack{j=1\\ j\neq i}}^n x_j x_j^\top
+= \sum_{j=1}^n x_j x_j^\top - x_i x_i^\top
+= X^\top X - x_i x_i^\top.
+$$
+
+### 2. Show that $X_{-i}^\top y_{-i} = X^\top y - x_i y_i$
+
+Similarly, $$
+X^\top y = \sum_{j=1}^n x_j y_j.
+$$ Therefore, \$\$ X\_{-i}\^\top y\_{-i} = \sum\*{\*\\substack{j=1\\\\ j\\neq i}}\^n x_j y_j = \sum{j=1}\^n x_j y_j - x_i y_i = X\^\top y - x_i y_i.
+
+### 3. Show that $[H(\gamma)]_{ii} = x_i^\top (X^\top X + \gamma I)^{-1} x_i$
+
+Let $$
+A := (X^\top X + \gamma I)^{-1}.
+$$ Then $$
+H(\gamma) = X A X^\top.
+$$ The $(i,i)$ entry of $X A X^\top$ is the $i$th row of $X$ times $A$ times the $i$th column of $X^\top$: $$
+[H(\gamma)]_{ii} = x_i^\top A x_i
+= x_i^\top (X^\top X + \gamma I)^{-1} x_i.
+$$
+
+------------------------------------------------------------------------
+
+## (b)
+
+We use ridge regression in closed form. Define $$
+A := X^\top X + \gamma I, \qquad \hat\beta := A^{-1}X^\top y.
+$$ For the leave-$i$-out fit, $$
+\hat\beta_{-i} = (X_{-i}^\top X_{-i}+\gamma I)^{-1}X_{-i}^\top y_{-i}.
+$$ Using part (a), $$
+X_{-i}^\top X_{-i}+\gamma I = (X^\top X - x_i x_i^\top)+\gamma I = A - x_i x_i^\top,
+$$ and $$
+X_{-i}^\top y_{-i} = X^\top y - x_i y_i.
+$$ Hence $$
+\hat\beta_{-i} = (A - x_i x_i^\top)^{-1}(X^\top y - x_i y_i).
+$$
+
+Now apply the matrix inversion lemma (with $v=x_i$): $$
+(A - x_i x_i^\top)^{-1} = A^{-1} + \frac{A^{-1}x_i x_i^\top A^{-1}}{1 - x_i^\top A^{-1}x_i}.
+$$ Let $$
+h_{ii} := x_i^\top A^{-1}x_i = [H(\gamma)]_{ii}.
+$$ Then $$
+\hat\beta_{-i}
+= \left(A^{-1} + \frac{A^{-1}x_i x_i^\top A^{-1}}{1-h_{ii}}\right)(X^\top y - x_i y_i).
+$$ Distribute: $$
+\hat\beta_{-i}
+= A^{-1}X^\top y - A^{-1}x_i y_i
++ \frac{A^{-1}x_i x_i^\top A^{-1}X^\top y}{1-h_{ii}}
+- \frac{A^{-1}x_i x_i^\top A^{-1}x_i\, y_i}{1-h_{ii}}.
+$$ Recognize $A^{-1}X^\top y = \hat\beta$, and $$
+x_i^\top A^{-1}X^\top y = x_i^\top \hat\beta = \hat y_i,
+\qquad
+x_i^\top A^{-1}x_i = h_{ii}.
+$$ So $$
+\hat\beta_{-i}
+= \hat\beta - A^{-1}x_i y_i
++ \frac{A^{-1}x_i \hat y_i}{1-h_{ii}}
+- \frac{A^{-1}x_i h_{ii} y_i}{1-h_{ii}}.
+$$ Combine the terms involving $A^{-1}x_i$ by putting $\hat\beta - A^{-1}x_i y_i$ over the common denominator: $$
+\hat\beta - A^{-1}x_i y_i
+= \hat\beta + \frac{-A^{-1}x_i y_i (1-h_{ii})}{1-h_{ii}}.
+$$ Thus $$
+\hat\beta_{-i}
+= \hat\beta
++ \frac{A^{-1}x_i\left[\hat y_i - h_{ii}y_i - y_i(1-h_{ii})\right]}{1-h_{ii}}
+= \hat\beta + \frac{A^{-1}x_i(\hat y_i - y_i)}{1-h_{ii}}.
+$$ Since $A^{-1}=(X^\top X+\gamma I)^{-1}$ and $h_{ii}=[H(\gamma)]_{ii}$, we obtain $$
+\boxed{
+\hat{\beta}_{-i} = \hat{\beta} +
+\frac{1}{1 - [H(\gamma)]_{ii}}
+(X^\top X + \gamma I)^{-1} x_i (\hat{y}_i - y_i).
+}
+$$
+
+------------------------------------------------------------------------
+
+## (c)
+
+Start from $$
+E_{\text{val}} = \frac{1}{n}\sum_{i=1}^n (\hat{\beta}_{-i}^\top x_i - y_i)^2.
+$$ Using the expression from (b), $$
+\hat\beta_{-i}^\top x_i
+= \left(\hat\beta + \frac{1}{1-h_{ii}}A^{-1}x_i(\hat y_i-y_i)\right)^\top x_i
+= \hat\beta^\top x_i + \frac{1}{1-h_{ii}}(\hat y_i-y_i)\, x_i^\top A^{-1}x_i.
+$$ But $\hat\beta^\top x_i=\hat y_i$ and $x_i^\top A^{-1}x_i=h_{ii}$, so $$
+\hat\beta_{-i}^\top x_i
+= \hat y_i + \frac{h_{ii}}{1-h_{ii}}(\hat y_i-y_i).
+$$ Therefore the leave-one-out residual is $$
+\hat\beta_{-i}^\top x_i - y_i
+= (\hat y_i-y_i) + \frac{h_{ii}}{1-h_{ii}}(\hat y_i-y_i)
+= \frac{1}{1-h_{ii}}(\hat y_i-y_i).
+$$ Plug into the CV error: $$
+E_{\text{val}}
+= \frac{1}{n}\sum_{i=1}^n \left(\frac{\hat y_i-y_i}{1-h_{ii}}\right)^2
+= \frac{1}{n}\sum_{i=1}^n \left(\frac{\hat y_i-y_i}{1-[H(\gamma)]_{ii}}\right)^2,
+$$ which is exactly eq. (1).
+
+------------------------------------------------------------------------
+
+## (d)
+
+Eq. (1) lets you compute the leave-one-out cross validation error for ridge regression **without refitting the model** $n$ times. In practice, you fit ridge once for a given $\gamma$, compute the fitted values $\hat y$ and the diagonal of the hat matrix $H(\gamma)$, and then get the LOOCV error by the simple formula. This makes it efficient to **select** $\gamma$ (e.g., by searching over a grid of $\gamma$ values) even when $n$ is large.

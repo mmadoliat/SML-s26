@@ -65,6 +65,8 @@ website:
             text: HW 4 Solution
           - href: hw/HW 5.qmd
             text: HW 5
+          - href: hw/sol/HW5-sol.qmd
+            text: HW 5 Solution
       - section: "Computing"
         contents:
           - href: computing/computing-cheatsheets.qmd

@@ -1,0 +1,23 @@
+---
+title: "Statistical Machine Learning - HW 5 (Solutions)"
+format: pdf
+editor: visual
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## [Exercise 6.1](ex6-1)
+
+## [Exercise 6.3](ex6-3)
+
+## [Exercise 6.4](ex6-4)
+
+## [Exercise 6.10](ex6-10)
+
+## [Exercise 7.3](ex7-3)
+
+## [Exercise 7.6](ex7-6)
+
+## [HW 5 in R](hw5-sol.pdf)

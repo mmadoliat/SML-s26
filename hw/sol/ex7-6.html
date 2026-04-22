@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MSSC 6250 – ex5-8</title>
+<title>MSSC 6250 – ex7-6</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -102,35 +102,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <meta property="og:title" content="MSSC 6250">
 <meta property="og:description" content="Homepage for ‘Statistical Machine Learning’ at Marquette University, Spring 2026.">
@@ -315,16 +286,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-5.8" id="toc-exercise-5.8" class="nav-link active" data-scroll-target="#exercise-5.8">Exercise 5.8</a></li>
+  <li><a href="#exercise-7.6" id="toc-exercise-7.6" class="nav-link active" data-scroll-target="#exercise-7.6">Exercise 7.6</a></li>
   <li><a href="#a" id="toc-a" class="nav-link" data-scroll-target="#a">(a)</a></li>
   <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
-  <li><a href="#c" id="toc-c" class="nav-link" data-scroll-target="#c">(c)</a></li>
-  <li><a href="#d" id="toc-d" class="nav-link" data-scroll-target="#d">(d)</a></li>
-  <li><a href="#e" id="toc-e" class="nav-link" data-scroll-target="#e">(e)</a></li>
-  <li><a href="#f" id="toc-f" class="nav-link" data-scroll-target="#f">(f)</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-8.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex7-6.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -332,260 +299,906 @@ window.Quarto = {
 
 
 
-<section id="exercise-5.8" class="level1">
-<h1>Exercise 5.8</h1>
+<section id="exercise-7.6" class="level1">
+<h1>Exercise 7.6</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> LeaveOneOut  <span class="co"># To use cross-validation in (c); only available after scikit v0.17.1</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> PolynomialFeatures</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm  <span class="co"># To fit models using least squares</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> PolynomialFeatures</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> cross_val_score</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_selection <span class="im">import</span> f_regression</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../data/Wage.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+year
+</th>
+<th>
+age
+</th>
+<th>
+sex
+</th>
+<th>
+maritl
+</th>
+<th>
+race
+</th>
+<th>
+education
+</th>
+<th>
+region
+</th>
+<th>
+jobclass
+</th>
+<th>
+health
+</th>
+<th>
+health_ins
+</th>
+<th>
+logwage
+</th>
+<th>
+wage
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+231655
+</th>
+<td>
+2006
+</td>
+<td>
+18
+</td>
+<td>
+<ol type="1">
+<li>Male
+</li></ol></td>
+<td>
+<ol type="1">
+<li>Never Married
+</li></ol></td>
+<td>
+<ol type="1">
+<li>White
+</li></ol></td>
+<td>
+<ol type="1">
+<li>&lt; HS Grad
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Middle Atlantic
+</li></ol></td>
+<td>
+<ol type="1">
+<li>Industrial
+</li></ol></td>
+<td>
+<ol type="1">
+<li>&lt;=Good
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>No
+</li></ol></td>
+<td>
+4.318063
+</td>
+<td>
+75.043154
+</td>
+</tr>
+<tr>
+<th>
+86582
+</th>
+<td>
+2004
+</td>
+<td>
+24
+</td>
+<td>
+<ol type="1">
+<li>Male
+</li></ol></td>
+<td>
+<ol type="1">
+<li>Never Married
+</li></ol></td>
+<td>
+<ol type="1">
+<li>White
+</li></ol></td>
+<td>
+<ol start="4" type="1">
+<li>College Grad
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Middle Atlantic
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Information
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>&gt;=Very Good
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>No
+</li></ol></td>
+<td>
+4.255273
+</td>
+<td>
+70.476020
+</td>
+</tr>
+<tr>
+<th>
+161300
+</th>
+<td>
+2003
+</td>
+<td>
+45
+</td>
+<td>
+<ol type="1">
+<li>Male
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Married
+</li></ol></td>
+<td>
+<ol type="1">
+<li>White
+</li></ol></td>
+<td>
+<ol start="3" type="1">
+<li>Some College
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Middle Atlantic
+</li></ol></td>
+<td>
+<ol type="1">
+<li>Industrial
+</li></ol></td>
+<td>
+<ol type="1">
+<li>&lt;=Good
+</li></ol></td>
+<td>
+<ol type="1">
+<li>Yes
+</li></ol></td>
+<td>
+4.875061
+</td>
+<td>
+130.982177
+</td>
+</tr>
+<tr>
+<th>
+155159
+</th>
+<td>
+2003
+</td>
+<td>
+43
+</td>
+<td>
+<ol type="1">
+<li>Male
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Married
+</li></ol></td>
+<td>
+<ol start="3" type="1">
+<li>Asian
+</li></ol></td>
+<td>
+<ol start="4" type="1">
+<li>College Grad
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Middle Atlantic
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Information
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>&gt;=Very Good
+</li></ol></td>
+<td>
+<ol type="1">
+<li>Yes
+</li></ol></td>
+<td>
+5.041393
+</td>
+<td>
+154.685293
+</td>
+</tr>
+<tr>
+<th>
+11443
+</th>
+<td>
+2005
+</td>
+<td>
+50
+</td>
+<td>
+<ol type="1">
+<li>Male
+</li></ol></td>
+<td>
+<ol start="4" type="1">
+<li>Divorced
+</li></ol></td>
+<td>
+<ol type="1">
+<li>White
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>HS Grad
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Middle Atlantic
+</li></ol></td>
+<td>
+<ol start="2" type="1">
+<li>Information
+</li></ol></td>
+<td>
+<ol type="1">
+<li>&lt;=Good
+</li></ol></td>
+<td>
+<ol type="1">
+<li>Yes
+</li></ol></td>
+<td>
+4.318063
+</td>
+<td>
+75.043154
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </section>
 <section id="a" class="level1">
 <h1>(a)</h1>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">1</span>)  <span class="co"># Random numbers generated by Python are different from those generated by R, as mentioned in Exercise 3.11</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">100</span>)  <span class="co"># By default np.random.normal considers a standard normal, so we just have to define the size</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> np.random.normal(size<span class="op">=</span><span class="dv">100</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> x <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> x<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> epsilon</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><b>n</b> = number of observations = 100</p>
-<p><b>p</b> = number of predictors = 2 (X and X^2)</p>
-<p>Model in equation form: <span class="math display">\[Y = X - 2 X^{2} + \epsilon\]</span></p>
-</section>
-<section id="b" class="level1">
-<h1>(b)</h1>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model variables</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df[<span class="st">'wage'</span>][:,np.newaxis]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> df[<span class="st">'age'</span>][:,np.newaxis]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute regression models with different degrees</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Variable 'scores' saves mean squared errors resulting from the different degrees models.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Cross validation is used</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []  </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">11</span>):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> Pipeline([(<span class="st">'poly'</span>, PolynomialFeatures(degree<span class="op">=</span>i)), (<span class="st">'linear'</span>, LinearRegression())])</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    model.fit(X,y)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    score <span class="op">=</span> cross_val_score(model, X, y, cv<span class="op">=</span><span class="dv">5</span>, scoring<span class="op">=</span><span class="st">'neg_mean_squared_error'</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    scores.append(np.mean(score))</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> np.<span class="bu">abs</span>(scores)  <span class="co"># Scikit computes negative mean square errors, so we need to turn the values positive.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot errors</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>x_plot <span class="op">=</span> np.arange(<span class="dv">0</span>,<span class="dv">11</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x_plot, scores)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Mean squared error (CV)'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Degrees'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>,<span class="dv">10</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="05_08_files/05_08_6_0.png" class="img-fluid figure-img"></p>
+<p><img src="07_06_files/07_06_7_0.png" class="img-fluid figure-img"></p>
 <figcaption>png</figcaption>
 </figure>
 </div>
-<p><b>Comments</b>:</p>
-<ul>
-<li>Quadratic plot</li>
-<li>Convex function with negative concavity</li>
-<li>X from about -2 to 2</li>
-<li>Y from about -10 to 2</li>
-</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Print array element correspoding to the minimum mean squared error</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Element number = polynomial degree for minimum mean squared error</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.where(scores <span class="op">==</span> np.<span class="bu">min</span>(scores)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>(array([4], dtype=int64),)</code></pre>
+<p>Optimal degree <em>d</em> for the polynomial according to cross-validation: <b>4</b></p>
+<p>We will use <em>statsmodels</em> to perform the hypothesis testing using ANOVA. <em>Statsmodels</em> has a built-in function that simplifies our job and we didn’t find an equivalent way of solving the problem with <em>scikit-learn</em>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit polynomial models to use in statsmodels.</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>models<span class="op">=</span>[]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">11</span>):</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    poly <span class="op">=</span> PolynomialFeatures(degree<span class="op">=</span>i)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    X_pol <span class="op">=</span> poly.fit_transform(X)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> smf.GLS(y, X_pol).fit()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    models.append(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hypothesis testing using ANOVA</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>sm.stats.anova_lm(models[<span class="dv">0</span>], models[<span class="dv">1</span>], models[<span class="dv">2</span>], models[<span class="dv">3</span>], models[<span class="dv">4</span>], models[<span class="dv">5</span>], models[<span class="dv">6</span>], typ<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+df_resid
+</th>
+<th>
+ssr
+</th>
+<th>
+df_diff
+</th>
+<th>
+ss_diff
+</th>
+<th>
+F
+</th>
+<th>
+Pr(&gt;F)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+2999.0
+</td>
+<td>
+5.222086e+06
+</td>
+<td>
+0.0
+</td>
+<td>
+NaN
+</td>
+<td>
+NaN
+</td>
+<td>
+NaN
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+2998.0
+</td>
+<td>
+5.022216e+06
+</td>
+<td>
+1.0
+</td>
+<td>
+199869.664970
+</td>
+<td>
+125.505882
+</td>
+<td>
+1.444930e-28
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+2997.0
+</td>
+<td>
+4.793430e+06
+</td>
+<td>
+1.0
+</td>
+<td>
+228786.010128
+</td>
+<td>
+143.663571
+</td>
+<td>
+2.285169e-32
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+2996.0
+</td>
+<td>
+4.777674e+06
+</td>
+<td>
+1.0
+</td>
+<td>
+15755.693664
+</td>
+<td>
+9.893609
+</td>
+<td>
+1.674794e-03
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+2995.0
+</td>
+<td>
+4.771604e+06
+</td>
+<td>
+1.0
+</td>
+<td>
+6070.152124
+</td>
+<td>
+3.811683
+</td>
+<td>
+5.098933e-02
+</td>
+</tr>
+<tr>
+<th>
+5
+</th>
+<td>
+2994.0
+</td>
+<td>
+4.770322e+06
+</td>
+<td>
+1.0
+</td>
+<td>
+1282.563017
+</td>
+<td>
+0.805371
+</td>
+<td>
+3.695646e-01
+</td>
+</tr>
+<tr>
+<th>
+6
+</th>
+<td>
+2993.0
+</td>
+<td>
+4.766389e+06
+</td>
+<td>
+1.0
+</td>
+<td>
+3932.257136
+</td>
+<td>
+2.469216
+</td>
+<td>
+1.162015e-01
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The lower the values of F, the lower the significance of the coefficient. Degrees higher than 4 don’t improve the polynomial regression model significantly. This results is in <b>agreement with cross validation results</b>.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save optimal degree</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>opt_degree <span class="op">=</span> <span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot polynomial regression</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Auxiliary variables X_line and y_line are created.</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># These variables allow us to draw the polynomial regression.</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># np.linspace() is used to create an ordered sequence of numbers. Then we can plot the polynomial regression.</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> Pipeline([(<span class="st">'poly'</span>, PolynomialFeatures(degree <span class="op">=</span> opt_degree)), (<span class="st">'linear'</span>, LinearRegression())])</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>model.fit(X,y)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>X_lin <span class="op">=</span> np.linspace(<span class="dv">18</span>,<span class="dv">80</span>)[:,np.newaxis]</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>y_lin <span class="op">=</span> model.predict(X_lin)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.scatter(X,y)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.plot(X_lin, y_lin,<span class="st">'-r'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07_06_files/07_06_15_0.png" class="img-fluid figure-img"></p>
+<figcaption>png</figcaption>
+</figure>
+</div>
 </section>
-<section id="c" class="level1">
-<h1>(c)</h1>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set new random seed</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create LOOCV object</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>loo <span class="op">=</span> LeaveOneOut()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Organize data into a dataframe (easier to handle)</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'x'</span>:x, <span class="st">'y'</span>:y})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Initiate variables</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>min_deg <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Minimum degree of the polynomial equations considered</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>max_deg <span class="op">=</span> <span class="dv">4</span><span class="op">+</span><span class="dv">1</span>  <span class="co"># Maximum degree of the polynomial equations considered</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute mean squared error (MSE) for the different polynomial equations.</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(min_deg, max_deg):</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Leave-one-out cross validation </span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> train, test <span class="kw">in</span> loo.split(df):</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        X_train <span class="op">=</span> df[<span class="st">'x'</span>][train]</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        y_train <span class="op">=</span> df[<span class="st">'y'</span>][train]</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        X_test <span class="op">=</span> df[<span class="st">'x'</span>][test]</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        y_test <span class="op">=</span> df[<span class="st">'y'</span>][test]</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Pipeline</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> Pipeline([(<span class="st">'poly'</span>, PolynomialFeatures(degree <span class="op">=</span> i)),</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>                      (<span class="st">'linear'</span>, LinearRegression())])</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        model.fit(X_train[:,np.newaxis], y_train)</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># MSE</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        score <span class="op">=</span> mean_squared_error(y_test, model.predict(X_test[:,np.newaxis]))</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        scores.append(score)</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Model </span><span class="sc">%i</span><span class="st"> (MSE): </span><span class="sc">%f</span><span class="st">'</span> <span class="op">%</span> (i,np.mean(scores)))</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>/Users/disciplina/anaconda3/envs/islp/lib/python3.6/site-packages/scipy/linalg/basic.py:1226: RuntimeWarning: internal gelsd driver lwork query error, required iwork dimension not returned. This is likely the result of LAPACK bug 0038, fixed in LAPACK 3.2.2 (released July 21, 2010). Falling back to 'gelss' driver.
-  warnings.warn(mesg, RuntimeWarning)
-
-
-Model 1 (MSE): 8.292212
-Model 2 (MSE): 1.017096
-Model 3 (MSE): 1.046553
-Model 4 (MSE): 1.057493</code></pre>
-</section>
-<section id="d" class="level1">
-<h1>(d)</h1>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set new random seed</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute MSE as in (c)</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>min_deg <span class="op">=</span> <span class="dv">1</span>  </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>max_deg <span class="op">=</span> <span class="dv">4</span><span class="op">+</span><span class="dv">1</span> </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(min_deg, max_deg):</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> train, test <span class="kw">in</span> loo.split(df):</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        X_train <span class="op">=</span> df[<span class="st">'x'</span>][train]</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        y_train <span class="op">=</span> df[<span class="st">'y'</span>][train]</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        X_test <span class="op">=</span> df[<span class="st">'x'</span>][test]</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        y_test <span class="op">=</span> df[<span class="st">'y'</span>][test]</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> Pipeline([(<span class="st">'poly'</span>, PolynomialFeatures(degree <span class="op">=</span> i)),</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>                      (<span class="st">'linear'</span>, LinearRegression())])</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        model.fit(X_train[:,np.newaxis], y_train)</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        score <span class="op">=</span> mean_squared_error(y_test, model.predict(X_test[:,np.newaxis]))</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        scores.append(score)</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Model </span><span class="sc">%i</span><span class="st"> (MSE): </span><span class="sc">%f</span><span class="st">'</span> <span class="op">%</span> (i,np.mean(scores)))</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>Model 1 (MSE): 8.292212
-Model 2 (MSE): 1.017096
-Model 3 (MSE): 1.046553
-Model 4 (MSE): 1.057493</code></pre>
-<p>The results are <b>exactly the same</b> because we only remove one observation from the training set. Thus, there is no random effect resulting from the observations used for the test set. LOOCV will always be the same, no matter the random seed.</p>
-</section>
-<section id="e" class="level1">
-<h1>(e)</h1>
-<p>The model that had the smallest LOOCV error was <b>model (ii)</b>. This was an expected result because model (ii) has the same form as y (second order polynomial).</p>
-<p><b>Comment:</b> If we used <em>np.random.seed(0)</em> instead of <em>np.random.seed(1)</em> or <em>np.random.seed(10)</em>, the answer to the problem would be different. Using <em>seed(0)</em>, the epsilon values are proportional higher to the remaining values in the y equation. Thus, its influence is greater and the random effect prevails over the second order parameters y. We didn’t try what happens for other seed values, but there may be other seed values that produce a similar effect to <em>seed(0)</em>.</p>
-</section>
-<section id="f" class="level1">
-<h1>(f)</h1>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Models with polynomial features</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>min_deg <span class="op">=</span> <span class="dv">1</span>  </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>max_deg <span class="op">=</span> <span class="dv">4</span><span class="op">+</span><span class="dv">1</span> </span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(min_deg, max_deg):</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    pol <span class="op">=</span> PolynomialFeatures(degree <span class="op">=</span> i)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    X_pol <span class="op">=</span> pol.fit_transform(df[<span class="st">'x'</span>][:,np.newaxis])</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> df[<span class="st">'y'</span>]</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> sm.OLS(y, X_pol)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> model.fit()</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(results.summary())  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code>                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                      y   R-squared:                       0.088
-Model:                            OLS   Adj. R-squared:                  0.079
-Method:                 Least Squares   F-statistic:                     9.460
-Date:                Fri, 05 Jan 2018   Prob (F-statistic):            0.00272
-Time:                        17:15:28   Log-Likelihood:                -242.69
-No. Observations:                 100   AIC:                             489.4
-Df Residuals:                      98   BIC:                             494.6
-Df Model:                           1                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P&gt;|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const         -1.7609      0.280     -6.278      0.000      -2.317      -1.204
-x1             0.9134      0.297      3.076      0.003       0.324       1.503
-==============================================================================
-Omnibus:                       40.887   Durbin-Watson:                   1.957
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               83.786
-Skew:                          -1.645   Prob(JB):                     6.40e-19
-Kurtosis:                       6.048   Cond. No.                         1.19
-==============================================================================
-
-Warnings:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                      y   R-squared:                       0.882
-Model:                            OLS   Adj. R-squared:                  0.880
-Method:                 Least Squares   F-statistic:                     362.9
-Date:                Fri, 05 Jan 2018   Prob (F-statistic):           9.26e-46
-Time:                        17:15:28   Log-Likelihood:                -140.40
-No. Observations:                 100   AIC:                             286.8
-Df Residuals:                      97   BIC:                             294.6
-Df Model:                           2                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P&gt;|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const         -0.0216      0.122     -0.177      0.860      -0.264       0.221
-x1             1.2132      0.108     11.238      0.000       0.999       1.428
-x2            -2.0014      0.078    -25.561      0.000      -2.157      -1.846
-==============================================================================
-Omnibus:                        0.094   Durbin-Watson:                   2.221
-Prob(Omnibus):                  0.954   Jarque-Bera (JB):                0.009
-Skew:                          -0.022   Prob(JB):                        0.995
-Kurtosis:                       2.987   Cond. No.                         2.26
-==============================================================================
-
-Warnings:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                      y   R-squared:                       0.883
-Model:                            OLS   Adj. R-squared:                  0.880
-Method:                 Least Squares   F-statistic:                     242.1
-Date:                Fri, 05 Jan 2018   Prob (F-statistic):           1.26e-44
-Time:                        17:15:28   Log-Likelihood:                -139.91
-No. Observations:                 100   AIC:                             287.8
-Df Residuals:                      96   BIC:                             298.2
-Df Model:                           3                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P&gt;|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const          0.0046      0.125      0.037      0.971      -0.244       0.253
-x1             1.0639      0.189      5.636      0.000       0.689       1.439
-x2            -2.0215      0.081    -24.938      0.000      -2.182      -1.861
-x3             0.0550      0.057      0.965      0.337      -0.058       0.168
-==============================================================================
-Omnibus:                        0.034   Durbin-Watson:                   2.253
-Prob(Omnibus):                  0.983   Jarque-Bera (JB):                0.050
-Skew:                           0.032   Prob(JB):                        0.975
-Kurtosis:                       2.911   Cond. No.                         6.55
-==============================================================================
-
-Warnings:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                      y   R-squared:                       0.885
-Model:                            OLS   Adj. R-squared:                  0.880
-Method:                 Least Squares   F-statistic:                     182.4
-Date:                Fri, 05 Jan 2018   Prob (F-statistic):           1.13e-43
-Time:                        17:15:28   Log-Likelihood:                -139.24
-No. Observations:                 100   AIC:                             288.5
-Df Residuals:                      95   BIC:                             301.5
-Df Model:                           4                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P&gt;|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const          0.0866      0.144      0.600      0.550      -0.200       0.373
-x1             1.0834      0.189      5.724      0.000       0.708       1.459
-x2            -2.2455      0.214    -10.505      0.000      -2.670      -1.821
-x3             0.0436      0.058      0.755      0.452      -0.071       0.158
-x4             0.0482      0.043      1.132      0.260      -0.036       0.133
-==============================================================================
-Omnibus:                        0.102   Durbin-Watson:                   2.214
-Prob(Omnibus):                  0.950   Jarque-Bera (JB):                0.117
-Skew:                           0.069   Prob(JB):                        0.943
-Kurtosis:                       2.906   Cond. No.                         17.5
-==============================================================================
-
-Warnings:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
-<p>To answer to the question, we should pay attention to the t-statistic value of each coefficient.</p>
-<p>As we can see, when we have a second order polynomial, both x1 and x2 have high t-statistic values. When we have a third order polynomial, x2 has the highest t-statistic, followed by x1 and then by x3. Finally, when we have a fourth order polynomial, x2 is the variable with the highest t-statistic, followed by x1, x4 and x3.</p>
-<p>We can conclude that x2 and x1 are variables with relevance for the presented models. These results agree with the conclusions drawn based on the cross-validation results, showing that the first and second order terms are the most significant.</p>
+<section id="b" class="level1">
+<h1>(b)</h1>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute cross-validated errors of step function</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">To define the step function, we need to cut the dataset into parts (pd.cut() does the job)</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">and associate a each part to a dummy variable. For example, if we have two parts (age&lt;50</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">and age &gt;= 50), we will have one dummy variable that gets value 1 if age&lt;50 and value 0</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">if age&gt;50.</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">Once we have the dataset in these conditions, we need to fit a linear regression to it.</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">The governing model will be defined by: y = b0 + b1 C1 + b2 C2 + ... + bn Cn, where</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">  b stands for the regression coefficient;</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">  C stands for the value of a dummy variable.</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">Using the same example as above, we have y = b0 + b1 C1, thus ...</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">'''</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> []</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">10</span>):</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    age_groups <span class="op">=</span> pd.cut(df[<span class="st">'age'</span>], i)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    df_dummies <span class="op">=</span> pd.get_dummies(age_groups)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    X_cv <span class="op">=</span> df_dummies</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    y_cv <span class="op">=</span> df[<span class="st">'wage'</span>]</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    model.fit(X_cv, y_cv)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    score <span class="op">=</span> cross_val_score(model, X_cv, y_cv, cv<span class="op">=</span><span class="dv">5</span>, scoring<span class="op">=</span><span class="st">'neg_mean_squared_error'</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    scores.append(score)</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> np.<span class="bu">abs</span>(scores)  <span class="co"># Scikit computes negative mean square errors, so we need to turn the values positive.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of cuts that minimize the error</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>min_scores <span class="op">=</span> []</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">9</span>):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    min_score <span class="op">=</span> np.mean(scores[i,:])</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    min_scores.append(min_score)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Number of cuts: </span><span class="sc">%i</span><span class="st">, error </span><span class="sc">%.3f</span><span class="st">'</span> <span class="op">%</span> (i<span class="op">+</span><span class="dv">1</span>, min_score))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Number of cuts: 1, error 1741.335
+Number of cuts: 2, error 1733.925
+Number of cuts: 3, error 1687.688
+Number of cuts: 4, error 1635.756
+Number of cuts: 5, error 1635.556
+Number of cuts: 6, error 1627.397
+Number of cuts: 7, error 1619.168
+Number of cuts: 8, error 1607.926
+Number of cuts: 9, error 1616.550</code></pre>
+<p>The number of cuts that minimize the error is <b>8</b>.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The following code shows, step by step, how to plot the step function.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert ages to groups of age ranges</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>n_groups <span class="op">=</span> <span class="dv">8</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>age_groups <span class="op">=</span> pd.cut(df[<span class="st">'age'</span>], n_groups)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dummy variables</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Dummy variables is a way to deal with categorical variables in linear regressions.</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># It associates the value 1 to the group to which the variable belongs, and the value 0 to the remaining groups.</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># For example, if age == 20, the (18,25] will have the value 1 while the group (25, 32] will have the value 0.</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>age_dummies <span class="op">=</span> pd.get_dummies(age_groups)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dataset for step function</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Add wage to the dummy dataset.</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>df_step <span class="op">=</span> age_dummies.join(df[<span class="st">'wage'</span>])</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>df_step.head()  <span class="co"># Just to visualize the dataset with the specified number of cuts</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+(17.938, 25.75]
+</th>
+<th>
+(25.75, 33.5]
+</th>
+<th>
+(33.5, 41.25]
+</th>
+<th>
+(41.25, 49]
+</th>
+<th>
+(49, 56.75]
+</th>
+<th>
+(56.75, 64.5]
+</th>
+<th>
+(64.5, 72.25]
+</th>
+<th>
+(72.25, 80]
+</th>
+<th>
+wage
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+231655
+</th>
+<td>
+1.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+75.043154
+</td>
+</tr>
+<tr>
+<th>
+86582
+</th>
+<td>
+1.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+70.476020
+</td>
+</tr>
+<tr>
+<th>
+161300
+</th>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+1.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+130.982177
+</td>
+</tr>
+<tr>
+<th>
+155159
+</th>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+1.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+154.685293
+</td>
+</tr>
+<tr>
+<th>
+11443
+</th>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+1.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+0.0
+</td>
+<td>
+75.043154
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Variables to fit the step function</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># X == dummy variables; y == wage.</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>X_step <span class="op">=</span> df_step.iloc[:,:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>y_step <span class="op">=</span> df_step.iloc[:,<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit step function (statsmodels)</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>reg <span class="op">=</span> sm.GLM(y_step[:,np.newaxis], X_step).fit()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auxiliary data to plot the step function</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># We need to create a comprehensive set of ordered points to draw the figure.</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># These points are based on 'age' values but include also the dummy variables identifiying the group that 'age' belongs.</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>X_aux <span class="op">=</span> np.linspace(<span class="dv">18</span>,<span class="dv">80</span>)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>groups_aux <span class="op">=</span> pd.cut(X_aux, n_groups)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>aux_dummies <span class="op">=</span> pd.get_dummies(groups_aux)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot step function</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>X_step_lin <span class="op">=</span> np.linspace(<span class="dv">18</span>,<span class="dv">80</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>y_lin <span class="op">=</span> reg.predict(aux_dummies)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(X,y)</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>plt.plot(X_step_lin, y_lin,<span class="st">'-r'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="07_06_files/07_06_27_0.png" class="img-fluid figure-img"></p>
+<figcaption>png</figcaption>
+</figure>
+</div>
 </section>
 <section id="references" class="level1">
 <h1>References</h1>
 <ul>
-<li>https://github.com/scikit-learn/scikit-learn/issues/6161 (scikit.model_selection only available after 0.17.1)</li>
-<li>http://scikit-learn.org/stable/install.html (to install scikit)</li>
-<li>http://stats.stackexchange.com/questions/58739/polynomial-regression-using-scikit-learn (polynomial linear regression)</li>
-<li>http://stackoverflow.com/questions/29241056/the-use-of-python-numpy-newaxis (use of np.newaxis)</li>
-<li>http://scikit-learn.org/stable/modules/linear_model.html#polynomial-regression-extending-linear-models-with-basis-functions (about the use of pipeline)</li>
+<li>http://statsmodels.sourceforge.net/stable/examples/notebooks/generated/glm_formula.html</li>
+<li>http://pandas.pydata.org/pandas-docs/stable/generated/pandas.cut.html</li>
 </ul>
 
 
@@ -1131,7 +1744,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex5-8.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex7-6.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>

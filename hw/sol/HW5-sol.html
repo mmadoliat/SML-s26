@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MSSC 6250 – ex4-15</title>
+<title>MSSC 6250 – Statistical Machine Learning - HW 5 (Solutions)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -63,6 +29,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../computing/computing-cheatsheets.html" rel="next">
+<link href="../../hw/HW 5.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -103,9 +71,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta property="og:title" content="MSSC 6250">
+<meta property="og:title" content="MSSC 6250 - Statistical Machine Learning - HW 5 (Solutions)">
 <meta property="og:site_name" content="MSSC 6250">
-<meta name="twitter:title" content="MSSC 6250">
+<meta name="twitter:title" content="MSSC 6250 - Statistical Machine Learning - HW 5 (Solutions)">
 <meta name="twitter:image" content="https://tinyurl.com/SML-MU/hw/sol/images/twitter-card.png">
 <meta name="twitter:creator" content="@mmadoliat">
 <meta name="twitter:card" content="summary_large_image">
@@ -120,7 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW5-sol.html">HW 5 Solution</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -188,13 +156,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">HW</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../hw/HW 1.html" class="sidebar-item-text sidebar-link">
@@ -251,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../hw/sol/HW5-sol.html" class="sidebar-item-text sidebar-link">
+  <a href="../../hw/sol/HW5-sol.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">HW 5 Solution</span></a>
   </div>
 </li>
@@ -284,111 +252,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#exercise-4.15" id="toc-exercise-4.15" class="nav-link active" data-scroll-target="#exercise-4.15">Exercise 4.15</a>
-  <ul class="collapse">
-  <li><a href="#a-power-prints-23" id="toc-a-power-prints-23" class="nav-link" data-scroll-target="#a-power-prints-23">(a) <code>Power()</code> prints (2^3)</a></li>
-  <li><a href="#b-power2x-a-prints-xa" id="toc-b-power2x-a-prints-xa" class="nav-link" data-scroll-target="#b-power2x-a-prints-xa">(b) <code>Power2(x, a)</code> prints (x^a)</a></li>
-  <li><a href="#c-use-power2-to-compute-103-817-and-1313" id="toc-c-use-power2-to-compute-103-817-and-1313" class="nav-link" data-scroll-target="#c-use-power2-to-compute-103-817-and-1313">(c) Use <code>Power2()</code> to compute (10^3), (8^{17}), and (131^3)</a></li>
-  <li><a href="#d-power3x-a-returns-xa-instead-of-printing" id="toc-d-power3x-a-returns-xa-instead-of-printing" class="nav-link" data-scroll-target="#d-power3x-a-returns-xa-instead-of-printing">(d) <code>Power3(x, a)</code> returns (x^a) (instead of printing)</a></li>
-  <li><a href="#e-using-power3-plot-fxx2-for-integers-1-to-10" id="toc-e-using-power3-plot-fxx2-for-integers-1-to-10" class="nav-link" data-scroll-target="#e-using-power3-plot-fxx2-for-integers-1-to-10">(e) Using <code>Power3()</code>, plot (f(x)=x^2) for integers 1 to 10</a></li>
-  <li><a href="#f-plotpowerx-a-plots-x-against-xa-for-a-fixed-a" id="toc-f-plotpowerx-a-plots-x-against-xa-for-a-fixed-a" class="nav-link" data-scroll-target="#f-plotpowerx-a-plots-x-against-xa-for-a-fixed-a">(f) <code>PlotPower(x, a)</code> plots (x) against (x^a) for a fixed (a)</a></li>
-  </ul></li>
+  <li><a href="#exercise-6.1" id="toc-exercise-6.1" class="nav-link active" data-scroll-target="#exercise-6.1">Exercise 6.1</a></li>
+  <li><a href="#exercise-6.3" id="toc-exercise-6.3" class="nav-link" data-scroll-target="#exercise-6.3">Exercise 6.3</a></li>
+  <li><a href="#exercise-6.4" id="toc-exercise-6.4" class="nav-link" data-scroll-target="#exercise-6.4">Exercise 6.4</a></li>
+  <li><a href="#exercise-6.10" id="toc-exercise-6.10" class="nav-link" data-scroll-target="#exercise-6.10">Exercise 6.10</a></li>
+  <li><a href="#exercise-7.3" id="toc-exercise-7.3" class="nav-link" data-scroll-target="#exercise-7.3">Exercise 7.3</a></li>
+  <li><a href="#exercise-7.6" id="toc-exercise-7.6" class="nav-link" data-scroll-target="#exercise-7.6">Exercise 7.6</a></li>
+  <li><a href="#hw-5-in-r" id="toc-hw-5-in-r" class="nav-link" data-scroll-target="#hw-5-in-r">HW 5 in R</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex4-15.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW5-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="HW5-sol.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<section id="exercise-4.15" class="level1">
-<h1>Exercise 4.15</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="a-power-prints-23" class="level2">
-<h2 class="anchored" data-anchor-id="a-power-prints-23">(a) <code>Power()</code> prints (2^3)</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Power():</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compute 2^3 and print it</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="dv">2</span><span class="op">**</span><span class="dv">3</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Power()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Expected output:</p>
-<pre><code>8</code></pre>
-</section>
-<section id="b-power2x-a-prints-xa" class="level2">
-<h2 class="anchored" data-anchor-id="b-power2x-a-prints-xa">(b) <code>Power2(x, a)</code> prints (x^a)</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Power2(x, a):</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(x<span class="op">**</span>a)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Power2(<span class="dv">3</span>, <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Expected output:</p>
-<pre><code>6561</code></pre>
-</section>
-<section id="c-use-power2-to-compute-103-817-and-1313" class="level2">
-<h2 class="anchored" data-anchor-id="c-use-power2-to-compute-103-817-and-1313">(c) Use <code>Power2()</code> to compute (10^3), (8^{17}), and (131^3)</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Power2(<span class="dv">10</span>, <span class="dv">3</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Power2(<span class="dv">8</span>, <span class="dv">17</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Power2(<span class="dv">131</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Expected output:</p>
-<pre><code>1000
-2251799813685248
-2248091</code></pre>
-</section>
-<section id="d-power3x-a-returns-xa-instead-of-printing" class="level2">
-<h2 class="anchored" data-anchor-id="d-power3x-a-returns-xa-instead-of-printing">(d) <code>Power3(x, a)</code> returns (x^a) (instead of printing)</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Power3(x, a):</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> x<span class="op">**</span>a</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Power3(<span class="dv">3</span>, <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Expected output:</p>
-<pre><code>6561</code></pre>
-</section>
-<section id="e-using-power3-plot-fxx2-for-integers-1-to-10" class="level2">
-<h2 class="anchored" data-anchor-id="e-using-power3-plot-fxx2-for-integers-1-to-10">(e) Using <code>Power3()</code>, plot (f(x)=x^2) for integers 1 to 10</h2>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">11</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([Power3(xi, <span class="dv">2</span>) <span class="cf">for</span> xi <span class="kw">in</span> x])</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>ax.plot(x, y, marker<span class="op">=</span><span class="st">"o"</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ax.set_xscale(<span class="st">"log"</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>ax.set_yscale(<span class="st">"log"</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Log of x"</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Log of y = x^2"</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"f(x) = x^2 for x = 1,...,10"</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="04_15_files/04_15_e.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
-</figure>
-</div>
-</section>
-<section id="f-plotpowerx-a-plots-x-against-xa-for-a-fixed-a" class="level2">
-<h2 class="anchored" data-anchor-id="f-plotpowerx-a-plots-x-against-xa-for-a-fixed-a">(f) <code>PlotPower(x, a)</code> plots (x) against (x^a) for a fixed (a)</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> PlotPower(x, a):</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.asarray(x)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> Power3(x, a)  <span class="co"># vectorized, since ** works elementwise on numpy arrays</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    ax.plot(x, y, marker<span class="op">=</span><span class="st">"o"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">"x"</span>)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="ss">f"x^</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="ss">f"Plot of x^</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss"> versus x"</span>)</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>PlotPower(np.arange(<span class="dv">1</span>, <span class="dv">11</span>), <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="04_15_files/04_15_f.png" class="img-fluid figure-img"></p>
-<figcaption>png</figcaption>
-</figure>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../hw/HW 1.html">HW</a></li><li class="breadcrumb-item"><a href="../../hw/sol/HW5-sol.html">HW 5 Solution</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Statistical Machine Learning - HW 5 (Solutions)</h1>
 </div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="exercise-6.1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-6.1"><a href="ex6-1">Exercise 6.1</a></h2>
 </section>
+<section id="exercise-6.3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-6.3"><a href="ex6-3">Exercise 6.3</a></h2>
+</section>
+<section id="exercise-6.4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-6.4"><a href="ex6-4">Exercise 6.4</a></h2>
+</section>
+<section id="exercise-6.10" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-6.10"><a href="ex6-10">Exercise 6.10</a></h2>
+</section>
+<section id="exercise-7.3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-7.3"><a href="ex7-3">Exercise 7.3</a></h2>
+</section>
+<section id="exercise-7.6" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-7.6"><a href="ex7-6">Exercise 7.6</a></h2>
+</section>
+<section id="hw-5-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="hw-5-in-r"><a href="hw5-sol.pdf">HW 5 in R</a></h2>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -923,6 +840,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../hw/HW 5.html" class="pagination-link" aria-label="HW 5">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">HW 5</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../computing/computing-cheatsheets.html" class="pagination-link" aria-label="Cheatsheets">
+        <span class="nav-page-text">Cheatsheets</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -931,7 +860,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/ex4-15.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/mmadoliat/SML-s26/edit/main/hw/sol/HW5-sol.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/mmadoliat/SML-s26/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
